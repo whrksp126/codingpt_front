@@ -1,23 +1,55 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
-/node_modules
-/.pnp
+# Node modules and dependencies
+node_modules/
+.pnp/
 .pnp.js
 
-# testing
-/coverage
+# Build output
+dist/
+build/
 
-# production
-/build
+# Cache and temporary files
+.cache/
+*.cache/
+tmp/
+.temp/
+*.tmp
 
-# misc
-.DS_Store
+# Environment configuration files (local development only)
+.env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
+# IDE and OS-specific configuration files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.log
+
+# ESLint, TypeScript, and Prettier cache
+.eslintcache
+.next
+*.tsbuildinfo
+.prettiercache
+
+# Testing output
+coverage/
+
+# Yarn / npm files and logs
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Lock files (for consistent dependency management)
+package-lock.json
+yarn.lock
