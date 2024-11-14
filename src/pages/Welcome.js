@@ -1,29 +1,28 @@
 // src/pages/Welcome.js
-import React, { useEffect, useState, useRef } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import React, { useEffect, useState, useRef  } from 'react';
+import { useLocation } from 'react-router-dom';
 import { motion, AnimatePresence  } from 'framer-motion';
 import Btn from './../components/component/Btn.js';
 import SelectBox from '../pages/SelectBox.js';
 import LiBox from '../pages/LiBox.js';
 import LottieAnimation from '../components/LottieAnimation.js';
 import { ArrowLeft } from "@phosphor-icons/react";
-import '../styles/animations.css';
-// Step data definition for text and options
+
 const stepsData = [
   {
-    step: "0",
+    step: 0,
     text: "안녕하세요! 코코에요!",
     options: [],
     component : null,
   },
   {
-    step: "1",
+    step: 1,
     text: "그럼 지금 바로 시작해 볼까요?",
     options: [],
     component : null,
   },
   {
-    step: "2",
+    step: 2,
     text: "CodingPT를 어떻게 접하셨나요?",
     options: [
       { type: 1, text: "TV", src: "https://d35aaqx5ub95lt.cloudfront.net/images/hdyhau/b2a0faf7b835cf2ab9a75afe033fdad9.svg" },
@@ -38,7 +37,7 @@ const stepsData = [
     component : SelectBox,
   },
   {
-    step: "3",
+    step: 3,
     text: "코딩을 배우는 이유가 무엇인가요?",
     options: [
       { type: 1, text: "경력 개발", src: "https://d35aaqx5ub95lt.cloudfront.net/images/funboarding/61a06f02b3b988d1c388d484bc0e52e6.svg" },
@@ -52,7 +51,7 @@ const stepsData = [
     component : SelectBox,
   },
   {
-    step: "4",
+    step: 4,
     text: "코딩을 얼마나 알고 계시나요?",
     options: [
       { type: 1, text: "코딩을 처음 배워요", src: "https://d35aaqx5ub95lt.cloudfront.net/images/funboarding/5f3f4451d9b4ceb393aa44aa3b44f8ff.svg" },
@@ -64,7 +63,7 @@ const stepsData = [
     component : SelectBox,
   },
   {
-    step: "5",
+    step: 5,
     text: "아래와 같은 목표를 달성할 수 있어요!",
     options: [
       { type: 2, title: "자신 있게 코드를 작성할 수 있어요", text: "간단한 프로젝트를 완성할 수 있는 연습 문제 3,000개 이상", src: "https://d35aaqx5ub95lt.cloudfront.net/images/funboarding/958e9a5aac8a0aeb099e08c28e327de7.svg" },
@@ -74,7 +73,7 @@ const stepsData = [
     component : LiBox,
   },
   {
-    step: "6",
+    step: 6,
     text: "일일 학습 목표가 무엇인가요?",
     options: [
       { type: 2, title: "하루 5분", text: "가볍게" },
@@ -85,7 +84,7 @@ const stepsData = [
     component : SelectBox,
   },
   {
-    step: "7",
+    step: 7,
     text: "이제 가장 알맞은 시작점을 찾아보세요!",
     options: [
       { type: 3, title: "기초부터 시작하기", text: "코딩 과정의 가장 쉬운 레슨부터 시작합니다.", src: "https://d35aaqx5ub95lt.cloudfront.net/images/funboarding/9730040521a168519871561cbea6509e.svg" },
@@ -94,82 +93,99 @@ const stepsData = [
     component : SelectBox,
   },
 ];
-// 애니메이션 설정
-const listVariants = {
-  hidden: { opacity: 0, x: 50 }, // 오른쪽에서 시작
-  visible: { opacity: 1, x: 0, transition: { duration: 0.4, ease: "easeInOut" } }, // 중앙으로 슬라이드
-  exit: { opacity: 0, x: -50, transition: { duration: 0.4, ease: "easeInOut" } }, // 왼쪽으로 슬라이드 아웃
-};
+
+
+let isBack = false;
 
 const Welcome = () => {
-  const navigate = useNavigate();
+  // TODO : 사라지는건 리랜더링 시키지 말고 그냥 사라져야할 방향으로 사라지게 애니메이션을 따로 처리하고 
+  // TODO : 그 후에 리랜더링을 시키자!
+  const listVariants = (is_back) => ({
+    hidden: { opacity: 0, x: is_back ? -50 : 50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.4, ease: "easeInOut" } },
+    exit: { opacity: 0, x: is_back ? 50 : -50, transition: { duration: 0.4, ease: "easeInOut" } },
+  });
   const location = useLocation();
   const contentRef = useRef(null);
 
   const searchParams = new URLSearchParams(location.search);
-  const welcomeStep = searchParams.get('welcomeStep') ;
-
-  const [text, setText] = useState("안녕하세요! 코코에요!");
+  const [naviData, setNaviData] = useState({
+    step : parseInt(searchParams.get('welcomeStep')) || 0,
+  })
   const [isScrolled, setIsScrolled] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null); 
   const [btnActive, setBtnActive] = useState(true);
-
-  useEffect(() => {
-    const currentStep = stepsData.find(step => step.step === welcomeStep) || stepsData[0];
-    setText(currentStep.text);
-  }, [welcomeStep]);
-
+  
   const handleClick = () => {
-    const currentStep = welcomeStep ? parseInt(welcomeStep) : 0;
-    const nextStep = currentStep + 1;
-    
+    const nextStep = naviData.step + 1;
     if (nextStep <= stepsData.length) {
-      navigate(`/welcome?welcomeStep=${nextStep}`);
-      setBtnActive(true);
+      isBack = false;
+      setNaviData({
+        step: nextStep
+      });
+      console.log(isBack)
     }
   };
   const handleBackClick = () => {
-    navigate(-1); // 이전 페이지로 이동
+    const nextStep = naviData.step - 1 < 0 ? 0 : naviData.step - 1 
+    isBack = true;
+    setNaviData({
+      step : nextStep
+    });
+    console.log(isBack)
   };
   const handleSelect = (option) => {
     setBtnActive(true);
     setSelectedOption(option); // 선택한 옵션을 상태에 저장
   };
 
-  const handleScroll = () => {
-    // 스크롤이 발생할 때만 isScrolled를 true로 설정
-    if (contentRef.current.scrollTop > 0) {
-      setIsScrolled(true);
-    } else {
-      setIsScrolled(false);
-    }
-  };
+
 
   useEffect(() => {
+    // 뒤로가기 방지 핸들러
+    const handlePopState = (event) => {
+      event.preventDefault();
+    };
+  
+    // 스크롤 핸들러
     const ref = contentRef.current;
+    const handleScroll = () => {
+      // 스크롤이 발생할 때만 isScrolled를 true로 설정
+      if (contentRef.current.scrollTop > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    // 이벤트 리스너 등록
+    window.addEventListener('popstate', handlePopState);
     ref.addEventListener("scroll", handleScroll);
+  
+    // 이벤트 리스너 정리
     return () => {
+      window.removeEventListener('popstate', handlePopState);
       ref.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  // 현재 단계에 해당하는 step 데이터 가져오기
-  const currentStepData = stepsData.find(step => step.step === welcomeStep);
-  // 애니메이션 설정
 
+
+  // 현재 단계에 해당하는 step 데이터 가져오기
+  const currentStepData = stepsData.find(step => step.step === naviData.step);
+  // 애니메이션 설정
   return (
     <div className="relative flex flex-col items-center justify-center max-w-96 h-screen mx-auto">
       <div className="absolute w-full h-full pointer-events-none">
-        <div className={`absolute top-1/2 left-1/2 ${![null, "1"].includes(welcomeStep) ? `hidden` : ``} w-max p-2 border border-gray-200 rounded-lg text-cyan-950 font-semibold transform -translate-x-1/2 -translate-y-40`}>
-          {text}
+        <div className={`absolute top-1/2 left-1/2 ${![0, 1].includes(naviData.step) ? `hidden` : ``} w-max p-2 border border-gray-200 rounded-lg text-cyan-950 font-semibold transform -translate-x-1/2 -translate-y-40`}>
+          {currentStepData.text}
         </div>
-        <div className={`absolute ${![null, "1"].includes(welcomeStep) ? `top-12 left-0` : `top-1/2 left-1/2`} ${![null, "1"].includes(welcomeStep) ? `max-w-36` : `max-w-64`} w-full h-auto transform ${![null, "1"].includes(welcomeStep) ? `-translate-x-0 -translate-y-0` : `-translate-x-1/2 -translate-y-1/2`} transition-all duration-500 ease-in-out`} >
+        <div className={`absolute ${![0, 1].includes(naviData.step) ? `top-12 left-0` : `top-1/2 left-1/2`} ${![0, 1].includes(naviData.step) ? `max-w-36` : `max-w-64`} w-full h-auto transform ${![0, 1].includes(naviData.step) ? `-translate-x-0 -translate-y-0` : `-translate-x-1/2 -translate-y-1/2`} transition-all duration-500 ease-in-out`} >
           <LottieAnimation width="100%" height="100%" animationKey={'welcome_main'}/>
         </div>
       </div>
 
 
 
-      <div className={`${![null, "1"].includes(welcomeStep) ? `` :`hidden`} w-full h-48`}>
+      <div className={`${![0, 1].includes(naviData.step) ? `` :`hidden`} w-full h-48`}>
         <div className={`flex items-center h-12 px-4`}>
           <ArrowLeft size={24} color="#083344" onClick={handleBackClick} />
           <div className="flex w-full h-4 ml-5 rounded-xl bg-cyan-100"></div>
@@ -178,8 +194,8 @@ const Welcome = () => {
           <div className="w-40 h-full">
           </div>
           <div className="flex flex-1 items-center h-full pr-4">
-            <div className={`${![null, "1"].includes(welcomeStep) ? `` : `hidden`} w-full p-2 border border-gray-200 rounded-lg text-cyan-950 font-semibold`}>
-              {text}
+            <div className={`${![0, 1].includes(naviData.step) ? `` : `hidden`} w-full p-2 border border-gray-200 rounded-lg text-cyan-950 font-semibold`}>
+              {currentStepData.text}
             </div>
           </div>
         </div>
@@ -188,19 +204,19 @@ const Welcome = () => {
       <div className={`flex-1 w-full px-4 overflow-auto ${isScrolled ? 'border-t border-gray-200' : ''}`} ref={contentRef}>
         <AnimatePresence mode="wait">
           {currentStepData && (
-            <motion.div className="overflow-hidden" key={welcomeStep}>
+            <motion.div className="overflow-hidden" key={naviData.step}>
               <motion.ul 
                 className="flex flex-col gap-3 pb-5"
                 initial="hidden"
                 animate="visible"
-                exit="exit" // 요소가 사라질 때 애니메이션
-                variants={listVariants}
+                exit="exit"
+                variants={listVariants(isBack)}
               >
                 {currentStepData.options.map((option, index) => {
                   const Component = currentStepData.component;
                   return Component
                     ? (
-                      <li key={index}>
+                      <div key={index}>
                         {React.createElement(Component, {
                           type: option.type,
                           text: option.text,
@@ -209,7 +225,7 @@ const Welcome = () => {
                           onClick: () => handleSelect(option.text),
                           isSelected: selectedOption === option.text,
                         })}
-                      </li>
+                      </div>
                     )
                     : null;
                 })}
