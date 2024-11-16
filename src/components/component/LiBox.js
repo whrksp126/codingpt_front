@@ -1,4 +1,4 @@
-// src/components/home/SelectBox
+// src/components/component/LiBox
 import React from 'react';
 
 const LiBox = ({ title, text, src, isLast }) => {

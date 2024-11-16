@@ -1,25 +1,28 @@
 // src/pages/Welcome.js
 import React, { useEffect, useState, useRef  } from 'react';
-import { useLocation } from 'react-router-dom';
-import { motion, AnimatePresence  } from 'framer-motion';
+import { useNavigate, useLocation } from 'react-router-dom';
 import Btn from './../components/component/Btn.js';
-import SelectBox from '../pages/SelectBox.js';
-import LiBox from '../pages/LiBox.js';
+import SelectBox from '../components/component/SelectBox.js';
+import LiBox from '../components/component/LiBox.js';
 import LottieAnimation from '../components/LottieAnimation.js';
 import { ArrowLeft } from "@phosphor-icons/react";
 
-const stepsData = [
+const dummyData = [
   {
     step: 0,
     text: "안녕하세요! 코코에요!",
-    options: [],
+    options: null,
     component : null,
+    free_next : true,
+    user_select_data : null
   },
   {
     step: 1,
     text: "그럼 지금 바로 시작해 볼까요?",
-    options: [],
+    options: null,
     component : null,
+    free_next : true,
+    user_select_data : null
   },
   {
     step: 2,
@@ -35,6 +38,8 @@ const stepsData = [
       { type: 1, text: "기타", src: "https://d35aaqx5ub95lt.cloudfront.net/images/hdyhau/d4419d84cb57b1295591e05cd60e45fb.svg" },
     ],
     component : SelectBox,
+    free_next : false,
+    user_select_data : null
   },
   {
     step: 3,
@@ -49,6 +54,8 @@ const stepsData = [
       { type: 1, text: "기타", src: "https://d35aaqx5ub95lt.cloudfront.net/images/funboarding/0e2332e8d4074ed5db4ca9152ffd0d25.svg" },
     ],
     component : SelectBox,
+    free_next : false,
+    user_select_data : null
   },
   {
     step: 4,
@@ -61,16 +68,21 @@ const stepsData = [
       { type: 1, text: "복잡한 문제를 해결하고 프로젝트를 완성할 수 있어요", src: "https://d35aaqx5ub95lt.cloudfront.net/images/funboarding/cd5dbf897151b9edc42919324382e4b7.svg" },
     ],
     component : SelectBox,
+    free_next : false,
+    user_select_data : null
   },
   {
     step: 5,
     text: "아래와 같은 목표를 달성할 수 있어요!",
     options: [
-      { type: 2, title: "자신 있게 코드를 작성할 수 있어요", text: "간단한 프로젝트를 완성할 수 있는 연습 문제 3,000개 이상", src: "https://d35aaqx5ub95lt.cloudfront.net/images/funboarding/958e9a5aac8a0aeb099e08c28e327de7.svg" },
-      { type: 2, title: "문제 해결 능력 키우기", text: "실생활에 유용한 알고리즘과 문제 풀이 방법 500개 이상", src: "https://d35aaqx5ub95lt.cloudfront.net/images/funboarding/bc1008ae41c90c9b1a6f63bb9e142f7f.svg" },
-      { type: 2, title: "꾸준한 학습 습관 기르기", text: "스마트 알림과 재미있는 챌린지 기능", src: "https://d35aaqx5ub95lt.cloudfront.net/images/funboarding/3757137c3beb1fbf0bfe21fdf9254023.svg" },
+      { type: 2, title: "자신 있게 코드를 작성할 수 있어요", text: "간단한 프로젝트를 완성할 수 있는 연습 문제 3,000개 이상", src: "https://d35aaqx5ub95lt.cloudfront.net/images/funboarding/958e9a5aac8a0aeb099e08c28e327de7.svg", isLast : false },
+      { type: 2, title: "문제 해결 능력 키우기", text: "실생활에 유용한 알고리즘과 문제 풀이 방법 500개 이상", src: "https://d35aaqx5ub95lt.cloudfront.net/images/funboarding/bc1008ae41c90c9b1a6f63bb9e142f7f.svg", isLast : false },
+      { type: 2, title: "꾸준한 학습 습관 기르기", text: "스마트 알림과 재미있는 챌린지 기능", src: "https://d35aaqx5ub95lt.cloudfront.net/images/funboarding/3757137c3beb1fbf0bfe21fdf9254023.svg", isLast : true },
     ],
     component : LiBox,
+    free_next : true,
+    user_select_data : null
+    
   },
   {
     step: 6,
@@ -82,6 +94,8 @@ const stepsData = [
       { type: 2, title: "하루 20분", text: "진지하게" },
     ],
     component : SelectBox,
+    free_next : false,
+    user_select_data : null
   },
   {
     step: 7,
@@ -91,61 +105,61 @@ const stepsData = [
       { type: 3, title: "내 레벨 찾기", text: "학습 시작 지점을 코코가 추천해드려요.", src: "https://d35aaqx5ub95lt.cloudfront.net/images/funboarding/03d40e9ad439925dfe47e8e77072318f.svg" },
     ],
     component : SelectBox,
+    free_next : false,
+    user_select_data : null
+  },
+  {
+    step: 8,
+    text: "학습 동기를 유지하는 것은 어렵죠...",
+    options: null,
+    component : null,
+    free_next : true,
+    user_select_data : null
+  },
+  {
+    step: 9,
+    text: "그래서 CodingPT는 게임처럼 재미있게 학습하도록 만들었답니다!",
+    options: null,
+    component : null,
+    free_next : true,
+    user_select_data : null
   },
 ];
 
 
-let isBack = false;
 
 const Welcome = () => {
-  // TODO : 사라지는건 리랜더링 시키지 말고 그냥 사라져야할 방향으로 사라지게 애니메이션을 따로 처리하고 
-  // TODO : 그 후에 리랜더링을 시키자!
-  const listVariants = (is_back) => ({
-    hidden: { opacity: 0, x: is_back ? -50 : 50 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.4, ease: "easeInOut" } },
-    exit: { opacity: 0, x: is_back ? 50 : -50, transition: { duration: 0.4, ease: "easeInOut" } },
-  });
   const location = useLocation();
   const contentRef = useRef(null);
+  const navigate = useNavigate();
+
 
   const searchParams = new URLSearchParams(location.search);
-  const [naviData, setNaviData] = useState({
-    step : parseInt(searchParams.get('welcomeStep')) || 0,
-  })
+  const [stepsData, setStepsData] = useState(dummyData);
+  const [welcomeStep, setWelcomeStep] = useState(parseInt(searchParams.get('welcomeStep')) || 0)
   const [isScrolled, setIsScrolled] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(null); 
-  const [btnActive, setBtnActive] = useState(true);
   
   const handleClick = () => {
-    const nextStep = naviData.step + 1;
-    if (nextStep <= stepsData.length) {
-      isBack = false;
-      setNaviData({
-        step: nextStep
-      });
-      console.log(isBack)
-    }
+    const nextStep = welcomeStep + 1;
+    nextStep === stepsData.length ? navigate('/lesson') : setWelcomeStep(nextStep);
   };
   const handleBackClick = () => {
-    const nextStep = naviData.step - 1 < 0 ? 0 : naviData.step - 1 
-    isBack = true;
-    setNaviData({
-      step : nextStep
-    });
-    console.log(isBack)
+    const nextStep = welcomeStep - 1 < 0 ? 0 : welcomeStep - 1 
+    setWelcomeStep(nextStep);
   };
   const handleSelect = (option) => {
-    setBtnActive(true);
-    setSelectedOption(option); // 선택한 옵션을 상태에 저장
+    setStepsData((prevSteps) =>
+      prevSteps.map((step) =>
+        step.step === welcomeStep
+          ? { ...step, user_select_data: option }
+          : step
+      )
+    );
   };
 
 
 
   useEffect(() => {
-    // 뒤로가기 방지 핸들러
-    const handlePopState = (event) => {
-      event.preventDefault();
-    };
   
     // 스크롤 핸들러
     const ref = contentRef.current;
@@ -158,43 +172,64 @@ const Welcome = () => {
       }
     };
     // 이벤트 리스너 등록
-    window.addEventListener('popstate', handlePopState);
     ref.addEventListener("scroll", handleScroll);
   
     // 이벤트 리스너 정리
     return () => {
-      window.removeEventListener('popstate', handlePopState);
       ref.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
 
   // 현재 단계에 해당하는 step 데이터 가져오기
-  const currentStepData = stepsData.find(step => step.step === naviData.step);
-  // 애니메이션 설정
+  const currentStepData = stepsData.find(step => step.step === welcomeStep);
   return (
     <div className="relative flex flex-col items-center justify-center max-w-96 h-screen mx-auto">
       <div className="absolute w-full h-full pointer-events-none">
-        <div className={`absolute top-1/2 left-1/2 ${![0, 1].includes(naviData.step) ? `hidden` : ``} w-max p-2 border border-gray-200 rounded-lg text-cyan-950 font-semibold transform -translate-x-1/2 -translate-y-40`}>
+        <div className={`
+          absolute bottom-1/2 left-1/2 
+          ${currentStepData.options ? `hidden` : ``}
+          w-max
+          max-w-72
+          p-2 border border-gray-200 rounded-lg 
+          text-cyan-950 font-semibold 
+          transform -translate-x-1/2 -translate-y-28
+        `}>
           {currentStepData.text}
         </div>
-        <div className={`absolute ${![0, 1].includes(naviData.step) ? `top-12 left-0` : `top-1/2 left-1/2`} ${![0, 1].includes(naviData.step) ? `max-w-36` : `max-w-64`} w-full h-auto transform ${![0, 1].includes(naviData.step) ? `-translate-x-0 -translate-y-0` : `-translate-x-1/2 -translate-y-1/2`} transition-all duration-500 ease-in-out`} >
+        <div className={`
+          absolute ${currentStepData.options ? `top-12 left-0` : `top-1/2 left-1/2`} 
+          ${currentStepData.options ? `max-w-36` : `max-w-64`} w-full h-auto 
+          transform ${currentStepData.options ? `-translate-x-0 -translate-y-0` : `-translate-x-1/2 -translate-y-1/2`} transition-all duration-500 ease-in-out
+        `}>
           <LottieAnimation width="100%" height="100%" animationKey={'welcome_main'}/>
         </div>
       </div>
 
-
-
-      <div className={`${![0, 1].includes(naviData.step) ? `` :`hidden`} w-full h-48`}>
+      <div className={`
+        ${currentStepData.options ? `` :`hidden`} 
+        w-full h-48
+      `}>
         <div className={`flex items-center h-12 px-4`}>
           <ArrowLeft size={24} color="#083344" onClick={handleBackClick} />
-          <div className="flex w-full h-4 ml-5 rounded-xl bg-cyan-100"></div>
+          <div className="flex w-full h-4 ml-5 rounded-xl bg-cyan-100">
+            <div 
+              className={`h-full rounded-xl bg-cyan-400 transition-all duration-500 ease-in-out`}
+              style={{ width: `${(currentStepData.step / stepsData.length) * 100}%` }}
+            ></div>
+          </div>
         </div>
         <div className="flex h-36">
           <div className="w-40 h-full">
           </div>
           <div className="flex flex-1 items-center h-full pr-4">
-            <div className={`${![0, 1].includes(naviData.step) ? `` : `hidden`} w-full p-2 border border-gray-200 rounded-lg text-cyan-950 font-semibold`}>
+            <div className={
+              `${currentStepData.options ? `` : `hidden`} 
+              w-full 
+              p-2 
+              border border-gray-200 rounded-lg 
+              text-cyan-950 font-semibold
+            `}>
               {currentStepData.text}
             </div>
           </div>
@@ -202,42 +237,33 @@ const Welcome = () => {
       </div>
 
       <div className={`flex-1 w-full px-4 overflow-auto ${isScrolled ? 'border-t border-gray-200' : ''}`} ref={contentRef}>
-        <AnimatePresence mode="wait">
-          {currentStepData && (
-            <motion.div className="overflow-hidden" key={naviData.step}>
-              <motion.ul 
-                className="flex flex-col gap-3 pb-5"
-                initial="hidden"
-                animate="visible"
-                exit="exit"
-                variants={listVariants(isBack)}
-              >
-                {currentStepData.options.map((option, index) => {
-                  const Component = currentStepData.component;
-                  return Component
-                    ? (
-                      <div key={index}>
-                        {React.createElement(Component, {
-                          type: option.type,
-                          text: option.text,
-                          title: option.title,
-                          src: option.src,
-                          onClick: () => handleSelect(option.text),
-                          isSelected: selectedOption === option.text,
-                        })}
-                      </div>
-                    )
-                    : null;
-                })}
-              </motion.ul>
-            </motion.div>
-          )}
-        </AnimatePresence>
+        <ul 
+          className="flex flex-col gap-3 pb-5"
+        >
+          {currentStepData.options?.map((option, index) => {
+            const Component = currentStepData.component;
+            return Component
+              ? (
+                <div key={index}>
+                  {React.createElement(Component, {
+                    type: option.type,
+                    text: option.text,
+                    title: option.title,
+                    src: option.src,
+                    onClick: () => handleSelect(option.text),
+                    isSelected: currentStepData.user_select_data === option.text,
+                    isLast : option.isLast
+                  })}
+                </div>
+              )
+              : null;
+          })}
+        </ul>
       </div>
 
 
       <div className="w-full py-5 px-4 border-t border-l-gray-200">
-        <Btn text="계속하기" color="cyan" onClick={handleClick} disabled={!btnActive} ></Btn>
+      <Btn text="계속하기" color="cyan" onClick={handleClick} disabled={!currentStepData.free_next && !currentStepData.user_select_data}></Btn>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-// src/components/home/SelectBox
+// src/components/component/SelectBox
 import React from 'react';
 
 const SelectBox = ({ type=1, title=null, text, src=null, onClick = () => {}, isSelected }) => {
