@@ -11,13 +11,21 @@ const Btn = ({ text, color='cyan', onClick=()=>{}, disabled }) => {
   if(color === 'white'){
     buttonColorClass = 'bg-white text-cyan-500 active:bg-gray-50 ';
   }
+  if(color === 'red'){
+    buttonColorClass = 'bg-red-500 text-white active:bg-red-600 border-b-red-100'
+  }
+  if(disabled) {
+    buttonColorClass = 'border-b-gray-100 bg-gray-200 text-gray-300'
+  }
   return (
     <div className="
+      
       flex 
-      w-full h-12
+      w-full h-12 
     ">
       <motion.button
         className={`
+          z-0
           h-12 w-full
           border-b-4 rounded-xl 
           ${buttonColorClass} font-semibold
@@ -26,7 +34,7 @@ const Btn = ({ text, color='cyan', onClick=()=>{}, disabled }) => {
           active:mt-1 
           active:border-b-0
           select-none
-          ${disabled ? 'border-b-gray-100 bg-gray-200 text-gray-300 cursor-not-allowed pointer-events-none' : ``}
+          ${disabled ? 'cursor-not-allowed pointer-events-none' : ``}
 
         `}
         disabled={disabled} 
