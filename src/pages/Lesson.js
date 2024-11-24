@@ -41,6 +41,7 @@ const Lesson = () => {
   };
   // 현재 단계에 해당하는 step 데이터 가져오기
   const currentStepData = stepsData.find(step => step.step === lessonStep);
+  console.log(currentStepData)
   return (
     <div className="relative flex flex-col items-center justify-center max-w-96 h-screen mx-auto">
       <div
@@ -70,14 +71,13 @@ const Lesson = () => {
         </div>
         <div className={`flex-1`}>
           <h1 className={`text-2xl font-bold`}>{currentStepData.title}</h1>
-          {currentStepData === 1 ?
+          {currentStepData.type === 1 ?
             <div>
               <div className="flex h-36">
                 <div className="
                   w-28 h-full
                 ">
                   <LottieAnimation width="100%" height="100%" animationKey={'welcome_main'}/>
-
                 </div>
                 <div className="flex flex-1 items-center h-full">
                   <div className={`
@@ -91,39 +91,41 @@ const Lesson = () => {
                 </div>
               </div>
               <div className={`flex-1 w-full overflow-auto`}>
-              <ul className="flex flex-col gap-3">
-                {currentStepData.options.map((option, index) => (
-                <li 
-                  className="
-                    w-full
-                    break-words whitespace-normal
-                  " 
-                  key={index} 
-                  onClick={() => handleSelect(option.text)}
-                > 
-                  <div
-                    className={`
+                <ul className="flex flex-col gap-3">
+                  {currentStepData.options.map((option, index) => (
+                  <li 
+                    className="
                       w-full
-                      px-4 py-2
-                      border-2 border-b-4 rounded-xl 
-                      font-semibold
-                      select-none cursor-pointer 
-                      active:mt-[2px]
-                      active:border-b-2
-                      active:border-cyan-400
-                      active:bg-cyan-50
-                      ${currentStepData.user_select_data === option.text ? 'border-cyan-400 text-cyan-500 bg-cyan-50' : ''}
-                    `}
-                  >
-                    <span>{option.text}</span>
-                  </div>
-                </li>
-                ))}
-              </ul>
+                      break-words whitespace-normal
+                    " 
+                    key={index} 
+                    onClick={() => handleSelect(option.text)}
+                  > 
+                    <div
+                      className={`
+                        w-full
+                        px-4 py-2
+                        border-2 border-b-4 rounded-xl 
+                        font-semibold
+                        select-none cursor-pointer 
+                        active:mt-[2px]
+                        active:border-b-2
+                        active:border-cyan-400
+                        active:bg-cyan-50
+                        ${currentStepData.user_select_data === option.text ? 'border-cyan-400 text-cyan-500 bg-cyan-50' : ''}
+                      `}
+                    >
+                      <span>{option.text}</span>
+                    </div>
+                  </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-          </div>
           : 
-          <div></div>
+            <div>
+              
+            </div>
           }
             
         </div>
