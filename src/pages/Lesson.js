@@ -1,12 +1,28 @@
 // src/pages/Lesson.js
-import React, {useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import { useLocation } from 'react-router-dom';
 import { X, Star, LampPendant } from "@phosphor-icons/react";
 import Btn from '../components/component/Btn';
 import LottieAnimation from '../components/LottieAnimation';
 import { LessonDummy } from '../dummys/LessonDummy';
+import * as monaco from 'monaco-editor';
 
-
+// Web Worker 경로 설정
+window.MonacoEnvironment = {
+  getWorker: function (moduleId, label) {
+    if (label === 'typescript' || label === 'javascript') {
+      return new Worker(
+        new URL(
+          'monaco-editor/esm/vs/language/typescript/ts.worker',
+          import.meta.url
+        )
+      );
+    }
+    return new Worker(
+      new URL('monaco-editor/esm/vs/editor/editor.worker', import.meta.url)
+    );
+  },
+};
 
 const Lesson = () => {
   const location = useLocation();
@@ -15,6 +31,33 @@ const Lesson = () => {
 
   const [stepsData, setStepsData] = useState(LessonDummy);
   const [lessonStep, setLessonStep] = useState(parseInt(searchParams.get('lessonStep')) || 0)
+
+  // 현재 단계에 해당하는 step 데이터 가져오기
+  const currentStepData = stepsData.find(step => step.step === lessonStep);
+  console.log(currentStepData)
+
+  const htmlEditorRef = useRef(null);
+  useEffect(() => {
+    if (htmlEditorRef.current) {
+      const editor = monaco.editor.create(htmlEditorRef.current, {
+        value: currentStepData.content.contextCode[0].code,
+        language: currentStepData.content.contextCode[0].type, 
+        theme: 'vs-dark', 
+        minimap: { enabled: false }, 
+        lineNumbers: 'off', 
+        readOnly: false, // 읽기 전용을 원하면 true로 설정
+        accessibilitySupport: 'off', // 접근성 관련 UI 숨김
+        tabIndex: -1, // 에디터 포커스 제어
+      });
+  
+      return () => {
+        editor.dispose();
+      };
+    }
+  }, []);
+  
+  
+  
 
   const [isCorrect, setIsCorrect] = useState(null);
 
@@ -39,9 +82,7 @@ const Lesson = () => {
       )
     );
   };
-  // 현재 단계에 해당하는 step 데이터 가져오기
-  const currentStepData = stepsData.find(step => step.step === lessonStep);
-  console.log(currentStepData)
+  
   return (
     <div className="relative flex flex-col items-center justify-center max-w-96 h-screen mx-auto">
       <div
@@ -70,8 +111,66 @@ const Lesson = () => {
           </div>
         </div>
         <div className={`flex-1`}>
+          {/* title */}
           <h1 className={`text-2xl font-bold`}>{currentStepData.title}</h1>
-          {currentStepData.type === 1 ?
+          {currentStepData.inputType === "single-select" && 
+          <div>
+            {/* description */}
+            <div className="flex">
+              <div className="flex flex-1 items-center h-full">
+                <div className={`w-full p-2 border border-gray-200 rounded-lg text-cyan-950 font-semibold`}>
+                  {currentStepData.content.description}
+                </div>
+              </div>
+            </div>
+            {/* html */}
+            <div
+              ref={htmlEditorRef}
+              style={{
+                borderRadius: '16px',
+                overflow: 'hidden',
+                height: 'auto', // 기본 높이: 내부 콘텐츠에 맞춤
+                minHeight: '150px', // 최소 높이
+                maxHeight: '500px', // 최대 높이
+              }}
+            ></div>
+
+            {/* options */}
+            <div className={`flex-1 w-full overflow-auto`}>
+              <ul className="flex flex-col gap-3">
+                {currentStepData.content.options.map((option, index) => (
+                <li 
+                  className="w-full break-words whitespace-normal" 
+                  key={index} 
+                  onClick={() => handleSelect(option.text)}
+                  >
+                    <div
+                      className={`
+                        w-full
+                        px-4 py-2
+                        border-2 border-b-4 rounded-xl 
+                        font-semibold
+                        select-none cursor-pointer 
+                        active:mt-[2px]
+                        active:border-b-2
+                        active:border-cyan-400
+                        active:bg-cyan-50
+                        ${currentStepData.user_select_data === option.text ? 'border-cyan-400 text-cyan-500 bg-cyan-50' : ''}
+                      `}
+                    >
+                      <span>{option.text}</span>
+                    </div>
+                </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          }
+          {currentStepData.inputType === "multi-select" && `
+          `}
+          {currentStepData.inputType === "text-input" && `
+          `}
+          {/* {currentStepData.type === 1 ?
             <div>
               <div className="flex h-36">
                 <div className="
@@ -126,7 +225,7 @@ const Lesson = () => {
             <div>
               
             </div>
-          }
+          } */}
             
         </div>
         <div className={`
