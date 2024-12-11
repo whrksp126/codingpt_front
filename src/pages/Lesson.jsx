@@ -15,14 +15,20 @@ window.MonacoEnvironment = {
         new URL(
           'monaco-editor/esm/vs/language/typescript/ts.worker',
           import.meta.url
-        )
+        ),
+        { type: 'module' }
       );
     }
     return new Worker(
-      new URL('monaco-editor/esm/vs/editor/editor.worker', import.meta.url)
+      new URL(
+        'monaco-editor/esm/vs/editor/editor.worker',
+        import.meta.url
+      ),
+      { type: 'module' }
     );
   },
 };
+
 
 const Lesson = () => {
   const location = useLocation();
@@ -38,24 +44,23 @@ const Lesson = () => {
 
   const htmlEditorRef = useRef(null);
   useEffect(() => {
-    if (htmlEditorRef.current) {
+    if (htmlEditorRef.current && currentStepData?.content?.contextCode?.[0]) {
       const editor = monaco.editor.create(htmlEditorRef.current, {
-        value: currentStepData.content.contextCode[0].code,
-        language: currentStepData.content.contextCode[0].type, 
-        theme: 'vs-dark', 
-        minimap: { enabled: false }, 
-        lineNumbers: 'off', 
-        readOnly: false, // 읽기 전용을 원하면 true로 설정
-        accessibilitySupport: 'off', // 접근성 관련 UI 숨김
-        tabIndex: -1, // 에디터 포커스 제어
+        value: currentStepData.content.contextCode[0].code || '// 코드를 입력하세요',
+        language: currentStepData.content.contextCode[0].type || 'javascript',
+        theme: 'vs-dark',
+        minimap: { enabled: false },
+        lineNumbers: 'off',
+        readOnly: true,
+        accessibilitySupport: 'off',
+        tabIndex: -1,
       });
   
       return () => {
         editor.dispose();
       };
     }
-  }, []);
-  
+  }, [htmlEditorRef, currentStepData]);
   
   
 
@@ -129,12 +134,12 @@ const Lesson = () => {
               style={{
                 borderRadius: '16px',
                 overflow: 'hidden',
-                height: 'auto', // 기본 높이: 내부 콘텐츠에 맞춤
-                minHeight: '150px', // 최소 높이
-                maxHeight: '500px', // 최대 높이
+                height: 'auto', 
+                minHeight: '150px', 
+                maxHeight: '500px', 
+                pointerEvents: 'none', 
               }}
             ></div>
-
             {/* options */}
             <div className={`flex-1 w-full overflow-auto`}>
               <ul className="flex flex-col gap-3">

@@ -1,8 +1,8 @@
 // src/components/home/main
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import LottieAnimation from '../LottieAnimation.js';
-import Btn from '../component/Btn.js';
+import LottieAnimation from '../LottieAnimation';
+import Btn from '../component/Btn';
 const Main = () => {
   const navigate = useNavigate();
   const handleStartClick = () => {

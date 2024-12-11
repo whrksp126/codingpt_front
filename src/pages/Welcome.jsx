@@ -1,10 +1,10 @@
 // src/pages/Welcome.js
 import React, { useEffect, useState, useRef  } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import Btn from './../components/component/Btn.js';
-import SelectBox from '../components/component/SelectBox.js';
-import LiBox from '../components/component/LiBox.js';
-import LottieAnimation from '../components/LottieAnimation.js';
+import Btn from '../components/component/Btn';
+import SelectBox from '../components/component/SelectBox';
+import LiBox from '../components/component/LiBox';
+import LottieAnimation from '../components/LottieAnimation';
 import { ArrowLeft } from "@phosphor-icons/react";
 
 const dummyData = [
