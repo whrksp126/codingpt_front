@@ -280,7 +280,7 @@ export const LessonDummy = [
       },
       {
         "type": "webview",
-        "content": "<html>...</html>",
+        "content": "<html> \n <head> \n  <style> \n   body { \n    font-family: sans-serif; \n    color: #2C3E50; \n    background-color: #9aa4d2; \n    margin-top: 5%; \n    min-height: 300px; \n   } \n    \n   button[disabled] { \n    opacity: 0.5; \n    cursor: default; \n   } \n    \n   h2, \n   h1, \n   #result { \n    text-align: center; \n    margin: 5px; \n   } \n    \n   #letterButtons { \n    display: flex; \n    flex-direction: row; \n    flex-wrap: wrap; \n    width: 100%; \n    padding: 0; \n    justify-content: center; \n   } \n    \n   button { \n    width: 40px; \n    height: 40px; \n    background-color: #34495E; \n    color: #FFF; \n    font-size: 14px; \n    border: none; \n    border-radius: 5px; \n    cursor: pointer; \n    margin: 7px; \n    text-align: center; \n   } \n    \n   #result { \n    width: 80%; \n    height: 20px; \n    padding: 10px; \n    font-size: 1.3em; \n    margin: 0px auto; \n    border-radius: 5px; \n    color: white; \n    font-weight: bold; \n   } \n    \n   img { \n    width: 80%; \n    max-width:150px; \n    height: auto; \n    border-radius: 5px; \n    margin: 10px auto; \n    text-align: center; \n    display: none; \n    justify-content: center; \n    border: white 2px solid; \n   } \n  </style> \n </head> \n <body> \n  <h1 id=\"result\">Guess the letter</h1> \n  <h2>_ O G</h2> \n  <img> \n  <div id=\"letterButtons\"> \n   <button>Q</button> \n   <button>R</button> \n   <button>D</button> \n  </div> \n  <script> \n   let letterButtons = document.querySelectorAll( \n    '#letterButtons button'); \n   let result = document.getElementById('result'); \n   let image = document.getElementsByTagName(\"img\")[0]; \n   let correctLetter = 'D'; \n   let word = document.querySelector('h2'); \n   letterButtons.forEach(button => { \n    button.addEventListener('click', function() { \n     let letter = this.textContent; \n     if (letter !== correctLetter) { \n      button.disabled = true; \n     } \n     if (letter === correctLetter) { \n      result.innerHTML = 'Correct!'; \n      result.style.color = \"#046865\"; \n      image.style.display = \"flex\"; \n      image.src = 'https://mimo.app/i/dog_yawn.png'; \n      word.textContent = 'D O G'; \n      letterButtons.forEach(button => { \n       button.disabled = true; \n      }); \n     } else { \n      result.innerHTML = 'Try again'; \n      result.style.color = \"#D1345B\"; \n     } \n    }); \n   }); \n  </script> \n </body> \n</html>",
         "visibleIf": "always"
       }
     ],
@@ -344,6 +344,117 @@ export const LessonDummy = [
       {
         "type": "paragraph",
         "content": "`<button>`, `Q`, 그리고 `</button>` 순서대로 선택하세요.",
+        "visibleIf": "wrong"
+      }
+    ]
+  },
+  {
+    "type": "Interactive",
+    "id": 75822,
+    "index": 9,
+    "preInteractionModules": [
+      {
+        "type": "paragraph",
+        "content": "\"R\" 라벨이 있는 버튼을 만듭니다.",
+        "visibleIf": "always"
+      }
+    ],
+    "interactionModule": {
+      "type": "codeFillTheGap",
+      "files": [
+        {
+          "isInteractive": true,
+          "name": "index.html",
+          "content": "<button>Q</button>\n<button>R</button>",
+          "codeLanguage": "html"
+        }
+      ],
+      "interactionOptions": [
+        {
+          "startIndex": 19,
+          "endIndex": 20,
+          "startLine": 1,
+          "startPos": 0,
+          "length": 1,
+          "value": "<",
+          "correct": true
+        },
+        {
+          "startIndex": 20,
+          "endIndex": 26,
+          "startLine": 1,
+          "startPos": 1,
+          "length": 6,
+          "value": "button",
+          "correct": true
+        },
+        {
+          "startIndex": 26,
+          "endIndex": 27,
+          "startLine": 1,
+          "startPos": 7,
+          "length": 1,
+          "value": ">",
+          "correct": true
+        },
+        {
+          "startIndex": 27,
+          "endIndex": 28,
+          "startLine": 1,
+          "startPos": 8,
+          "length": 1,
+          "value": "R",
+          "correct": true
+        },
+        {
+          "startIndex": 28,
+          "endIndex": 29,
+          "startLine": 1,
+          "startPos": 9,
+          "length": 1,
+          "value": "<",
+          "correct": true
+        },
+        {
+          "startIndex": 29,
+          "endIndex": 30,
+          "startLine": 1,
+          "startPos": 10,
+          "length": 1,
+          "value": "/",
+          "correct": true
+        },
+        {
+          "startIndex": 30,
+          "endIndex": 36,
+          "startLine": 1,
+          "startPos": 11,
+          "length": 6,
+          "value": "button",
+          "correct": true
+        },
+        {
+          "startIndex": 36,
+          "endIndex": 37,
+          "startLine": 1,
+          "startPos": 17,
+          "length": 1,
+          "value": ">",
+          "correct": true
+        }
+      ],
+      "wrongOptions": [],
+      "output": null
+    },
+    "postInteractionModules": [
+      {
+        "visibleIf": "correct",
+        "type": "webview",
+        "content": "<html>\n <head>\n  <style>\n   body {\n    font-family: sans-serif;\n    color: #2C3E50;\n    background-color: #9aa4d2;\n    margin-top: 5%;\n    min-height: 300px;\n   }\n   \n   button[disabled] {\n    opacity: 0.5;\n    cursor: default;\n   }\n   \n   h2,\n   h1,\n   #result {\n    text-align: center;\n    margin: 5px;\n   }\n   \n   #letterButtons {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    width: 100%;\n    padding: 0;\n    justify-content: center;\n   }\n   \n   button {\n    width: 40px;\n    height: 40px;\n    background-color: #34495E;\n    color: #FFF;\n    font-size: 14px;\n    border: none;\n    border-radius: 5px;\n    cursor: pointer;\n    margin: 7px;\n    text-align: center;\n   }\n   \n   #result {\n    width: 80%;\n    height: 20px;\n    padding: 10px;\n    font-size: 1.3em;\n    margin: 0px auto;\n    border-radius: 5px;\n    color: white;\n    font-weight: bold;\n   }\n   \n   img {\n    width: 80%;\n    max-width:150px;\n    height: auto;\n    border-radius: 5px;\n    margin: 10px auto;\n    text-align: center;\n    display: none;\n    justify-content: center;\n    border: white 2px solid;\n   }\n  </style>\n </head>\n <body>\n  <h1 id=\"result\">Guess the letter</h1>\n  <h2>_ O G</h2>\n  <img>\n  <div id=\"letterButtons\">\n   <button>Q</button>\n   <button>R</button>\n  </div>\n  <script>\n   let letterButtons = document.querySelectorAll(\n    '#letterButtons button');\n   let result = document.getElementById('result');\n   let image = document.getElementsByTagName(\"img\")[0];\n   let correctLetter = 'D';\n   let word = document.querySelector('h2');\n   letterButtons.forEach(button => {\n    button.addEventListener('click', function() {\n     let letter = this.textContent;\n     if (letter !== correctLetter) {\n      button.disabled = true;\n     }\n     if (letter === correctLetter) {\n      result.innerHTML = 'Correct!';\n      result.style.color = \"#046865\";\n      image.style.display = \"flex\";\n      image.src = 'https://mimo.app/i/dog_yawn.png';\n      word.textContent = 'D O G';\n      letterButtons.forEach(button => {\n       button.disabled = true;\n      });\n     } else {\n      result.innerHTML = 'Try again';\n      result.style.color = \"#D1345B\";\n     }\n    });\n   });\n  </script>\n </body>\n</html>"
+      },
+      {
+        "type": "paragraph",
+        "content": "`<`, `button`, `>`, `R`, `<`, `/`, `button`, `>`을 선택하세요.",
         "visibleIf": "wrong"
       }
     ]

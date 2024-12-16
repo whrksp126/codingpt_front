@@ -1,31 +1,13 @@
 // src/pages/Lesson.js
-import React, {useEffect, useMemo, useRef, useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
 import { X, Star, LampPendant } from "@phosphor-icons/react";
 import Btn from '../components/component/Btn';
 // import LottieAnimation from '../components/LottieAnimation';
 import { LessonDummy } from '../dummys/LessonDummy';
-import * as monaco from 'monaco-editor';
 
 import ReactMarkdown from 'react-markdown';
 
-const languageMap = {
-  js: 'javascript',
-  javascript: 'javascript',
-  JavaScript: 'javascript',
-  ts: 'typescript',
-  typescript: 'typescript',
-  html: 'html',
-  css: 'css',
-  py: 'python',
-  python: 'python',
-  java: 'java',
-  cpp: 'cpp',
-  c: 'c',
-};
-const getLanguage = (input) => {
-  return languageMap[input] || 'plaintext'; // 기본값은 'plaintext'
-};
 const Lesson = () => {
   const inputRefs = useRef([]);
   const [disabledOptions, setDisabledOptions] = useState([]); // 비활성화된 옵션 상태
@@ -39,30 +21,74 @@ const Lesson = () => {
 
   const currentStepData = stepsData.find((step) => step.index === lessonStep);
   const [isCorrect, setIsCorrect] = useState(null);
+  useEffect(()=>{
+    // options 세팅
+    LessonDummy.forEach((dummy)=>{
+      if(dummy?.interactionModule?.interactionOptions){
+        const values = dummy.interactionModule.interactionOptions.map(({value})=>{return value})
+        dummy.options = [...dummy.interactionModule.wrongOptions, ...values];
+        function shuffleArray(array) {
+          for (let i = array.length - 1; i > 0; i--) {
+            const randomIndex = Math.floor(Math.random() * (i + 1));
+            [array[i], array[randomIndex]] = [array[randomIndex], array[i]]; // Swap
+          }
+          return array;
+        }
+        dummy.options = shuffleArray(dummy.options);
+      }
+    })
+  },[])
+
+  const resetInputRefs = () => {
+    // 기존 참조 초기화
+    inputRefs.current.forEach((inputRef) => {
+      if (inputRef) {
+        inputRef.value = ""; // 값 제거
+      }
+    });
+    inputRefs.current = []; // 완전히 새로운 배열로 초기화
+  };
+
 
   const handleClick = () => {
-    const interactionOptions = currentStepData?.interactionModule?.interactionOptions
-    
-    if(interactionOptions){
-      const hasIncorrectAnswer = interactionOptions.some((option, index) => option.value !== inputRefs.current[index]?.value);
-      const postInteractionModules = currentStepData?.postInteractionModules
-      if(hasIncorrectAnswer){
-        console.log('오답');
-        const content = postInteractionModules.find((postInteractionModule)=>postInteractionModule.visibleIf === "wrong");
-        console.log(content);
-        
-        setIsCorrect(false);
-      }else{
-        console.log('정답');
-        const content = postInteractionModules.find((postInteractionModule)=>postInteractionModule.visibleIf === "correct");
-        console.log(content);
-        // 문제가 해결되었습니다. 잘했어요!
-        setIsCorrect(true);
+    if(currentStepData?.interactionModule?.type === "codeFillTheGap") {
+      const interactionOptions = currentStepData?.interactionModule?.interactionOptions
+      if(interactionOptions){
+        const hasIncorrectAnswer = interactionOptions.some((option, index) => option.value !== inputRefs.current[index]?.value);
+        const postInteractionModules = currentStepData?.postInteractionModules
+        if(hasIncorrectAnswer){
+          const content = postInteractionModules.find((postInteractionModule)=>postInteractionModule.visibleIf === "wrong");
+          console.log(content)
+          setIsCorrect(false);
+        }else{
+          const content = postInteractionModules.find((postInteractionModule)=>postInteractionModule.visibleIf === "correct");
+          console.log(content)
+          setIsCorrect(true); 
+        }
+        if(isCorrect !== null){
+          resetInputRefs();
+          setIsCorrect(null);
+          const nextStep = lessonStep + 1;
+          nextStep === stepsData.length ? Navigate('/lesson') : setLessonStep(nextStep);
+          setDisabledOptions([]);
+          setAllInputsFilled(false);
+        }
+      }
+    }else if(currentStepData?.interactionModule?.type === "multipleChoice") {
+      setIsCorrect(currentStepData?.interactionModule.items[disabledOptions[0]].correct);
+      if(isCorrect !== null){
+        resetInputRefs();
+        setIsCorrect(null);
+        const nextStep = lessonStep + 1;
+        nextStep === stepsData.length ? Navigate('/lesson') : setLessonStep(nextStep);
+        setDisabledOptions([]);
+        setAllInputsFilled(false);
       }
     }else{
       const nextStep = lessonStep + 1;
       nextStep === stepsData.length ? Navigate('/lesson') : setLessonStep(nextStep);
     }
+    
   };
 
   const handleSelect = (option) => {
@@ -76,21 +102,22 @@ const Lesson = () => {
   };
   // option 클릭 시
   const clickOptionItem = (event) => {
-    const selectedValue = event.target.textContent; // 클릭한 옵션 값
-    const index = event.target.dataset.index; // 옵션의 고유 인덱스
-
-    // 첫 번째 값이 없는 input 찾기
-    const emptyInput = inputRefs.current.find((input) => input && !input.value);
-
-    if (emptyInput) {
-      emptyInput.value = selectedValue; // 값 삽입
-      emptyInput.dataset.optionIndex = index; // input에 옵션 인덱스를 저장
-      emptyInput.dispatchEvent(new Event("input", { bubbles: true })); // React에서 input 이벤트 트리거
-
-      // 클릭한 옵션 비활성화
-      setDisabledOptions((prev) => [...prev, parseInt(index)]);
+    const selectedValue = event.target.textContent; 
+    const index = event.target.dataset.index; 
+    if(currentStepData?.interactionModule?.type === "codeFillTheGap") {
+      const emptyInput = inputRefs.current.find((input) => input && !input.value);
+      if (emptyInput) {
+        emptyInput.value = selectedValue; 
+        emptyInput.dataset.optionIndex = index; 
+        emptyInput.dispatchEvent(new Event("input", { bubbles: true })); 
+        setDisabledOptions((prev) => [...prev, parseInt(index)]);
+      }
+      checkAllInputsFilled();
     }
-    checkAllInputsFilled();
+    if(currentStepData?.interactionModule?.type === "multipleChoice") {
+      setDisabledOptions([index]);
+      setAllInputsFilled(true);
+    }    
   };
   // input value 제거
   const clearInputValue = (event) => {
@@ -115,15 +142,8 @@ const Lesson = () => {
     setAllInputsFilled(allFilled); // 상태 업데이트
   };
   // JSON 데이터를 기반으로 옵션 `<button>` 태그 생성 및 랜덤 섞기
-  const generateOptionBtns = (interactionOptions, wrongOptions) => {
+  const generateOptionBtns = (options) => {
     const elements = [];
-    const options = [...interactionOptions.map((opt) => opt.value), ...wrongOptions];
-
-    // 랜덤 섞기 (Fisher-Yates 알고리즘)
-    for (let i = options.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [options[i], options[j]] = [options[j], options[i]];
-    }
 
     options.forEach((option, index) => {
       elements.push(
@@ -147,17 +167,20 @@ const Lesson = () => {
   };
   
   // JSON 데이터를 기반으로 라인별 코드와 `<input>` 태그를 생성
-  const generateCodeWithInputs = (content, options) => {
+  const generateCodeWithInputs = (interactionModule) => {
+    const content = interactionModule.files[0].content
+    const options = interactionModule.interactionOptions
     const lines = content.split("\n"); // 전체 내용을 라인 단위로 분리
     const elements = [];
+
     lines.forEach((line, lineIndex) => {
       let lineElements = [];
       let lastIndex = 0;
 
-      // 해당 라인에 포함된 옵션 필터링
       const lineOptions = options.filter((option) => option.startLine === lineIndex);
+
       lineOptions.forEach((option, optionIndex) => {
-        const { startPos, endIndex, length } = option;
+        const { startPos, endIndex, length, value } = option;
 
         // `<code>` 태그 추가 (startPos 이전의 텍스트)
         if (startPos > lastIndex) {
@@ -172,14 +195,25 @@ const Lesson = () => {
         lineElements.push(
           <input
             key={`input-${lineIndex}-${optionIndex}`}
-            ref={(el) => (inputRefs.current[lineIndex + optionIndex] = el)} // input ref 배열에 저장
+            ref={(el) => {
+              if (el) {
+                // 중복 방지 및 null 값 제외
+                if (!inputRefs.current.includes(el)) {
+                  inputRefs.current.push(el);
+                }
+              } else {
+                // 요소가 삭제되면 배열에서 제거
+                inputRefs.current = inputRefs.current.filter((ref) => ref !== null);
+              }
+            }}
             className="ml-1 h-5 min-w-[21px] border border-gray-700 rounded-md bg-gray-800 text-center text-sm text-white caret-blue-400 focus:border-blue-500 focus:ring focus:ring-blue-300 focus:outline-none"
             style={{ width: `calc(${length}ch + 12px)` }}
-            readOnly // input을 비활성화
-            onClick={(event) => clearInputValue(event)} // 클릭 시 값 제거
+            readOnly // 읽기 전용
+            onClick={(event) => clearInputValue(event)}
           />
         );
-        lastIndex = endIndex - lineOptions[0].startIndex; // 라인 내에서 현재 인덱스 업데이트
+
+        lastIndex = endIndex;
       });
 
       // 마지막 `<code>` 태그 처리
@@ -197,10 +231,12 @@ const Lesson = () => {
         </div>
       );
     });
+
     return elements;
   };
-
-  
+  const postModule = currentStepData.postInteractionModules.find(
+    ({ visibleIf }) => visibleIf === (isCorrect ? "correct" : "wrong")
+  );
   return (
     <div className="relative flex flex-col items-center justify-center max-w-96 h-screen mx-auto">
       <div
@@ -235,7 +271,7 @@ const Lesson = () => {
           {currentStepData.type === "Interactive" && 
           <div>
             {/* preInteractionModules */}
-            <div className="flex flex-1 items-center h-full">
+            <div className="flex flex-1 items-center h-full m-4">
               <div className={`flex flex-col text-center gap-4 w-full text-cyan-950 font-semibold`}>
                 {currentStepData.preInteractionModules.map((data, index)=> { return (
                 <div key={index}>
@@ -258,7 +294,10 @@ const Lesson = () => {
             </div>
             {/* interactionModule */}
             {currentStepData.interactionModule !== null && 
+            
+            
             <div className={`flex w-full justify-center`}>
+              {currentStepData.interactionModule.type === 'codeFillTheGap' &&
               <div className={`min-w-[300px] max-w-[664px] flex-1 bg-product-background-primary-light dark:bg-product-background-primary-dark`}>
                 <div className={`relative flex flex-col`}>
                   <div className={`relative flex max-h-[440px] w-full flex-col overflow-hidden rounded-xl border border-indigo-800 bg-product2-background-dark`}>
@@ -270,141 +309,40 @@ const Lesson = () => {
                     </div>
                     {/* programming language */}
                     <pre className="h-56 overflow-y-auto bg-gray-900 px-4 py-3 text-sm text-white">
-                      {generateCodeWithInputs(currentStepData.interactionModule.files[0].content, currentStepData.interactionModule.interactionOptions)}
+                      {generateCodeWithInputs(currentStepData.interactionModule)}
                     </pre>
+                    
                   </div>
                   {/* programming Options */}
                   <div className={`mt-8 flex flex-wrap items-center justify-center gap-y-2 space-x-4`}>
-                      <div className={`relative`}>
-                        {generateOptionBtns(currentStepData.interactionModule.interactionOptions, currentStepData.interactionModule.wrongOptions)}
-                      </div>
+                        {generateOptionBtns(currentStepData.options)}
+                      {/* <div className={`relative`}>
+                      </div> */}
                     </div>
                 </div>
               </div>
+              }
+              {currentStepData.interactionModule.type === 'multipleChoice' && 
+              <div className="max-w-[664px] flex-1">
+                <div className="z-20 flex w-full flex-col items-center">
+                  {currentStepData.interactionModule.items.map((item, index) => (
+                  <div key={index} className="relative w-full max-w-[480px]">
+                    <button 
+                      data-index={index}
+                      onClick={(event) => clickOptionItem(event)}
+                      className="mb-3 flex min-h-10 w-full items-center justify-between space-x-2 rounded-lg border border-b-2 py-2 pl-3 pr-2 text-left hover:bg-gray-200 border-gray-400"
+                    >
+                      {item.text}
+                    </button>
+                  </div>
+                  ))}
+                </div>
+              </div>
+              }            
             </div>
             }
           </div>
           }
-
-
-
-          {currentStepData.inputType === "single-select" && 
-          <div>
-            {/* description */}
-
-            <div className="flex">
-              <div className="flex flex-1 items-center h-full">
-                <div className={`w-full p-2 border border-gray-200 rounded-lg text-cyan-950 font-semibold`}>
-                  {currentStepData.content.description}
-                </div>
-              </div>
-            </div>
-            
-            {/* {currentStepData.content.contextCode.map((context, index) => { return (
-            <div
-              key={index} // map 내부에서는 key가 필요
-              ref={refList[index]} // 각 div에 고유한 ref 연결
-              className="relative"
-              style={{borderRadius: '12px',overflow: 'hidden',pointerEvents: 'none',}}
-            >
-              <div className="absolute bottom-0 right-4 z-10 text-xs font-semibold text-gray-500">
-                {context.label}.{context.type}
-              </div>
-            </div>
-            )})} */}
-
-            {/* options */}
-            <div className={`flex-1 w-full overflow-auto`}>
-              <ul className="flex flex-col gap-3">
-                {currentStepData.content.options.map((option, index) => (
-                <li 
-                  className="w-full break-words whitespace-normal" 
-                  key={index} 
-                  onClick={() => handleSelect(option.text)}
-                  >
-                    <div
-                      className={`
-                        w-full
-                        px-4 py-2
-                        border-2 border-b-4 rounded-xl 
-                        font-semibold
-                        select-none cursor-pointer 
-                        active:mt-[2px]
-                        active:border-b-2
-                        active:border-cyan-400
-                        active:bg-cyan-50
-                        ${currentStepData.user_select_data === option.text ? 'border-cyan-400 text-cyan-500 bg-cyan-50' : ''}
-                      `}
-                    >
-                      <span>{option.text}</span>
-                    </div>
-                </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          }
-          {currentStepData.inputType === "multi-select" && `
-          `}
-          {currentStepData.inputType === "text-input" && `
-          `}
-          {/* {currentStepData.type === 1 ?
-            <div>
-              <div className="flex h-36">
-                <div className="
-                  w-28 h-full
-                ">
-                  <LottieAnimation width="100%" height="100%" animationKey={'welcome_main'}/>
-                </div>
-                <div className="flex flex-1 items-center h-full">
-                  <div className={`
-                    w-full 
-                    p-2 
-                    border border-gray-200 rounded-lg 
-                    text-cyan-950 font-semibold
-                  `}>
-                    {currentStepData.text}
-                  </div>
-                </div>
-              </div>
-              <div className={`flex-1 w-full overflow-auto`}>
-                <ul className="flex flex-col gap-3">
-                  {currentStepData.options.map((option, index) => (
-                  <li 
-                    className="
-                      w-full
-                      break-words whitespace-normal
-                    " 
-                    key={index} 
-                    onClick={() => handleSelect(option.text)}
-                  > 
-                    <div
-                      className={`
-                        w-full
-                        px-4 py-2
-                        border-2 border-b-4 rounded-xl 
-                        font-semibold
-                        select-none cursor-pointer 
-                        active:mt-[2px]
-                        active:border-b-2
-                        active:border-cyan-400
-                        active:bg-cyan-50
-                        ${currentStepData.user_select_data === option.text ? 'border-cyan-400 text-cyan-500 bg-cyan-50' : ''}
-                      `}
-                    >
-                      <span>{option.text}</span>
-                    </div>
-                  </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          : 
-            <div>
-              
-            </div>
-          } */}
-            
         </div>
         <div className={`
           relative
@@ -428,21 +366,22 @@ const Lesson = () => {
                 ${isCorrect ? "text-cyan-500" : "text-red-500"}
                 
               `}>
-                {isCorrect ? "완벽합니다! 잘했어요!" : "정답:"}
+                {isCorrect ? "완벽합니다! 잘했어요!" : "뭔가 잘못됐어"}
               </h2>
               <div className={`
                 ${isCorrect ? "text-cyan-500" : "text-red-500"}
                 text-sm
               `}>
-                {!isCorrect ? currentStepData.answer : ""}
+                <ReactMarkdown>
+                  {postModule?.type === "paragraph" && postModule?.content}
+                </ReactMarkdown>
               </div>
             </div>
-            <div>
+            {/* <div>
               <LampPendant size={24} className={`
                 ${isCorrect ? "text-cyan-500" : "text-red-500"}
-
               `} />
-            </div>
+            </div> */}
           </div> 
           : ``}
           
