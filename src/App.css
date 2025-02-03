@@ -3,6 +3,25 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+
+  --logo-main-color : #58cc02;
+
+  --main-btn-color : #93d333;
+
+  --blue-color : #49c0f8;
+  --red-color : #d84848;
+  --purple-color : #ce82ff;
+  --orange-color : #ffab33;
+  
+  --border-color : #37464f;
+  
+  --progress-color : #ffc700;
+  
+  --background-color : #131f24;
+  --span-color : #f1f7fb;
+  --p-color : #dce6ec;
+  --disabled-span-color : #52656d;
+  
 }
 
 .logo {

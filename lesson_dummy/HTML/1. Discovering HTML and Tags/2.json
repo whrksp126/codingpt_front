@@ -1,0 +1,750 @@
+{
+  "abTests": {
+
+  },
+  "__N_SSG": true,
+  "pageProps": {
+    "lessons": [
+      {
+        "type": "Interactive",
+        "id": 76817,
+        "index": 0,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "In HTML, the keywords of some tags are obvious, but there are some tags that use a shortened form. For example, we use `p` for a paragraph.",
+            "visibleIf": "always"
+          },
+          {
+            "type": "paragraph",
+            "content": "Which one of these HTML tags creates a **paragraph**?",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "multipleChoice",
+          "files": [],
+          "items": [
+            {
+              "correct": true,
+              "value": 0,
+              "text": "`\u003Cp\u003E`"
+            },
+            {
+              "correct": false,
+              "value": 1,
+              "text": "`\u003Cbutton\u003E`"
+            }
+          ],
+          "isCode": false,
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `\u003Cp\u003E`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 76819,
+        "index": 1,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Let's remember how to code a button. Code a button that has the text `Post`.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeFillTheGap",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "\u003Cbutton\u003EPost\u003C/button\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOptions": [
+            {
+              "startIndex": 12,
+              "endIndex": 21,
+              "startLine": 0,
+              "startPos": 12,
+              "length": 9,
+              "value": "\u003C/button\u003E",
+              "correct": true
+            },
+            {
+              "startIndex": 8,
+              "endIndex": 12,
+              "startLine": 0,
+              "startPos": 8,
+              "length": 4,
+              "value": "Post",
+              "correct": true
+            },
+            {
+              "startIndex": 0,
+              "endIndex": 8,
+              "startLine": 0,
+              "startPos": 0,
+              "length": 8,
+              "value": "\u003Cbutton\u003E",
+              "correct": true
+            }
+          ],
+          "wrongOptions": [],
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "visibleIf": "correct",
+            "type": "webview",
+            "content": "\u003C!doctype html\u003E\n\u003Chtml\u003E\n \u003Chead\u003E\n  \u003Cstyle\u003E\n   body {\n    padding: 8px;\n   }\n  \u003C/style\u003E\n \u003C/head\u003E\n \u003Cbody\u003E\n  \u003Cbutton\u003EPost\u003C/button\u003E\n \u003C/body\u003E\n\u003C/html\u003E"
+          },
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `\u003Cbutton\u003E`, followed by `Post`, and finally `\u003C/button\u003E`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 76818,
+        "index": 2,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Coding a paragraph is very similar to coding a button. You need an opening tag, followed by your text, and a closing tag.",
+            "visibleIf": "always"
+          },
+          {
+            "type": "paragraph",
+            "content": "Code a paragraph that displays `Mimo is Fun!`.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeFillTheGap",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "\u003Cp\u003EMimo is Fun!\u003C/p\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOptions": [
+            {
+              "startIndex": 0,
+              "endIndex": 3,
+              "startLine": 0,
+              "startPos": 0,
+              "length": 3,
+              "value": "\u003Cp\u003E",
+              "correct": true
+            },
+            {
+              "startIndex": 3,
+              "endIndex": 15,
+              "startLine": 0,
+              "startPos": 3,
+              "length": 12,
+              "value": "Mimo is Fun!",
+              "correct": true
+            },
+            {
+              "startIndex": 15,
+              "endIndex": 19,
+              "startLine": 0,
+              "startPos": 15,
+              "length": 4,
+              "value": "\u003C/p\u003E",
+              "correct": true
+            }
+          ],
+          "wrongOptions": [],
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "visibleIf": "correct",
+            "type": "webview",
+            "content": "\u003C!doctype html\u003E\n\u003Chtml\u003E\n \u003Chead\u003E\n  \u003Cstyle\u003E\n   body {\n    padding: 8px;\n   }\n  \u003C/style\u003E\n \u003C/head\u003E\n \u003Cbody\u003E\n  \u003Cp\u003EMimo is Fun!\u003C/p\u003E\n \u003C/body\u003E\n\u003C/html\u003E"
+          },
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `\u003Cp\u003E`, followed by `Mimo is Fun!`, and finally `\u003C/p\u003E`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 76820,
+        "index": 3,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Code `hello` in between the opening and closing `p` tags.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeValidatedInput",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "\u003Cp\u003Ehello\u003C/p\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOption": {
+            "startIndex": 3,
+            "endIndex": 8,
+            "startLine": 0,
+            "startPos": 3,
+            "length": 5,
+            "value": "hello",
+            "correct": true
+          },
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "visibleIf": "correct",
+            "type": "webview",
+            "content": "\u003C!doctype html\u003E\n\u003Chtml\u003E\n \u003Chead\u003E\n  \u003Cstyle\u003E\n   body {\n    padding: 8px;\n   }\n  \u003C/style\u003E\n \u003C/head\u003E\n \u003Cbody\u003E\n  \u003Cp\u003Ehello\u003C/p\u003E\n \u003C/body\u003E\n\u003C/html\u003E"
+          },
+          {
+            "type": "paragraph",
+            "content": "Make sure to type `hello`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 76821,
+        "index": 4,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "We can create headings in HTML to emphasize certain texts. There are 6 sizes of heading in HTML, from h1 to h6.",
+            "visibleIf": "always"
+          },
+          {
+            "type": "paragraph",
+            "content": "Which one of these HTML tags creates a **heading**?",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "multipleChoice",
+          "files": [],
+          "items": [
+            {
+              "correct": true,
+              "value": 0,
+              "text": "`\u003Ch1\u003E`"
+            },
+            {
+              "correct": false,
+              "value": 1,
+              "text": "`\u003Cbutton\u003E`"
+            },
+            {
+              "correct": false,
+              "value": 2,
+              "text": "`\u003Cp\u003E`"
+            },
+            {
+              "correct": false,
+              "value": 3,
+              "text": "`\u003Cvideo\u003E`"
+            }
+          ],
+          "isCode": false,
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `\u003Ch1\u003E`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 76822,
+        "index": 5,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Code a heading that displays `SnapCat`.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeFillTheGap",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "\u003Ch1\u003ESnapCat\u003C/h1\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOptions": [
+            {
+              "startIndex": 0,
+              "endIndex": 4,
+              "startLine": 0,
+              "startPos": 0,
+              "length": 4,
+              "value": "\u003Ch1\u003E",
+              "correct": true
+            },
+            {
+              "startIndex": 4,
+              "endIndex": 11,
+              "startLine": 0,
+              "startPos": 4,
+              "length": 7,
+              "value": "SnapCat",
+              "correct": true
+            },
+            {
+              "startIndex": 11,
+              "endIndex": 16,
+              "startLine": 0,
+              "startPos": 11,
+              "length": 5,
+              "value": "\u003C/h1\u003E",
+              "correct": true
+            }
+          ],
+          "wrongOptions": [
+            "\u003Cp\u003E",
+            "\u003C/button\u003E"
+          ],
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "visibleIf": "correct",
+            "type": "webview",
+            "content": "\u003C!doctype html\u003E\n\u003Chtml\u003E\n \u003Chead\u003E\n  \u003Cstyle\u003E\n   body {\n    padding: 8px;\n   }\n  \u003C/style\u003E\n \u003C/head\u003E\n \u003Cbody\u003E\n  \u003Ch1\u003ESnapCat\u003C/h1\u003E\n \u003C/body\u003E\n\u003C/html\u003E"
+          },
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `\u003Ch1\u003E`, followed by `SnapCat`, and finally `\u003C/h1\u003E`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 76824,
+        "index": 6,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Add the closing tag.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeFillTheGap",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "\u003Cbutton\u003EAccept\u003C/button\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOptions": [
+            {
+              "startIndex": 14,
+              "endIndex": 23,
+              "startLine": 0,
+              "startPos": 14,
+              "length": 9,
+              "value": "\u003C/button\u003E",
+              "correct": true
+            }
+          ],
+          "wrongOptions": [
+            "\u003Cbutton\u003E",
+            "\u003C/p\u003E"
+          ],
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "visibleIf": "correct",
+            "type": "webview",
+            "content": "\u003C!doctype html\u003E\n\u003Chtml\u003E\n \u003Chead\u003E\n  \u003Cstyle\u003E\n   body {\n    padding: 8px;\n   }\n  \u003C/style\u003E\n \u003C/head\u003E\n \u003Cbody\u003E\n  \u003Cbutton\u003EAccept\u003C/button\u003E\n \u003C/body\u003E\n\u003C/html\u003E"
+          },
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `\u003C/button\u003E`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 76825,
+        "index": 7,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "The heading tag emphasizes texts by making them bigger and bolder. h1 is the biggest and boldest and h6 is the smallest and least bold.",
+            "visibleIf": "always"
+          },
+          {
+            "type": "paragraph",
+            "content": "Which one of these HTML tags creates a **smaller heading** than `\u003Ch1\u003E`?",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "multipleChoice",
+          "files": [],
+          "items": [
+            {
+              "correct": true,
+              "value": 0,
+              "text": "`\u003Ch6\u003E`"
+            },
+            {
+              "correct": false,
+              "value": 1,
+              "text": "`\u003Cbutton\u003E`"
+            },
+            {
+              "correct": false,
+              "value": 2,
+              "text": "`\u003Cvideo\u003E`"
+            },
+            {
+              "correct": false,
+              "value": 3,
+              "text": "`\u003Cp\u003E`"
+            }
+          ],
+          "isCode": false,
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `\u003Ch6\u003E`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 76827,
+        "index": 8,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Code a heading with opening and closing `h6` tags.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeFillTheGap",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "\u003Ch6\u003ELittle Things\u003C/h6\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOptions": [
+            {
+              "startIndex": 0,
+              "endIndex": 4,
+              "startLine": 0,
+              "startPos": 0,
+              "length": 4,
+              "value": "\u003Ch6\u003E",
+              "correct": true
+            },
+            {
+              "startIndex": 17,
+              "endIndex": 22,
+              "startLine": 0,
+              "startPos": 17,
+              "length": 5,
+              "value": "\u003C/h6\u003E",
+              "correct": true
+            },
+            {
+              "startIndex": 4,
+              "endIndex": 17,
+              "startLine": 0,
+              "startPos": 4,
+              "length": 13,
+              "value": "Little Things",
+              "correct": true
+            }
+          ],
+          "wrongOptions": [],
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "visibleIf": "correct",
+            "type": "webview",
+            "content": "\u003C!doctype html\u003E\n\u003Chtml\u003E\n \u003Chead\u003E\n  \u003Cstyle\u003E\n   body {\n    padding: 8px;\n   }\n  \u003C/style\u003E\n \u003C/head\u003E\n \u003Cbody\u003E\n  \u003Ch6\u003ELittle Things\u003C/h6\u003E\n \u003C/body\u003E\n\u003C/html\u003E"
+          },
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `\u003Ch6\u003E`, followed by `Little Things`, and finally `\u003C/h6\u003E`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 76828,
+        "index": 9,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Code the opening tag for the biggest heading.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeValidatedInput",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "\u003Ch1\u003EMy Blog\u003C/h1\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOption": {
+            "startIndex": 0,
+            "endIndex": 4,
+            "startLine": 0,
+            "startPos": 0,
+            "length": 4,
+            "value": "\u003Ch1\u003E",
+            "correct": true
+          },
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "visibleIf": "correct",
+            "type": "webview",
+            "content": "\u003C!doctype html\u003E\n\u003Chtml\u003E\n \u003Chead\u003E\n  \u003Cstyle\u003E\n   body {\n    padding: 8px;\n   }\n  \u003C/style\u003E\n \u003C/head\u003E\n \u003Cbody\u003E\n  \u003Ch1\u003EMy Blog\u003C/h1\u003E\n \u003C/body\u003E\n\u003C/html\u003E"
+          },
+          {
+            "type": "paragraph",
+            "content": "Make sure to type `\u003Ch1\u003E`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 76830,
+        "index": 10,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Code the opening tag for the second biggest heading.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeFillTheGap",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "\u003Ch2\u003EMy Favorite Things\u003C/h2\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOptions": [
+            {
+              "startIndex": 0,
+              "endIndex": 1,
+              "startLine": 0,
+              "startPos": 0,
+              "length": 1,
+              "value": "\u003C",
+              "correct": true
+            },
+            {
+              "startIndex": 1,
+              "endIndex": 3,
+              "startLine": 0,
+              "startPos": 1,
+              "length": 2,
+              "value": "h2",
+              "correct": true
+            },
+            {
+              "startIndex": 3,
+              "endIndex": 4,
+              "startLine": 0,
+              "startPos": 3,
+              "length": 1,
+              "value": "\u003E",
+              "correct": true
+            }
+          ],
+          "wrongOptions": [
+            "/"
+          ],
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "visibleIf": "correct",
+            "type": "webview",
+            "content": "\u003C!doctype html\u003E\n\u003Chtml\u003E\n \u003Chead\u003E\n  \u003Cstyle\u003E\n   body {\n    padding: 8px;\n   }\n  \u003C/style\u003E\n \u003C/head\u003E\n \u003Cbody\u003E\n  \u003Ch2\u003EMy Favorite Things\u003C/h2\u003E\n \u003C/body\u003E\n\u003C/html\u003E"
+          },
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `\u003C`, followed by `h2`, and finally `\u003E`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 76831,
+        "index": 11,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Which one of these HTML tags creates the smallest heading?",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "multipleChoice",
+          "files": [],
+          "items": [
+            {
+              "correct": true,
+              "value": 0,
+              "text": "`\u003Ch6\u003E`"
+            },
+            {
+              "correct": false,
+              "value": 1,
+              "text": "`\u003Ch3\u003E`"
+            },
+            {
+              "correct": false,
+              "value": 2,
+              "text": "`\u003Ch4\u003E`"
+            },
+            {
+              "correct": false,
+              "value": 3,
+              "text": "`\u003Ch1\u003E`"
+            }
+          ],
+          "isCode": false,
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `\u003Ch6\u003E`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      }
+    ],
+    "tutorialType": "course",
+    "nextTutorial": {
+      "id": 906,
+      "index": 1,
+      "codeLanguage": "html",
+      "descriptionContent": "Create stylish text for websites using tags and learn what the head of an HTML page does.",
+      "title": "Structuring Text with Tags",
+      "type": "course",
+      "version": 73,
+      "bannerIconUrl": null,
+      "chapters": [
+        {
+          "id": 15309,
+          "title": "Line Breaks, Emphasis and Importance",
+          "type": "practiceLevel1",
+          "lessons": [
+            {
+              "id": 134830
+            },
+            {
+              "id": 134837
+            },
+            {
+              "id": 134831
+            },
+            {
+              "id": 134812
+            },
+            {
+              "id": 134813
+            },
+            {
+              "id": 134838
+            },
+            {
+              "id": 134814
+            },
+            {
+              "id": 134839
+            },
+            {
+              "id": 134815
+            },
+            {
+              "id": 134816
+            },
+            {
+              "id": 134819
+            },
+            {
+              "id": 134817
+            },
+            {
+              "id": 134818
+            }
+          ]
+        }
+      ]
+    },
+    "chaptersCount": 2,
+    "currentChapterIndex": 1,
+    "publishSetVersion": 698,
+    "trackVersion": 46,
+    "tutorialVersion": 151,
+    "sectionIndex": 0,
+    "codeLanguage": "html"
+  }
+}

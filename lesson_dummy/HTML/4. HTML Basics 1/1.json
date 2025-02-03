@@ -1,0 +1,869 @@
+{
+  "abTests": {
+
+  },
+  "__N_SSG": true,
+  "pageProps": {
+    "lessons": [
+      {
+        "type": "Interactive",
+        "id": 58996,
+        "index": 0,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "How many paragraphs will this webpage have?",
+            "visibleIf": "always"
+          },
+          {
+            "type": "codeNone",
+            "files": [
+              {
+                "isInteractive": false,
+                "name": "index.html",
+                "content": "\u003Ch1\u003EMy favorite things\u003C/h1\u003E\n\u003Cp\u003ERaindrops on roses Whiskers on kittens\u003C/p\u003E\n\u003Cp\u003EBright copper kettles Warm woolen mittens\u003C/p\u003E",
+                "codeLanguage": "html"
+              }
+            ],
+            "output": null
+          }
+        ],
+        "interactionModule": {
+          "type": "multipleChoice",
+          "files": [
+            {
+              "isInteractive": false,
+              "name": "index.html",
+              "content": "\u003Ch1\u003EMy favorite things\u003C/h1\u003E\n\u003Cp\u003ERaindrops on roses Whiskers on kittens\u003C/p\u003E\n\u003Cp\u003EBright copper kettles Warm woolen mittens\u003C/p\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "items": [
+            {
+              "correct": true,
+              "value": 0,
+              "text": "2"
+            },
+            {
+              "correct": false,
+              "value": 1,
+              "text": "1"
+            },
+            {
+              "correct": false,
+              "value": 2,
+              "text": "4"
+            }
+          ],
+          "isCode": false,
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick 2.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 58994,
+        "index": 1,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Add the missing closing tag.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeFillTheGap",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "\u003Ch1\u003EWelcome\u003C/h1\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOptions": [
+            {
+              "startIndex": 11,
+              "endIndex": 16,
+              "startLine": 0,
+              "startPos": 11,
+              "length": 5,
+              "value": "\u003C/h1\u003E",
+              "correct": true
+            }
+          ],
+          "wrongOptions": [
+            "\u003C\\h1\u003E"
+          ],
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `\u003C/h1\u003E`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 58993,
+        "index": 2,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Add the right snippets to make the headings.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeFillTheGap",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "\u003Ch1\u003EVideo games\u003C/h1\u003E\n\u003Ch2\u003EConsole games\u003C/h2\u003E\n\u003Ch2\u003EMobile games\u003C/h2\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOptions": [
+            {
+              "startIndex": 0,
+              "endIndex": 4,
+              "startLine": 0,
+              "startPos": 0,
+              "length": 4,
+              "value": "\u003Ch1\u003E",
+              "correct": true
+            },
+            {
+              "startIndex": 21,
+              "endIndex": 25,
+              "startLine": 1,
+              "startPos": 0,
+              "length": 4,
+              "value": "\u003Ch2\u003E",
+              "correct": true
+            },
+            {
+              "startIndex": 44,
+              "endIndex": 48,
+              "startLine": 2,
+              "startPos": 0,
+              "length": 4,
+              "value": "\u003Ch2\u003E",
+              "correct": true
+            }
+          ],
+          "wrongOptions": [
+            "\u003Ch3\u003E",
+            "\u003Ch4\u003E"
+          ],
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `\u003Ch1\u003E`, followed by `\u003Ch2\u003E`, and finally `\u003Ch2\u003E`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 59039,
+        "index": 3,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Give this webpage the biggest heading.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeFillTheGap",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "\u003Ch1\u003EHello, World!\u003C/h1\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOptions": [
+            {
+              "startIndex": 0,
+              "endIndex": 4,
+              "startLine": 0,
+              "startPos": 0,
+              "length": 4,
+              "value": "\u003Ch1\u003E",
+              "correct": true
+            },
+            {
+              "startIndex": 17,
+              "endIndex": 22,
+              "startLine": 0,
+              "startPos": 17,
+              "length": 5,
+              "value": "\u003C/h1\u003E",
+              "correct": true
+            }
+          ],
+          "wrongOptions": [
+            "\u003Ch2\u003E",
+            "\u003C/h2\u003E",
+            "\u003Cp\u003E",
+            "\u003C/p\u003E"
+          ],
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `\u003Ch1\u003E`, followed by `\u003C/h1\u003E`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 63940,
+        "index": 4,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "What's wrong with this webpage?",
+            "visibleIf": "always"
+          },
+          {
+            "type": "codeNone",
+            "files": [
+              {
+                "isInteractive": false,
+                "name": "index.html",
+                "content": "\u003C/h1\u003E3D Printers\u003C/h1\u003E\n\u003Cp\u003EEasy to get started\u003C/p\u003E\n\u003Cp\u003EFun to play with\u003C/p\u003E\n\u003Cp\u003EUnlimited creativity\u003C/p\u003E",
+                "codeLanguage": "html"
+              }
+            ],
+            "output": null
+          }
+        ],
+        "interactionModule": {
+          "type": "multipleChoice",
+          "files": [
+            {
+              "isInteractive": false,
+              "name": "index.html",
+              "content": "\u003C/h1\u003E3D Printers\u003C/h1\u003E\n\u003Cp\u003EEasy to get started\u003C/p\u003E\n\u003Cp\u003EFun to play with\u003C/p\u003E\n\u003Cp\u003EUnlimited creativity\u003C/p\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "items": [
+            {
+              "correct": true,
+              "value": 0,
+              "text": "There is no opening `h1` tag"
+            },
+            {
+              "correct": false,
+              "value": 1,
+              "text": "The paragraph tags aren&#039;t assembled correctly"
+            },
+            {
+              "correct": false,
+              "value": 2,
+              "text": "Some closing tags are missing"
+            }
+          ],
+          "isCode": false,
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "There is no opening `h1` tag.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 59583,
+        "index": 5,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "What's wrong with these emphasis tags?",
+            "visibleIf": "always"
+          },
+          {
+            "type": "codeNone",
+            "files": [
+              {
+                "isInteractive": false,
+                "name": "index.html",
+                "content": "\u003C/em\u003EPurple Haze\u003C/em\u003E",
+                "codeLanguage": "html"
+              }
+            ],
+            "output": null
+          }
+        ],
+        "interactionModule": {
+          "type": "multipleChoice",
+          "files": [
+            {
+              "isInteractive": false,
+              "name": "index.html",
+              "content": "\u003C/em\u003EPurple Haze\u003C/em\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "items": [
+            {
+              "correct": true,
+              "value": 0,
+              "text": "There&#039;s a `/` sign in the opening tag"
+            },
+            {
+              "correct": false,
+              "value": 1,
+              "text": "There&#039;s no closing tag"
+            },
+            {
+              "correct": false,
+              "value": 2,
+              "text": "There&#039;s no content inside them"
+            }
+          ],
+          "isCode": false,
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "There's a `/` sign in the opening tag.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 59093,
+        "index": 6,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Code the opening tag that defines text as important.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeFillTheGap",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "\u003Ch1\u003EDr. Amp's Gold Shovels\u003C/h1\u003E\n\u003Cp\u003E Order now - \u003Cstrong\u003Eonly $29.99\u003C/strong\u003E\u003C/p\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOptions": [
+            {
+              "startIndex": 48,
+              "endIndex": 49,
+              "startLine": 1,
+              "startPos": 16,
+              "length": 1,
+              "value": "\u003C",
+              "correct": true
+            },
+            {
+              "startIndex": 49,
+              "endIndex": 55,
+              "startLine": 1,
+              "startPos": 17,
+              "length": 6,
+              "value": "strong",
+              "correct": true
+            },
+            {
+              "startIndex": 55,
+              "endIndex": 56,
+              "startLine": 1,
+              "startPos": 23,
+              "length": 1,
+              "value": "\u003E",
+              "correct": true
+            }
+          ],
+          "wrongOptions": [
+            "/"
+          ],
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `\u003C`, followed by `strong`, and finally `\u003E`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 59083,
+        "index": 7,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Why is the line break tag an empty tag?",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "multipleChoice",
+          "files": [],
+          "items": [
+            {
+              "correct": true,
+              "value": 0,
+              "text": "Because it has no closing tag"
+            },
+            {
+              "correct": false,
+              "value": 1,
+              "text": "Because it has no effect on the structure of a webpage"
+            },
+            {
+              "correct": false,
+              "value": 2,
+              "text": "Because it has no opening tag"
+            }
+          ],
+          "isCode": false,
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Because it has no closing tag.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 67563,
+        "index": 8,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Display `Accept` on the button by coding between the opening and closing tags.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeFillTheGap",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "\u003Ch4\u003ETerms and Conditions\u003C/h4\u003E\n\u003Cp\u003EBy clicking accept, you agree to helping a friend this weekend.\u003C/p\u003E\n\u003Cbutton\u003EAccept\u003C/button\u003E\n\u003Cbutton\u003ENo way!\u003C/button\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOptions": [
+            {
+              "startIndex": 109,
+              "endIndex": 115,
+              "startLine": 2,
+              "startPos": 8,
+              "length": 6,
+              "value": "Accept",
+              "correct": true
+            }
+          ],
+          "wrongOptions": [
+            "Reject"
+          ],
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `Accept`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 67567,
+        "index": 9,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Code the closing tag of the button displaying `Book a Room`.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeFillTheGap",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "\u003Ch1\u003EJoe's Bed and Breakfast\u003C/h1\u003E\n\u003Cp\u003EThere's nothing more relaxing than booking a room at Joe's BnB.\u003C/p\u003E\n\u003Cbutton\u003EBook a Room\u003C/button\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOptions": [
+            {
+              "startIndex": 123,
+              "endIndex": 125,
+              "startLine": 2,
+              "startPos": 19,
+              "length": 2,
+              "value": "\u003C/",
+              "correct": true
+            },
+            {
+              "startIndex": 125,
+              "endIndex": 131,
+              "startLine": 2,
+              "startPos": 21,
+              "length": 6,
+              "value": "button",
+              "correct": true
+            },
+            {
+              "startIndex": 131,
+              "endIndex": 132,
+              "startLine": 2,
+              "startPos": 27,
+              "length": 1,
+              "value": "\u003E",
+              "correct": true
+            }
+          ],
+          "wrongOptions": [
+            "\u003C",
+            "\u003Cbr\u003E"
+          ],
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `\u003C/`, followed by `button`, and finally `\u003E`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 67535,
+        "index": 10,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "What's wrong with this code?",
+            "visibleIf": "always"
+          },
+          {
+            "type": "codeNone",
+            "files": [
+              {
+                "isInteractive": false,
+                "name": "index.html",
+                "content": "\u003Cbutton\u003EAdd to Cart\u003C/button\u003E",
+                "codeLanguage": "html"
+              }
+            ],
+            "output": null
+          }
+        ],
+        "interactionModule": {
+          "type": "multipleChoice",
+          "files": [
+            {
+              "isInteractive": false,
+              "name": "index.html",
+              "content": "\u003Cbutton\u003EAdd to Cart\u003C/button\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "items": [
+            {
+              "correct": true,
+              "value": 0,
+              "text": "Nothing&#039;s wrong with the code"
+            },
+            {
+              "correct": false,
+              "value": 1,
+              "text": "The text inside the `button` element has a space"
+            },
+            {
+              "correct": false,
+              "value": 2,
+              "text": "The button&#039;s closing tag is missing a `/`"
+            }
+          ],
+          "isCode": false,
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Nothing's wrong with the code.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 67550,
+        "index": 11,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Place the last button below the other by coding `\u003Cbr\u003E`.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeFillTheGap",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "\u003Ch4\u003EWelcome to Mimo\u003C/h4\u003E\n\u003Cbutton\u003ESign Up\u003C/button\u003E\n\u003Cbr\u003E\n\u003Cbutton\u003ELogin\u003C/button\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOptions": [
+            {
+              "startIndex": 50,
+              "endIndex": 51,
+              "startLine": 2,
+              "startPos": 0,
+              "length": 1,
+              "value": "\u003C",
+              "correct": true
+            },
+            {
+              "startIndex": 51,
+              "endIndex": 53,
+              "startLine": 2,
+              "startPos": 1,
+              "length": 2,
+              "value": "br",
+              "correct": true
+            },
+            {
+              "startIndex": 53,
+              "endIndex": 54,
+              "startLine": 2,
+              "startPos": 3,
+              "length": 1,
+              "value": "\u003E",
+              "correct": true
+            }
+          ],
+          "wrongOptions": [
+            "\u003C/",
+            "/\u003E"
+          ],
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `\u003C`, followed by `br`, and finally `\u003E`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 67564,
+        "index": 12,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Place the button displaying `Copy to Clipboard` next to the other button on the webpage.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeFillTheGap",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "\u003Ch4\u003EJoke of the Month\u003C/h4\u003E\n\u003Cp\u003EI made a pencil with two erasers. It was pointless.\u003C/p\u003E\n\u003Cbutton\u003EVote\u003C/button\u003E\n\u003Cbutton\u003ECopy to Clipboard\u003C/button\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOptions": [
+            {
+              "startIndex": 108,
+              "endIndex": 116,
+              "startLine": 3,
+              "startPos": 0,
+              "length": 8,
+              "value": "\u003Cbutton\u003E",
+              "correct": true
+            },
+            {
+              "startIndex": 116,
+              "endIndex": 133,
+              "startLine": 3,
+              "startPos": 8,
+              "length": 17,
+              "value": "Copy to Clipboard",
+              "correct": true
+            },
+            {
+              "startIndex": 133,
+              "endIndex": 142,
+              "startLine": 3,
+              "startPos": 25,
+              "length": 9,
+              "value": "\u003C/button\u003E",
+              "correct": true
+            }
+          ],
+          "wrongOptions": [
+            "\u003Cbr\u003E",
+            "\u003Ch1\u003E",
+            "\u003C/h1\u003E"
+          ],
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `\u003Cbutton\u003E`, followed by `Copy to Clipboard`, and finally `\u003C/button\u003E`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      }
+    ],
+    "tutorialType": "practiceRequired",
+    "nextTutorial": {
+      "id": 904,
+      "index": 0,
+      "codeLanguage": "html",
+      "descriptionContent": "Learn what HTML is and its importance in coding for the web.",
+      "title": "Discovering HTML and Tags",
+      "type": "course",
+      "version": 151,
+      "bannerIconUrl": "/icons/track-icons/tutorial-904-icon-banner.svg",
+      "chapters": [
+        {
+          "id": 8608,
+          "title": "HTML Tags",
+          "type": "practiceLevel1",
+          "lessons": [
+            {
+              "id": 76804
+            },
+            {
+              "id": 75802
+            },
+            {
+              "id": 75817
+            },
+            {
+              "id": 75819
+            },
+            {
+              "id": 75821
+            },
+            {
+              "id": 75816
+            },
+            {
+              "id": 76812
+            },
+            {
+              "id": 130087
+            },
+            {
+              "id": 75824
+            },
+            {
+              "id": 75822
+            },
+            {
+              "id": 75825
+            },
+            {
+              "id": 75823
+            }
+          ]
+        },
+        {
+          "id": 8716,
+          "title": "Text and Headings",
+          "type": "practiceLevel1",
+          "lessons": [
+            {
+              "id": 76817
+            },
+            {
+              "id": 76819
+            },
+            {
+              "id": 76818
+            },
+            {
+              "id": 76820
+            },
+            {
+              "id": 76821
+            },
+            {
+              "id": 76822
+            },
+            {
+              "id": 76824
+            },
+            {
+              "id": 76825
+            },
+            {
+              "id": 76827
+            },
+            {
+              "id": 76828
+            },
+            {
+              "id": 76830
+            },
+            {
+              "id": 76831
+            }
+          ]
+        }
+      ]
+    },
+    "chaptersCount": 1,
+    "currentChapterIndex": 0,
+    "publishSetVersion": 698,
+    "trackVersion": 46,
+    "tutorialVersion": 5,
+    "sectionIndex": 0,
+    "codeLanguage": "html"
+  }
+}

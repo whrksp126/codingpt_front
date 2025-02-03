@@ -1,0 +1,637 @@
+{
+  "abTests": {
+
+  },
+  "__N_SSG": true,
+  "pageProps": {
+    "lessons": [
+      {
+        "type": "Interactive",
+        "id": 71198,
+        "index": 0,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "What do attributes do?",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "multipleChoice",
+          "files": [],
+          "items": [
+            {
+              "correct": true,
+              "value": 0,
+              "text": "They add additional information to tags"
+            },
+            {
+              "correct": false,
+              "value": 1,
+              "text": "Attributes create links"
+            },
+            {
+              "correct": false,
+              "value": 2,
+              "text": "They create empty tags"
+            },
+            {
+              "correct": false,
+              "value": 3,
+              "text": "Attributes create URLs"
+            }
+          ],
+          "isCode": false,
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "They add additional information to tags.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 71197,
+        "index": 1,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "How does the link appear in the browser?",
+            "visibleIf": "always"
+          },
+          {
+            "type": "codeNone",
+            "files": [
+              {
+                "isInteractive": false,
+                "name": "index.html",
+                "content": "\u003Ch3\u003EAnother Famous Page\u003C/h3\u003E\n\u003Cp\u003E\u003Ca href=\"https://en.wikipedia.org/wiki/Elliot_Page\"\u003E\u003Cem\u003EElliot Page\u003C/em\u003E\u003C/a\u003E\u003C/p\u003E",
+                "codeLanguage": "html"
+              }
+            ],
+            "output": null
+          }
+        ],
+        "interactionModule": {
+          "type": "multipleChoice",
+          "files": [
+            {
+              "isInteractive": false,
+              "name": "index.html",
+              "content": "\u003Ch3\u003EAnother Famous Page\u003C/h3\u003E\n\u003Cp\u003E\u003Ca href=\"https://en.wikipedia.org/wiki/Elliot_Page\"\u003E\u003Cem\u003EElliot Page\u003C/em\u003E\u003C/a\u003E\u003C/p\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "items": [
+            {
+              "correct": true,
+              "value": 0,
+              "text": "`Elliot Page` as a link with emphasis"
+            },
+            {
+              "correct": false,
+              "value": 1,
+              "text": "`Elliot Page` as a normal link"
+            },
+            {
+              "correct": false,
+              "value": 2,
+              "text": "`Elliot Page` with emphasis but with a broken link"
+            },
+            {
+              "correct": false,
+              "value": 3,
+              "text": "`\u003Cem\u003EElliot Page\u003C/em\u003E` as a link"
+            }
+          ],
+          "isCode": false,
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "`Elliot Page` as a link with emphasis.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 71200,
+        "index": 2,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "What's wrong with this code?",
+            "visibleIf": "always"
+          },
+          {
+            "type": "codeNone",
+            "files": [
+              {
+                "isInteractive": false,
+                "name": "index.html",
+                "content": "\u003Ca src=\"https://m.xkcd.com/1425/\"\u003ELearn to Code\u003C/a\u003E",
+                "codeLanguage": "html"
+              }
+            ],
+            "output": null
+          }
+        ],
+        "interactionModule": {
+          "type": "multipleChoice",
+          "files": [
+            {
+              "isInteractive": false,
+              "name": "index.html",
+              "content": "\u003Ca src=\"https://m.xkcd.com/1425/\"\u003ELearn to Code\u003C/a\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "items": [
+            {
+              "correct": true,
+              "value": 0,
+              "text": "The attribute name should be `href`"
+            },
+            {
+              "correct": false,
+              "value": 1,
+              "text": "It has no text between `\u003Ca\u003E` and `\u003C/a\u003E`"
+            },
+            {
+              "correct": false,
+              "value": 2,
+              "text": "Nothing&#039;s wrong with the code"
+            },
+            {
+              "correct": false,
+              "value": 3,
+              "text": "The opening tag `\u003Ca\u003E` is missing"
+            }
+          ],
+          "isCode": false,
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "The attribute name should be `href`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 71159,
+        "index": 3,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Complete the code to make it work properly.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeValidatedInput",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "\u003Ca href=\"https://mimo.org/r/lisa.html\"\u003EClick to visit my website!\u003C/a\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOption": {
+            "startIndex": 65,
+            "endIndex": 69,
+            "startLine": 0,
+            "startPos": 65,
+            "length": 4,
+            "value": "\u003C/a\u003E",
+            "correct": true
+          },
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to type `\u003C/a\u003E`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 71160,
+        "index": 4,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Add the correct attribute to the opening `\u003Ca\u003E` tag.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeValidatedInput",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "\u003Ch3\u003EWelcome to the Roaring Twenties, rebooted!\u003C/h3\u003E\n\u003Ca href=\"https://www.1920-30.com/\"\u003E Take a look at the previous\n   Roaring Twenties here! \u003C/a\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOption": {
+            "startIndex": 55,
+            "endIndex": 59,
+            "startLine": 1,
+            "startPos": 3,
+            "length": 4,
+            "value": "href",
+            "correct": true
+          },
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to type `href`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 71600,
+        "index": 5,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "What's wrong with this `img` element?",
+            "visibleIf": "always"
+          },
+          {
+            "type": "codeNone",
+            "files": [
+              {
+                "isInteractive": false,
+                "name": "index.html",
+                "content": "\u003Ca src=\"https://mimo.app/snapcat.png\"\u003E",
+                "codeLanguage": "html"
+              }
+            ],
+            "output": null
+          }
+        ],
+        "interactionModule": {
+          "type": "multipleChoice",
+          "files": [
+            {
+              "isInteractive": false,
+              "name": "index.html",
+              "content": "\u003Ca src=\"https://mimo.app/snapcat.png\"\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "items": [
+            {
+              "correct": true,
+              "value": 0,
+              "text": "The tag should have `img` as the tag name, not the `a` tag"
+            },
+            {
+              "correct": false,
+              "value": 1,
+              "text": "Nothing"
+            },
+            {
+              "correct": false,
+              "value": 2,
+              "text": "The `img` element is missing a closing tag"
+            },
+            {
+              "correct": false,
+              "value": 3,
+              "text": "It&#039;s missing a URL to access the image"
+            }
+          ],
+          "isCode": false,
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "The tag should have `img` as the tag name, not the `a` tag.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 59597,
+        "index": 6,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Set the `width` attribute in this image tag to `\"300\"`.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeValidatedInput",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "\u003Cimg src=\"/img/taxi.png\" width=\"300\" height=\"200\"\u003E\n",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOption": {
+            "startIndex": 31,
+            "endIndex": 36,
+            "startLine": 0,
+            "startPos": 31,
+            "length": 5,
+            "value": "\"300\"",
+            "correct": true
+          },
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to type `\"300\"`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 59600,
+        "index": 7,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Set the `height` attribute of this image tag to `\"200\"`.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeValidatedInput",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "\u003Cimg src=\"/img/cat.png\" height=\"200\" width=\"200\"\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOption": {
+            "startIndex": 24,
+            "endIndex": 36,
+            "startLine": 0,
+            "startPos": 24,
+            "length": 12,
+            "value": "height=\"200\"",
+            "correct": true
+          },
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to type `height=\"200\"`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 71541,
+        "index": 8,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "How many `img` elements does this code have?",
+            "visibleIf": "always"
+          },
+          {
+            "type": "codeNone",
+            "files": [
+              {
+                "isInteractive": false,
+                "name": "index.html",
+                "content": "\u003Cp\u003EA cat\u003C/p\u003E\n\u003Cimg src=\"/img/kittles.png\"\u003E\n\u003Cbr\u003E\n\u003Ca href=\"https://mimo.app/i/cat.png\"\u003EMy cat\u003C/a\u003E",
+                "codeLanguage": "html"
+              }
+            ],
+            "output": null
+          }
+        ],
+        "interactionModule": {
+          "type": "multipleChoice",
+          "files": [
+            {
+              "isInteractive": false,
+              "name": "index.html",
+              "content": "\u003Cp\u003EA cat\u003C/p\u003E\n\u003Cimg src=\"/img/kittles.png\"\u003E\n\u003Cbr\u003E\n\u003Ca href=\"https://mimo.app/i/cat.png\"\u003EMy cat\u003C/a\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "items": [
+            {
+              "correct": true,
+              "value": 0,
+              "text": "One"
+            },
+            {
+              "correct": false,
+              "value": 1,
+              "text": "Two"
+            },
+            {
+              "correct": false,
+              "value": 2,
+              "text": "Three"
+            }
+          ],
+          "isCode": false,
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick One.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 71540,
+        "index": 9,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Set the `height` and `width` attributes so that the height is bigger than the width.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeFillTheGap",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "\u003Cimg src=\"/img/clawdius.png\" height=\"300\" width=\"220\"\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOptions": [
+            {
+              "startIndex": 36,
+              "endIndex": 41,
+              "startLine": 0,
+              "startPos": 36,
+              "length": 5,
+              "value": "\"300\"",
+              "correct": true
+            },
+            {
+              "startIndex": 48,
+              "endIndex": 53,
+              "startLine": 0,
+              "startPos": 48,
+              "length": 5,
+              "value": "\"220\"",
+              "correct": true
+            }
+          ],
+          "wrongOptions": [
+            "src",
+            "href"
+          ],
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `\"300\"`, followed by `\"220\"`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      }
+    ],
+    "tutorialType": "practiceRequired",
+    "nextTutorial": {
+      "id": 904,
+      "index": 0,
+      "codeLanguage": "html",
+      "descriptionContent": "Learn what HTML is and its importance in coding for the web.",
+      "title": "Discovering HTML and Tags",
+      "type": "course",
+      "version": 151,
+      "bannerIconUrl": "/icons/track-icons/tutorial-904-icon-banner.svg",
+      "chapters": [
+        {
+          "id": 8608,
+          "title": "HTML Tags",
+          "type": "practiceLevel1",
+          "lessons": [
+            {
+              "id": 76804
+            },
+            {
+              "id": 75802
+            },
+            {
+              "id": 75817
+            },
+            {
+              "id": 75819
+            },
+            {
+              "id": 75821
+            },
+            {
+              "id": 75816
+            },
+            {
+              "id": 76812
+            },
+            {
+              "id": 130087
+            },
+            {
+              "id": 75824
+            },
+            {
+              "id": 75822
+            },
+            {
+              "id": 75825
+            },
+            {
+              "id": 75823
+            }
+          ]
+        },
+        {
+          "id": 8716,
+          "title": "Text and Headings",
+          "type": "practiceLevel1",
+          "lessons": [
+            {
+              "id": 76817
+            },
+            {
+              "id": 76819
+            },
+            {
+              "id": 76818
+            },
+            {
+              "id": 76820
+            },
+            {
+              "id": 76821
+            },
+            {
+              "id": 76822
+            },
+            {
+              "id": 76824
+            },
+            {
+              "id": 76825
+            },
+            {
+              "id": 76827
+            },
+            {
+              "id": 76828
+            },
+            {
+              "id": 76830
+            },
+            {
+              "id": 76831
+            }
+          ]
+        }
+      ]
+    },
+    "chaptersCount": 1,
+    "currentChapterIndex": 0,
+    "publishSetVersion": 698,
+    "trackVersion": 46,
+    "tutorialVersion": 7,
+    "sectionIndex": 0,
+    "codeLanguage": "html"
+  }
+}

@@ -1,0 +1,818 @@
+{
+  "abTests": {
+
+  },
+  "__N_SSG": true,
+  "pageProps": {
+    "lessons": [
+      {
+        "type": "Interactive",
+        "id": 71324,
+        "index": 0,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Let's take a look at how links work to combine **webpages** into **websites**. Click on `Take a break!` to use the link.",
+            "visibleIf": "always"
+          },
+          {
+            "type": "webview",
+            "content": "\u003C!doctype html\u003E\n\u003Chead\u003E\n \u003Cstyle\u003E\n  body {\n   background-image: linear-gradient(45deg, #a1c4fd, #c2e9fb);\n   text-align: center;\n   font-family: \"Verdana\", Sans-serif;\n  }\n  \n  img {\n   margin: 40px;\n   height: 40px;\n   width: 150px;\n  }\n  \n  h1 {\n   margin-top: 30px;\n  }\n  \n  h3 {\n   margin: 20px;\n   font-weight: normal;\n  }\n  \n  p {\n   margin-top: 80px;\n   margin-left: 30px;\n   margin-right: 30px;\n   padding: 20px;\n   background-color: DimGray;\n  }\n \u003C/style\u003E\n\u003C/head\u003E\n\u003Cbody\u003E\n \u003Ch1\u003ENeed five?\u003C/h1\u003E \u003Ca\n  href=\"https://google.com\"\u003ETake a\n  break!\u003C/a\u003E\n\u003C/body\u003E\n\u003C/html\u003E",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": null,
+        "postInteractionModules": []
+      },
+      {
+        "type": "Interactive",
+        "id": 70808,
+        "index": 1,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "To start creating a link, we add the text in between the `\u003Ca\u003E` and `\u003C/a\u003E` tags. This won't highlight the text yet.",
+            "visibleIf": "always"
+          },
+          {
+            "type": "paragraph",
+            "content": "`\u003Ca\u003E` stands for \"Anchor\" tag.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeFillTheGap",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "\u003Ca\u003ELearn to Code\u003C/a\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOptions": [
+            {
+              "startIndex": 0,
+              "endIndex": 3,
+              "startLine": 0,
+              "startPos": 0,
+              "length": 3,
+              "value": "\u003Ca\u003E",
+              "correct": true
+            },
+            {
+              "startIndex": 16,
+              "endIndex": 20,
+              "startLine": 0,
+              "startPos": 16,
+              "length": 4,
+              "value": "\u003C/a\u003E",
+              "correct": true
+            }
+          ],
+          "wrongOptions": [],
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `\u003Ca\u003E`, followed by `\u003C/a\u003E`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 70811,
+        "index": 2,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "To link the text to a webpage, we add `href=\"\"` along with a Uniform Resource Locator (**URL**). `href` is short for \"hypertext reference\".",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeFillTheGap",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "\u003Ca href=\"https://mimo.org\"\u003ELearn to Code\u003C/a\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOptions": [
+            {
+              "startIndex": 3,
+              "endIndex": 7,
+              "startLine": 0,
+              "startPos": 3,
+              "length": 4,
+              "value": "href",
+              "correct": true
+            },
+            {
+              "startIndex": 7,
+              "endIndex": 8,
+              "startLine": 0,
+              "startPos": 7,
+              "length": 1,
+              "value": "=",
+              "correct": true
+            },
+            {
+              "startIndex": 8,
+              "endIndex": 26,
+              "startLine": 0,
+              "startPos": 8,
+              "length": 18,
+              "value": "\"https://mimo.org\"",
+              "correct": true
+            }
+          ],
+          "wrongOptions": [],
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `href`, followed by `=`, and finally `\"https://mimo.org\"`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 70809,
+        "index": 3,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "`href` is an **attribute**. All attributes have two things in common: they provide extra information and they go inside the opening tag.",
+            "visibleIf": "always"
+          },
+          {
+            "type": "paragraph",
+            "content": "Attributes are added after the name of the tag, and before the `\u003E` closing sign.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeFillTheGap",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "\u003Ca href=\"https://mimo.org\"\u003ELearn to Code\u003C/a\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOptions": [
+            {
+              "startIndex": 3,
+              "endIndex": 7,
+              "startLine": 0,
+              "startPos": 3,
+              "length": 4,
+              "value": "href",
+              "correct": true
+            }
+          ],
+          "wrongOptions": [],
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `href`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 70810,
+        "index": 4,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "We link to a webpage by adding `=` after the attribute and a URL as a value in between quotes.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeFillTheGap",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "\u003C!doctype html\u003E\n\u003Chtml\u003E\n \u003Cbody\u003E\n  \u003Ca href=\"https://mimo.org\"\u003ELearn to Code\u003C/a\u003E\n \u003C/body\u003E\n\u003C/html\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOptions": [
+            {
+              "startIndex": 40,
+              "endIndex": 41,
+              "startLine": 3,
+              "startPos": 9,
+              "length": 1,
+              "value": "=",
+              "correct": true
+            },
+            {
+              "startIndex": 41,
+              "endIndex": 42,
+              "startLine": 3,
+              "startPos": 10,
+              "length": 1,
+              "value": "\"",
+              "correct": true
+            },
+            {
+              "startIndex": 42,
+              "endIndex": 58,
+              "startLine": 3,
+              "startPos": 11,
+              "length": 16,
+              "value": "https://mimo.org",
+              "correct": true
+            },
+            {
+              "startIndex": 58,
+              "endIndex": 59,
+              "startLine": 3,
+              "startPos": 27,
+              "length": 1,
+              "value": "\"",
+              "correct": true
+            }
+          ],
+          "wrongOptions": [],
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `=` followed by `\"` and then `https://mimo.org`, `\"`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 117993,
+        "index": 5,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Create an opening `\u003Ca\u003E` tag with the `href` attribute set to `\"https://mimo.org\"`.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeFillTheGap",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "\u003Ca href=\"https://mimo.org\"\u003ELearn to Code\u003C/a\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOptions": [
+            {
+              "startIndex": 0,
+              "endIndex": 1,
+              "startLine": 0,
+              "startPos": 0,
+              "length": 1,
+              "value": "\u003C",
+              "correct": true
+            },
+            {
+              "startIndex": 1,
+              "endIndex": 2,
+              "startLine": 0,
+              "startPos": 1,
+              "length": 1,
+              "value": "a",
+              "correct": true
+            },
+            {
+              "startIndex": 3,
+              "endIndex": 7,
+              "startLine": 0,
+              "startPos": 3,
+              "length": 4,
+              "value": "href",
+              "correct": true
+            },
+            {
+              "startIndex": 7,
+              "endIndex": 8,
+              "startLine": 0,
+              "startPos": 7,
+              "length": 1,
+              "value": "=",
+              "correct": true
+            },
+            {
+              "startIndex": 8,
+              "endIndex": 26,
+              "startLine": 0,
+              "startPos": 8,
+              "length": 18,
+              "value": "\"https://mimo.org\"",
+              "correct": true
+            },
+            {
+              "startIndex": 26,
+              "endIndex": 27,
+              "startLine": 0,
+              "startPos": 26,
+              "length": 1,
+              "value": "\u003E",
+              "correct": true
+            }
+          ],
+          "wrongOptions": [],
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `\u003C` followed by `a` and then `href`, `=`, `\"https://mimo.org\"`, `\u003E`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 70812,
+        "index": 6,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "What do links do?",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "multipleChoice",
+          "files": [],
+          "items": [
+            {
+              "correct": true,
+              "value": 0,
+              "text": "Link webpages to other webpages and websites"
+            },
+            {
+              "correct": false,
+              "value": 1,
+              "text": "Emphasize text"
+            }
+          ],
+          "isCode": false,
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Link webpages to other webpages and websites.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 70813,
+        "index": 7,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Why is the link not working?",
+            "visibleIf": "always"
+          },
+          {
+            "type": "codeNone",
+            "files": [
+              {
+                "isInteractive": false,
+                "name": "index.html",
+                "content": "\u003Ca\u003ELearn to Code\u003C/a\u003E",
+                "codeLanguage": "html"
+              }
+            ],
+            "output": null
+          }
+        ],
+        "interactionModule": {
+          "type": "multipleChoice",
+          "files": [
+            {
+              "isInteractive": false,
+              "name": "index.html",
+              "content": "\u003Ca\u003ELearn to Code\u003C/a\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "items": [
+            {
+              "correct": true,
+              "value": 0,
+              "text": "Because it has no `href` attribute"
+            },
+            {
+              "correct": false,
+              "value": 1,
+              "text": "Because it has no text between `\u003Ca\u003E` and `\u003C/a\u003E`"
+            }
+          ],
+          "isCode": false,
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Because it has no `href` attribute.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 70814,
+        "index": 8,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "What happens when a visitor clicks the link on this webpage?",
+            "visibleIf": "always"
+          },
+          {
+            "type": "codeNone",
+            "files": [
+              {
+                "isInteractive": false,
+                "name": "index.html",
+                "content": "\u003Ca href=\"https://mimo.org\"\u003EWhere Developers Learn, Share,\n   & Build Careers\u003C/a\u003E",
+                "codeLanguage": "html"
+              }
+            ],
+            "output": null
+          }
+        ],
+        "interactionModule": {
+          "type": "multipleChoice",
+          "files": [
+            {
+              "isInteractive": false,
+              "name": "index.html",
+              "content": "\u003Ca href=\"https://mimo.org\"\u003EWhere Developers Learn, Share,\n   & Build Careers\u003C/a\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "items": [
+            {
+              "correct": true,
+              "value": 0,
+              "text": "The link directs the user to another website"
+            },
+            {
+              "correct": false,
+              "value": 1,
+              "text": "Nothing, because the `href` attribute is missing"
+            }
+          ],
+          "isCode": false,
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "The link directs the user to another website.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 70815,
+        "index": 9,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "What are `attributes` for?",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "multipleChoice",
+          "files": [],
+          "items": [
+            {
+              "correct": true,
+              "value": 0,
+              "text": "To provide additional information about tags"
+            },
+            {
+              "correct": false,
+              "value": 1,
+              "text": "To turn all tags into links"
+            }
+          ],
+          "isCode": false,
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "To provide additional information about tags.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 70816,
+        "index": 10,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Pick the opening tag that makes the link clickable.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeFillTheGap",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "\u003Ca href=\"https://cars.com\"\u003EBuy a car\u003C/a\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOptions": [
+            {
+              "startIndex": 0,
+              "endIndex": 27,
+              "startLine": 0,
+              "startPos": 0,
+              "length": 27,
+              "value": "\u003Ca href=\"https://cars.com\"\u003E",
+              "correct": true
+            }
+          ],
+          "wrongOptions": [
+            "\u003Ca\u003E"
+          ],
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `\u003Ca href=\"https://cars.com\"\u003E`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 70818,
+        "index": 11,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Add the attribute and its value so that clicking the link directs users to the Facebook website.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeFillTheGap",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "\u003Ca href=\"https://facebook.com\"\u003ELike us on Facebook\u003C/a\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOptions": [
+            {
+              "startIndex": 3,
+              "endIndex": 7,
+              "startLine": 0,
+              "startPos": 3,
+              "length": 4,
+              "value": "href",
+              "correct": true
+            },
+            {
+              "startIndex": 7,
+              "endIndex": 8,
+              "startLine": 0,
+              "startPos": 7,
+              "length": 1,
+              "value": "=",
+              "correct": true
+            },
+            {
+              "startIndex": 8,
+              "endIndex": 30,
+              "startLine": 0,
+              "startPos": 8,
+              "length": 22,
+              "value": "\"https://facebook.com\"",
+              "correct": true
+            }
+          ],
+          "wrongOptions": [],
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `href`, followed by `=`, and finally `\"https://facebook.com\"`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 70817,
+        "index": 12,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Put together the tag to direct users to the Snapchat website.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeFillTheGap",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "\u003Ca href=\"https://www.snap.com/\"\u003EOpen Snapchat\u003C/a\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOptions": [
+            {
+              "startIndex": 45,
+              "endIndex": 47,
+              "startLine": 0,
+              "startPos": 45,
+              "length": 2,
+              "value": "\u003C/",
+              "correct": true
+            },
+            {
+              "startIndex": 47,
+              "endIndex": 48,
+              "startLine": 0,
+              "startPos": 47,
+              "length": 1,
+              "value": "a",
+              "correct": true
+            },
+            {
+              "startIndex": 48,
+              "endIndex": 49,
+              "startLine": 0,
+              "startPos": 48,
+              "length": 1,
+              "value": "\u003E",
+              "correct": true
+            }
+          ],
+          "wrongOptions": [],
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `\u003C/`, followed by `a`, and finally `\u003E`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 70819,
+        "index": 13,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Type the `href` attribute.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeValidatedInput",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "\u003Ca href=\"https://abc.com\"\u003EWatch some news\u003C/a\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOption": {
+            "startIndex": 3,
+            "endIndex": 7,
+            "startLine": 0,
+            "startPos": 3,
+            "length": 4,
+            "value": "href",
+            "correct": true
+          },
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to type `href`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      }
+    ],
+    "tutorialType": "course",
+    "nextTutorial": {
+      "id": 907,
+      "index": 6,
+      "codeLanguage": "html",
+      "descriptionContent": "Learn how to edit images with attributes and how to add them to your webpage with URLs.",
+      "title": "Adding Images",
+      "type": "course",
+      "version": 45,
+      "bannerIconUrl": null,
+      "chapters": [
+        {
+          "id": 6824,
+          "title": "Images",
+          "type": "practiceLevel1",
+          "lessons": [
+            {
+              "id": 71395
+            },
+            {
+              "id": 58841
+            },
+            {
+              "id": 58835
+            },
+            {
+              "id": 58836
+            },
+            {
+              "id": 58911
+            },
+            {
+              "id": 58839
+            },
+            {
+              "id": 58840
+            },
+            {
+              "id": 58912
+            },
+            {
+              "id": 58913
+            },
+            {
+              "id": 58914
+            },
+            {
+              "id": 58915
+            },
+            {
+              "id": 58917
+            },
+            {
+              "id": 58919
+            },
+            {
+              "id": 58920
+            },
+            {
+              "id": 58921
+            }
+          ]
+        }
+      ]
+    },
+    "chaptersCount": 1,
+    "currentChapterIndex": 0,
+    "publishSetVersion": 698,
+    "trackVersion": 46,
+    "tutorialVersion": 31,
+    "sectionIndex": 0,
+    "codeLanguage": "html"
+  }
+}

@@ -1,0 +1,683 @@
+{
+  "abTests": {
+
+  },
+  "__N_SSG": true,
+  "pageProps": {
+    "lessons": [
+      {
+        "type": "Interactive",
+        "id": 134830,
+        "index": 0,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Sometimes we want to format paragraphs with line breaks.",
+            "visibleIf": "always"
+          },
+          {
+            "type": "paragraph",
+            "content": "For example, this song would look much better if `Raindrops on roses` appeared on one line, `Whiskers on kittens` on the next, and so on.",
+            "visibleIf": "always"
+          },
+          {
+            "type": "webview",
+            "content": "\u003Ch1\u003EMy favorite things\u003C/h1\u003E\n\u003Cp\u003E Raindrops on roses Whiskers on kittens Bright copper kettles Warm\n woolen mittens \u003C/p\u003E",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": null,
+        "postInteractionModules": []
+      },
+      {
+        "type": "Interactive",
+        "id": 134837,
+        "index": 1,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "We can separate lines with the help of the **line break tag**: `br`.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeFillTheGap",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "\u003Ch1\u003EMy favorite things\u003C/h1\u003E\n\u003Cp\u003E Raindrops on roses\u003Cbr\u003E\nWhiskers on kittens\u003Cbr\u003E \nBright copper kettles \u003Cbr\u003E \nWarm woolen mittens\n \u003C/p\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOptions": [
+            {
+              "startIndex": 50,
+              "endIndex": 54,
+              "startLine": 1,
+              "startPos": 22,
+              "length": 4,
+              "value": "\u003Cbr\u003E",
+              "correct": true
+            },
+            {
+              "startIndex": 102,
+              "endIndex": 106,
+              "startLine": 3,
+              "startPos": 22,
+              "length": 4,
+              "value": "\u003Cbr\u003E",
+              "correct": true
+            }
+          ],
+          "wrongOptions": [],
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `\u003Cbr\u003E`, followed by `\u003Cbr\u003E`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 134831,
+        "index": 2,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "`\u003Cbr\u003E` is an **empty tag**. Empty tags have no closing tag and no content. They are also called self-closing tags.",
+            "visibleIf": "always"
+          },
+          {
+            "type": "paragraph",
+            "content": "Put together the line break tag.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeFillTheGap",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "\u003Ch1\u003EMy favorite things\u003C/h1\u003E\n\u003Cp\u003E\n Raindrops on roses\u003Cbr\u003E\n Whiskers on kittens\u003Cbr\u003E\n Bright copper kettles\u003Cbr\u003E\n Warm woolen mittens\n\u003C/p\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOptions": [
+            {
+              "startIndex": 103,
+              "endIndex": 104,
+              "startLine": 4,
+              "startPos": 22,
+              "length": 1,
+              "value": "\u003C",
+              "correct": true
+            },
+            {
+              "startIndex": 104,
+              "endIndex": 106,
+              "startLine": 4,
+              "startPos": 23,
+              "length": 2,
+              "value": "br",
+              "correct": true
+            },
+            {
+              "startIndex": 106,
+              "endIndex": 107,
+              "startLine": 4,
+              "startPos": 25,
+              "length": 1,
+              "value": "\u003E",
+              "correct": true
+            }
+          ],
+          "wrongOptions": [
+            "/"
+          ],
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `\u003C`, followed by `br`, and finally `\u003E`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 134812,
+        "index": 3,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "There's an element for giving emphasis to text, it makes it _italic_. It's called the `em` element. Add `\u003Cem\u003E` and `\u003C/em\u003E`.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeFillTheGap",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "\n\u003Ch1\u003EMy favorite things\u003C/h1\u003E\n\u003Cp\u003E\n Raindrops on \u003Cem\u003Eroses\u003C/em\u003E\u003Cbr\u003E\n Whiskers on kittens\u003Cbr\u003E\n Bright copper kettles\u003Cbr\u003E\n Warm woolen mittens\n\u003C/p\u003E\n",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOptions": [
+            {
+              "startIndex": 47,
+              "endIndex": 51,
+              "startLine": 3,
+              "startPos": 14,
+              "length": 4,
+              "value": "\u003Cem\u003E",
+              "correct": true
+            },
+            {
+              "startIndex": 56,
+              "endIndex": 61,
+              "startLine": 3,
+              "startPos": 23,
+              "length": 5,
+              "value": "\u003C/em\u003E",
+              "correct": true
+            }
+          ],
+          "wrongOptions": [],
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `\u003Cem\u003E`, followed by `\u003C/em\u003E`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 134813,
+        "index": 4,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "To define texts as important, we use the `\u003Cstrong\u003E` and `\u003C/strong\u003E` tags. It makes text **bold**.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeFillTheGap",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "\u003Ch1\u003EMy favorite things\u003C/h1\u003E\n\u003Cp\u003E\n Raindrops on \u003Cem\u003Eroses\u003C/em\u003E\u003Cbr\u003E\n Whiskers on \u003Cstrong\u003Ekittens\u003C/strong\u003E\n\u003C/p\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOptions": [
+            {
+              "startIndex": 78,
+              "endIndex": 86,
+              "startLine": 3,
+              "startPos": 13,
+              "length": 8,
+              "value": "\u003Cstrong\u003E",
+              "correct": true
+            },
+            {
+              "startIndex": 93,
+              "endIndex": 102,
+              "startLine": 3,
+              "startPos": 28,
+              "length": 9,
+              "value": "\u003C/strong\u003E",
+              "correct": true
+            }
+          ],
+          "wrongOptions": [],
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `\u003Cstrong\u003E`, followed by `\u003C/strong\u003E`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 134838,
+        "index": 5,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "What's the `\u003Cbr\u003E` tag for?",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "multipleChoice",
+          "files": [],
+          "items": [
+            {
+              "correct": false,
+              "value": 0,
+              "text": "It gives emphasis to text"
+            },
+            {
+              "correct": true,
+              "value": 1,
+              "text": "It adds a line break"
+            }
+          ],
+          "isCode": false,
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "It adds a line break.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 134814,
+        "index": 6,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Which of these tags is an empty or self-closing tag?",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "multipleChoice",
+          "files": [],
+          "items": [
+            {
+              "correct": true,
+              "value": 0,
+              "text": "`\u003Cbr\u003E`"
+            },
+            {
+              "correct": false,
+              "value": 1,
+              "text": "`\u003C/strong\u003E`"
+            },
+            {
+              "correct": false,
+              "value": 2,
+              "text": "`\u003C/em\u003E`"
+            },
+            {
+              "correct": false,
+              "value": 3,
+              "text": "`\u003Cp\u003E`"
+            }
+          ],
+          "isCode": false,
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `\u003Cbr\u003E`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 134839,
+        "index": 7,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Which of these tags give emphasis to text?",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "multipleChoice",
+          "files": [],
+          "items": [
+            {
+              "correct": true,
+              "value": 0,
+              "text": "`\u003Cem\u003E` and `\u003C/em\u003E`"
+            },
+            {
+              "correct": false,
+              "value": 1,
+              "text": "`\u003Cp\u003E` and `\u003C/p\u003E`"
+            }
+          ],
+          "isCode": false,
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "`\u003Cem\u003E` and `\u003C/em\u003E`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 134815,
+        "index": 8,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "What are the `\u003Cstrong\u003E` and `\u003C/strong\u003E` tags for?",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "multipleChoice",
+          "files": [],
+          "items": [
+            {
+              "correct": true,
+              "value": 0,
+              "text": "They define text as important"
+            },
+            {
+              "correct": false,
+              "value": 1,
+              "text": "They make the text unbreakable by line break"
+            }
+          ],
+          "isCode": false,
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "They define text as important.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 134816,
+        "index": 9,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Give emphasis to the album title by adding the opening and closing emphasis tags.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeFillTheGap",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "\u003Cp\u003E I just listened to \u003Cem\u003EAbbey Road\u003C/em\u003E for the first time.\u003C/p\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOptions": [
+            {
+              "startIndex": 23,
+              "endIndex": 27,
+              "startLine": 0,
+              "startPos": 23,
+              "length": 4,
+              "value": "\u003Cem\u003E",
+              "correct": true
+            },
+            {
+              "startIndex": 37,
+              "endIndex": 42,
+              "startLine": 0,
+              "startPos": 37,
+              "length": 5,
+              "value": "\u003C/em\u003E",
+              "correct": true
+            }
+          ],
+          "wrongOptions": [],
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `\u003Cem\u003E`, followed by `\u003C/em\u003E`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 134819,
+        "index": 10,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Add a line break to the address between _Mimo_ and _Vienna, Austria_, such that _Mimo_ appears on one line and _Vienna, Austria_ appears below it.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeFillTheGap",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "\u003Cp\u003E Mimo \u003Cbr\u003E Vienna, Austria \u003C/p\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOptions": [
+            {
+              "startIndex": 9,
+              "endIndex": 13,
+              "startLine": 0,
+              "startPos": 9,
+              "length": 4,
+              "value": "\u003Cbr\u003E",
+              "correct": true
+            }
+          ],
+          "wrongOptions": [
+            "\u003C/br\u003E"
+          ],
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `\u003Cbr\u003E`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 134817,
+        "index": 11,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Give emphasis to the words in the second sentence.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeFillTheGap",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "\u003Cp\u003EMy friends get annoyed when I post in italics. \u003Cem\u003EI guess it's a\n bit too right-leaning for them.\u003C/em\u003E\u003C/p\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOptions": [
+            {
+              "startIndex": 50,
+              "endIndex": 54,
+              "startLine": 0,
+              "startPos": 50,
+              "length": 4,
+              "value": "\u003Cem\u003E",
+              "correct": true
+            },
+            {
+              "startIndex": 101,
+              "endIndex": 106,
+              "startLine": 1,
+              "startPos": 32,
+              "length": 5,
+              "value": "\u003C/em\u003E",
+              "correct": true
+            }
+          ],
+          "wrongOptions": [],
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `\u003Cem\u003E`, followed by `\u003C/em\u003E`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 134818,
+        "index": 12,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Define _rock you_ as important text by coding ` \u003C/strong\u003E`.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeFillTheGap",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "\u003Cp\u003E We will, we will\u003Cbr\u003E\u003Cstrong\u003E rock you\u003C/strong\u003E\u003C/p\u003E",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOptions": [
+            {
+              "startIndex": 41,
+              "endIndex": 50,
+              "startLine": 0,
+              "startPos": 41,
+              "length": 9,
+              "value": "\u003C/strong\u003E",
+              "correct": true
+            }
+          ],
+          "wrongOptions": [],
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `\u003C/strong\u003E`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      }
+    ],
+    "tutorialType": "course",
+    "nextTutorial": {
+      "id": 1001,
+      "index": 2,
+      "codeLanguage": "html",
+      "descriptionContent": "Learn how to build your first button in HTML.",
+      "title": "Building Buttons",
+      "type": "course",
+      "version": 29,
+      "bannerIconUrl": null,
+      "chapters": [
+        {
+          "id": 7692,
+          "title": "Buttons",
+          "type": "practiceLevel1",
+          "lessons": [
+            {
+              "id": 67395
+            },
+            {
+              "id": 67389
+            },
+            {
+              "id": 67391
+            },
+            {
+              "id": 67425
+            },
+            {
+              "id": 67393
+            },
+            {
+              "id": 67402
+            },
+            {
+              "id": 67443
+            },
+            {
+              "id": 67444
+            },
+            {
+              "id": 67445
+            },
+            {
+              "id": 67446
+            },
+            {
+              "id": 67448
+            },
+            {
+              "id": 67449
+            },
+            {
+              "id": 67450
+            },
+            {
+              "id": 67454
+            },
+            {
+              "id": 67453
+            },
+            {
+              "id": 67451
+            }
+          ]
+        }
+      ]
+    },
+    "chaptersCount": 1,
+    "currentChapterIndex": 0,
+    "publishSetVersion": 698,
+    "trackVersion": 46,
+    "tutorialVersion": 73,
+    "sectionIndex": 0,
+    "codeLanguage": "html"
+  }
+}

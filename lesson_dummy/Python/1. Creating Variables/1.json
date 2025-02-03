@@ -1,0 +1,676 @@
+{
+  "abTests": {
+
+  },
+  "__N_SSG": true,
+  "pageProps": {
+    "lessons": [
+      {
+        "type": "Interactive",
+        "id": 123418,
+        "index": 0,
+        "preInteractionModules": [
+          {
+            "type": "image",
+            "src": "e9175bae-c291-4ac4-a85e-c2788e030649",
+            "visibleIf": "always"
+          },
+          {
+            "type": "paragraph",
+            "content": "**Python** is a fantastic programming language for beginners and experts alike.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": null,
+        "postInteractionModules": []
+      },
+      {
+        "type": "Interactive",
+        "id": 123419,
+        "index": 1,
+        "preInteractionModules": [
+          {
+            "type": "image",
+            "src": "abf073bf-a3c1-422e-9fd6-fae44307cf26",
+            "visibleIf": "always"
+          },
+          {
+            "type": "paragraph",
+            "content": "It's the language of choice for many companies and a popular pick for personal projects.",
+            "visibleIf": "always"
+          },
+          {
+            "type": "paragraph",
+            "content": "You can use it for automating tasks, getting ahead in work with data analysis, machine learning, and much more!",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": null,
+        "postInteractionModules": []
+      },
+      {
+        "type": "Interactive",
+        "id": 123412,
+        "index": 2,
+        "preInteractionModules": [
+          {
+            "type": "image",
+            "src": "8f7303cc-7d52-41e0-ad7b-3a3a992e6de2",
+            "visibleIf": "always"
+          },
+          {
+            "type": "paragraph",
+            "content": "No matter how complex a program is, it begins with a single line of code. This first line is usually a **variable**.",
+            "visibleIf": "always"
+          },
+          {
+            "type": "paragraph",
+            "content": "Programs use variables to **remember information**. Like moving boxes, variables have content and names that tell us what's inside.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": null,
+        "postInteractionModules": []
+      },
+      {
+        "type": "Interactive",
+        "id": 123420,
+        "index": 3,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "What do computers use variables for?",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "multipleChoice",
+          "files": [],
+          "items": [
+            {
+              "correct": true,
+              "value": 0,
+              "text": "To store information for later use"
+            },
+            {
+              "correct": false,
+              "value": 1,
+              "text": "To display information on the screen"
+            }
+          ],
+          "isCode": false,
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "To store information for later use.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 123413,
+        "index": 4,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "To create a variable, we start by typing its **name**. Variable names need to be single words and, therefore, have no spaces.",
+            "visibleIf": "always"
+          },
+          {
+            "type": "paragraph",
+            "content": "Tap on the word `city` to start creating the variable.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeFillTheGap",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "script.py",
+              "content": "city ",
+              "codeLanguage": "python"
+            }
+          ],
+          "interactionOptions": [
+            {
+              "startIndex": 0,
+              "endIndex": 4,
+              "startLine": 0,
+              "startPos": 0,
+              "length": 4,
+              "value": "city",
+              "correct": true
+            }
+          ],
+          "wrongOptions": [
+            "home city"
+          ],
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `city`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 123411,
+        "index": 5,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "If we want a variable name with multiple words, we use **snake case**. Snake case means using `_` to connect the additional words.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeFillTheGap",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "script.py",
+              "content": "home_city",
+              "codeLanguage": "python"
+            }
+          ],
+          "interactionOptions": [
+            {
+              "startIndex": 4,
+              "endIndex": 5,
+              "startLine": 0,
+              "startPos": 4,
+              "length": 1,
+              "value": "_",
+              "correct": true
+            }
+          ],
+          "wrongOptions": [
+            "+"
+          ],
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `_`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 123410,
+        "index": 6,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "What's wrong with this variable name?",
+            "visibleIf": "always"
+          },
+          {
+            "type": "codeNone",
+            "files": [
+              {
+                "isInteractive": false,
+                "name": "script.py",
+                "content": "high score",
+                "codeLanguage": "python"
+              }
+            ],
+            "output": null
+          }
+        ],
+        "interactionModule": {
+          "type": "multipleChoice",
+          "files": [
+            {
+              "isInteractive": false,
+              "name": "script.py",
+              "content": "high score",
+              "codeLanguage": "python"
+            }
+          ],
+          "items": [
+            {
+              "correct": true,
+              "value": 0,
+              "text": "There&#039;s a space between the words"
+            },
+            {
+              "correct": false,
+              "value": 1,
+              "text": "It contains a lowercase letter"
+            }
+          ],
+          "isCode": false,
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "There's a space between the words.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 123421,
+        "index": 7,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "To help us understand what's inside a variable we pick descriptive names.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeFillTheGap",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "script.py",
+              "content": "home_city_province",
+              "codeLanguage": "python"
+            }
+          ],
+          "interactionOptions": [
+            {
+              "startIndex": 0,
+              "endIndex": 18,
+              "startLine": 0,
+              "startPos": 0,
+              "length": 18,
+              "value": "home_city_province",
+              "correct": true
+            }
+          ],
+          "wrongOptions": [
+            "hcp"
+          ],
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `home_city_province`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 123416,
+        "index": 8,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Pick the most descriptive variable name.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeFillTheGap",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "script.py",
+              "content": "high_score",
+              "codeLanguage": "python"
+            }
+          ],
+          "interactionOptions": [
+            {
+              "startIndex": 0,
+              "endIndex": 10,
+              "startLine": 0,
+              "startPos": 0,
+              "length": 10,
+              "value": "high_score",
+              "correct": true
+            }
+          ],
+          "wrongOptions": [
+            "hs",
+            "h_s"
+          ],
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `high_score`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 123417,
+        "index": 9,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "How does snake case format multiple words when creating a variable name?",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "multipleChoice",
+          "files": [],
+          "items": [
+            {
+              "correct": true,
+              "value": 0,
+              "text": "Using underscores (e.g., `my_variable_name`)"
+            },
+            {
+              "correct": false,
+              "value": 1,
+              "text": "Using capital letters (e.g., `myVariableName`)"
+            }
+          ],
+          "isCode": false,
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Using underscores (e.g., `my_variable_name`).",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 123409,
+        "index": 10,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Why do we give variables descriptive names like `city` or `population` instead of `c` or `p`? ",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "multipleChoice",
+          "files": [],
+          "items": [
+            {
+              "correct": true,
+              "value": 0,
+              "text": "To help us understand what&#039;s inside them"
+            },
+            {
+              "correct": false,
+              "value": 1,
+              "text": "To make them faster to type"
+            }
+          ],
+          "isCode": false,
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "To help us understand what's inside them.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 123422,
+        "index": 11,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Add the right symbols to create the snake case variable.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeFillTheGap",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "script.py",
+              "content": "total_cash_amount",
+              "codeLanguage": "python"
+            }
+          ],
+          "interactionOptions": [
+            {
+              "startIndex": 5,
+              "endIndex": 6,
+              "startLine": 0,
+              "startPos": 5,
+              "length": 1,
+              "value": "_",
+              "correct": true
+            },
+            {
+              "startIndex": 10,
+              "endIndex": 11,
+              "startLine": 0,
+              "startPos": 10,
+              "length": 1,
+              "value": "_",
+              "correct": true
+            }
+          ],
+          "wrongOptions": [
+            "+"
+          ],
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `_`, followed by `_`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 123415,
+        "index": 12,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Finish naming this variable by typing `request`.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeValidatedInput",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "script.py",
+              "content": "friend_request",
+              "codeLanguage": "python"
+            }
+          ],
+          "interactionOption": {
+            "startIndex": 7,
+            "endIndex": 14,
+            "startLine": 0,
+            "startPos": 7,
+            "length": 7,
+            "value": "request",
+            "correct": true
+          },
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to type `request`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      }
+    ],
+    "tutorialType": "course",
+    "nextTutorial": {
+      "id": 1104,
+      "index": 1,
+      "codeLanguage": "python",
+      "descriptionContent": "Learn how to update and reuse variables.",
+      "title": "Using Variables",
+      "type": "course",
+      "version": 20,
+      "bannerIconUrl": null,
+      "chapters": [
+        {
+          "id": 8643,
+          "title": "Updating Variables",
+          "type": "practiceLevel1",
+          "lessons": [
+            {
+              "id": 76142
+            },
+            {
+              "id": 76143
+            },
+            {
+              "id": 76144
+            },
+            {
+              "id": 76145
+            },
+            {
+              "id": 76141
+            },
+            {
+              "id": 76139
+            },
+            {
+              "id": 76140
+            },
+            {
+              "id": 76138
+            },
+            {
+              "id": 76137
+            },
+            {
+              "id": 76136
+            },
+            {
+              "id": 76135
+            },
+            {
+              "id": 76134
+            }
+          ]
+        },
+        {
+          "id": 8642,
+          "title": "Expressions",
+          "type": "practiceLevel1",
+          "lessons": [
+            {
+              "id": 76149
+            },
+            {
+              "id": 76148
+            },
+            {
+              "id": 76147
+            },
+            {
+              "id": 76125
+            },
+            {
+              "id": 76171
+            },
+            {
+              "id": 76170
+            },
+            {
+              "id": 76169
+            },
+            {
+              "id": 76167
+            },
+            {
+              "id": 76166
+            },
+            {
+              "id": 76165
+            },
+            {
+              "id": 76164
+            }
+          ]
+        },
+        {
+          "id": 13890,
+          "title": "Numbers",
+          "type": "practiceLevel1",
+          "lessons": [
+            {
+              "id": 123597
+            },
+            {
+              "id": 123599
+            },
+            {
+              "id": 123595
+            },
+            {
+              "id": 123598
+            },
+            {
+              "id": 123600
+            },
+            {
+              "id": 123596
+            },
+            {
+              "id": 123594
+            },
+            {
+              "id": 123593
+            },
+            {
+              "id": 123592
+            },
+            {
+              "id": 123591
+            },
+            {
+              "id": 123589
+            },
+            {
+              "id": 123590
+            },
+            {
+              "id": 123588
+            },
+            {
+              "id": 123587
+            }
+          ]
+        }
+      ]
+    },
+    "chaptersCount": 3,
+    "currentChapterIndex": 0,
+    "publishSetVersion": 698,
+    "trackVersion": 115,
+    "tutorialVersion": 36,
+    "sectionIndex": 0,
+    "codeLanguage": "python"
+  }
+}
