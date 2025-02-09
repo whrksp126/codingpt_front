@@ -30,7 +30,7 @@ const Main = () => {
           text-2xl font-bold text-cyan-900 text-center
           select-none
         ">
-          코딩을 배우는 재미있고 효과적인 방법!
+          코딩을 배우는 재미있고 효과적인 방법!!
         </h1>
         <div className="flex flex-col gap-3">
           <Btn color="cyan" text="시작하기" onClick={handleStartClick} />
