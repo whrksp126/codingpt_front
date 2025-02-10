@@ -9,9 +9,11 @@ console.log(common.backendUrl)
 const Main = () => {
   const navigate = useNavigate();
   const handleStartClick = () => {
-    navigate('/register');
+    navigate('/curriculum-list');
   };
   
+  
+
   return (
     <div className="
       flex flex-col
@@ -34,7 +36,7 @@ const Main = () => {
         </h1>
         <div className="flex flex-col gap-3">
           <Btn color="cyan" text="시작하기" onClick={handleStartClick} />
-          <Btn color="white" text="계정이 이미 있습니다" />
+          {/* <Btn color="white" text="계정이 이미 있습니다" /> */}
         </div>
       </div>
 

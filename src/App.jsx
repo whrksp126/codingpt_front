@@ -7,7 +7,8 @@ import Register from './pages/Register';
 import Welcome from './pages/Welcome';
 import Lesson from './pages/Lesson';
 import Learn from './pages/Learn';
-
+import CurriculumList from './pages/CurriculumList';
+import Curriculum from './pages/Curriculum';
 function App() {
   return (
     <BrowserRouter>
@@ -17,6 +18,8 @@ function App() {
         <Route path="/welcome" element={<Welcome />} />
         <Route path="/lesson" element={<Lesson />} />
         <Route path="/learn" element={<Learn />} />
+        <Route path="/curriculum-list" element={<CurriculumList />} />
+        <Route path="/curriculum/:id" element={<Curriculum />} />
       </Routes>
     </BrowserRouter>
   );

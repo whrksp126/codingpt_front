@@ -5,18 +5,14 @@ import Header from '../components/component/Header';
 
 const Home = () => {
   return (
-    <div 
-      className="
-        flex flex-col items-center justify-center 
-        h-screen 
-        mx-auto
-      "
-      style={{ paddingTop: '70px' }}
-    >
-      <Header />
-      <Main />
+    <div>
+      <div className="flex flex-col">
+        <Header />
+        <Main />
+      </div>
     </div>
   );
+
 };
 
 export default Home;

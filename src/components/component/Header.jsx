@@ -1,4 +1,4 @@
-// src/components/home/header
+// src/components/component/header
 const Header = () => {
   return (
     <header 
