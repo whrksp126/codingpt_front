@@ -1,7 +1,7 @@
-// src/components/curriculumList/Header.jsx
+// src/components/sections/Header.jsx
 import { X } from "@phosphor-icons/react";
 
-const Header = () => {
+const Header = ({curriculum}) => {
   return (
     <div className="
       fixed top-0
@@ -16,13 +16,13 @@ const Header = () => {
         h-14 w-full
         px-4
       ">
-        <div><X size={34} /></div>
+        <button onClick={() => {window.history.back();}}><X size={34} /></button>
         <h1
           className="
             absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
             text-xl font-bold
           "
-        >커리큘럼</h1>
+        >{curriculum.title}</h1>
         <div></div>
       </div>
     </div>

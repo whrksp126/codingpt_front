@@ -7,19 +7,24 @@ import Register from './pages/Register';
 import Welcome from './pages/Welcome';
 import Lesson from './pages/Lesson';
 import Learn from './pages/Learn';
-import CurriculumList from './pages/CurriculumList';
+
+import Curriculums from './pages/Curriculums';
 import Curriculum from './pages/Curriculum';
+import Sections from './pages/Sections';
+
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/welcome" element={<Welcome />} />
-        <Route path="/lesson" element={<Lesson />} />
-        <Route path="/learn" element={<Learn />} />
-        <Route path="/curriculum-list" element={<CurriculumList />} />
-        <Route path="/curriculum/:id" element={<Curriculum />} />
+        <Route path="/" element={<Home />} /> {/* 루트 */}
+        <Route path="/register" element={<Register />} /> {/* 루트 */}
+        <Route path="/welcome" element={<Welcome />} /> {/* 루트 */}
+        <Route path="/lesson" element={<Lesson />} /> {/* 루트 */}
+        <Route path="/learn" element={<Learn />} /> {/* 루트 */}
+
+        <Route path="/curriculums" element={<Curriculums />} /> {/* 커리큘럼 리스트 페이지 */}
+        <Route path="/sections" element={<Sections />} /> {/* 섹션 리스트 페이지 */}
+        <Route path="/curriculum" element={<Curriculum />} /> {/* 커리큘럼 페이지 */}
       </Routes>
     </BrowserRouter>
   );

@@ -1,16 +1,10 @@
 // src/pages/CurriculumList.js
-import Header from '../components/curriculumList/Header';
-import Main from '../components/curriculumList/Main';
+import Header from '../components/curriculums/Header';
+import Main from '../components/curriculums/Main';
 import { curriculumList } from '../assets/lesson_dummy/curriculumList';
 
-
-
-
-
-const CurriculumList = () => {
-
+const Curriculums = () => {
   return (
-
     <div 
       className="
         flex flex-col items-center justify-center
@@ -19,10 +13,8 @@ const CurriculumList = () => {
     >
       <Header />
       <Main curriculumList={curriculumList} />
-
     </div>
-    
   );
 };
 
-export default CurriculumList;
+export default Curriculums;

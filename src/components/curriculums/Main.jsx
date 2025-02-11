@@ -33,7 +33,7 @@ const Main = ({curriculumList}) => {
               p-4
             "
             onClick={() => {
-              navigate(`/curriculum/${curriculum.id}`);
+              navigate(`/sections?curriculum_id=${curriculum.id}`);
             }}
           >
             <img 

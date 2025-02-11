@@ -22,6 +22,9 @@ export default {
       },
       marginTop:{
         'header': '88px',
+      },
+      height:{
+        'header': '88px',
       }
     },
   },

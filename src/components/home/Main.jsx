@@ -9,7 +9,7 @@ console.log(common.backendUrl)
 const Main = () => {
   const navigate = useNavigate();
   const handleStartClick = () => {
-    navigate('/curriculum-list');
+    navigate('/curriculums');
   };
   
   

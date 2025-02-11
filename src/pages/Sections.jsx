@@ -1,14 +1,12 @@
-// src/pages/Curriculum.jsx
-import Header from '../components/curriculum/Header';
-import Main from '../components/curriculum/Main';
+// src/pages/CurriculumList.js
+import Header from '../components/sections/Header';
+import Main from '../components/sections/Main';
 import { curriculumList } from '../assets/lesson_dummy/curriculumList';
 
-const Curriculum = () => {
+const Sections = () => {
   const searchParams = new URLSearchParams(window.location.search);
   const curriculum_id = searchParams.get('curriculum_id');
-  const section_id = searchParams.get('section_id');
   const curriculum = curriculumList.find((curriculum) => curriculum.id === Number(curriculum_id));
-  const section = curriculum.sections.find((section)=>section.id === Number(section_id));
   
 
   return (
@@ -18,11 +16,11 @@ const Curriculum = () => {
         mx-auto
       "
     >
-      <Header/>
-      <Main section={section} />
+      <Header curriculum={curriculum} />
+      <Main curriculum={curriculum} />
     </div>
     
   );
 };
 
-export default Curriculum;
+export default Sections;
