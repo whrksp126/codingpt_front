@@ -10,7 +10,7 @@ const Header = () => {
         select-none
       "
     >
-      CodingPT
+      <img src="/src/assets/images/codingPT.png" alt="CodingPT Logo" />
     </header>
   )
 }

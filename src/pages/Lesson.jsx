@@ -8,6 +8,7 @@ import Iframe from '../components/component/Iframe';
 import { LessonDummy } from '../dummys/LessonDummy';
 
 import ReactMarkdown from 'react-markdown';
+import Header from '../components/lesson/Header';
 
 const Lesson = () => {
   const inputRefs = useRef([]);
@@ -167,11 +168,18 @@ const Lesson = () => {
           key={`option-${index}`}
           data-index={index}
           onClick={(event) => clickOptionItem(event)}
-          className={`flex h-8 items-center rounded-lg border border-b-2 px-3 !font-aeonikMono font-mimopro font-normal text-sm hover:bg-product2-background-secondary ${
+          className={`
+            flex items-center 
+            h-8 
+            px-3
+            border border-b-2 rounded-lg border-[#37464f]
+            font-normal text-sm 
+            ${
             disabledOptions.includes(index)
-              ? "bg-gray-300 text-gray-500 cursor-not-allowed"
-              : "border-product2-border-secondary text-product2-content-primary"
-          }`}
+              ? "text-gray-500 cursor-not-allowed bg-[#37464f] border-[#37464f]"
+              : "border-product2-border-secondary text-white text-product2-content-primary"
+            }
+          `}
           disabled={disabledOptions.includes(index)} // 비활성화 상태
         >
           {option}
@@ -227,8 +235,19 @@ const Lesson = () => {
                 }
               }}
               className={`
-                ${lineElements.length != 0 ? 'ml-1' : ''} h-5 min-w-[21px] border border-gray-700 rounded-md bg-cyan-800 text-center text-sm text-white caret-blue-400 
-                focus:border-blue-500 focus:ring focus:ring-blue-300 focus:outline-none
+                h-5 
+                ${lineElements.length != 0 ? 'ml-1' : ''} 
+                min-w-[21px] 
+                border border-[#282828] rounded-md 
+                
+                
+                text-center text-sm text-white 
+                caret-blue-400 
+                bg-[#282828]
+                focus:border-blue-500 
+                focus:ring 
+                focus:ring-blue-300 
+                focus:outline-none
               `}
               style={{ width: `calc(${length}ch + 12px)` }}
               readOnly // 읽기 전용
@@ -278,31 +297,16 @@ const Lesson = () => {
           
         "
       >
-        <div className={`flex items-center gap-5 px-4 py-6 pb-2`}>
-          <X size={32} color="#083344" />
-          <div className="flex w-full h-4 rounded-xl bg-cyan-100">
-            <div 
-              className={`h-full rounded-xl bg-cyan-400 transition-all duration-500 ease-in-out`}
-              style={{ width: `${(1 / 10) * 100}%` }}
-            ></div>
-          </div>
-          <div className={`
-            flex gap-1 items-center
-            text-lg text-amber-400 font-bold
-          `}
-          >
-            <Star size={24} weight="fill" />
-            <span>5</span>
-          </div>
-        </div>
-        <div className={`flex-1 px-4 flex flex-col items-center justify-center pb-24 overflow-auto`}>
+        <Header />
+        
+        <div className={`flex-1 px-4 flex flex-col items-center justify-start pb-24 overflow-auto`}>
           {/* title */}
           {/* <h1 className={`text-2xl font-bold`}>{currentStepData.title}</h1> */}
           {currentStepData.type === "Interactive" && 
           <div className={`flex gap-4 flex-col w-full`}>
             {/* preInteractionModules */}
             <div className="flex flex-1 items-center h-full">
-              <div className={`flex flex-col text-center gap-4 w-full text-cyan-950 font-semibold`}>
+              <div className={`flex flex-col text-center gap-4 w-full text-[#f1f7fb] font-semibold`}>
                 {currentStepData.preInteractionModules.map((data, index)=> {
                 return (
                 <div key={index}>
@@ -331,9 +335,20 @@ const Lesson = () => {
               {currentStepData.interactionModule.type === 'codeFillTheGap' &&
               <div className={`min-w-[300px] max-w-[664px] flex-1 bg-product-background-primary-light dark:bg-product-background-primary-dark`}>
                 <div className={`relative flex flex-col`}>
-                  <div className={`relative flex max-h-[440px] w-full flex-col overflow-hidden rounded-xl border border-indigo-800 bg-product2-background-dark`}>
+                  <div className={`
+                    relative 
+                    flex flex-col 
+                    max-h-[440px] w-full 
+                    rounded-[4px] border border-[#181818]
+                    overflow-hidden
+                    `}>
                     {/* programming language nav */}
-                    <div className={`flex h-10 flex-shrink-0 overflow-x-auto bg-cyan-800`}>
+                    <div className={`
+                      flex flex-shrink-0 
+                      h-10 
+                      bg-[#1f1f1f]
+                      overflow-x-auto 
+                      `}>
                       {currentStepData.interactionModule.files.map((file, index)=>{return (
                       <button 
                         data-index={index}
@@ -345,8 +360,8 @@ const Lesson = () => {
                           px-4 
                           whitespace-nowrap 
                           font-semibold text-xs text-white
-                          rounded-t-xl
-                          ${languageNav == index ? "bg-cyan-950" : "bg-cyan-800"}
+                          ${languageNav == index ? "bg-[#1c1c1c] border border-[#2b2b2b] border-b-0 border-t-[#49c0f8]" : ""}
+                          
                         `}
                       >{file.name}</button>
                       )})}
@@ -361,8 +376,7 @@ const Lesson = () => {
                           px-4 
                           whitespace-nowrap 
                           text-xs font-semibold text-white
-                          rounded-t-xl
-                          ${languageNav == currentStepData.interactionModule.files.length ? "bg-cyan-950" : "bg-cyan-800"} 
+                          ${languageNav == currentStepData.interactionModule.files.length ? "bg-[#1c1c1c] border border-[#2b2b2b] border-b-0 border-t-[#49c0f8]" : ""} 
                         `}>
                         Browser
                       </button>
@@ -370,12 +384,12 @@ const Lesson = () => {
                     </div>
                     {/* programming language */}
                     {languageNav == currentStepData.interactionModule.files.length ? 
-                    <div className="h-56 overflow-y-auto bg-cyan-950 px-4 py-3 text-sm text-white">
+                    <div className="h-56 overflow-y-auto bg-[#1c1c1c] px-4 py-3 text-sm text-white">
                       {generateBrowswer(currentStepData.index)}
                     </div>
                     :
                     currentStepData.interactionModule.files.map((file, index)=>{
-                      return <pre key={`pre_${index}`} className="h-56 overflow-y-auto bg-cyan-950 px-4 py-3 text-sm text-white">
+                      return <pre key={`pre_${index}`} className="h-56 overflow-y-auto bg-[#1c1c1c] px-4 py-3 text-sm text-white">
                         {generateCodeWithInputs(currentStepData.interactionModule, index)}
                       </pre>
                     })
@@ -400,13 +414,15 @@ const Lesson = () => {
                       className={`
                         flex items-center justify-between space-x-2 
                         min-h-10 w-full 
-                        py-2 pl-3 pr-2 
-                        mb-3 
-                        rounded-lg border border-b-2 
-                        text-left font-semibold 
-                        text-base
-                        ${disabledOptions[0] == index ? 'bg-cyan-500 border-cyan-600 text-white' : 'border-gray-400'}
-                        hover:bg-cyan-500 hover:border-cyan-600
+                        py-2 pl-3 pr-2 mb-3 
+                        border-[2px] border-b-[4px] border-[#37464f] rounded-lg 
+                        text-left font-semibold text-base text-[#f1f7fb]
+                        bg-[#151f24]
+                    
+                        ${disabledOptions[0] == index ? 'border-[#1899d5] bg-[#131f24]  text-[#1899d5]' : 'border-gray-400'}
+                        hover:border-[#1899d5]
+                        hover:bg-[#131f24] 
+                        hover:text-[#1899d5]
                       `}
                     >
                       <ReactMarkdown>
@@ -425,17 +441,14 @@ const Lesson = () => {
           }
         </div>
         <div 
-          className={`
-            fixed bottom-0 left-0 right-0
-            px-4 py-6
-          `}
+          className={`fixed bottom-0 left-0 right-0 px-4 py-6`}
           >
           {isCorrect !== null ? 
           <div className={`
             absolute bottom-0 left-0 right-0
             flex justify-between items-center
             px-4 pb-20 pt-6 
-            ${isCorrect ? "bg-cyan-50" : "bg-red-50"}
+            ${isCorrect ? "bg-[#202f36]" : "bg-[#202f36]"}
 
             
             after:content-[""]
@@ -446,13 +459,13 @@ const Lesson = () => {
             <div className={`flex flex-col gap-2`}>
               <h2 className={`
                 text-2xl font-bold 
-                ${isCorrect ? "text-cyan-500" : "text-red-500"}
+                ${isCorrect ? "text-[#79b933]" : "text-red-500"}
                 
               `}>
                 {isCorrect ? "완벽합니다! 잘했어요!" : "뭔가 잘못됐어"}
               </h2>
               <div className={`
-                ${isCorrect ? "text-cyan-500" : "text-red-500"}
+                ${isCorrect ? "text-[#79b933]" : "text-red-500"}
                 text-sm
               `}>
                 <ReactMarkdown>

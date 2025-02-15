@@ -70,6 +70,8 @@ const Main = ({section}) => {
                         }
                       }}
                       isClosing={closingStageId === stage.id}
+                      curriculum_id={section.curriculum_id}
+                      section_id={section.id}
                     />
                   )}
                 </div>
