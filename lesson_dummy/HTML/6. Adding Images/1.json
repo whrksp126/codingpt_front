@@ -12,7 +12,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "HTML also allows us to add images to a webpage.",
+            "content": "HTML은 웹페이지에 이미지를 추가할 수 있습니다.",
             "visibleIf": "always"
           },
           {
@@ -31,7 +31,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "To add **images** to a webpage, we start with the `\u003Cimg\u003E` tag.",
+            "content": "웹페이지에 **이미지**를 추가하기 위해, 우리는 `\u003Cimg\u003E` 태그로 시작합니다.",
             "visibleIf": "always"
           }
         ],
@@ -64,7 +64,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003Cimg\u003E`.",
+            "content": "`\u003Cimg\u003E`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -127,7 +127,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003C`, followed by `img`, and finally `\u003E`.",
+            "content": "`\u003C`, `img`, `\u003E`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -139,7 +139,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "To display an image, an image tag needs the `src` attribute. `src` stands for source.",
+            "content": "이미지를 표시하기 위해, 이미지 태그는 `src` 속성이 필요합니다. `src`는 소스를 의미합니다.",
             "visibleIf": "always"
           }
         ],
@@ -172,7 +172,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `src`.",
+            "content": "`src`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -235,7 +235,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `src`, followed by `=`, and finally `\"https://mimo.app/i/earth.png\"`.",
+            "content": "`src`, `=`, `\"https://mimo.app/i/earth.png\"`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -303,7 +303,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `width`, followed by `=`, and finally `\"100\"`.",
+            "content": "`width`, `=`, `\"100\"`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -343,7 +343,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to type `height`.",
+            "content": "`height`를 입력하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -385,7 +385,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "It has no closing tag.",
+            "content": "닫는 태그가 없습니다.",
             "visibleIf": "wrong"
           }
         ]
@@ -441,7 +441,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick 2.",
+            "content": "2를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -478,7 +478,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "With the `height` attribute.",
+            "content": "`height` 속성을 사용하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -515,7 +515,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "The `src` attribute.",
+            "content": "`src` 속성을 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -578,7 +578,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `width`, followed by `=`, and finally `\"200\"`.",
+            "content": "`width`, `=`, `\"200\"`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -668,7 +668,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003C` followed by `img` and then `src`, `=`, `\"https://mimo.app/i/cafe.png\"`, `\u003E`.",
+            "content": "`\u003C` 다음에 `img`를 선택하고, 그 다음 `src`, `=`, `\"https://mimo.app/i/cafe.png\"`, `\u003E`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -708,7 +708,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to type `src`.",
+            "content": "`src`를 입력하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -748,7 +748,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to type `height=\"100\"`.",
+            "content": "`height=\"100\"`를 입력하세요.",
             "visibleIf": "wrong"
           }
         ]

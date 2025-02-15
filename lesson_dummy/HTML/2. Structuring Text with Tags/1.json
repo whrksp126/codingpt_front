@@ -12,17 +12,17 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Sometimes we want to format paragraphs with line breaks.",
+            "content": "가끔 우리는 문단을 줄바꿈하고 싶을 때가 있습니다.",
             "visibleIf": "always"
           },
           {
             "type": "paragraph",
-            "content": "For example, this song would look much better if `Raindrops on roses` appeared on one line, `Whiskers on kittens` on the next, and so on.",
+            "content": "예를 들어, 이 노래는 `장미꽃 위의 빗방울`이 한 줄에 나오고, `고양이의 수염`이 다음 줄에 나오고, 이런 식으로 보기가 더 좋을 것입니다.",
             "visibleIf": "always"
           },
           {
             "type": "webview",
-            "content": "\u003Ch1\u003EMy favorite things\u003C/h1\u003E\n\u003Cp\u003E Raindrops on roses Whiskers on kittens Bright copper kettles Warm\n woolen mittens \u003C/p\u003E",
+            "content": "<h1>내가 좋아하는 것들</h1>\n<p> 장미꽃 위의 빗방울 고양이의 수염 밝은 구리 주전자 따뜻한\n 양모 장갑 </p>",
             "visibleIf": "always"
           }
         ],
@@ -36,7 +36,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "We can separate lines with the help of the **line break tag**: `br`.",
+            "content": "우리는 줄바꿈을 돕기 위해 **줄바꿈 태그**를 사용할 수 있습니다: `br`.",
             "visibleIf": "always"
           }
         ],
@@ -46,7 +46,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Ch1\u003EMy favorite things\u003C/h1\u003E\n\u003Cp\u003E Raindrops on roses\u003Cbr\u003E\nWhiskers on kittens\u003Cbr\u003E \nBright copper kettles \u003Cbr\u003E \nWarm woolen mittens\n \u003C/p\u003E",
+              "content": "<h1>내가 좋아하는 것들</h1>\n<p> 장미꽃 위의 빗방울<br>\n고양이의 수염<br> \n밝은 구리 주전자<br> \n따뜻한 양모 장갑\n </p>",
               "codeLanguage": "html"
             }
           ],
@@ -57,7 +57,7 @@
               "startLine": 1,
               "startPos": 22,
               "length": 4,
-              "value": "\u003Cbr\u003E",
+              "value": "<br>",
               "correct": true
             },
             {
@@ -66,7 +66,7 @@
               "startLine": 3,
               "startPos": 22,
               "length": 4,
-              "value": "\u003Cbr\u003E",
+              "value": "<br>",
               "correct": true
             }
           ],
@@ -76,7 +76,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003Cbr\u003E`, followed by `\u003Cbr\u003E`.",
+            "content": "`<br>`를 선택하고, `<br>`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -88,12 +88,12 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`\u003Cbr\u003E` is an **empty tag**. Empty tags have no closing tag and no content. They are also called self-closing tags.",
+            "content": "`<br>`은 **빈 태그**입니다. 빈 태그는 닫는 태그가 없고 내용도 없습니다. 이를 자체 닫힘 태그라고도 합니다.",
             "visibleIf": "always"
           },
           {
             "type": "paragraph",
-            "content": "Put together the line break tag.",
+            "content": "줄바꿈 태그를 함께 넣어보세요.",
             "visibleIf": "always"
           }
         ],
@@ -103,7 +103,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Ch1\u003EMy favorite things\u003C/h1\u003E\n\u003Cp\u003E\n Raindrops on roses\u003Cbr\u003E\n Whiskers on kittens\u003Cbr\u003E\n Bright copper kettles\u003Cbr\u003E\n Warm woolen mittens\n\u003C/p\u003E",
+              "content": "<h1>내가 좋아하는 것들</h1>\n<p>\n 장미에 맺힌 빗방울<br>\n 고양이의 수염<br>\n 반짝이는 구리 주전자<br>\n 따뜻한 양모 장갑\n</p>",
               "codeLanguage": "html"
             }
           ],
@@ -114,7 +114,7 @@
               "startLine": 4,
               "startPos": 22,
               "length": 1,
-              "value": "\u003C",
+              "value": "<",
               "correct": true
             },
             {
@@ -132,7 +132,7 @@
               "startLine": 4,
               "startPos": 25,
               "length": 1,
-              "value": "\u003E",
+              "value": ">",
               "correct": true
             }
           ],
@@ -144,7 +144,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003C`, followed by `br`, and finally `\u003E`.",
+            "content": "`<`를 선택하고, `br`를 선택한 다음, `>`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -156,7 +156,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "There's an element for giving emphasis to text, it makes it _italic_. It's called the `em` element. Add `\u003Cem\u003E` and `\u003C/em\u003E`.",
+            "content": "텍스트를 강조하는 요소가 있습니다. 이 요소는 텍스트를 _기울임꼴_로 만듭니다. 이것을 `em` 요소라고 합니다. `<em>`과 `</em>`을 추가해보세요.",
             "visibleIf": "always"
           }
         ],
@@ -166,7 +166,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\n\u003Ch1\u003EMy favorite things\u003C/h1\u003E\n\u003Cp\u003E\n Raindrops on \u003Cem\u003Eroses\u003C/em\u003E\u003Cbr\u003E\n Whiskers on kittens\u003Cbr\u003E\n Bright copper kettles\u003Cbr\u003E\n Warm woolen mittens\n\u003C/p\u003E\n",
+              "content": "\n<h1>내가 좋아하는 것들</h1>\n<p>\n <em>장미</em>에 맺힌 빗방울<br>\n 고양이의 수염<br>\n 반짝이는 구리 주전자<br>\n 따뜻한 양모 장갑\n</p>\n",
               "codeLanguage": "html"
             }
           ],
@@ -177,7 +177,7 @@
               "startLine": 3,
               "startPos": 14,
               "length": 4,
-              "value": "\u003Cem\u003E",
+              "value": "<em>",
               "correct": true
             },
             {
@@ -186,7 +186,7 @@
               "startLine": 3,
               "startPos": 23,
               "length": 5,
-              "value": "\u003C/em\u003E",
+              "value": "</em>",
               "correct": true
             }
           ],
@@ -196,7 +196,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003Cem\u003E`, followed by `\u003C/em\u003E`.",
+            "content": "`<em>`를 선택하고, `</em>`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -208,7 +208,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "To define texts as important, we use the `\u003Cstrong\u003E` and `\u003C/strong\u003E` tags. It makes text **bold**.",
+            "content": "텍스트를 중요하게 표시하기 위해서는 `<strong>`와 `</strong>` 태그를 사용합니다. 이는 텍스트를 **굵게** 만듭니다.",
             "visibleIf": "always"
           }
         ],
@@ -218,7 +218,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Ch1\u003EMy favorite things\u003C/h1\u003E\n\u003Cp\u003E\n Raindrops on \u003Cem\u003Eroses\u003C/em\u003E\u003Cbr\u003E\n Whiskers on \u003Cstrong\u003Ekittens\u003C/strong\u003E\n\u003C/p\u003E",
+              "content": "<h1>내가 좋아하는 것들</h1>\n<p>\n 장미꽃 위의 <em>빗방울</em><br>\n 고양이의 <strong>수염</strong>\n</p>",
               "codeLanguage": "html"
             }
           ],
@@ -229,7 +229,7 @@
               "startLine": 3,
               "startPos": 13,
               "length": 8,
-              "value": "\u003Cstrong\u003E",
+              "value": "<strong>",
               "correct": true
             },
             {
@@ -238,7 +238,7 @@
               "startLine": 3,
               "startPos": 28,
               "length": 9,
-              "value": "\u003C/strong\u003E",
+              "value": "</strong>",
               "correct": true
             }
           ],
@@ -248,7 +248,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003Cstrong\u003E`, followed by `\u003C/strong\u003E`.",
+            "content": "`<strong>`를 선택하고, `</strong>`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -260,7 +260,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "What's the `\u003Cbr\u003E` tag for?",
+            "content": "`<br>` 태그는 무엇을 위한 것인가요?",
             "visibleIf": "always"
           }
         ],
@@ -271,12 +271,12 @@
             {
               "correct": false,
               "value": 0,
-              "text": "It gives emphasis to text"
+              "text": "텍스트를 강조합니다"
             },
             {
               "correct": true,
               "value": 1,
-              "text": "It adds a line break"
+              "text": "줄바꿈을 추가합니다"
             }
           ],
           "isCode": false,
@@ -285,7 +285,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "It adds a line break.",
+            "content": "줄바꿈을 추가합니다.",
             "visibleIf": "wrong"
           }
         ]
@@ -297,7 +297,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Which of these tags is an empty or self-closing tag?",
+            "content": "다음 중 빈 태그 또는 자체 닫는 태그는 무엇인가요?",
             "visibleIf": "always"
           }
         ],
@@ -308,22 +308,22 @@
             {
               "correct": true,
               "value": 0,
-              "text": "`\u003Cbr\u003E`"
+              "text": "`<br>`"
             },
             {
               "correct": false,
               "value": 1,
-              "text": "`\u003C/strong\u003E`"
+              "text": "`</strong>`"
             },
             {
               "correct": false,
               "value": 2,
-              "text": "`\u003C/em\u003E`"
+              "text": "`</em>`"
             },
             {
               "correct": false,
               "value": 3,
-              "text": "`\u003Cp\u003E`"
+              "text": "`<p>`"
             }
           ],
           "isCode": false,
@@ -332,7 +332,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003Cbr\u003E`.",
+            "content": "`<br>`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -344,7 +344,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Which of these tags give emphasis to text?",
+            "content": "어떤 태그가 텍스트를 강조하는 데 사용되나요?",
             "visibleIf": "always"
           }
         ],
@@ -355,12 +355,12 @@
             {
               "correct": true,
               "value": 0,
-              "text": "`\u003Cem\u003E` and `\u003C/em\u003E`"
+              "text": "`<em>` and `</em>`"
             },
             {
               "correct": false,
               "value": 1,
-              "text": "`\u003Cp\u003E` and `\u003C/p\u003E`"
+              "text": "`<p>` and `</p>`"
             }
           ],
           "isCode": false,
@@ -369,7 +369,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`\u003Cem\u003E` and `\u003C/em\u003E`.",
+            "content": "`<em>`와 `</em>`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -381,7 +381,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "What are the `\u003Cstrong\u003E` and `\u003C/strong\u003E` tags for?",
+            "content": "`<strong>`와 `</strong>` 태그는 무엇을 위한 것인가요?",
             "visibleIf": "always"
           }
         ],
@@ -392,12 +392,12 @@
             {
               "correct": true,
               "value": 0,
-              "text": "They define text as important"
+              "text": "텍스트를 중요하게 정의합니다"
             },
             {
               "correct": false,
               "value": 1,
-              "text": "They make the text unbreakable by line break"
+              "text": "줄바꿈을 추가합니다"
             }
           ],
           "isCode": false,
@@ -406,7 +406,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "They define text as important.",
+            "content": "그들은 텍스트를 중요하게 정의합니다.",
             "visibleIf": "wrong"
           }
         ]
@@ -418,7 +418,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Give emphasis to the album title by adding the opening and closing emphasis tags.",
+            "content": "앨범 제목을 강조하기 위해 열리고 닫힌 강조 태그를 추가하세요.",
             "visibleIf": "always"
           }
         ],
@@ -428,7 +428,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Cp\u003E I just listened to \u003Cem\u003EAbbey Road\u003C/em\u003E for the first time.\u003C/p\u003E",
+              "content": "<p> 나는 방금 <em>애비 로드</em>를 처음 들었어요.</p>",
               "codeLanguage": "html"
             }
           ],
@@ -439,7 +439,7 @@
               "startLine": 0,
               "startPos": 23,
               "length": 4,
-              "value": "\u003Cem\u003E",
+              "value": "<em>",
               "correct": true
             },
             {
@@ -448,7 +448,7 @@
               "startLine": 0,
               "startPos": 37,
               "length": 5,
-              "value": "\u003C/em\u003E",
+              "value": "</em>",
               "correct": true
             }
           ],
@@ -458,7 +458,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003Cem\u003E`, followed by `\u003C/em\u003E`.",
+            "content": "`<em>`를 선택하고, `</em>`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -470,7 +470,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Add a line break to the address between _Mimo_ and _Vienna, Austria_, such that _Mimo_ appears on one line and _Vienna, Austria_ appears below it.",
+            "content": "_Mimo_와 _Vienna, Austria_ 사이에 줄바꿈을 추가하여 _Mimo_가 한 줄에 나타나고 _Vienna, Austria_가 그 아래에 나타나도록 하세요.",
             "visibleIf": "always"
           }
         ],
@@ -480,7 +480,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Cp\u003E Mimo \u003Cbr\u003E Vienna, Austria \u003C/p\u003E",
+              "content": "<p> 마이모 <br> 비엔나, 오스트리아 </p>",
               "codeLanguage": "html"
             }
           ],
@@ -491,19 +491,19 @@
               "startLine": 0,
               "startPos": 9,
               "length": 4,
-              "value": "\u003Cbr\u003E",
+              "value": "<br>",
               "correct": true
             }
           ],
           "wrongOptions": [
-            "\u003C/br\u003E"
+            "</br>"
           ],
           "output": null
         },
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003Cbr\u003E`.",
+            "content": "`<br>`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -515,7 +515,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Give emphasis to the words in the second sentence.",
+            "content": "두 번째 문장의 단어들을 강조해보세요.",
             "visibleIf": "always"
           }
         ],
@@ -525,7 +525,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Cp\u003EMy friends get annoyed when I post in italics. \u003Cem\u003EI guess it's a\n bit too right-leaning for them.\u003C/em\u003E\u003C/p\u003E",
+              "content": "<p>친구들은 내가 기울임체로 글을 쓸 때마다 짜증을 내요. <em>아마도 너무 오른쪽으로\n 기울어져서 그런가 봐요.</em></p>",
               "codeLanguage": "html"
             }
           ],
@@ -536,7 +536,7 @@
               "startLine": 0,
               "startPos": 50,
               "length": 4,
-              "value": "\u003Cem\u003E",
+              "value": "<em>",
               "correct": true
             },
             {
@@ -545,7 +545,7 @@
               "startLine": 1,
               "startPos": 32,
               "length": 5,
-              "value": "\u003C/em\u003E",
+              "value": "</em>",
               "correct": true
             }
           ],
@@ -555,7 +555,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003Cem\u003E`, followed by `\u003C/em\u003E`.",
+            "content": "`<em>`를 선택하고, `</em>`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -567,7 +567,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Define _rock you_ as important text by coding ` \u003C/strong\u003E`.",
+            "content": "`</strong>`를 사용하여 _rock you_를 중요한 텍스트로 정의해보세요.",
             "visibleIf": "always"
           }
         ],
@@ -577,7 +577,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Cp\u003E We will, we will\u003Cbr\u003E\u003Cstrong\u003E rock you\u003C/strong\u003E\u003C/p\u003E",
+              "content": "<p> 우리는, 우리는<br><strong> 널 흔들 거야</strong></p>",
               "codeLanguage": "html"
             }
           ],
@@ -588,7 +588,7 @@
               "startLine": 0,
               "startPos": 41,
               "length": 9,
-              "value": "\u003C/strong\u003E",
+              "value": "</strong>",
               "correct": true
             }
           ],
@@ -598,7 +598,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003C/strong\u003E`.",
+            "content": "`</strong>`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -609,15 +609,15 @@
       "id": 1001,
       "index": 2,
       "codeLanguage": "html",
-      "descriptionContent": "Learn how to build your first button in HTML.",
-      "title": "Building Buttons",
+      "descriptionContent": "HTML에서 첫 번째 버튼을 만드는 방법을 배워보세요.",
+      "title": "버튼 만들기",
       "type": "course",
       "version": 29,
       "bannerIconUrl": null,
       "chapters": [
         {
           "id": 7692,
-          "title": "Buttons",
+          "title": "버튼",
           "type": "practiceLevel1",
           "lessons": [
             {

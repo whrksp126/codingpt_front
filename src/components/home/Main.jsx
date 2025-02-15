@@ -37,7 +37,6 @@ const Main = () => {
         </h1>
         <div className="flex flex-col gap-3">
           <Btn color="cyan" text="시작하기" onClick={handleStartClick} />
-          {/* <Btn color="white" text="계정이 이미 있습니다" /> */}
         </div>
       </div>
     </div>

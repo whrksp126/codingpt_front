@@ -31,7 +31,7 @@ const Btn = ({ text, color='cyan', onClick=()=>{}, disabled }) => {
           px-4 
           border-solid border-b-4 rounded-2xl
           text-[15px] font-bold
-          text-[rgb(88,204,2)]
+          
           outline: none;
           border-transparent
           select-none
@@ -48,7 +48,7 @@ const Btn = ({ text, color='cyan', onClick=()=>{}, disabled }) => {
           before:bottom-0
           before:left-0
           before:-z-[1]
-          before:bg-white
+          
           before:rounded-2xl
           before:shadow-[0_4px_0]
           before:text-white/70

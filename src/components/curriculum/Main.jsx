@@ -4,6 +4,7 @@ import StageButton from './StageButton';
 import Tooltip from './Tooltip';
 
 const Main = ({section}) => {
+  console.log(section)
   // 현재 클릭된 stage의 id를 저장할 state
   const [clickedStageId, setClickedStageId] = useState(null);
   const [closingStageId, setClosingStageId] = useState(null);
@@ -70,8 +71,7 @@ const Main = ({section}) => {
                         }
                       }}
                       isClosing={closingStageId === stage.id}
-                      curriculum_id={section.curriculum_id}
-                      section_id={section.id}
+                      unit_id={unit.id}
                     />
                   )}
                 </div>

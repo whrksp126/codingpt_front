@@ -6,11 +6,24 @@ import Btn from '../components/component/Btn';
 import Iframe from '../components/component/Iframe';
 // import LottieAnimation from '../components/LottieAnimation';
 import { LessonDummy } from '../dummys/LessonDummy';
+import { curriculumList } from '../assets/lesson_dummy/curriculumList';
 
 import ReactMarkdown from 'react-markdown';
 import Header from '../components/lesson/Header';
 
+const urlParams = new URLSearchParams(window.location.search);
+const curriculumId = urlParams.get('curriculum_id');
+const sectionId = urlParams.get('section_id');
+const unitId = urlParams.get('unit_id');
+const stageId = urlParams.get('stage_id');
+
+
 const Lesson = () => {
+  const curriculum = curriculumList.find((curriculum) => curriculum.id === Number(curriculumId));
+  const section = curriculum.sections.find((section)=>section.id === Number(sectionId));
+  const unit = section.units.find((unit)=>unit.id === Number(unitId));
+  const stage = unit.stages.find((stage)=>stage.id === Number(stageId));
+
   const inputRefs = useRef([]);
   const [disabledOptions, setDisabledOptions] = useState([]); // 비활성화된 옵션 상태
   const [allInputsFilled, setAllInputsFilled] = useState(false); // 모든 input이 채워졌는지 상태 확인
@@ -18,15 +31,18 @@ const Lesson = () => {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
 
-  const [stepsData, setStepsData] = useState(LessonDummy);
+  // const [stepsData, setStepsData] = useState(LessonDummy);
+  const [stepsData, setStepsData] = useState(stage.lessons[0].content.pageProps.lessons);
   const [lessonStep, setLessonStep] = useState(parseInt(searchParams.get('lessonStep')) || 0);
   const [languageNav, setLanguageNav] = useState(0);
 
   const currentStepData = stepsData.find((step) => step.index === lessonStep);
   const [isCorrect, setIsCorrect] = useState(null);
+  const [, forceUpdate] = useState({});  // 강제 리렌더링을 위한 state 추가
+
   useEffect(()=>{
     // options 세팅
-    LessonDummy.forEach((dummy)=>{
+    stage.lessons[0].content.pageProps.lessons.forEach((dummy)=>{
       if(dummy?.interactionModule?.interactionOptions){
         const values = dummy.interactionModule.interactionOptions.map(({value})=>{return value})
         dummy.options = [...dummy.interactionModule.wrongOptions, ...values];
@@ -54,30 +70,45 @@ const Lesson = () => {
 
 
   const handleClick = () => {
-    if(currentStepData?.interactionModule?.type === "codeFillTheGap") {
-      const interactionOptions = currentStepData?.interactionModule?.interactionOptions
-      if(interactionOptions){
-        const hasIncorrectAnswer = interactionOptions.some((option, index) => option.value !== inputRefs.current[index]?.value);
-        // const postInteractionModules = currentStepData?.postInteractionModules
-        if(hasIncorrectAnswer){
-          // const content = postInteractionModules.find((postInteractionModule)=>postInteractionModule.visibleIf === "wrong");
-          // console.log(content)
-          setIsCorrect(false);
-        }else{
-          // const content = postInteractionModules.find((postInteractionModule)=>postInteractionModule.visibleIf === "correct");
-          // console.log(content)
-          setIsCorrect(true); 
-          setLanguageNav(currentStepData.interactionModule.files.length);
+    
+    if(["codeFillTheGap", "codeValidatedInput"].includes(currentStepData?.interactionModule?.type)) {
+      if(currentStepData?.interactionModule?.type === "codeValidatedInput") {
+        const interactionOption = currentStepData?.interactionModule?.interactionOption
+        if(interactionOption){
+          const hasIncorrectAnswer = interactionOption.value !== inputRefs.current[0]?.value;
+          if(hasIncorrectAnswer){
+            setIsCorrect(false);
+          }else{
+            setIsCorrect(true);
+            setLanguageNav(currentStepData.interactionModule.files.length);
+          }
         }
-        if(isCorrect !== null){
-          resetInputRefs();
-          setIsCorrect(null);
-          const nextStep = lessonStep + 1;
-          nextStep === stepsData.length ? Navigate('/lesson') : setLessonStep(nextStep);
-          setLanguageNav(0);
-          setDisabledOptions([]);
-          setAllInputsFilled(false);
+      }
+      if(currentStepData?.interactionModule?.type === "codeFillTheGap"){
+        const interactionOptions = currentStepData?.interactionModule?.interactionOptions
+        if(interactionOptions){
+          const hasIncorrectAnswer = interactionOptions.some((option, index) => option.value !== inputRefs.current[index]?.value);
+          // const postInteractionModules = currentStepData?.postInteractionModules
+          if(hasIncorrectAnswer){
+            // const content = postInteractionModules.find((postInteractionModule)=>postInteractionModule.visibleIf === "wrong");
+            // console.log(content)
+            setIsCorrect(false);
+          }else{
+            // const content = postInteractionModules.find((postInteractionModule)=>postInteractionModule.visibleIf === "correct");
+            // console.log(content)
+            setIsCorrect(true); 
+            setLanguageNav(currentStepData.interactionModule.files.length);
+          }
         }
+      }
+      if(isCorrect !== null){
+        resetInputRefs();
+        setIsCorrect(null);
+        const nextStep = lessonStep + 1;
+        nextStep === stepsData.length ? Navigate('/lesson') : setLessonStep(nextStep);
+        setLanguageNav(0);
+        setDisabledOptions([]);
+        setAllInputsFilled(false);
       }
     }else if(currentStepData?.interactionModule?.type === "multipleChoice") {
       setIsCorrect(currentStepData?.interactionModule.items[disabledOptions[0]].correct);
@@ -121,6 +152,8 @@ const Lesson = () => {
     if(currentStepData?.interactionModule?.type === "codeFillTheGap") {
       const emptyInputIndex = inputRefs.current.findIndex((input) => input && !input.value);
       const emptyInput = inputRefs.current[emptyInputIndex];
+
+
       if (emptyInput) {
         currentStepData.interactionModule.interactionOptions[emptyInputIndex].userValue = selectedValue;
         emptyInput.value = selectedValue; 
@@ -189,15 +222,48 @@ const Lesson = () => {
 
     return elements;
   };
+
+  // 사용자 입력값으로 코드 완성하기
+  const combineUserInputsWithTemplate = () => {
+    let templateCode = currentStepData.interactionModule.files[0].content;
+    let codeArray = [];
+    let lastIndex = 0;
+    if(currentStepData.interactionModule.type === "codeFillTheGap"){
+      currentStepData.interactionModule.interactionOptions.forEach((option, i) => {
+        const { startIndex, endIndex } = option;
+        if (startIndex > lastIndex) {
+          codeArray.push(templateCode.slice(lastIndex, startIndex));
+        }
+        codeArray.push(inputRefs.current[i]?.value || "");
+        lastIndex = endIndex;
+      });
+      if (lastIndex < templateCode.length) {
+        codeArray.push(templateCode.slice(lastIndex));
+      }
+      const completedCode = codeArray.join('');
+      return completedCode;
+    }
+    if(currentStepData.interactionModule.type === "codeValidatedInput"){
+      const { startPos, endIndex, length, value, userValue } = currentStepData.interactionModule.interactionOption;
+      if (startPos > lastIndex) {
+        codeArray.push(templateCode.slice(lastIndex, startPos));
+      }
+      codeArray.push(inputRefs.current[0]?.value || "");
+      lastIndex = endIndex; 
+      const completedCode = codeArray.join('');
+      return completedCode;
+
+    }
+  }
   
   // JSON 데이터를 기반으로 라인별 코드와 `<input>` 태그를 생성
   const generateCodeWithInputs = (interactionModule, fileIndex) => {
+    const type = interactionModule.type;
     const isInteractive = interactionModule.files[fileIndex].isInteractive;
     const content = interactionModule.files[fileIndex].content;
     const options = interactionModule.interactionOptions
     const lines = content.split("\n"); // 전체 내용을 라인 단위로 분리
     const elements = [];
-
     lines.forEach((line, lineIndex) => {
       let lineElements = [];
       let lastIndex = 0;
@@ -208,21 +274,18 @@ const Lesson = () => {
         </code>
         )
       }else{
-        const lineOptions = options.filter((option) => option.startLine === lineIndex);
-        lineOptions.forEach((option, optionIndex) => {
-          const { startPos, endIndex, length, value, userValue } = option;
-          // `<code>` 태그 추가 (startPos 이전의 텍스트)
+        if(type == "codeValidatedInput"){
+          const { startPos, endIndex, length, value, userValue } = interactionModule.interactionOption;
           if (startPos > lastIndex) {
             lineElements.push(
-              <code key={`code-${lineIndex}-${optionIndex}`} className={`${lineElements.length != 0 && 'ml-1'} text-white`}>
+              <code key={`code-${lineIndex}-0`} className={`${lineElements.length != 0 && 'ml-1'} text-white`}>
                 {line.slice(lastIndex, startPos)}
               </code>
             );
           }
-          // `<input>` 태그 추가
           lineElements.push(
             <input
-              key={`input-${lineIndex}-${optionIndex}`}
+              key={`input-${lineIndex}-0`}
               ref={(el) => {
                 if (el) {
                   // 중복 방지 및 null 값 제외
@@ -250,17 +313,76 @@ const Lesson = () => {
                 focus:outline-none
               `}
               style={{ width: `calc(${length}ch + 12px)` }}
-              readOnly // 읽기 전용
               value={userValue ? userValue : ""}
-              onClick={(event) => clearInputValue(event)}
-            />
-          );
-  
+              onChange={(event) => {
+                const input = event.target;
+                currentStepData.interactionModule.interactionOption.userValue = input.value;
+                forceUpdate({})
+                checkAllInputsFilled()
+              }}
+            /> 
+          )
           lastIndex = endIndex;
-        });
+        }
+        if(type == "codeFillTheGap"){
+          const lineOptions = options.filter((option) => option.startLine === lineIndex);
+          lineOptions.forEach((option, optionIndex) => {
+            const { startPos, endIndex, length, value, userValue } = option;
+            // `<code>` 태그 추가 (startPos 이전의 텍스트)
+            if (startPos > lastIndex) {
+              lineElements.push(
+                <code key={`code-${lineIndex}-${optionIndex}`} className={`${lineElements.length != 0 && 'ml-1'} text-white`}>
+                  {line.slice(lastIndex, startPos)}
+                </code>
+              );
+              lastIndex = endIndex;
+
+            }
+            // `<input>` 태그 추가
+            lineElements.push(
+              <input
+                key={`input-${lineIndex}-${optionIndex}`}
+                ref={(el) => {
+                  if (el) {
+                    // 중복 방지 및 null 값 제외
+                    if (!inputRefs.current.includes(el)) {
+                      inputRefs.current.push(el);
+                    }
+                  } else {
+                    // 요소가 삭제되면 배열에서 제거
+                    inputRefs.current = inputRefs.current.filter((ref) => ref !== null);
+                  }
+                }}
+                className={`
+                  h-5 
+                  ${lineElements.length != 0 ? 'ml-1' : ''} 
+                  min-w-[21px] 
+                  border border-[#282828] rounded-md 
+                  
+                  
+                  text-center text-sm text-white 
+                  caret-blue-400 
+                  bg-[#282828]
+                  focus:border-blue-500 
+                  focus:ring 
+                  focus:ring-blue-300 
+                  focus:outline-none
+                `}
+                style={{ width: `calc(${length}ch + 12px)` }}
+                readOnly // 읽기 전용
+                value={userValue ? userValue : ""}
+                onClick={(event) => clearInputValue(event)}
+              />
+            );
+    
+            lastIndex = endIndex;
+          });
+        }
+        
+
       }
       
-
+      
       // 마지막 `<code>` 태그 처리
       if (lastIndex < line.length) {
         lineElements.push(
@@ -269,20 +391,20 @@ const Lesson = () => {
           </code>
         );
       }
-
+      
       elements.push(
         <div key={`line-${lineIndex}`} className="flex items-center">
           {lineElements}
         </div>
       );
     });
-
     return elements;
   };
 
   // JSON 데이터를 기반으로 Browser `<Iframe>` 태그를 생성
   const generateBrowswer = (step) => {
-    return <Iframe src={`/src/assets/lesson_files/html/step_0/${step}/index.html`} />  
+    return <iframe className={`w-full flex-grow bg-product-background-primary-light`} srcDoc={combineUserInputsWithTemplate()}></iframe>
+    // return <Iframe src={`/src/assets/lesson_files/html/step_0/${step}/index.html`} />  
   }
 
   const postModule = currentStepData.postInteractionModules.find(
@@ -310,16 +432,41 @@ const Lesson = () => {
                 {currentStepData.preInteractionModules.map((data, index)=> {
                 return (
                 <div key={index}>
-                  {data.type === "image" && <img src={data.src} alt="Lesson Content" className="rounded-lg" />}
+                  {data.type === "image" && <img src={`https://images.getmimo.com/images/${data.src}`} alt="Lesson Content" className="rounded-lg" />}
                   {data.type === "paragraph" && <ReactMarkdown>{data.content}</ReactMarkdown>}
                   {data.type === "webview" && 
-                  <div className={`relative flex min-h-[200px] w-full resize flex-col overflow-hidden rounded-xl border border-product2-border-secondary`}>
-                    <div className={`flex h-10 flex-shrink-0 items-center justify-between px-3 font-semibold text-xs bg-gray-100 text-gray-600`}>
-                      <h3>Browser</h3>
+                  <div className={`min-w-[300px] max-w-[664px] flex-1`}>
+                    <div className={`
+                    relative 
+                    flex flex-col 
+                    max-h-[440px] w-full 
+                    rounded-[4px] border border-[#181818]
+                    overflow-hidden
+                    `}>
+                      <div className={`    
+                        flex flex-shrink-0 
+                        h-10 
+                        bg-[#1f1f1f]
+                        overflow-x-auto 
+                        `}>
+                        <button 
+                          className={`
+                            flex items-center justify-center 
+                            h-full 
+                            space-x-2 
+                            px-4 
+                            whitespace-nowrap 
+                            text-xs font-semibold text-white
+                            bg-[#1c1c1c] border border-[#2b2b2b] border-b-0 border-t-[#49c0f8]
+                          `}>
+                          Browser
+                        </button>
+                      </div>
+                      <div className="h-56 overflow-y-auto bg-[#fff]">
+                        <iframe className={`w-full flex-grow bg-product-background-primary-light`} srcDoc={data.content}></iframe>
+                      </div>
                     </div>
-                    <div className={`flex h-[300px] flex-grow overflow-y-auto`}>
-                      <iframe className={`w-full flex-grow bg-product-background-primary-light`} srcDoc={data.content}></iframe>
-                    </div>
+
                   </div>
                   }
                   
@@ -329,11 +476,9 @@ const Lesson = () => {
             </div>
             {/* interactionModule */}
             {currentStepData.interactionModule !== null && 
-            
-            
             <div className={`flex w-full justify-center`}>
-              {currentStepData.interactionModule.type === 'codeFillTheGap' &&
-              <div className={`min-w-[300px] max-w-[664px] flex-1 bg-product-background-primary-light dark:bg-product-background-primary-dark`}>
+              {currentStepData.interactionModule.type === 'codeValidatedInput' && 
+              <div className={`min-w-[300px] max-w-[664px] flex-1`}>
                 <div className={`relative flex flex-col`}>
                   <div className={`
                     relative 
@@ -385,6 +530,72 @@ const Lesson = () => {
                     {/* programming language */}
                     {languageNav == currentStepData.interactionModule.files.length ? 
                     <div className="h-56 overflow-y-auto bg-[#1c1c1c] px-4 py-3 text-sm text-white">
+                      {generateBrowswer(currentStepData.index)}
+                    </div>
+                    :
+                    currentStepData.interactionModule.files.map((file, index)=>{
+                      return <pre key={`pre_${index}`} className="h-56 overflow-y-auto bg-[#1c1c1c] px-4 py-3 text-sm text-white">
+                        {generateCodeWithInputs(currentStepData.interactionModule, index)}
+                      </pre>
+                    })
+                    }
+                  </div>
+                </div>
+              </div>
+              }
+              {currentStepData.interactionModule.type === 'codeFillTheGap' &&
+              <div className={`min-w-[300px] max-w-[664px] flex-1`}>
+                <div className={`relative flex flex-col`}>
+                  <div className={`
+                    relative 
+                    flex flex-col 
+                    max-h-[440px] w-full 
+                    rounded-[4px] border border-[#181818]
+                    overflow-hidden
+                    `}>
+                    {/* programming language nav */}
+                    <div className={`
+                      flex flex-shrink-0 
+                      h-10 
+                      bg-[#1f1f1f]
+                      overflow-x-auto 
+                      `}>
+                      {currentStepData.interactionModule.files.map((file, index)=>{return (
+                      <button 
+                        data-index={index}
+                        onClick={(event) => clickProgrammingLanguageNav(event)}
+                        key={index} 
+                        className={`
+                          flex items-center justify-center space-x-2 
+                          h-full 
+                          px-4 
+                          whitespace-nowrap 
+                          font-semibold text-xs text-white
+                          ${languageNav == index ? "bg-[#1c1c1c] border border-[#2b2b2b] border-b-0 border-t-[#49c0f8]" : ""}
+                          
+                        `}
+                      >{file.name}</button>
+                      )})}
+                      {isCorrect === true &&
+                      <button 
+                        data-index={currentStepData.interactionModule.files.length}
+                        onClick={(event) => clickProgrammingLanguageNav(event)}
+                        className={`
+                          flex items-center justify-center 
+                          h-full 
+                          space-x-2 
+                          px-4 
+                          whitespace-nowrap 
+                          text-xs font-semibold text-white
+                          ${languageNav == currentStepData.interactionModule.files.length ? "bg-[#1c1c1c] border border-[#2b2b2b] border-b-0 border-t-[#49c0f8]" : ""} 
+                        `}>
+                        Browser
+                      </button>
+                      }
+                    </div>
+                    {/* programming language */}
+                    {languageNav == currentStepData.interactionModule.files.length ? 
+                    <div className="h-56 overflow-y-auto bg-[#fff]">
                       {generateBrowswer(currentStepData.index)}
                     </div>
                     :

@@ -1,9 +1,12 @@
 import { useEffect } from 'react';
 
 // 새로운 Tooltip 컴포넌트
-const Tooltip = ({ stage, onClose, isClosing, curriculum_id, section_id }) => {
+const Tooltip = ({ stage, onClose, isClosing, unit_id }) => {
+
   useEffect(() => {
     if (isClosing) {
+      
+
       // 애니메이션 시간(300ms) 후에 onClose 호출
       const timer = setTimeout(() => {
         onClose();
@@ -12,7 +15,12 @@ const Tooltip = ({ stage, onClose, isClosing, curriculum_id, section_id }) => {
       return () => clearTimeout(timer);
     }
   }, [isClosing, onClose]);
-
+  const handleLessonClick = () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const curriculum_id = urlParams.get('curriculum_id');
+    const section_id = urlParams.get('section_id');
+    window.location.href = `/lesson?curriculum_id=${curriculum_id}&section_id=${section_id}&unit_id=${unit_id}&stage_id=${stage.id}`;
+  }
   return (
     <div 
       data-tooltip="true"
@@ -46,9 +54,7 @@ const Tooltip = ({ stage, onClose, isClosing, curriculum_id, section_id }) => {
             </div>
             <p className="text-[17px] font-medium"></p>
             <button 
-              onClick={() => {
-                window.location.href = `/lesson?curriculum_id=${curriculum_id}&section_id=${section_id}&stage_id=${stage.id}`;
-              }}
+              onClick={handleLessonClick}
               className="
                 relative z-0
                 w-full h-[50px]

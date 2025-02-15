@@ -12,7 +12,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Let's take a look at how links work to combine **webpages** into **websites**. Click on `Take a break!` to use the link.",
+            "content": "링크가 작동하는 방식을 살펴보고, **웹페이지**를 **웹사이트**로 결합하는 방법을 배워보세요. `Take a break!`을 클릭하여 링크를 사용하세요.",
             "visibleIf": "always"
           },
           {
@@ -31,12 +31,12 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "To start creating a link, we add the text in between the `\u003Ca\u003E` and `\u003C/a\u003E` tags. This won't highlight the text yet.",
+            "content": "링크를 만들기 위해, 텍스트를 `\u003Ca\u003E`와 `\u003C/a\u003E` 태그 사이에 넣습니다. 이것은 텍스트를 아직 강조하지 않습니다.",
             "visibleIf": "always"
           },
           {
             "type": "paragraph",
-            "content": "`\u003Ca\u003E` stands for \"Anchor\" tag.",
+            "content": "`\u003Ca\u003E`는 \"Anchor\" 태그를 의미합니다.",
             "visibleIf": "always"
           }
         ],
@@ -76,7 +76,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003Ca\u003E`, followed by `\u003C/a\u003E`.",
+            "content": "`\u003Ca\u003E`, `\u003C/a\u003E`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -88,7 +88,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "To link the text to a webpage, we add `href=\"\"` along with a Uniform Resource Locator (**URL**). `href` is short for \"hypertext reference\".",
+            "content": "텍스트를 웹페이지에 연결하기 위해, `href=\"\"`와 함께 유니폼 리소스 로케이터(**URL**)를 추가합니다. `href`는 \"하이퍼텍스트 참조\"를 의미합니다.",
             "visibleIf": "always"
           }
         ],
@@ -137,7 +137,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `href`, followed by `=`, and finally `\"https://mimo.org\"`.",
+            "content": "`href`, `=`, `\"https://mimo.org\"`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -185,7 +185,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `href`.",
+            "content": "`href`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -197,7 +197,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "We link to a webpage by adding `=` after the attribute and a URL as a value in between quotes.",
+            "content": "우리는 `=` 뒤에 속성을 추가하고, 따옴표 사이에 URL을 값으로 추가하여 웹페이지에 링크를 추가합니다.",
             "visibleIf": "always"
           }
         ],
@@ -255,7 +255,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `=` followed by `\"` and then `https://mimo.org`, `\"`.",
+            "content": "`=`, `\"`, `https://mimo.org`, `\"`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -343,7 +343,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003C` followed by `a` and then `href`, `=`, `\"https://mimo.org\"`, `\u003E`.",
+            "content": "`\u003C`, `a`, `href`, `=`, `\"https://mimo.org\"`, `\u003E`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -355,7 +355,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "What do links do?",
+            "content": "링크는 무엇을 합니까?",
             "visibleIf": "always"
           }
         ],
@@ -380,7 +380,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Link webpages to other webpages and websites.",
+            "content": "웹페이지를 다른 웹페이지와 웹사이트에 연결합니다.",
             "visibleIf": "wrong"
           }
         ]
@@ -392,7 +392,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Why is the link not working?",
+            "content": "링크가 작동하지 않는 이유는 무엇입니까?",
             "visibleIf": "always"
           },
           {
@@ -436,7 +436,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Because it has no `href` attribute.",
+            "content": "`href` 속성이 없기 때문입니다.",
             "visibleIf": "wrong"
           }
         ]
@@ -448,7 +448,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "What happens when a visitor clicks the link on this webpage?",
+            "content": "이 웹페이지에서 링크를 클릭하면 무엇이 일어납니까?",
             "visibleIf": "always"
           },
           {
@@ -492,7 +492,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "The link directs the user to another website.",
+            "content": "링크는 사용자를 다른 웹사이트로 이동시킵니다.",
             "visibleIf": "wrong"
           }
         ]
@@ -504,7 +504,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "What are `attributes` for?",
+            "content": "`attributes`는 무엇을 위한 것입니까?",
             "visibleIf": "always"
           }
         ],
@@ -529,7 +529,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "To provide additional information about tags.",
+            "content": "태그에 대한 추가 정보를 제공하기 위한 것입니다.",
             "visibleIf": "wrong"
           }
         ]
@@ -541,7 +541,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Pick the opening tag that makes the link clickable.",
+            "content": "링크를 클릭할 수 있도록 하는 열리는 태그를 선택하세요.",
             "visibleIf": "always"
           }
         ],
@@ -574,7 +574,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003Ca href=\"https://cars.com\"\u003E`.",
+            "content": "`\u003Ca href=\"https://cars.com\"\u003E`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -586,7 +586,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Add the attribute and its value so that clicking the link directs users to the Facebook website.",
+            "content": "링크를 클릭하면 사용자가 Facebook 웹사이트로 이동하도록 하는 속성과 값을 추가하세요.",
             "visibleIf": "always"
           }
         ],
@@ -635,7 +635,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `href`, followed by `=`, and finally `\"https://facebook.com\"`.",
+            "content": "`href`, `=`, `\"https://facebook.com\"`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -696,7 +696,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003C/`, followed by `a`, and finally `\u003E`.",
+            "content": "`\u003C/`, `a`, `\u003E`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -736,7 +736,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to type `href`.",
+            "content": "`href`를 입력하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -747,15 +747,15 @@
       "id": 907,
       "index": 6,
       "codeLanguage": "html",
-      "descriptionContent": "Learn how to edit images with attributes and how to add them to your webpage with URLs.",
-      "title": "Adding Images",
+      "descriptionContent": "이미지를 편집하고, 웹페이지에 추가하는 방법을 배워보세요.",
+      "title": "이미지 추가",
       "type": "course",
       "version": 45,
       "bannerIconUrl": null,
       "chapters": [
         {
           "id": 6824,
-          "title": "Images",
+          "title": "이미지",
           "type": "practiceLevel1",
           "lessons": [
             {

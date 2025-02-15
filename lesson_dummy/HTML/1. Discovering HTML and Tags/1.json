@@ -17,12 +17,12 @@
           },
           {
             "type": "paragraph",
-            "content": "Welcome! You're about to learn technologies like HTML, CSS, JavaScript, React, and everything else we'll need to build for the web.",
+            "content": "환영합니다! HTML, CSS, JavaScript, React 그리고 웹 개발에 필요한 모든 기술들을 배우게 될 거예요.",
             "visibleIf": "always"
           },
           {
             "type": "paragraph",
-            "content": "Before you realize it, we'll be creating real-life projects. Let's start with **HTML**.",
+            "content": "곧 실제 프로젝트를 만들게 될 거예요. 먼저 **HTML**부터 시작해볼까요?",
             "visibleIf": "always"
           }
         ],
@@ -36,12 +36,12 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Hypertext Markup Language, or **HTML**, is the computer language that structures the web pages on the internet.",
+            "content": "하이퍼텍스트 마크업 언어, 즉 **HTML**은 인터넷의 웹 페이지를 구조화하는 컴퓨터 언어입니다.",
             "visibleIf": "always"
           },
           {
             "type": "paragraph",
-            "content": "On top of HTML, you can build stunning web pages with buttons, images, and lots more.\n",
+            "content": "HTML을 기반으로 버튼, 이미지 등을 포함한 멋진 웹 페이지를 만들 수 있어요.\n",
             "visibleIf": "always"
           },
           {
@@ -60,7 +60,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "By adding the HTML code `\u003Cbutton\u003ELike\u003C/button\u003E`, you can create a button with the label \"Like\".",
+            "content": "HTML 코드 `\u003Cbutton\u003ELike\u003C/button\u003E`를 추가하면 \"Like\"라는 라벨이 있는 버튼을 만들 수 있어요.",
             "visibleIf": "always"
           }
         ],
@@ -103,7 +103,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "The HTML code to create a button uses an opening tag, `\u003Cbutton\u003E`, and a closing tag, `\u003C/button\u003E`, in this order.",
+            "content": "버튼을 만드는 HTML 코드는 여는 태그 `\u003Cbutton\u003E`와 닫는 태그 `\u003C/button\u003E`를 이 순서대로 사용합니다.",
             "visibleIf": "always"
           }
         ],
@@ -155,7 +155,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "The text between the opening and closing tags of a button becomes the button's label.",
+            "content": "버튼의 여는 태그와 닫는 태그 사이에 있는 텍스트가 버튼의 라벨이 됩니다.",
             "visibleIf": "always"
           }
         ],
@@ -198,7 +198,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Time to test what you've learned so far! What type of tag is this? `\u003C/button\u003E` .",
+            "content": "지금까지 배운 내용을 테스트해볼까요! 이 태그는 어떤 종류일까요? `\u003C/button\u003E`",
             "visibleIf": "always"
           }
         ],
@@ -209,12 +209,12 @@
             {
               "correct": true,
               "value": 0,
-              "text": "A closing tag"
+              "text": "닫는 태그"
             },
             {
               "correct": false,
               "value": 1,
-              "text": "An opening tag"
+              "text": "여는 태그"
             }
           ],
           "isCode": false,
@@ -223,7 +223,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "A closing tag.",
+            "content": "닫는 태그입니다.",
             "visibleIf": "wrong"
           }
         ]
@@ -235,7 +235,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Which of these tags is spelled out **incorrectly**?",
+            "content": "다음 중 **잘못** 작성된 태그는 무엇일까요?",
             "visibleIf": "always"
           }
         ],
@@ -265,7 +265,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003Cbutton\\\u003E`.",
+            "content": "`\u003Cbutton\\\u003E`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -276,13 +276,13 @@
         "index": 7,
         "preInteractionModules": [
           {
-            "type": "paragraph",
-            "content": "Remember the previous example? In the next steps, we'll create the buttons for **Q**, **R**, and **D**. We'll ignore the rest of the code for now.",
+            "type": "paragraph", 
+            "content": "이전 예제를 기억하시나요? 다음 단계에서는 **Q**, **R**, **D** 버튼을 만들어보겠습니다. 지금은 나머지 코드는 무시하도록 하겠습니다.",
             "visibleIf": "always"
           },
           {
             "type": "webview",
-            "content": "\u003Chtml\u003E \n \u003Chead\u003E \n  \u003Cstyle\u003E \n   body { \n    font-family: sans-serif; \n    color: #2C3E50; \n    background-color: #9aa4d2; \n    margin-top: 5%; \n    min-height: 300px; \n   } \n    \n   button[disabled] { \n    opacity: 0.5; \n    cursor: default; \n   } \n    \n   h2, \n   h1, \n   #result { \n    text-align: center; \n    margin: 5px; \n   } \n    \n   #letterButtons { \n    display: flex; \n    flex-direction: row; \n    flex-wrap: wrap; \n    width: 100%; \n    padding: 0; \n    justify-content: center; \n   } \n    \n   button { \n    width: 40px; \n    height: 40px; \n    background-color: #34495E; \n    color: #FFF; \n    font-size: 14px; \n    border: none; \n    border-radius: 5px; \n    cursor: pointer; \n    margin: 7px; \n    text-align: center; \n   } \n    \n   #result { \n    width: 80%; \n    height: 20px; \n    padding: 10px; \n    font-size: 1.3em; \n    margin: 0px auto; \n    border-radius: 5px; \n    color: white; \n    font-weight: bold; \n   } \n    \n   img { \n    width: 80%; \n    max-width:150px; \n    height: auto; \n    border-radius: 5px; \n    margin: 10px auto; \n    text-align: center; \n    display: none; \n    justify-content: center; \n    border: white 2px solid; \n   } \n  \u003C/style\u003E \n \u003C/head\u003E \n \u003Cbody\u003E \n  \u003Ch1 id=\"result\"\u003EGuess the letter\u003C/h1\u003E \n  \u003Ch2\u003E_ O G\u003C/h2\u003E \n  \u003Cimg\u003E \n  \u003Cdiv id=\"letterButtons\"\u003E \n   \u003Cbutton\u003EQ\u003C/button\u003E \n   \u003Cbutton\u003ER\u003C/button\u003E \n   \u003Cbutton\u003ED\u003C/button\u003E \n  \u003C/div\u003E \n  \u003Cscript\u003E \n   let letterButtons = document.querySelectorAll( \n    '#letterButtons button'); \n   let result = document.getElementById('result'); \n   let image = document.getElementsByTagName(\"img\")[0]; \n   let correctLetter = 'D'; \n   let word = document.querySelector('h2'); \n   letterButtons.forEach(button =\u003E { \n    button.addEventListener('click', function() { \n     let letter = this.textContent; \n     if (letter !== correctLetter) { \n      button.disabled = true; \n     } \n     if (letter === correctLetter) { \n      result.innerHTML = 'Correct!'; \n      result.style.color = \"#046865\"; \n      image.style.display = \"flex\"; \n      image.src = 'https://mimo.app/i/dog_yawn.png'; \n      word.textContent = 'D O G'; \n      letterButtons.forEach(button =\u003E { \n       button.disabled = true; \n      }); \n     } else { \n      result.innerHTML = 'Try again'; \n      result.style.color = \"#D1345B\"; \n     } \n    }); \n   }); \n  \u003C/script\u003E \n \u003C/body\u003E \n\u003C/html\u003E",
+            "content": "\u003Chtml\u003E \n \u003Chead\u003E \n  \u003Cstyle\u003E \n   body { \n    font-family: sans-serif; \n    color: #2C3E50; \n    background-color: #9aa4d2; \n    margin-top: 5%; \n    min-height: 300px; \n   } \n    \n   button[disabled] { \n    opacity: 0.5; \n    cursor: default; \n   } \n    \n   h2, \n   h1, \n   #result { \n    text-align: center; \n    margin: 5px; \n   } \n    \n   #letterButtons { \n    display: flex; \n    flex-direction: row; \n    flex-wrap: wrap; \n    width: 100%; \n    padding: 0; \n    justify-content: center; \n   } \n    \n   button { \n    width: 40px; \n    height: 40px; \n    background-color: #34495E; \n    color: #FFF; \n    font-size: 14px; \n    border: none; \n    border-radius: 5px; \n    cursor: pointer; \n    margin: 7px; \n    text-align: center; \n   } \n    \n   #result { \n    width: 80%; \n    height: 20px; \n    padding: 10px; \n    font-size: 1.3em; \n    margin: 0px auto; \n    border-radius: 5px; \n    color: white; \n    font-weight: bold; \n   } \n    \n   img { \n    width: 80%; \n    max-width:150px; \n    height: auto; \n    border-radius: 5px; \n    margin: 10px auto; \n    text-align: center; \n    display: none; \n    justify-content: center; \n    border: white 2px solid; \n   } \n  \u003C/style\u003E \n \u003C/head\u003E \n \u003Cbody\u003E \n  \u003Ch1 id=\"result\"\u003E글자를 맞춰보세요\u003C/h1\u003E \n  \u003Ch2\u003E_ O G\u003C/h2\u003E \n  \u003Cimg\u003E \n  \u003Cdiv id=\"letterButtons\"\u003E \n   \u003Cbutton\u003EQ\u003C/button\u003E \n   \u003Cbutton\u003ER\u003C/button\u003E \n   \u003Cbutton\u003ED\u003C/button\u003E \n  \u003C/div\u003E \n  \u003Cscript\u003E \n   let letterButtons = document.querySelectorAll( \n    '#letterButtons button'); \n   let result = document.getElementById('result'); \n   let image = document.getElementsByTagName(\"img\")[0]; \n   let correctLetter = 'D'; \n   let word = document.querySelector('h2'); \n   letterButtons.forEach(button =\u003E { \n    button.addEventListener('click', function() { \n     let letter = this.textContent; \n     if (letter !== correctLetter) { \n      button.disabled = true; \n     } \n     if (letter === correctLetter) { \n      result.innerHTML = '정답입니다!'; \n      result.style.color = \"#046865\"; \n      image.style.display = \"flex\"; \n      image.src = 'https://mimo.app/i/dog_yawn.png'; \n      word.textContent = 'D O G'; \n      letterButtons.forEach(button =\u003E { \n       button.disabled = true; \n      }); \n     } else { \n      result.innerHTML = '다시 시도해보세요'; \n      result.style.color = \"#D1345B\"; \n     } \n    }); \n   }); \n  \u003C/script\u003E \n \u003C/body\u003E \n\u003C/html\u003E",
             "visibleIf": "always"
           }
         ],
@@ -296,7 +296,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Create a button with the label \"Q\".",
+            "content": "\"Q\"라는 라벨이 있는 버튼을 만들어보세요.",
             "visibleIf": "always"
           }
         ],
@@ -346,11 +346,11 @@
           {
             "visibleIf": "correct",
             "type": "webview",
-            "content": "\u003Chtml\u003E\n \u003Chead\u003E\n  \u003Cstyle\u003E\n   body {\n    font-family: sans-serif;\n    color: #2C3E50;\n    background-color: #9aa4d2;\n    margin-top: 5%;\n    min-height: 300px;\n   }\n   \n   button[disabled] {\n    opacity: 0.5;\n    cursor: default;\n   }\n   \n   h2,\n   h1,\n   #result {\n    text-align: center;\n    margin: 5px;\n   }\n   \n   #letterButtons {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    width: 100%;\n    padding: 0;\n    justify-content: center;\n   }\n   \n   button {\n    width: 40px;\n    height: 40px;\n    background-color: #34495E;\n    color: #FFF;\n    font-size: 14px;\n    border: none;\n    border-radius: 5px;\n    cursor: pointer;\n    margin: 7px;\n    text-align: center;\n   }\n   \n   #result {\n    width: 80%;\n    height: 20px;\n    padding: 10px;\n    font-size: 1.3em;\n    margin: 0px auto;\n    border-radius: 5px;\n    color: white;\n    font-weight: bold;\n   }\n   \n   img {\n    width: 80%;\n    max-width:150px;\n    height: auto;\n    border-radius: 5px;\n    margin: 10px auto;\n    text-align: center;\n    display: none;\n    justify-content: center;\n    border: white 2px solid;\n   }\n  \u003C/style\u003E\n \u003C/head\u003E\n \u003Cbody\u003E\n  \u003Ch1 id=\"result\"\u003EGuess the letter\u003C/h1\u003E\n  \u003Ch2\u003E_ O G\u003C/h2\u003E\n  \u003Cimg\u003E\n  \u003Cdiv id=\"letterButtons\"\u003E\n   \u003Cbutton\u003EQ\u003C/button\u003E\n  \u003C/div\u003E\n  \u003Cscript\u003E\n   let letterButtons = document.querySelectorAll(\n    '#letterButtons button');\n   let result = document.getElementById('result');\n   let image = document.getElementsByTagName(\"img\")[0];\n   let correctLetter = 'D';\n   let word = document.querySelector('h2');\n   letterButtons.forEach(button =\u003E {\n    button.addEventListener('click', function() {\n     let letter = this.textContent;\n     if (letter !== correctLetter) {\n      button.disabled = true;\n     }\n     if (letter === correctLetter) {\n      result.innerHTML = 'Correct!';\n      result.style.color = \"#046865\";\n      image.style.display = \"flex\";\n      image.src = 'https://mimo.app/i/dog_yawn.png';\n      word.textContent = 'D O G';\n      letterButtons.forEach(button =\u003E {\n       button.disabled = true;\n      });\n     } else {\n      result.innerHTML = 'Try again';\n      result.style.color = \"#D1345B\";\n     }\n    });\n   });\n  \u003C/script\u003E\n \u003C/body\u003E\n\u003C/html\u003E"
+            "content": "\u003Chtml\u003E\n \u003Chead\u003E\n  \u003Cstyle\u003E\n   body {\n    font-family: sans-serif;\n    color: #2C3E50;\n    background-color: #9aa4d2;\n    margin-top: 5%;\n    min-height: 300px;\n   }\n   \n   button[disabled] {\n    opacity: 0.5;\n    cursor: default;\n   }\n   \n   h2,\n   h1,\n   #result {\n    text-align: center;\n    margin: 5px;\n   }\n   \n   #letterButtons {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    width: 100%;\n    padding: 0;\n    justify-content: center;\n   }\n   \n   button {\n    width: 40px;\n    height: 40px;\n    background-color: #34495E;\n    color: #FFF;\n    font-size: 14px;\n    border: none;\n    border-radius: 5px;\n    cursor: pointer;\n    margin: 7px;\n    text-align: center;\n   }\n   \n   #result {\n    width: 80%;\n    height: 20px;\n    padding: 10px;\n    font-size: 1.3em;\n    margin: 0px auto;\n    border-radius: 5px;\n    color: white;\n    font-weight: bold;\n   }\n   \n   img {\n    width: 80%;\n    max-width:150px;\n    height: auto;\n    border-radius: 5px;\n    margin: 10px auto;\n    text-align: center;\n    display: none;\n    justify-content: center;\n    border: white 2px solid;\n   }\n  \u003C/style\u003E\n \u003C/head\u003E\n \u003Cbody\u003E\n  \u003Ch1 id=\"result\"\u003E글자를 맞춰보세요\u003C/h1\u003E\n  \u003Ch2\u003E_ O G\u003C/h2\u003E\n  \u003Cimg\u003E\n  \u003Cdiv id=\"letterButtons\"\u003E\n   \u003Cbutton\u003EQ\u003C/button\u003E\n  \u003C/div\u003E\n  \u003Cscript\u003E\n   let letterButtons = document.querySelectorAll(\n    '#letterButtons button');\n   let result = document.getElementById('result');\n   let image = document.getElementsByTagName(\"img\")[0];\n   let correctLetter = 'D';\n   let word = document.querySelector('h2');\n   letterButtons.forEach(button =\u003E {\n    button.addEventListener('click', function() {\n     let letter = this.textContent;\n     if (letter !== correctLetter) {\n      button.disabled = true;\n     }\n     if (letter === correctLetter) {\n      result.innerHTML = '정답입니다!';\n      result.style.color = \"#046865\";\n      image.style.display = \"flex\";\n      image.src = 'https://mimo.app/i/dog_yawn.png';\n      word.textContent = 'D O G';\n      letterButtons.forEach(button =\u003E {\n       button.disabled = true;\n      });\n     } else {\n      result.innerHTML = '다시 시도해보세요';\n      result.style.color = \"#D1345B\";\n     }\n    });\n   });\n  \u003C/script\u003E\n \u003C/body\u003E\n\u003C/html\u003E"
           },
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003Cbutton\u003E`, followed by `Q`, and finally `\u003C/button\u003E`.",
+            "content": "`\u003Cbutton\u003E`를 선택하고, `Q`를 입력한 다음, `\u003C/button\u003E`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -361,8 +361,8 @@
         "index": 9,
         "preInteractionModules": [
           {
-            "type": "paragraph",
-            "content": "Create a button with the label \"R\".",
+            "type": "paragraph", 
+            "content": "\"R\"이라는 라벨이 있는 버튼을 만드세요.",
             "visibleIf": "always"
           }
         ],
@@ -457,11 +457,11 @@
           {
             "visibleIf": "correct",
             "type": "webview",
-            "content": "\u003Chtml\u003E\n \u003Chead\u003E\n  \u003Cstyle\u003E\n   body {\n    font-family: sans-serif;\n    color: #2C3E50;\n    background-color: #9aa4d2;\n    margin-top: 5%;\n    min-height: 300px;\n   }\n   \n   button[disabled] {\n    opacity: 0.5;\n    cursor: default;\n   }\n   \n   h2,\n   h1,\n   #result {\n    text-align: center;\n    margin: 5px;\n   }\n   \n   #letterButtons {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    width: 100%;\n    padding: 0;\n    justify-content: center;\n   }\n   \n   button {\n    width: 40px;\n    height: 40px;\n    background-color: #34495E;\n    color: #FFF;\n    font-size: 14px;\n    border: none;\n    border-radius: 5px;\n    cursor: pointer;\n    margin: 7px;\n    text-align: center;\n   }\n   \n   #result {\n    width: 80%;\n    height: 20px;\n    padding: 10px;\n    font-size: 1.3em;\n    margin: 0px auto;\n    border-radius: 5px;\n    color: white;\n    font-weight: bold;\n   }\n   \n   img {\n    width: 80%;\n    max-width:150px;\n    height: auto;\n    border-radius: 5px;\n    margin: 10px auto;\n    text-align: center;\n    display: none;\n    justify-content: center;\n    border: white 2px solid;\n   }\n  \u003C/style\u003E\n \u003C/head\u003E\n \u003Cbody\u003E\n  \u003Ch1 id=\"result\"\u003EGuess the letter\u003C/h1\u003E\n  \u003Ch2\u003E_ O G\u003C/h2\u003E\n  \u003Cimg\u003E\n  \u003Cdiv id=\"letterButtons\"\u003E\n   \u003Cbutton\u003EQ\u003C/button\u003E\n   \u003Cbutton\u003ER\u003C/button\u003E\n  \u003C/div\u003E\n  \u003Cscript\u003E\n   let letterButtons = document.querySelectorAll(\n    '#letterButtons button');\n   let result = document.getElementById('result');\n   let image = document.getElementsByTagName(\"img\")[0];\n   let correctLetter = 'D';\n   let word = document.querySelector('h2');\n   letterButtons.forEach(button =\u003E {\n    button.addEventListener('click', function() {\n     let letter = this.textContent;\n     if (letter !== correctLetter) {\n      button.disabled = true;\n     }\n     if (letter === correctLetter) {\n      result.innerHTML = 'Correct!';\n      result.style.color = \"#046865\";\n      image.style.display = \"flex\";\n      image.src = 'https://mimo.app/i/dog_yawn.png';\n      word.textContent = 'D O G';\n      letterButtons.forEach(button =\u003E {\n       button.disabled = true;\n      });\n     } else {\n      result.innerHTML = 'Try again';\n      result.style.color = \"#D1345B\";\n     }\n    });\n   });\n  \u003C/script\u003E\n \u003C/body\u003E\n\u003C/html\u003E"
+            "content": "\u003Chtml\u003E\n \u003Chead\u003E\n  \u003Cstyle\u003E\n   body {\n    font-family: sans-serif;\n    color: #2C3E50;\n    background-color: #9aa4d2;\n    margin-top: 5%;\n    min-height: 300px;\n   }\n   \n   button[disabled] {\n    opacity: 0.5;\n    cursor: default;\n   }\n   \n   h2,\n   h1,\n   #result {\n    text-align: center;\n    margin: 5px;\n   }\n   \n   #letterButtons {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    width: 100%;\n    padding: 0;\n    justify-content: center;\n   }\n   \n   button {\n    width: 40px;\n    height: 40px;\n    background-color: #34495E;\n    color: #FFF;\n    font-size: 14px;\n    border: none;\n    border-radius: 5px;\n    cursor: pointer;\n    margin: 7px;\n    text-align: center;\n   }\n   \n   #result {\n    width: 80%;\n    height: 20px;\n    padding: 10px;\n    font-size: 1.3em;\n    margin: 0px auto;\n    border-radius: 5px;\n    color: white;\n    font-weight: bold;\n   }\n   \n   img {\n    width: 80%;\n    max-width:150px;\n    height: auto;\n    border-radius: 5px;\n    margin: 10px auto;\n    text-align: center;\n    display: none;\n    justify-content: center;\n    border: white 2px solid;\n   }\n  \u003C/style\u003E\n \u003C/head\u003E\n \u003Cbody\u003E\n  \u003Ch1 id=\"result\"\u003E글자를 맞춰보세요\u003C/h1\u003E\n  \u003Ch2\u003E_ O G\u003C/h2\u003E\n  \u003Cimg\u003E\n  \u003Cdiv id=\"letterButtons\"\u003E\n   \u003Cbutton\u003EQ\u003C/button\u003E\n   \u003Cbutton\u003ER\u003C/button\u003E\n  \u003C/div\u003E\n  \u003Cscript\u003E\n   let letterButtons = document.querySelectorAll(\n    '#letterButtons button');\n   let result = document.getElementById('result');\n   let image = document.getElementsByTagName(\"img\")[0];\n   let correctLetter = 'D';\n   let word = document.querySelector('h2');\n   letterButtons.forEach(button =\u003E {\n    button.addEventListener('click', function() {\n     let letter = this.textContent;\n     if (letter !== correctLetter) {\n      button.disabled = true;\n     }\n     if (letter === correctLetter) {\n      result.innerHTML = '정답입니다!';\n      result.style.color = \"#046865\";\n      image.style.display = \"flex\";\n      image.src = 'https://mimo.app/i/dog_yawn.png';\n      word.textContent = 'D O G';\n      letterButtons.forEach(button =\u003E {\n       button.disabled = true;\n      });\n     } else {\n      result.innerHTML = '다시 시도해보세요';\n      result.style.color = \"#D1345B\";\n     }\n    });\n   });\n  \u003C/script\u003E\n \u003C/body\u003E\n\u003C/html\u003E"
           },
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003C` followed by `button` and then `\u003E`, `R`, `\u003C`, `/`, `button`, `\u003E`.",
+            "content": "`\u003C`, `button`, `\u003E`, `R`, `\u003C`, `/`, `button`, `\u003E`를 순서대로 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -473,7 +473,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Finally, create a button with the label \"D\", making sure you use an opening and a closing tag.",
+            "content": "마지막으로, \"D\"라는 라벨이 있는 버튼을 여는 태그와 닫는 태그를 사용하여 만드세요.",
             "visibleIf": "always"
           }
         ],
@@ -525,11 +525,11 @@
           {
             "visibleIf": "correct",
             "type": "webview",
-            "content": "\u003Chtml\u003E\n \u003Chead\u003E\n  \u003Cstyle\u003E\n   body {\n    font-family: sans-serif;\n    color: #2C3E50;\n    background-color: #9aa4d2;\n    margin-top: 5%;\n    min-height: 300px;\n   }\n   \n   button[disabled] {\n    opacity: 0.5;\n    cursor: default;\n   }\n   \n   h2,\n   h1,\n   #result {\n    text-align: center;\n    margin: 5px;\n   }\n   \n   #letterButtons {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    width: 100%;\n    padding: 0;\n    justify-content: center;\n   }\n   \n   button {\n    width: 40px;\n    height: 40px;\n    background-color: #34495E;\n    color: #FFF;\n    font-size: 14px;\n    border: none;\n    border-radius: 5px;\n    cursor: pointer;\n    margin: 7px;\n    text-align: center;\n   }\n   \n   #result {\n    width: 80%;\n    height: 20px;\n    padding: 10px;\n    font-size: 1.3em;\n    margin: 0px auto;\n    border-radius: 5px;\n    color: white;\n    font-weight: bold;\n   }\n   \n   img {\n    width: 80%;\n    max-width:150px;\n    height: auto;\n    border-radius: 5px;\n    margin: 10px auto;\n    text-align: center;\n    display: none;\n    justify-content: center;\n    border: white 2px solid;\n   }\n  \u003C/style\u003E\n \u003C/head\u003E\n \u003Cbody\u003E\n  \u003Ch1 id=\"result\"\u003EGuess the letter\u003C/h1\u003E\n  \u003Ch2\u003E_ O G\u003C/h2\u003E\n  \u003Cimg\u003E\n  \u003Cdiv id=\"letterButtons\"\u003E\n   \u003Cbutton\u003EQ\u003C/button\u003E\n   \u003Cbutton\u003ER\u003C/button\u003E\n   \u003Cbutton\u003ED\u003C/button\u003E\n  \u003C/div\u003E\n  \u003Cscript\u003E\n   let letterButtons = document.querySelectorAll(\n    '#letterButtons button');\n   let result = document.getElementById('result');\n   let image = document.getElementsByTagName(\"img\")[0];\n   let correctLetter = 'D';\n   let word = document.querySelector('h2');\n   letterButtons.forEach(button =\u003E {\n    button.addEventListener('click', function() {\n     let letter = this.textContent;\n     if (letter !== correctLetter) {\n      button.disabled = true;\n     }\n     if (letter === correctLetter) {\n      result.innerHTML = 'Correct!';\n      result.style.color = \"#046865\";\n      image.style.display = \"flex\";\n      image.src = 'https://mimo.app/i/dog_yawn.png';\n      word.textContent = 'D O G';\n      letterButtons.forEach(button =\u003E {\n       button.disabled = true;\n      });\n     } else {\n      result.innerHTML = 'Try again';\n      result.style.color = \"#D1345B\";\n     }\n    });\n   });\n  \u003C/script\u003E\n \u003C/body\u003E\n\u003C/html\u003E"
+            "content": "\u003Chtml\u003E\n \u003Chead\u003E\n  \u003Cstyle\u003E\n   body {\n    font-family: sans-serif;\n    color: #2C3E50;\n    background-color: #9aa4d2;\n    margin-top: 5%;\n    min-height: 300px;\n   }\n   \n   button[disabled] {\n    opacity: 0.5;\n    cursor: default;\n   }\n   \n   h2,\n   h1,\n   #result {\n    text-align: center;\n    margin: 5px;\n   }\n   \n   #letterButtons {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    width: 100%;\n    padding: 0;\n    justify-content: center;\n   }\n   \n   button {\n    width: 40px;\n    height: 40px;\n    background-color: #34495E;\n    color: #FFF;\n    font-size: 14px;\n    border: none;\n    border-radius: 5px;\n    cursor: pointer;\n    margin: 7px;\n    text-align: center;\n   }\n   \n   #result {\n    width: 80%;\n    height: 20px;\n    padding: 10px;\n    font-size: 1.3em;\n    margin: 0px auto;\n    border-radius: 5px;\n    color: white;\n    font-weight: bold;\n   }\n   \n   img {\n    width: 80%;\n    max-width:150px;\n    height: auto;\n    border-radius: 5px;\n    margin: 10px auto;\n    text-align: center;\n    display: none;\n    justify-content: center;\n    border: white 2px solid;\n   }\n  \u003C/style\u003E\n \u003C/head\u003E\n \u003Cbody\u003E\n  \u003Ch1 id=\"result\"\u003E글자를 맞춰보세요\u003C/h1\u003E\n  \u003Ch2\u003E_ O G\u003C/h2\u003E\n  \u003Cimg\u003E\n  \u003Cdiv id=\"letterButtons\"\u003E\n   \u003Cbutton\u003EQ\u003C/button\u003E\n   \u003Cbutton\u003ER\u003C/button\u003E\n   \u003Cbutton\u003ED\u003C/button\u003E\n  \u003C/div\u003E\n  \u003Cscript\u003E\n   let letterButtons = document.querySelectorAll(\n    '#letterButtons button');\n   let result = document.getElementById('result');\n   let image = document.getElementsByTagName(\"img\")[0];\n   let correctLetter = 'D';\n   let word = document.querySelector('h2');\n   letterButtons.forEach(button =\u003E {\n    button.addEventListener('click', function() {\n     let letter = this.textContent;\n     if (letter !== correctLetter) {\n      button.disabled = true;\n     }\n     if (letter === correctLetter) {\n      result.innerHTML = '정답입니다!';\n      result.style.color = \"#046865\";\n      image.style.display = \"flex\";\n      image.src = 'https://mimo.app/i/dog_yawn.png';\n      word.textContent = 'D O G';\n      letterButtons.forEach(button =\u003E {\n       button.disabled = true;\n      });\n     } else {\n      result.innerHTML = '다시 시도해보세요';\n      result.style.color = \"#D1345B\";\n     }\n    });\n   });\n  \u003C/script\u003E\n \u003C/body\u003E\n\u003C/html\u003E"
           },
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003Cbutton\u003E`, followed by `D`, and finally `\u003C/button\u003E`.",
+            "content": "`\u003Cbutton\u003E`를 선택하고, `D`를 선택한 다음, `\u003C/button\u003E`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]

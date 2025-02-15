@@ -12,7 +12,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "How many paragraphs will this webpage have?",
+            "content": "이 웹페이지에 몇 개의 문단이 있습니까?",
             "visibleIf": "always"
           },
           {
@@ -21,7 +21,7 @@
               {
                 "isInteractive": false,
                 "name": "index.html",
-                "content": "\u003Ch1\u003EMy favorite things\u003C/h1\u003E\n\u003Cp\u003ERaindrops on roses Whiskers on kittens\u003C/p\u003E\n\u003Cp\u003EBright copper kettles Warm woolen mittens\u003C/p\u003E",
+                "content": "\u003Ch1\u003E내가 좋아하는 것들\u003C/h1\u003E\n\u003Cp\u003E장미꽃 위의 빗방울과 고양이의 수염\u003C/p\u003E\n\u003Cp\u003E밝은 구리 주전자와 따뜻한 양모 장갑\u003C/p\u003E",
                 "codeLanguage": "html"
               }
             ],
@@ -34,7 +34,7 @@
             {
               "isInteractive": false,
               "name": "index.html",
-              "content": "\u003Ch1\u003EMy favorite things\u003C/h1\u003E\n\u003Cp\u003ERaindrops on roses Whiskers on kittens\u003C/p\u003E\n\u003Cp\u003EBright copper kettles Warm woolen mittens\u003C/p\u003E",
+              "content": "\u003Ch1\u003E내가 좋아하는 것들\u003C/h1\u003E\n\u003Cp\u003E장미꽃 위의 빗방울과 고양이의 수염\u003C/p\u003E\n\u003Cp\u003E밝은 구리 주전자와 따뜻한 양모 장갑\u003C/p\u003E",
               "codeLanguage": "html"
             }
           ],
@@ -61,7 +61,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick 2.",
+            "content": "2를 선택해주세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -73,7 +73,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Add the missing closing tag.",
+            "content": "누락된 닫는 태그를 추가하세요.",
             "visibleIf": "always"
           }
         ],
@@ -118,7 +118,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Add the right snippets to make the headings.",
+            "content": "올바른 조각을 추가하여 제목을 만들어보세요.",
             "visibleIf": "always"
           }
         ],
@@ -128,7 +128,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Ch1\u003EVideo games\u003C/h1\u003E\n\u003Ch2\u003EConsole games\u003C/h2\u003E\n\u003Ch2\u003EMobile games\u003C/h2\u003E",
+              "content": "\u003Ch1\u003E비디오 게임\u003C/h1\u003E\n\u003Ch2\u003E콘솔 게임\u003C/h2\u003E\n\u003Ch2\u003E모바일 게임\u003C/h2\u003E",
               "codeLanguage": "html"
             }
           ],
@@ -170,7 +170,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003Ch1\u003E`, followed by `\u003Ch2\u003E`, and finally `\u003Ch2\u003E`.",
+            "content": "`\u003Ch1\u003E`, `\u003Ch2\u003E`, `\u003Ch2\u003E`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -182,7 +182,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Give this webpage the biggest heading.",
+            "content": "이 웹페이지에 가장 큰 제목을 주세요.",
             "visibleIf": "always"
           }
         ],
@@ -227,7 +227,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003Ch1\u003E`, followed by `\u003C/h1\u003E`.",
+            "content": "`\u003Ch1\u003E`, `\u003C/h1\u003E`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -239,7 +239,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "What's wrong with this webpage?",
+            "content": "이 웹페이지에 무엇이 잘못되었습니까?",
             "visibleIf": "always"
           },
           {
@@ -300,7 +300,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "What's wrong with these emphasis tags?",
+            "content": "이 강조 태그에 무엇이 잘못되었습니까?",
             "visibleIf": "always"
           },
           {
@@ -361,7 +361,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Code the opening tag that defines text as important.",
+            "content": "중요한 텍스트를 정의하는 열리는 태그를 코딩하세요.",
             "visibleIf": "always"
           }
         ],
@@ -412,7 +412,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003C`, followed by `strong`, and finally `\u003E`.",
+            "content": "`\u003C`, `strong`, `\u003E`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -424,7 +424,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Why is the line break tag an empty tag?",
+            "content": "줄바꿈 태그가 빈 태그인 이유는 무엇입니까?",
             "visibleIf": "always"
           }
         ],
@@ -454,7 +454,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Because it has no closing tag.",
+            "content": "닫는 태그가 없기 때문입니다.",
             "visibleIf": "wrong"
           }
         ]
@@ -499,7 +499,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `Accept`.",
+            "content": "`Accept`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -511,7 +511,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Code the closing tag of the button displaying `Book a Room`.",
+            "content": "`Book a Room`을 표시하는 버튼의 닫는 태그를 코딩하세요.",
             "visibleIf": "always"
           }
         ],
@@ -563,7 +563,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003C/`, followed by `button`, and finally `\u003E`.",
+            "content": "`\u003C/`, `button`, `\u003E`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -575,7 +575,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "What's wrong with this code?",
+            "content": "이 코드에 무엇이 잘못되었습니까?",
             "visibleIf": "always"
           },
           {
@@ -624,7 +624,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Nothing's wrong with the code.",
+            "content": "코드에 문제가 없습니다.",
             "visibleIf": "wrong"
           }
         ]
@@ -688,7 +688,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003C`, followed by `br`, and finally `\u003E`.",
+            "content": "`\u003C`, `br`, `\u003E`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -753,7 +753,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003Cbutton\u003E`, followed by `Copy to Clipboard`, and finally `\u003C/button\u003E`.",
+            "content": "`\u003Cbutton\u003E`, `Copy to Clipboard`, `\u003C/button\u003E`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -764,15 +764,15 @@
       "id": 904,
       "index": 0,
       "codeLanguage": "html",
-      "descriptionContent": "Learn what HTML is and its importance in coding for the web.",
-      "title": "Discovering HTML and Tags",
+      "descriptionContent": "HTML이 무엇인지 배우고, 웹 개발에서 중요한 역할을 하는 방법을 배워보세요.",
+      "title": "HTML 및 태그 발견",
       "type": "course",
       "version": 151,
       "bannerIconUrl": "/icons/track-icons/tutorial-904-icon-banner.svg",
       "chapters": [
         {
           "id": 8608,
-          "title": "HTML Tags",
+          "title": "HTML 태그",
           "type": "practiceLevel1",
           "lessons": [
             {

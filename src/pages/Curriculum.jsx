@@ -8,7 +8,7 @@ const Curriculum = () => {
   const curriculum_id = searchParams.get('curriculum_id');
   const section_id = searchParams.get('section_id');
   const curriculum = curriculumList.find((curriculum) => curriculum.id === Number(curriculum_id));
-  const section = curriculum.sections.find((section)=>section.id === Number(section_id));
+  const section = curriculum.sections.find((section)=> section.id === Number(section_id));
   
 
   return (

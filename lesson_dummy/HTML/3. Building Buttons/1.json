@@ -12,12 +12,12 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "With buttons, programs change webpages based on user behavior. For example, clicking _Next_ can run code that cycles through characters.",
+            "content": "버튼은 프로그램이 사용자의 행동에 따라 웹페이지를 변경합니다. 예를 들어, _Next_를 클릭하면 문자를 순환하는 코드가 실행됩니다.",
             "visibleIf": "always"
           },
           {
             "type": "paragraph",
-            "content": "We'll learn how to write that code later. For now, we'll focus on the `button` element.",
+            "content": "나중에 그 코드를 배우게 될 것입니다. 지금은 `button` 요소에 집중할 것입니다.",
             "visibleIf": "always"
           },
           {
@@ -36,7 +36,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "To create a button users can click on, we need the opening `\u003Cbutton\u003E` and closing `\u003C/button\u003E` tags.",
+            "content": "사용자가 클릭할 수 있는 버튼을 만들기 위해, 열리는 `\u003Cbutton\u003E` 태그와 닫는 `\u003C/button\u003E` 태그가 필요합니다.",
             "visibleIf": "always"
           }
         ],
@@ -78,7 +78,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003Cbutton\u003E`, followed by `\u003C/button\u003E`.",
+            "content": "`\u003Cbutton\u003E`를 선택하고, `\u003C/button\u003E`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -90,12 +90,12 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "We can make texts appear on a button by typing them between the tags. Try typing `Login` between the button tags.",
+            "content": "태그 사이에 텍스트를 입력하면 버튼에 텍스트가 나타납니다. `Login`을 버튼 태그 사이에 입력해보세요.",
             "visibleIf": "always"
           },
           {
             "type": "paragraph",
-            "content": "Make sure you use an uppercase `\"L\"`.",
+            "content": "대문자 `\"L\"`를 사용하세요.",
             "visibleIf": "always"
           }
         ],
@@ -123,7 +123,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to type `Login`.",
+            "content": "`Login`을 입력하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -135,12 +135,12 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Previously, we learned how to emphasize or make text important. We can also use these tags for the text inside a button.",
+            "content": "이전에는 텍스트를 강조하거나 중요하게 만드는 방법을 배웠습니다. 버튼 태그 사이의 텍스트에도 이 태그를 사용할 수 있습니다.",
             "visibleIf": "always"
           },
           {
             "type": "paragraph",
-            "content": "Try typing `\u003Cstrong\u003Econtinue anyway\u003C/strong\u003E` between the button tags.",
+            "content": "`\u003Cstrong\u003Econtinue anyway\u003C/strong\u003E`을 버튼 태그 사이에 입력해보세요.",
             "visibleIf": "always"
           }
         ],
@@ -173,7 +173,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003Cstrong\u003Econtinue anyway\u003C/strong\u003E`.",
+            "content": "`\u003Cstrong\u003Econtinue anyway\u003C/strong\u003E`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -185,7 +185,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Buttons display next to each other even if they're on separate lines of code. Place these buttons displaying `First`, `Second`, then `Third`.",
+            "content": "버튼은 코드 줄에 있는 것이 아니라 서로 붙어있습니다. `First`, `Second`, `Third`를 표시하는 이 버튼을 만들어보세요.",
             "visibleIf": "always"
           }
         ],
@@ -234,7 +234,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `First`, followed by `Second`, and finally `Third`.",
+            "content": "`First`, `Second`, `Third`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -295,7 +295,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003C`, followed by `br`, and finally `\u003E`.",
+            "content": "`\u003C`, `br`, `\u003E`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -307,7 +307,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "What's wrong with this code?",
+            "content": "이 코드에 문제가 있습니다.",
             "visibleIf": "always"
           },
           {
@@ -361,7 +361,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "The button's closing tag is missing a `/`.",
+            "content": "버튼의 닫는 태그에 `/`가 없습니다.",
             "visibleIf": "wrong"
           }
         ]
@@ -373,7 +373,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "What does this code display?",
+            "content": "이 코드는 무엇을 표시합니까?",
             "visibleIf": "always"
           },
           {
@@ -417,7 +417,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "A button displaying `Give me a break!`.",
+            "content": "버튼에 `Give me a break!`가 표시됩니다.",
             "visibleIf": "wrong"
           }
         ]
@@ -429,7 +429,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "What happens when we place `\u003Cem\u003EAdd to Cart\u003C/em\u003E` in between opening and closing `button` tags?",
+            "content": "`\u003Cem\u003EAdd to Cart\u003C/em\u003E`을 버튼 태그 사이에 입력하면 무슨 일이 일어납니까?",
             "visibleIf": "always"
           }
         ],
@@ -454,7 +454,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "A button with emphasized text displays on the webpage.",
+            "content": "강조된 텍스트가 있는 버튼이 웹페이지에 표시됩니다.",
             "visibleIf": "wrong"
           }
         ]
@@ -466,7 +466,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "What does this code display?",
+            "content": "이 코드는 무엇을 표시합니까?",
             "visibleIf": "always"
           },
           {
@@ -510,7 +510,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "One button next to another button.",
+            "content": "하나의 버튼이 다른 버튼 옆에 있습니다.",
             "visibleIf": "wrong"
           }
         ]
@@ -522,7 +522,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Which tag do we use to place one button underneath another?",
+            "content": "하나의 버튼을 다른 버튼 아래에 배치하기 위해 사용하는 태그는 무엇입니까?",
             "visibleIf": "always"
           }
         ],
@@ -547,7 +547,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003Cbr\u003E`.",
+            "content": "`\u003Cbr\u003E`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -559,7 +559,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Code the opening `\u003Cbutton\u003E` tag.",
+            "content": "열리는 `\u003Cbutton\u003E` 태그를 코딩하세요.",
             "visibleIf": "always"
           }
         ],
@@ -608,7 +608,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003C`, followed by `button`, and finally `\u003E`.",
+            "content": "`\u003C`, `button`, `\u003E`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -620,7 +620,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Display `Sign up` on the button by coding between the opening and closing tags.",
+            "content": "열리는 태그와 닫는 태그 사이에 `Sign up`을 코딩하세요.",
             "visibleIf": "always"
           }
         ],
@@ -651,7 +651,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `Sign up`.",
+            "content": "`Sign up`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -663,7 +663,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Insert text inside `strong` tags to display `Click Me!` on the button.",
+            "content": "`strong` 태그 사이에 텍스트를 입력하여 `Click Me!`를 버튼에 표시하세요.",
             "visibleIf": "always"
           }
         ],
@@ -715,7 +715,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003Cstrong\u003E`, followed by `Click Me!`, and finally `\u003C/strong\u003E`.",
+            "content": "`\u003Cstrong\u003E`, `Click Me!`, `\u003C/strong\u003E`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -727,7 +727,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Place the last button below the others.",
+            "content": "마지막 버튼을 다른 버튼 아래에 배치하세요.",
             "visibleIf": "always"
           }
         ],
@@ -778,7 +778,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003C`, followed by `br`, and finally `\u003E`.",
+            "content": "`\u003C`, `br`, `\u003E`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -790,7 +790,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Display the `Share` button next to the other button.",
+            "content": "`Share` 버튼을 다른 버튼 옆에 표시하세요.",
             "visibleIf": "always"
           }
         ],
@@ -841,7 +841,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003Cbutton\u003E`, followed by `Share`, and finally `\u003C/button\u003E`.",
+            "content": "`\u003Cbutton\u003E`, `Share`, `\u003C/button\u003E`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -852,15 +852,15 @@
       "id": 1049,
       "index": 5,
       "codeLanguage": "html",
-      "descriptionContent": "Use tags and attributes to create all sorts of links and turn webpages into websites.",
-      "title": "Creating Links",
+      "descriptionContent": "태그와 속성을 사용하여 모든 종류의 링크를 만들고, 웹페이지를 웹사이트로 만들어보세요.",
+      "title": "링크 만들기",
       "type": "course",
       "version": 31,
       "bannerIconUrl": null,
       "chapters": [
         {
           "id": 8100,
-          "title": "Links and Attributes",
+          "title": "링크와 속성",
           "type": "practiceLevel1",
           "lessons": [
             {
