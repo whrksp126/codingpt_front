@@ -1,12 +1,39 @@
 // src/components/curriculum/main
-import { useNavigate } from 'react-router-dom';
-import { Star } from '@phosphor-icons/react';
+import { useState, useEffect } from 'react';
+import StageButton from './StageButton';
+import Tooltip from './Tooltip';
 
 const Main = ({section}) => {
+  // 현재 클릭된 stage의 id를 저장할 state
+  const [clickedStageId, setClickedStageId] = useState(null);
+  const [closingStageId, setClosingStageId] = useState(null);
   
-  console.log(section)
-  const clickStageBtn = (stage) => {
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      // 클릭된 요소가 툴팁 영역 내부인지 확인
+      const isTooltipArea = event.target.closest('[data-tooltip]');
+      // 클릭된 요소가 스테이지 버튼인지 확인
+      const isStageButton = event.target.closest('.stage-button');
+      
+      // 툴팁 영역이나 스테이지 버튼이 아닌 외부를 클릭했을 때만 툴팁 닫기
+      if (!isTooltipArea && !isStageButton) {
+        // 닫기 애니메이션을 위해 현재 열린 스테이지 ID 저장
+        setClosingStageId(clickedStageId);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [clickedStageId]);
+  const handleStageClick = (stage) => {
     console.log(stage)
+    if (clickedStageId === stage.id) {
+      setClosingStageId(stage.id);
+    } else {
+      setClickedStageId(stage.id);
+    }
   }
   return (
     <div 
@@ -17,7 +44,6 @@ const Main = ({section}) => {
     >
       <div className="">
         {section.units.map((unit) => {
-          console.log(unit)
           return (
           <div key={unit.id}>
             <div className="flex justify-center items-center w-full h-[82px] text-[#37464F] text-xl font-bold">
@@ -27,84 +53,25 @@ const Main = ({section}) => {
             </div>
             <div className="flex flex-col">
               {unit.stages.map((stage)=>{
-                console.log(stage)
                 return (
                 <div key={stage.id} className="relative">
-
-                  <div className="
-                    flex justify-center
-                    mt-4 
-                  ">
-                    <button 
-                      onClick={()=>{
-                        clickStageBtn(stage)
+                  <StageButton 
+                    stage={stage}
+                    isActive={clickedStageId === stage.id}
+                    onClick={() => handleStageClick(stage)}
+                  />
+                  {(clickedStageId === stage.id || closingStageId === stage.id) && (
+                    <Tooltip 
+                      stage={stage}
+                      onClose={() => {
+                        if (closingStageId === stage.id) {
+                          setClickedStageId(null);
+                          setClosingStageId(null);
+                        }
                       }}
-                      className="
-                        flex justify-center items-center
-                        w-[70px] h-[65px] 
-                        rounded-[50%]
-                        
-                        after:content-['']
-                        after:absolute
-                        after:bg-[#93D333]
-                        after:rounded-[50%]
-                        
-                        after:shadow-[0_8px_0_rgba(0,0,0,0.2),0_8px_0_#93D333]
-                        after:h-[57px]
-                        after:w-[70px]
-                        after:top-0
-                        relative
-
-                        active:translate-y-2
-                        active:after:shadow-none
-                      "
-                    >
-                      <Star size={42} color="#fff" weight="fill" className="
-                      absolute top-2 z-10
-                      " />
-                    </button>
-                  </div>
-                  <div className="
-                    absolute top-full left-1/2 z-[199]
-                    brightness-100
-                    origin-[center_12px]
-                  ">
-                    <div className="
-                      absolute left-1/2 top-full z-10
-                      w-[295px]
-                      mt-3
-                      -translate-x-1/2
-                    ">
-                      <div className="
-                        p-4
-                        border-0
-                        text-center leading-[1.4] text-white text-[19px] font-bold
-                        bg-[#58cc02]
-                      ">
-                        <div className="text-align: left;">
-                          <div>
-                            <h1>
-                              불규칙 복수 명사 만들기
-                            </h1>
-                          </div>
-                          <p>레슨 3/6</p>
-                          <button className="
-                            mt-4
-                            w-full
-                            outline: none;
-                            relative
-                            before:absolute before:top-0 before:left-0 before:z-[-1]
-                            before:bg-white 
-                            before:rounded-2xl
-                            before:shadow-[0_4px_0_rgba(255,255,255,0.7)]
-                            before:content-['']
-                            before:transition-shadow
-                          ">시작 +10 XP</button>
-                        </div>
-                      </div>
-                      <div>화살표</div>
-                    </div>
-                  </div>
+                      isClosing={closingStageId === stage.id}
+                    />
+                  )}
                 </div>
                 )
               })}
