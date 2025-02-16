@@ -240,17 +240,25 @@ const Lesson = () => {
       if (lastIndex < templateCode.length) {
         codeArray.push(templateCode.slice(lastIndex));
       }
+      console.log("codeArray,",codeArray)
       const completedCode = codeArray.join('');
       return completedCode;
     }
     if(currentStepData.interactionModule.type === "codeValidatedInput"){
+      
       const { startPos, endIndex, length, value, userValue } = currentStepData.interactionModule.interactionOption;
       if (startPos > lastIndex) {
         codeArray.push(templateCode.slice(lastIndex, startPos));
+        lastIndex = endIndex; 
       }
       codeArray.push(inputRefs.current[0]?.value || "");
       lastIndex = endIndex; 
+      if (lastIndex < templateCode.length) {
+        codeArray.push(templateCode.slice(lastIndex));
+      }
+      lastIndex = endIndex; 
       const completedCode = codeArray.join('');
+      
       return completedCode;
 
     }
@@ -463,7 +471,7 @@ const Lesson = () => {
                         </button>
                       </div>
                       <div className="h-56 overflow-y-auto bg-[#fff]">
-                        <iframe className={`w-full flex-grow bg-product-background-primary-light`} srcDoc={data.content}></iframe>
+                        <iframe className={`w-full h-full flex-grow bg-product-background-primary-light`} srcDoc={data.content}></iframe>
                       </div>
                     </div>
 
@@ -529,7 +537,7 @@ const Lesson = () => {
                     </div>
                     {/* programming language */}
                     {languageNav == currentStepData.interactionModule.files.length ? 
-                    <div className="h-56 overflow-y-auto bg-[#1c1c1c] px-4 py-3 text-sm text-white">
+                    <div className="h-56 overflow-y-auto bg-[#fff] px-4 py-3 text-sm">
                       {generateBrowswer(currentStepData.index)}
                     </div>
                     :

@@ -46,7 +46,7 @@
           },
           {
             "type": "webview",
-            "content": "\u003Chtml\u003E\n \u003Chead\u003E\n  \u003Cstyle\u003E\n   body {\n    font-family: sans-serif;\n    color: #2C3E50;\n    background-color: #9aa4d2;\n    margin-top: 5%;\n    min-height: 300px;\n   }\n   \n   button[disabled] {\n    opacity: 0.5;\n    cursor: default;\n   }\n   \n   h2,\n   h1,\n   #result {\n    text-align: center;\n    margin: 5px;\n   }\n   \n   #letterButtons {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    width: 100%;\n    padding: 0;\n    justify-content: center;\n   }\n   \n   button {\n    width: 40px;\n    height: 40px;\n    background-color: #34495E;\n    color: #FFF;\n    font-size: 14px;\n    border: none;\n    border-radius: 5px;\n    cursor: pointer;\n    margin: 7px;\n    text-align: center;\n   }\n   \n   #result {\n    width: 80%;\n    height: 20px;\n    padding: 10px;\n    font-size: 1.3em;\n    margin: 0px auto;\n    border-radius: 5px;\n    color: white;\n    font-weight: bold;\n   }\n   \n   img {\n    width: 80%;\n    max-width:150px;\n    height: auto;\n    border-radius: 5px;\n    margin: 10px auto;\n    text-align: center;\n    display: none;\n    justify-content: center;\n    border: white 2px solid;\n   }\n  \u003C/style\u003E\n \u003C/head\u003E\n \u003Cbody\u003E\n  \u003Ch1 id=\"result\"\u003EGuess the letter\u003C/h1\u003E\n  \u003Ch2\u003E_ O G\u003C/h2\u003E\n  \u003Cimg\u003E\n  \u003Cdiv id=\"letterButtons\"\u003E\n   \u003Cbutton\u003EQ\u003C/button\u003E\n   \u003Cbutton\u003ER\u003C/button\u003E\n   \u003Cbutton\u003ED\u003C/button\u003E\n  \u003C/div\u003E\n  \u003Cscript\u003E\n   let letterButtons = document.querySelectorAll(\n    '#letterButtons button');\n   let result = document.getElementById('result');\n   let image = document.getElementsByTagName(\"img\")[0];\n   let correctLetter = 'D';\n   let word = document.querySelector('h2');\n   letterButtons.forEach(button =\u003E {\n    button.addEventListener('click', function() {\n     let letter = this.textContent;\n     if (letter !== correctLetter) {\n      button.disabled = true;\n     }\n     if (letter === correctLetter) {\n      result.innerHTML = 'Correct!';\n      result.style.color = \"#046865\";\n      image.style.display = \"flex\";\n      image.src = 'https://mimo.app/i/dog_yawn.png';\n      word.textContent = 'D O G';\n      letterButtons.forEach(button =\u003E {\n       button.disabled = true;\n      });\n     } else {\n      result.innerHTML = 'Try again';\n      result.style.color = \"#D1345B\";\n     }\n    });\n   });\n  \u003C/script\u003E\n \u003C/body\u003E\n\u003C/html\u003E",
+            "content": "<html>\n <head>\n  <style>\n   body {\n    font-family: sans-serif;\n    color: #2C3E50;\n    background-color: #9aa4d2;\n    margin-top: 5%;\n    min-height: 300px;\n   }\n   \n   button[disabled] {\n    opacity: 0.5;\n    cursor: default;\n   }\n   \n   h2,\n   h1,\n   #result {\n    text-align: center;\n    margin: 5px;\n   }\n   \n   #letterButtons {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    width: 100%;\n    padding: 0;\n    justify-content: center;\n   }\n   \n   button {\n    width: 40px;\n    height: 40px;\n    background-color: #34495E;\n    color: #FFF;\n    font-size: 14px;\n    border: none;\n    border-radius: 5px;\n    cursor: pointer;\n    margin: 7px;\n    text-align: center;\n   }\n   \n   #result {\n    width: 80%;\n    height: 20px;\n    padding: 10px;\n    font-size: 1.3em;\n    margin: 0px auto;\n    border-radius: 5px;\n    color: white;\n    font-weight: bold;\n   }\n   \n   img {\n    width: 80%;\n    max-width:150px;\n    height: auto;\n    border-radius: 5px;\n    margin: 10px auto;\n    text-align: center;\n    display: none;\n    justify-content: center;\n    border: white 2px solid;\n   }\n  </style>\n </head>\n <body>\n  <h1 id=\"result\">편지를 맞춰보세요</h1>\n  <h2>_ O G</h2>\n  <img>\n  <div id=\"letterButtons\">\n   <button>Q</button>\n   <button>R</button>\n   <button>D</button>\n  </div>\n  <script>\n   let letterButtons = document.querySelectorAll(\n    '#letterButtons button');\n   let result = document.getElementById('result');\n   let image = document.getElementsByTagName(\"img\")[0];\n   let correctLetter = 'D';\n   let word = document.querySelector('h2');\n   letterButtons.forEach(button => {\n    button.addEventListener('click', function() {\n     let letter = this.textContent;\n     if (letter !== correctLetter) {\n      button.disabled = true;\n     }\n     if (letter === correctLetter) {\n      result.innerHTML = '정답이에요!';\n      result.style.color = \"#046865\";\n      image.style.display = \"flex\";\n      image.src = 'https://mimo.app/i/dog_yawn.png';\n      word.textContent = 'D O G';\n      letterButtons.forEach(button => {\n       button.disabled = true;\n      });\n     } else {\n      result.innerHTML = '다시 시도하십시오';\n      result.style.color = \"#D1345B\";\n     }\n    });\n   });\n  </script>\n </body>\n</html>",
             "visibleIf": "always"
           }
         ],
@@ -60,7 +60,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "HTML 코드 `\u003Cbutton\u003ELike\u003C/button\u003E`를 추가하면 \"Like\"라는 라벨이 있는 버튼을 만들 수 있어요.",
+            "content": "HTML 코드 `<button>Like</button>`를 추가하면 \"Like\"라는 라벨이 있는 버튼을 만들 수 있어요.",
             "visibleIf": "always"
           }
         ],
@@ -70,7 +70,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Cbutton\u003ELike\u003C/button\u003E",
+              "content": "<button>Like</button>",
               "codeLanguage": "html"
             }
           ],
@@ -81,7 +81,7 @@
               "startLine": 0,
               "startPos": 0,
               "length": 21,
-              "value": "\u003Cbutton\u003ELike\u003C/button\u003E",
+              "value": "<button>Like</button>",
               "correct": true
             }
           ],
@@ -91,7 +91,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003Cbutton\u003ELike\u003C/button\u003E`.",
+            "content": "Make sure to pick `<button>Like</button>`.",
             "visibleIf": "wrong"
           }
         ]
@@ -103,7 +103,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "버튼을 만드는 HTML 코드는 여는 태그 `\u003Cbutton\u003E`와 닫는 태그 `\u003C/button\u003E`를 이 순서대로 사용합니다.",
+            "content": "버튼을 만드는 HTML 코드는 여는 태그 `<button>`와 닫는 태그 `</button>`를 이 순서대로 사용합니다.",
             "visibleIf": "always"
           }
         ],
@@ -113,7 +113,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Cbutton\u003ELike\u003C/button\u003E",
+              "content": "<button>Like</button>",
               "codeLanguage": "html"
             }
           ],
@@ -124,7 +124,7 @@
               "startLine": 0,
               "startPos": 0,
               "length": 8,
-              "value": "\u003Cbutton\u003E",
+              "value": "<button>",
               "correct": true
             },
             {
@@ -133,7 +133,7 @@
               "startLine": 0,
               "startPos": 12,
               "length": 9,
-              "value": "\u003C/button\u003E",
+              "value": "</button>",
               "correct": true
             }
           ],
@@ -143,7 +143,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003Cbutton\u003E`, followed by `\u003C/button\u003E`.",
+            "content": "Make sure to pick `<button>`, followed by `</button>`.",
             "visibleIf": "wrong"
           }
         ]
@@ -165,7 +165,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Cbutton\u003ELike\u003C/button\u003E",
+              "content": "<button>Like</button>",
               "codeLanguage": "html"
             }
           ],
@@ -198,7 +198,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "지금까지 배운 내용을 테스트해볼까요! 이 태그는 어떤 종류일까요? `\u003C/button\u003E`",
+            "content": "지금까지 배운 내용을 테스트해볼까요! 이 태그는 어떤 종류일까요? `</button>`",
             "visibleIf": "always"
           }
         ],
@@ -246,17 +246,17 @@
             {
               "correct": false,
               "value": 0,
-              "text": "`\u003Cbutton\u003E`"
+              "text": "`<button>`"
             },
             {
               "correct": false,
               "value": 1,
-              "text": "`\u003C/button\u003E`"
+              "text": "`</button>`"
             },
             {
               "correct": true,
               "value": 2,
-              "text": "`\u003Cbutton\\\u003E`"
+              "text": "`<button\\>`"
             }
           ],
           "isCode": false,
@@ -265,7 +265,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`\u003Cbutton\\\u003E`를 선택하세요.",
+            "content": "`<button\\>`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -282,7 +282,7 @@
           },
           {
             "type": "webview",
-            "content": "\u003Chtml\u003E \n \u003Chead\u003E \n  \u003Cstyle\u003E \n   body { \n    font-family: sans-serif; \n    color: #2C3E50; \n    background-color: #9aa4d2; \n    margin-top: 5%; \n    min-height: 300px; \n   } \n    \n   button[disabled] { \n    opacity: 0.5; \n    cursor: default; \n   } \n    \n   h2, \n   h1, \n   #result { \n    text-align: center; \n    margin: 5px; \n   } \n    \n   #letterButtons { \n    display: flex; \n    flex-direction: row; \n    flex-wrap: wrap; \n    width: 100%; \n    padding: 0; \n    justify-content: center; \n   } \n    \n   button { \n    width: 40px; \n    height: 40px; \n    background-color: #34495E; \n    color: #FFF; \n    font-size: 14px; \n    border: none; \n    border-radius: 5px; \n    cursor: pointer; \n    margin: 7px; \n    text-align: center; \n   } \n    \n   #result { \n    width: 80%; \n    height: 20px; \n    padding: 10px; \n    font-size: 1.3em; \n    margin: 0px auto; \n    border-radius: 5px; \n    color: white; \n    font-weight: bold; \n   } \n    \n   img { \n    width: 80%; \n    max-width:150px; \n    height: auto; \n    border-radius: 5px; \n    margin: 10px auto; \n    text-align: center; \n    display: none; \n    justify-content: center; \n    border: white 2px solid; \n   } \n  \u003C/style\u003E \n \u003C/head\u003E \n \u003Cbody\u003E \n  \u003Ch1 id=\"result\"\u003E글자를 맞춰보세요\u003C/h1\u003E \n  \u003Ch2\u003E_ O G\u003C/h2\u003E \n  \u003Cimg\u003E \n  \u003Cdiv id=\"letterButtons\"\u003E \n   \u003Cbutton\u003EQ\u003C/button\u003E \n   \u003Cbutton\u003ER\u003C/button\u003E \n   \u003Cbutton\u003ED\u003C/button\u003E \n  \u003C/div\u003E \n  \u003Cscript\u003E \n   let letterButtons = document.querySelectorAll( \n    '#letterButtons button'); \n   let result = document.getElementById('result'); \n   let image = document.getElementsByTagName(\"img\")[0]; \n   let correctLetter = 'D'; \n   let word = document.querySelector('h2'); \n   letterButtons.forEach(button =\u003E { \n    button.addEventListener('click', function() { \n     let letter = this.textContent; \n     if (letter !== correctLetter) { \n      button.disabled = true; \n     } \n     if (letter === correctLetter) { \n      result.innerHTML = '정답입니다!'; \n      result.style.color = \"#046865\"; \n      image.style.display = \"flex\"; \n      image.src = 'https://mimo.app/i/dog_yawn.png'; \n      word.textContent = 'D O G'; \n      letterButtons.forEach(button =\u003E { \n       button.disabled = true; \n      }); \n     } else { \n      result.innerHTML = '다시 시도해보세요'; \n      result.style.color = \"#D1345B\"; \n     } \n    }); \n   }); \n  \u003C/script\u003E \n \u003C/body\u003E \n\u003C/html\u003E",
+            "content": "<html> \n <head> \n  <style> \n   body { \n    font-family: sans-serif; \n    color: #2C3E50; \n    background-color: #9aa4d2; \n    margin-top: 5%; \n    min-height: 300px; \n   } \n    \n   button[disabled] { \n    opacity: 0.5; \n    cursor: default; \n   } \n    \n   h2, \n   h1, \n   #result { \n    text-align: center; \n    margin: 5px; \n   } \n    \n   #letterButtons { \n    display: flex; \n    flex-direction: row; \n    flex-wrap: wrap; \n    width: 100%; \n    padding: 0; \n    justify-content: center; \n   } \n    \n   button { \n    width: 40px; \n    height: 40px; \n    background-color: #34495E; \n    color: #FFF; \n    font-size: 14px; \n    border: none; \n    border-radius: 5px; \n    cursor: pointer; \n    margin: 7px; \n    text-align: center; \n   } \n    \n   #result { \n    width: 80%; \n    height: 20px; \n    padding: 10px; \n    font-size: 1.3em; \n    margin: 0px auto; \n    border-radius: 5px; \n    color: white; \n    font-weight: bold; \n   } \n    \n   img { \n    width: 80%; \n    max-width:150px; \n    height: auto; \n    border-radius: 5px; \n    margin: 10px auto; \n    text-align: center; \n    display: none; \n    justify-content: center; \n    border: white 2px solid; \n   } \n  </style> \n </head> \n <body> \n  <h1 id=\"result\">글자를 맞춰보세요</h1> \n  <h2>_ O G</h2> \n  <img> \n  <div id=\"letterButtons\"> \n   <button>Q</button> \n   <button>R</button> \n   <button>D</button> \n  </div> \n  <script> \n   let letterButtons = document.querySelectorAll( \n    '#letterButtons button'); \n   let result = document.getElementById('result'); \n   let image = document.getElementsByTagName(\"img\")[0]; \n   let correctLetter = 'D'; \n   let word = document.querySelector('h2'); \n   letterButtons.forEach(button => { \n    button.addEventListener('click', function() { \n     let letter = this.textContent; \n     if (letter !== correctLetter) { \n      button.disabled = true; \n     } \n     if (letter === correctLetter) { \n      result.innerHTML = '정답입니다!'; \n      result.style.color = \"#046865\"; \n      image.style.display = \"flex\"; \n      image.src = 'https://mimo.app/i/dog_yawn.png'; \n      word.textContent = 'D O G'; \n      letterButtons.forEach(button => { \n       button.disabled = true; \n      }); \n     } else { \n      result.innerHTML = '다시 시도해보세요'; \n      result.style.color = \"#D1345B\"; \n     } \n    }); \n   }); \n  </script> \n </body> \n</html>",
             "visibleIf": "always"
           }
         ],
@@ -306,7 +306,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Cbutton\u003EQ\u003C/button\u003E",
+              "content": "<button>Q</button>",
               "codeLanguage": "html"
             }
           ],
@@ -317,7 +317,7 @@
               "startLine": 0,
               "startPos": 0,
               "length": 8,
-              "value": "\u003Cbutton\u003E",
+              "value": "<button>",
               "correct": true
             },
             {
@@ -335,7 +335,7 @@
               "startLine": 0,
               "startPos": 9,
               "length": 9,
-              "value": "\u003C/button\u003E",
+              "value": "</button>",
               "correct": true
             }
           ],
@@ -346,11 +346,11 @@
           {
             "visibleIf": "correct",
             "type": "webview",
-            "content": "\u003Chtml\u003E\n \u003Chead\u003E\n  \u003Cstyle\u003E\n   body {\n    font-family: sans-serif;\n    color: #2C3E50;\n    background-color: #9aa4d2;\n    margin-top: 5%;\n    min-height: 300px;\n   }\n   \n   button[disabled] {\n    opacity: 0.5;\n    cursor: default;\n   }\n   \n   h2,\n   h1,\n   #result {\n    text-align: center;\n    margin: 5px;\n   }\n   \n   #letterButtons {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    width: 100%;\n    padding: 0;\n    justify-content: center;\n   }\n   \n   button {\n    width: 40px;\n    height: 40px;\n    background-color: #34495E;\n    color: #FFF;\n    font-size: 14px;\n    border: none;\n    border-radius: 5px;\n    cursor: pointer;\n    margin: 7px;\n    text-align: center;\n   }\n   \n   #result {\n    width: 80%;\n    height: 20px;\n    padding: 10px;\n    font-size: 1.3em;\n    margin: 0px auto;\n    border-radius: 5px;\n    color: white;\n    font-weight: bold;\n   }\n   \n   img {\n    width: 80%;\n    max-width:150px;\n    height: auto;\n    border-radius: 5px;\n    margin: 10px auto;\n    text-align: center;\n    display: none;\n    justify-content: center;\n    border: white 2px solid;\n   }\n  \u003C/style\u003E\n \u003C/head\u003E\n \u003Cbody\u003E\n  \u003Ch1 id=\"result\"\u003E글자를 맞춰보세요\u003C/h1\u003E\n  \u003Ch2\u003E_ O G\u003C/h2\u003E\n  \u003Cimg\u003E\n  \u003Cdiv id=\"letterButtons\"\u003E\n   \u003Cbutton\u003EQ\u003C/button\u003E\n  \u003C/div\u003E\n  \u003Cscript\u003E\n   let letterButtons = document.querySelectorAll(\n    '#letterButtons button');\n   let result = document.getElementById('result');\n   let image = document.getElementsByTagName(\"img\")[0];\n   let correctLetter = 'D';\n   let word = document.querySelector('h2');\n   letterButtons.forEach(button =\u003E {\n    button.addEventListener('click', function() {\n     let letter = this.textContent;\n     if (letter !== correctLetter) {\n      button.disabled = true;\n     }\n     if (letter === correctLetter) {\n      result.innerHTML = '정답입니다!';\n      result.style.color = \"#046865\";\n      image.style.display = \"flex\";\n      image.src = 'https://mimo.app/i/dog_yawn.png';\n      word.textContent = 'D O G';\n      letterButtons.forEach(button =\u003E {\n       button.disabled = true;\n      });\n     } else {\n      result.innerHTML = '다시 시도해보세요';\n      result.style.color = \"#D1345B\";\n     }\n    });\n   });\n  \u003C/script\u003E\n \u003C/body\u003E\n\u003C/html\u003E"
+            "content": "<html>\n <head>\n  <style>\n   body {\n    font-family: sans-serif;\n    color: #2C3E50;\n    background-color: #9aa4d2;\n    margin-top: 5%;\n    min-height: 300px;\n   }\n   \n   button[disabled] {\n    opacity: 0.5;\n    cursor: default;\n   }\n   \n   h2,\n   h1,\n   #result {\n    text-align: center;\n    margin: 5px;\n   }\n   \n   #letterButtons {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    width: 100%;\n    padding: 0;\n    justify-content: center;\n   }\n   \n   button {\n    width: 40px;\n    height: 40px;\n    background-color: #34495E;\n    color: #FFF;\n    font-size: 14px;\n    border: none;\n    border-radius: 5px;\n    cursor: pointer;\n    margin: 7px;\n    text-align: center;\n   }\n   \n   #result {\n    width: 80%;\n    height: 20px;\n    padding: 10px;\n    font-size: 1.3em;\n    margin: 0px auto;\n    border-radius: 5px;\n    color: white;\n    font-weight: bold;\n   }\n   \n   img {\n    width: 80%;\n    max-width:150px;\n    height: auto;\n    border-radius: 5px;\n    margin: 10px auto;\n    text-align: center;\n    display: none;\n    justify-content: center;\n    border: white 2px solid;\n   }\n  </style>\n </head>\n <body>\n  <h1 id=\"result\">글자를 맞춰보세요</h1>\n  <h2>_ O G</h2>\n  <img>\n  <div id=\"letterButtons\">\n   <button>Q</button>\n  </div>\n  <script>\n   let letterButtons = document.querySelectorAll(\n    '#letterButtons button');\n   let result = document.getElementById('result');\n   let image = document.getElementsByTagName(\"img\")[0];\n   let correctLetter = 'D';\n   let word = document.querySelector('h2');\n   letterButtons.forEach(button => {\n    button.addEventListener('click', function() {\n     let letter = this.textContent;\n     if (letter !== correctLetter) {\n      button.disabled = true;\n     }\n     if (letter === correctLetter) {\n      result.innerHTML = '정답입니다!';\n      result.style.color = \"#046865\";\n      image.style.display = \"flex\";\n      image.src = 'https://mimo.app/i/dog_yawn.png';\n      word.textContent = 'D O G';\n      letterButtons.forEach(button => {\n       button.disabled = true;\n      });\n     } else {\n      result.innerHTML = '다시 시도해보세요';\n      result.style.color = \"#D1345B\";\n     }\n    });\n   });\n  </script>\n </body>\n</html>"
           },
           {
             "type": "paragraph",
-            "content": "`\u003Cbutton\u003E`를 선택하고, `Q`를 입력한 다음, `\u003C/button\u003E`를 선택하세요.",
+            "content": "`<button>`를 선택하고, `Q`를 입력한 다음, `</button>`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -372,7 +372,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Cbutton\u003EQ\u003C/button\u003E\n\u003Cbutton\u003ER\u003C/button\u003E",
+              "content": "<button>Q</button>\n<button>R</button>",
               "codeLanguage": "html"
             }
           ],
@@ -383,7 +383,7 @@
               "startLine": 1,
               "startPos": 0,
               "length": 1,
-              "value": "\u003C",
+              "value": "<",
               "correct": true
             },
             {
@@ -401,7 +401,7 @@
               "startLine": 1,
               "startPos": 7,
               "length": 1,
-              "value": "\u003E",
+              "value": ">",
               "correct": true
             },
             {
@@ -419,7 +419,7 @@
               "startLine": 1,
               "startPos": 9,
               "length": 1,
-              "value": "\u003C",
+              "value": "<",
               "correct": true
             },
             {
@@ -446,7 +446,7 @@
               "startLine": 1,
               "startPos": 17,
               "length": 1,
-              "value": "\u003E",
+              "value": ">",
               "correct": true
             }
           ],
@@ -457,11 +457,11 @@
           {
             "visibleIf": "correct",
             "type": "webview",
-            "content": "\u003Chtml\u003E\n \u003Chead\u003E\n  \u003Cstyle\u003E\n   body {\n    font-family: sans-serif;\n    color: #2C3E50;\n    background-color: #9aa4d2;\n    margin-top: 5%;\n    min-height: 300px;\n   }\n   \n   button[disabled] {\n    opacity: 0.5;\n    cursor: default;\n   }\n   \n   h2,\n   h1,\n   #result {\n    text-align: center;\n    margin: 5px;\n   }\n   \n   #letterButtons {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    width: 100%;\n    padding: 0;\n    justify-content: center;\n   }\n   \n   button {\n    width: 40px;\n    height: 40px;\n    background-color: #34495E;\n    color: #FFF;\n    font-size: 14px;\n    border: none;\n    border-radius: 5px;\n    cursor: pointer;\n    margin: 7px;\n    text-align: center;\n   }\n   \n   #result {\n    width: 80%;\n    height: 20px;\n    padding: 10px;\n    font-size: 1.3em;\n    margin: 0px auto;\n    border-radius: 5px;\n    color: white;\n    font-weight: bold;\n   }\n   \n   img {\n    width: 80%;\n    max-width:150px;\n    height: auto;\n    border-radius: 5px;\n    margin: 10px auto;\n    text-align: center;\n    display: none;\n    justify-content: center;\n    border: white 2px solid;\n   }\n  \u003C/style\u003E\n \u003C/head\u003E\n \u003Cbody\u003E\n  \u003Ch1 id=\"result\"\u003E글자를 맞춰보세요\u003C/h1\u003E\n  \u003Ch2\u003E_ O G\u003C/h2\u003E\n  \u003Cimg\u003E\n  \u003Cdiv id=\"letterButtons\"\u003E\n   \u003Cbutton\u003EQ\u003C/button\u003E\n   \u003Cbutton\u003ER\u003C/button\u003E\n  \u003C/div\u003E\n  \u003Cscript\u003E\n   let letterButtons = document.querySelectorAll(\n    '#letterButtons button');\n   let result = document.getElementById('result');\n   let image = document.getElementsByTagName(\"img\")[0];\n   let correctLetter = 'D';\n   let word = document.querySelector('h2');\n   letterButtons.forEach(button =\u003E {\n    button.addEventListener('click', function() {\n     let letter = this.textContent;\n     if (letter !== correctLetter) {\n      button.disabled = true;\n     }\n     if (letter === correctLetter) {\n      result.innerHTML = '정답입니다!';\n      result.style.color = \"#046865\";\n      image.style.display = \"flex\";\n      image.src = 'https://mimo.app/i/dog_yawn.png';\n      word.textContent = 'D O G';\n      letterButtons.forEach(button =\u003E {\n       button.disabled = true;\n      });\n     } else {\n      result.innerHTML = '다시 시도해보세요';\n      result.style.color = \"#D1345B\";\n     }\n    });\n   });\n  \u003C/script\u003E\n \u003C/body\u003E\n\u003C/html\u003E"
+            "content": "<html>\n <head>\n  <style>\n   body {\n    font-family: sans-serif;\n    color: #2C3E50;\n    background-color: #9aa4d2;\n    margin-top: 5%;\n    min-height: 300px;\n   }\n   \n   button[disabled] {\n    opacity: 0.5;\n    cursor: default;\n   }\n   \n   h2,\n   h1,\n   #result {\n    text-align: center;\n    margin: 5px;\n   }\n   \n   #letterButtons {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    width: 100%;\n    padding: 0;\n    justify-content: center;\n   }\n   \n   button {\n    width: 40px;\n    height: 40px;\n    background-color: #34495E;\n    color: #FFF;\n    font-size: 14px;\n    border: none;\n    border-radius: 5px;\n    cursor: pointer;\n    margin: 7px;\n    text-align: center;\n   }\n   \n   #result {\n    width: 80%;\n    height: 20px;\n    padding: 10px;\n    font-size: 1.3em;\n    margin: 0px auto;\n    border-radius: 5px;\n    color: white;\n    font-weight: bold;\n   }\n   \n   img {\n    width: 80%;\n    max-width:150px;\n    height: auto;\n    border-radius: 5px;\n    margin: 10px auto;\n    text-align: center;\n    display: none;\n    justify-content: center;\n    border: white 2px solid;\n   }\n  </style>\n </head>\n <body>\n  <h1 id=\"result\">글자를 맞춰보세요</h1>\n  <h2>_ O G</h2>\n  <img>\n  <div id=\"letterButtons\">\n   <button>Q</button>\n   <button>R</button>\n  </div>\n  <script>\n   let letterButtons = document.querySelectorAll(\n    '#letterButtons button');\n   let result = document.getElementById('result');\n   let image = document.getElementsByTagName(\"img\")[0];\n   let correctLetter = 'D';\n   let word = document.querySelector('h2');\n   letterButtons.forEach(button => {\n    button.addEventListener('click', function() {\n     let letter = this.textContent;\n     if (letter !== correctLetter) {\n      button.disabled = true;\n     }\n     if (letter === correctLetter) {\n      result.innerHTML = '정답입니다!';\n      result.style.color = \"#046865\";\n      image.style.display = \"flex\";\n      image.src = 'https://mimo.app/i/dog_yawn.png';\n      word.textContent = 'D O G';\n      letterButtons.forEach(button => {\n       button.disabled = true;\n      });\n     } else {\n      result.innerHTML = '다시 시도해보세요';\n      result.style.color = \"#D1345B\";\n     }\n    });\n   });\n  </script>\n </body>\n</html>"
           },
           {
             "type": "paragraph",
-            "content": "`\u003C`, `button`, `\u003E`, `R`, `\u003C`, `/`, `button`, `\u003E`를 순서대로 선택하세요.",
+            "content": "`<`, `button`, `>`, `R`, `<`, `/`, `button`, `>`를 순서대로 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -483,7 +483,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Cbutton\u003EQ\u003C/button\u003E\n\u003Cbutton\u003ER\u003C/button\u003E\n\u003Cbutton\u003ED\u003C/button\u003E",
+              "content": "<button>Q</button>\n<button>R</button>\n<button>D</button>",
               "codeLanguage": "html"
             }
           ],
@@ -494,7 +494,7 @@
               "startLine": 2,
               "startPos": 0,
               "length": 8,
-              "value": "\u003Cbutton\u003E",
+              "value": "<button>",
               "correct": true
             },
             {
@@ -512,12 +512,12 @@
               "startLine": 2,
               "startPos": 9,
               "length": 9,
-              "value": "\u003C/button\u003E",
+              "value": "</button>",
               "correct": true
             }
           ],
           "wrongOptions": [
-            "\u003Cbutton\u003E"
+            "<button>"
           ],
           "output": null
         },
@@ -525,11 +525,11 @@
           {
             "visibleIf": "correct",
             "type": "webview",
-            "content": "\u003Chtml\u003E\n \u003Chead\u003E\n  \u003Cstyle\u003E\n   body {\n    font-family: sans-serif;\n    color: #2C3E50;\n    background-color: #9aa4d2;\n    margin-top: 5%;\n    min-height: 300px;\n   }\n   \n   button[disabled] {\n    opacity: 0.5;\n    cursor: default;\n   }\n   \n   h2,\n   h1,\n   #result {\n    text-align: center;\n    margin: 5px;\n   }\n   \n   #letterButtons {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    width: 100%;\n    padding: 0;\n    justify-content: center;\n   }\n   \n   button {\n    width: 40px;\n    height: 40px;\n    background-color: #34495E;\n    color: #FFF;\n    font-size: 14px;\n    border: none;\n    border-radius: 5px;\n    cursor: pointer;\n    margin: 7px;\n    text-align: center;\n   }\n   \n   #result {\n    width: 80%;\n    height: 20px;\n    padding: 10px;\n    font-size: 1.3em;\n    margin: 0px auto;\n    border-radius: 5px;\n    color: white;\n    font-weight: bold;\n   }\n   \n   img {\n    width: 80%;\n    max-width:150px;\n    height: auto;\n    border-radius: 5px;\n    margin: 10px auto;\n    text-align: center;\n    display: none;\n    justify-content: center;\n    border: white 2px solid;\n   }\n  \u003C/style\u003E\n \u003C/head\u003E\n \u003Cbody\u003E\n  \u003Ch1 id=\"result\"\u003E글자를 맞춰보세요\u003C/h1\u003E\n  \u003Ch2\u003E_ O G\u003C/h2\u003E\n  \u003Cimg\u003E\n  \u003Cdiv id=\"letterButtons\"\u003E\n   \u003Cbutton\u003EQ\u003C/button\u003E\n   \u003Cbutton\u003ER\u003C/button\u003E\n   \u003Cbutton\u003ED\u003C/button\u003E\n  \u003C/div\u003E\n  \u003Cscript\u003E\n   let letterButtons = document.querySelectorAll(\n    '#letterButtons button');\n   let result = document.getElementById('result');\n   let image = document.getElementsByTagName(\"img\")[0];\n   let correctLetter = 'D';\n   let word = document.querySelector('h2');\n   letterButtons.forEach(button =\u003E {\n    button.addEventListener('click', function() {\n     let letter = this.textContent;\n     if (letter !== correctLetter) {\n      button.disabled = true;\n     }\n     if (letter === correctLetter) {\n      result.innerHTML = '정답입니다!';\n      result.style.color = \"#046865\";\n      image.style.display = \"flex\";\n      image.src = 'https://mimo.app/i/dog_yawn.png';\n      word.textContent = 'D O G';\n      letterButtons.forEach(button =\u003E {\n       button.disabled = true;\n      });\n     } else {\n      result.innerHTML = '다시 시도해보세요';\n      result.style.color = \"#D1345B\";\n     }\n    });\n   });\n  \u003C/script\u003E\n \u003C/body\u003E\n\u003C/html\u003E"
+            "content": "<html>\n <head>\n  <style>\n   body {\n    font-family: sans-serif;\n    color: #2C3E50;\n    background-color: #9aa4d2;\n    margin-top: 5%;\n    min-height: 300px;\n   }\n   \n   button[disabled] {\n    opacity: 0.5;\n    cursor: default;\n   }\n   \n   h2,\n   h1,\n   #result {\n    text-align: center;\n    margin: 5px;\n   }\n   \n   #letterButtons {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    width: 100%;\n    padding: 0;\n    justify-content: center;\n   }\n   \n   button {\n    width: 40px;\n    height: 40px;\n    background-color: #34495E;\n    color: #FFF;\n    font-size: 14px;\n    border: none;\n    border-radius: 5px;\n    cursor: pointer;\n    margin: 7px;\n    text-align: center;\n   }\n   \n   #result {\n    width: 80%;\n    height: 20px;\n    padding: 10px;\n    font-size: 1.3em;\n    margin: 0px auto;\n    border-radius: 5px;\n    color: white;\n    font-weight: bold;\n   }\n   \n   img {\n    width: 80%;\n    max-width:150px;\n    height: auto;\n    border-radius: 5px;\n    margin: 10px auto;\n    text-align: center;\n    display: none;\n    justify-content: center;\n    border: white 2px solid;\n   }\n  </style>\n </head>\n <body>\n  <h1 id=\"result\">글자를 맞춰보세요</h1>\n  <h2>_ O G</h2>\n  <img>\n  <div id=\"letterButtons\">\n   <button>Q</button>\n   <button>R</button>\n   <button>D</button>\n  </div>\n  <script>\n   let letterButtons = document.querySelectorAll(\n    '#letterButtons button');\n   let result = document.getElementById('result');\n   let image = document.getElementsByTagName(\"img\")[0];\n   let correctLetter = 'D';\n   let word = document.querySelector('h2');\n   letterButtons.forEach(button => {\n    button.addEventListener('click', function() {\n     let letter = this.textContent;\n     if (letter !== correctLetter) {\n      button.disabled = true;\n     }\n     if (letter === correctLetter) {\n      result.innerHTML = '정답입니다!';\n      result.style.color = \"#046865\";\n      image.style.display = \"flex\";\n      image.src = 'https://mimo.app/i/dog_yawn.png';\n      word.textContent = 'D O G';\n      letterButtons.forEach(button => {\n       button.disabled = true;\n      });\n     } else {\n      result.innerHTML = '다시 시도해보세요';\n      result.style.color = \"#D1345B\";\n     }\n    });\n   });\n  </script>\n </body>\n</html>"
           },
           {
             "type": "paragraph",
-            "content": "`\u003Cbutton\u003E`를 선택하고, `D`를 선택한 다음, `\u003C/button\u003E`를 선택하세요.",
+            "content": "`<button>`를 선택하고, `D`를 선택한 다음, `</button>`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -541,12 +541,12 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Awesome! We've learned how to create the structure of a button.",
+            "content": "잘했어요! 버튼을 만드는 구조를 배웠어요.",
             "visibleIf": "always"
           },
           {
             "type": "paragraph",
-            "content": "Before we add actions to them, move on to the next lesson to learn about an **HTML element** present on every web page out there.",
+            "content": "버튼에 동작을 추가하기 전에, 모든 웹 페이지에 있는 **HTML 요소**에 대해 배우기 위해 다음 레슨으로 넘어가볼까요?",
             "visibleIf": "always"
           }
         ],
@@ -559,15 +559,15 @@
       "id": 906,
       "index": 1,
       "codeLanguage": "html",
-      "descriptionContent": "Create stylish text for websites using tags and learn what the head of an HTML page does.",
-      "title": "Structuring Text with Tags",
+      "descriptionContent": "태그를 사용하여 웹사이트의 텍스트를 스타일링하고 HTML 페이지의 head가 하는 일을 배워보세요.",
+      "title": "태그로 텍스트 구조화하기",
       "type": "course",
       "version": 73,
       "bannerIconUrl": null,
       "chapters": [
         {
           "id": 15309,
-          "title": "Line Breaks, Emphasis and Importance",
+          "title": "줄바꿈, 강조와 중요도",
           "type": "practiceLevel1",
           "lessons": [
             {

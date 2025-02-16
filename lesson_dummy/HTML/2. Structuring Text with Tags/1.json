@@ -11,18 +11,18 @@
         "index": 0,
         "preInteractionModules": [
           {
-            "type": "paragraph",
-            "content": "가끔 우리는 문단을 줄바꿈하고 싶을 때가 있습니다.",
+            "type": "paragraph", 
+            "content": "때로는 문단을 줄바꿈으로 구분하고 싶을 때가 있습니다.",
             "visibleIf": "always"
           },
           {
             "type": "paragraph",
-            "content": "예를 들어, 이 노래는 `장미꽃 위의 빗방울`이 한 줄에 나오고, `고양이의 수염`이 다음 줄에 나오고, 이런 식으로 보기가 더 좋을 것입니다.",
+            "content": "예를 들어, 이 노래는 `장미꽃 위의 빗방울`이 한 줄에, `고양이의 수염`이 다음 줄에 있는 식으로 표현하면 더 보기 좋을 것 같네요.",
             "visibleIf": "always"
           },
           {
             "type": "webview",
-            "content": "<h1>내가 좋아하는 것들</h1>\n<p> 장미꽃 위의 빗방울 고양이의 수염 밝은 구리 주전자 따뜻한\n 양모 장갑 </p>",
+            "content": "<h1>내가 좋아하는 것들</h1>\n<p> 장미꽃 위의 빗방울 고양이의 수염 반짝이는 구리 주전자 따뜻한\n 양모 장갑 </p>",
             "visibleIf": "always"
           }
         ],
@@ -36,7 +36,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "우리는 줄바꿈을 돕기 위해 **줄바꿈 태그**를 사용할 수 있습니다: `br`.",
+            "content": "**줄바꿈 태그** `br`을 사용하여 줄을 나눌 수 있습니다.",
             "visibleIf": "always"
           }
         ],
@@ -46,25 +46,27 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "<h1>내가 좋아하는 것들</h1>\n<p> 장미꽃 위의 빗방울<br>\n고양이의 수염<br> \n밝은 구리 주전자<br> \n따뜻한 양모 장갑\n </p>",
+              
+
+              "content": "<h1>내가 좋아하는 것들</h1>\n<p>\n장미꽃 위의 빗방울<br>\n고양이의 수염<br> \n반짝이는 구리 주전자<br> \n따뜻한 양모 장갑\n</p>",
               "codeLanguage": "html"
             }
           ],
           "interactionOptions": [
             {
-              "startIndex": 50,
-              "endIndex": 54,
-              "startLine": 1,
-              "startPos": 22,
+              "startIndex": 33,
+              "endIndex": 37,
+              "startLine": 2,
+              "startPos": 10,
               "length": 4,
               "value": "<br>",
               "correct": true
             },
             {
-              "startIndex": 102,
-              "endIndex": 106,
-              "startLine": 3,
-              "startPos": 22,
+              "startIndex": 60,
+              "endIndex": 64,
+              "startLine": 4,
+              "startPos": 11,
               "length": 4,
               "value": "<br>",
               "correct": true
@@ -76,7 +78,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`<br>`를 선택하고, `<br>`를 선택하세요.",
+            "content": "Make sure to pick `<br>`, followed by `<br>`.",
             "visibleIf": "wrong"
           }
         ]
@@ -88,12 +90,12 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`<br>`은 **빈 태그**입니다. 빈 태그는 닫는 태그가 없고 내용도 없습니다. 이를 자체 닫힘 태그라고도 합니다.",
+            "content": "`<br>` is an **empty tag**. Empty tags have no closing tag and no content. They are also called self-closing tags.",
             "visibleIf": "always"
           },
           {
             "type": "paragraph",
-            "content": "줄바꿈 태그를 함께 넣어보세요.",
+            "content": "Put together the line break tag.",
             "visibleIf": "always"
           }
         ],
@@ -103,7 +105,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "<h1>내가 좋아하는 것들</h1>\n<p>\n 장미에 맺힌 빗방울<br>\n 고양이의 수염<br>\n 반짝이는 구리 주전자<br>\n 따뜻한 양모 장갑\n</p>",
+              "content": "<h1>My favorite things</h1>\n<p>\n Raindrops on roses<br>\n Whiskers on kittens<br>\n Bright copper kettles<br>\n Warm woolen mittens\n</p>",
               "codeLanguage": "html"
             }
           ],
@@ -144,7 +146,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`<`를 선택하고, `br`를 선택한 다음, `>`를 선택하세요.",
+            "content": "Make sure to pick `<`, followed by `br`, and finally `>`.",
             "visibleIf": "wrong"
           }
         ]
@@ -156,7 +158,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "텍스트를 강조하는 요소가 있습니다. 이 요소는 텍스트를 _기울임꼴_로 만듭니다. 이것을 `em` 요소라고 합니다. `<em>`과 `</em>`을 추가해보세요.",
+            "content": "There's an element for giving emphasis to text, it makes it _italic_. It's called the `em` element. Add `<em>` and `</em>`.",
             "visibleIf": "always"
           }
         ],
@@ -166,7 +168,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\n<h1>내가 좋아하는 것들</h1>\n<p>\n <em>장미</em>에 맺힌 빗방울<br>\n 고양이의 수염<br>\n 반짝이는 구리 주전자<br>\n 따뜻한 양모 장갑\n</p>\n",
+              "content": "\n<h1>My favorite things</h1>\n<p>\n Raindrops on <em>roses</em><br>\n Whiskers on kittens<br>\n Bright copper kettles<br>\n Warm woolen mittens\n</p>\n",
               "codeLanguage": "html"
             }
           ],
@@ -196,7 +198,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`<em>`를 선택하고, `</em>`를 선택하세요.",
+            "content": "Make sure to pick `<em>`, followed by `</em>`.",
             "visibleIf": "wrong"
           }
         ]
@@ -208,7 +210,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "텍스트를 중요하게 표시하기 위해서는 `<strong>`와 `</strong>` 태그를 사용합니다. 이는 텍스트를 **굵게** 만듭니다.",
+            "content": "To define texts as important, we use the `<strong>` and `</strong>` tags. It makes text **bold**.",
             "visibleIf": "always"
           }
         ],
@@ -218,7 +220,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "<h1>내가 좋아하는 것들</h1>\n<p>\n 장미꽃 위의 <em>빗방울</em><br>\n 고양이의 <strong>수염</strong>\n</p>",
+              "content": "<h1>My favorite things</h1>\n<p>\n Raindrops on <em>roses</em><br>\n Whiskers on <strong>kittens</strong>\n</p>",
               "codeLanguage": "html"
             }
           ],
@@ -248,7 +250,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`<strong>`를 선택하고, `</strong>`를 선택하세요.",
+            "content": "Make sure to pick `<strong>`, followed by `</strong>`.",
             "visibleIf": "wrong"
           }
         ]
@@ -260,7 +262,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`<br>` 태그는 무엇을 위한 것인가요?",
+            "content": "What's the `<br>` tag for?",
             "visibleIf": "always"
           }
         ],
@@ -271,12 +273,12 @@
             {
               "correct": false,
               "value": 0,
-              "text": "텍스트를 강조합니다"
+              "text": "It gives emphasis to text"
             },
             {
               "correct": true,
               "value": 1,
-              "text": "줄바꿈을 추가합니다"
+              "text": "It adds a line break"
             }
           ],
           "isCode": false,
@@ -285,7 +287,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "줄바꿈을 추가합니다.",
+            "content": "It adds a line break.",
             "visibleIf": "wrong"
           }
         ]
@@ -297,7 +299,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "다음 중 빈 태그 또는 자체 닫는 태그는 무엇인가요?",
+            "content": "Which of these tags is an empty or self-closing tag?",
             "visibleIf": "always"
           }
         ],
@@ -332,7 +334,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`<br>`를 선택하세요.",
+            "content": "Make sure to pick `<br>`.",
             "visibleIf": "wrong"
           }
         ]
@@ -344,7 +346,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "어떤 태그가 텍스트를 강조하는 데 사용되나요?",
+            "content": "Which of these tags give emphasis to text?",
             "visibleIf": "always"
           }
         ],
@@ -369,7 +371,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`<em>`와 `</em>`를 선택하세요.",
+            "content": "`<em>` and `</em>`.",
             "visibleIf": "wrong"
           }
         ]
@@ -381,7 +383,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`<strong>`와 `</strong>` 태그는 무엇을 위한 것인가요?",
+            "content": "What are the `<strong>` and `</strong>` tags for?",
             "visibleIf": "always"
           }
         ],
@@ -392,12 +394,12 @@
             {
               "correct": true,
               "value": 0,
-              "text": "텍스트를 중요하게 정의합니다"
+              "text": "They define text as important"
             },
             {
               "correct": false,
               "value": 1,
-              "text": "줄바꿈을 추가합니다"
+              "text": "They make the text unbreakable by line break"
             }
           ],
           "isCode": false,
@@ -406,7 +408,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "그들은 텍스트를 중요하게 정의합니다.",
+            "content": "They define text as important.",
             "visibleIf": "wrong"
           }
         ]
@@ -418,7 +420,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "앨범 제목을 강조하기 위해 열리고 닫힌 강조 태그를 추가하세요.",
+            "content": "Give emphasis to the album title by adding the opening and closing emphasis tags.",
             "visibleIf": "always"
           }
         ],
@@ -428,7 +430,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "<p> 나는 방금 <em>애비 로드</em>를 처음 들었어요.</p>",
+              "content": "<p> I just listened to <em>Abbey Road</em> for the first time.</p>",
               "codeLanguage": "html"
             }
           ],
@@ -458,7 +460,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`<em>`를 선택하고, `</em>`를 선택하세요.",
+            "content": "Make sure to pick `<em>`, followed by `</em>`.",
             "visibleIf": "wrong"
           }
         ]
@@ -470,7 +472,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "_Mimo_와 _Vienna, Austria_ 사이에 줄바꿈을 추가하여 _Mimo_가 한 줄에 나타나고 _Vienna, Austria_가 그 아래에 나타나도록 하세요.",
+            "content": "Add a line break to the address between _Mimo_ and _Vienna, Austria_, such that _Mimo_ appears on one line and _Vienna, Austria_ appears below it.",
             "visibleIf": "always"
           }
         ],
@@ -480,7 +482,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "<p> 마이모 <br> 비엔나, 오스트리아 </p>",
+              "content": "<p> Mimo <br> Vienna, Austria </p>",
               "codeLanguage": "html"
             }
           ],
@@ -503,7 +505,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`<br>`를 선택하세요.",
+            "content": "Make sure to pick `<br>`.",
             "visibleIf": "wrong"
           }
         ]
@@ -515,7 +517,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "두 번째 문장의 단어들을 강조해보세요.",
+            "content": "Give emphasis to the words in the second sentence.",
             "visibleIf": "always"
           }
         ],
@@ -525,7 +527,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "<p>친구들은 내가 기울임체로 글을 쓸 때마다 짜증을 내요. <em>아마도 너무 오른쪽으로\n 기울어져서 그런가 봐요.</em></p>",
+              "content": "<p>My friends get annoyed when I post in italics. <em>I guess it's a\n bit too right-leaning for them.</em></p>",
               "codeLanguage": "html"
             }
           ],
@@ -555,7 +557,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`<em>`를 선택하고, `</em>`를 선택하세요.",
+            "content": "Make sure to pick `<em>`, followed by `</em>`.",
             "visibleIf": "wrong"
           }
         ]
@@ -567,7 +569,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`</strong>`를 사용하여 _rock you_를 중요한 텍스트로 정의해보세요.",
+            "content": "Define _rock you_ as important text by coding ` </strong>`.",
             "visibleIf": "always"
           }
         ],
@@ -577,7 +579,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "<p> 우리는, 우리는<br><strong> 널 흔들 거야</strong></p>",
+              "content": "<p> We will, we will<br><strong> rock you</strong></p>",
               "codeLanguage": "html"
             }
           ],
@@ -598,7 +600,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`</strong>`를 선택하세요.",
+            "content": "Make sure to pick `</strong>`.",
             "visibleIf": "wrong"
           }
         ]
@@ -609,15 +611,15 @@
       "id": 1001,
       "index": 2,
       "codeLanguage": "html",
-      "descriptionContent": "HTML에서 첫 번째 버튼을 만드는 방법을 배워보세요.",
-      "title": "버튼 만들기",
+      "descriptionContent": "Learn how to build your first button in HTML.",
+      "title": "Building Buttons",
       "type": "course",
       "version": 29,
       "bannerIconUrl": null,
       "chapters": [
         {
           "id": 7692,
-          "title": "버튼",
+          "title": "Buttons",
           "type": "practiceLevel1",
           "lessons": [
             {
