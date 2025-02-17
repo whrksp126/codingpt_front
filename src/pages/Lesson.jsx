@@ -225,43 +225,48 @@ const Lesson = () => {
 
   // 사용자 입력값으로 코드 완성하기
   const combineUserInputsWithTemplate = () => {
-    let templateCode = currentStepData.interactionModule.files[0].content;
-    let codeArray = [];
-    let lastIndex = 0;
-    if(currentStepData.interactionModule.type === "codeFillTheGap"){
-      currentStepData.interactionModule.interactionOptions.forEach((option, i) => {
-        const { startIndex, endIndex } = option;
-        if (startIndex > lastIndex) {
-          codeArray.push(templateCode.slice(lastIndex, startIndex));
+    const type = currentStepData.interactionModule.type;
+    const isInteractive = currentStepData.interactionModule.files[0].isInteractive;
+    const content = currentStepData.interactionModule.files[0].content;
+    const lines = content.split("\n");
+    const elements = [];
+    lines.forEach((line, lineIndex) => {
+      let lineElements = [];
+      let lastIndex = 0;
+      if(!isInteractive){
+        lineElements.push(line)
+      }else{
+        if(type == "codeValidatedInput"){
+          const option = currentStepData.interactionModule.interactionOption;
+          const { startPos, length, userValue } = option;
+            if (startPos > lastIndex) {
+              lineElements.push(line.slice(lastIndex, startPos));
+              lastIndex = startPos + length; 
+            }
+            lineElements.push(userValue || "");
+            lastIndex = startPos + length; 
         }
-        codeArray.push(inputRefs.current[i]?.value || "");
-        lastIndex = endIndex;
-      });
-      if (lastIndex < templateCode.length) {
-        codeArray.push(templateCode.slice(lastIndex));
+        if(type == "codeFillTheGap"){
+          const options = currentStepData.interactionModule.interactionOptions
+          const lineOptions = options.filter((option) => option.startLine === lineIndex);
+          lineOptions.forEach((option) => {
+            const { startPos, length, userValue } = option;
+            if (startPos > lastIndex) {
+              lineElements.push(line.slice(lastIndex, startPos));
+              lastIndex = startPos + length;
+            }
+            lineElements.push(userValue || "");
+            lastIndex = startPos + length;
+          })
+        }
       }
-      console.log("codeArray,",codeArray)
-      const completedCode = codeArray.join('');
-      return completedCode;
-    }
-    if(currentStepData.interactionModule.type === "codeValidatedInput"){
-      
-      const { startPos, endIndex, length, value, userValue } = currentStepData.interactionModule.interactionOption;
-      if (startPos > lastIndex) {
-        codeArray.push(templateCode.slice(lastIndex, startPos));
-        lastIndex = endIndex; 
+      if (lastIndex < content.length) {
+        lineElements.push(line.slice(lastIndex));
       }
-      codeArray.push(inputRefs.current[0]?.value || "");
-      lastIndex = endIndex; 
-      if (lastIndex < templateCode.length) {
-        codeArray.push(templateCode.slice(lastIndex));
-      }
-      lastIndex = endIndex; 
-      const completedCode = codeArray.join('');
-      
-      return completedCode;
-
-    }
+      elements.push(lineElements.join(''))
+    })
+    
+    return elements.join('');
   }
   
   // JSON 데이터를 기반으로 라인별 코드와 `<input>` 태그를 생성
@@ -290,6 +295,7 @@ const Lesson = () => {
                 {line.slice(lastIndex, startPos)}
               </code>
             );
+            lastIndex = startPos + length;
           }
           lineElements.push(
             <input
@@ -330,20 +336,23 @@ const Lesson = () => {
               }}
             /> 
           )
-          lastIndex = endIndex;
+          lastIndex = startPos + length;
         }
         if(type == "codeFillTheGap"){
           const lineOptions = options.filter((option) => option.startLine === lineIndex);
           lineOptions.forEach((option, optionIndex) => {
-            const { startPos, endIndex, length, value, userValue } = option;
+            const { startIndex, endIndex, startPos, length, value, userValue } = option;
+            console.log(option)
+            console.log(line)
+            
             // `<code>` 태그 추가 (startPos 이전의 텍스트)
-            if (startPos > lastIndex) {
+            if (startIndex > lastIndex) {
               lineElements.push(
                 <code key={`code-${lineIndex}-${optionIndex}`} className={`${lineElements.length != 0 && 'ml-1'} text-white`}>
                   {line.slice(lastIndex, startPos)}
                 </code>
               );
-              lastIndex = endIndex;
+              lastIndex = startPos + length;
 
             }
             // `<input>` 태그 추가
@@ -367,7 +376,6 @@ const Lesson = () => {
                   min-w-[21px] 
                   border border-[#282828] rounded-md 
                   
-                  
                   text-center text-sm text-white 
                   caret-blue-400 
                   bg-[#282828]
@@ -383,7 +391,7 @@ const Lesson = () => {
               />
             );
     
-            lastIndex = endIndex;
+            lastIndex = startPos + length;
           });
         }
         
@@ -411,7 +419,7 @@ const Lesson = () => {
 
   // JSON 데이터를 기반으로 Browser `<Iframe>` 태그를 생성
   const generateBrowswer = (step) => {
-    return <iframe className={`w-full flex-grow bg-product-background-primary-light`} srcDoc={combineUserInputsWithTemplate()}></iframe>
+    return <iframe className={`w-full h-full flex-grow bg-product-background-primary-light`} srcDoc={combineUserInputsWithTemplate()}></iframe>
     // return <Iframe src={`/src/assets/lesson_files/html/step_0/${step}/index.html`} />  
   }
 

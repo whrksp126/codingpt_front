@@ -11,18 +11,18 @@
         "index": 0,
         "preInteractionModules": [
           {
-            "type": "paragraph", 
-            "content": "때로는 문단을 줄바꿈으로 구분하고 싶을 때가 있습니다.",
+            "type": "paragraph",
+            "content": "Sometimes we want to format paragraphs with line breaks.",
             "visibleIf": "always"
           },
           {
             "type": "paragraph",
-            "content": "예를 들어, 이 노래는 `장미꽃 위의 빗방울`이 한 줄에, `고양이의 수염`이 다음 줄에 있는 식으로 표현하면 더 보기 좋을 것 같네요.",
+            "content": "For example, this song would look much better if `Raindrops on roses` appeared on one line, `Whiskers on kittens` on the next, and so on.",
             "visibleIf": "always"
           },
           {
             "type": "webview",
-            "content": "<h1>내가 좋아하는 것들</h1>\n<p> 장미꽃 위의 빗방울 고양이의 수염 반짝이는 구리 주전자 따뜻한\n 양모 장갑 </p>",
+            "content": "<h1>My favorite things</h1>\n<p> Raindrops on roses Whiskers on kittens Bright copper kettles Warm\n woolen mittens </p>",
             "visibleIf": "always"
           }
         ],
@@ -36,7 +36,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "**줄바꿈 태그** `br`을 사용하여 줄을 나눌 수 있습니다.",
+            "content": "We can separate lines with the help of the **line break tag**: `br`.",
             "visibleIf": "always"
           }
         ],
@@ -46,27 +46,25 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              
-
-              "content": "<h1>내가 좋아하는 것들</h1>\n<p>\n장미꽃 위의 빗방울<br>\n고양이의 수염<br> \n반짝이는 구리 주전자<br> \n따뜻한 양모 장갑\n</p>",
+              "content": "<h1>My favorite things</h1>\n<p> Raindrops on roses<br>\nWhiskers on kittens<br> \nBright copper kettles <br> \nWarm woolen mittens\n </p>",
               "codeLanguage": "html"
             }
           ],
           "interactionOptions": [
             {
-              "startIndex": 33,
-              "endIndex": 37,
-              "startLine": 2,
-              "startPos": 10,
+              "startIndex": 50,
+              "endIndex": 54,
+              "startLine": 1,
+              "startPos": 22,
               "length": 4,
               "value": "<br>",
               "correct": true
             },
             {
-              "startIndex": 60,
-              "endIndex": 64,
-              "startLine": 4,
-              "startPos": 11,
+              "startIndex": 102,
+              "endIndex": 106,
+              "startLine": 3,
+              "startPos": 22,
               "length": 4,
               "value": "<br>",
               "correct": true
