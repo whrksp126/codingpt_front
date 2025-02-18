@@ -7,73 +7,36 @@
     "lessons": [
       {
         "type": "Interactive",
-        "id": 58996,
+        "id": 67395,
         "index": 0,
         "preInteractionModules": [
           {
-            "type": "paragraph",
-            "content": "이 웹페이지에 몇 개의 문단이 있습니까?",
+            "type": "paragraph", 
+            "content": "버튼을 사용하면 프로그램이 사용자의 행동에 따라 웹페이지를 변경할 수 있습니다. 예를 들어, _Next_를 클릭하면 캐릭터를 순환하는 코드가 실행됩니다.",
             "visibleIf": "always"
           },
           {
-            "type": "codeNone",
-            "files": [
-              {
-                "isInteractive": false,
-                "name": "index.html",
-                "content": "\u003Ch1\u003E내가 좋아하는 것들\u003C/h1\u003E\n\u003Cp\u003E장미꽃 위의 빗방울과 고양이의 수염\u003C/p\u003E\n\u003Cp\u003E밝은 구리 주전자와 따뜻한 양모 장갑\u003C/p\u003E",
-                "codeLanguage": "html"
-              }
-            ],
-            "output": null
+            "type": "paragraph",
+            "content": "나중에 그 코드를 작성하는 방법을 배우게 될 것입니다. 지금은 `button` 요소에 집중할 것입니다.",
+            "visibleIf": "always"
+          },
+          {
+            "type": "webview",
+            "content": "<!doctype html>\n<html>\n <head>\n  <style>\n   button {\n    touch-action: manipulation;\n   }\n  </style>\n </head>\n <body style=\"text-align:center;\">\n  <h3>캐릭터를 선택하세요</h3> <img height=180 id=\"캐릭터\"\n   src='https://mimo.app/i/dan.png'> <br> <button\n   onclick=\"이전()\">이전</button> <button\n   onclick=\"다음()\">다음</button>\n  <script>\n   let 현재인덱스 = 0;\n   const 이미지들 = ['https://mimo.app/i/dan.png',\n    'https://mimo.app/i/jon.png'\n   ];\n   \n   function 다음() {\n    if (현재인덱스 >= 이미지들.length - 1) {\n     현재인덱스 = 0;\n    } else {\n     현재인덱스 += 1;\n    }\n    document.getElementById(\"캐릭터\").setAttribute(\"src\", 이미지들[\n     현재인덱스]);\n   }\n   \n   function 이전() {\n    if (현재인덱스 <= 0) {\n     현재인덱스 = 이미지들.length - 1;\n    } else {\n     현재인덱스 -= 1;\n    }\n    document.getElementById(\"캐릭터\").setAttribute(\"src\", 이미지들[\n     현재인덱스]);\n   }\n  </script>\n </body>\n</html>",
+            "visibleIf": "always"
           }
         ],
-        "interactionModule": {
-          "type": "multipleChoice",
-          "files": [
-            {
-              "isInteractive": false,
-              "name": "index.html",
-              "content": "\u003Ch1\u003E내가 좋아하는 것들\u003C/h1\u003E\n\u003Cp\u003E장미꽃 위의 빗방울과 고양이의 수염\u003C/p\u003E\n\u003Cp\u003E밝은 구리 주전자와 따뜻한 양모 장갑\u003C/p\u003E",
-              "codeLanguage": "html"
-            }
-          ],
-          "items": [
-            {
-              "correct": true,
-              "value": 0,
-              "text": "2"
-            },
-            {
-              "correct": false,
-              "value": 1,
-              "text": "1"
-            },
-            {
-              "correct": false,
-              "value": 2,
-              "text": "4"
-            }
-          ],
-          "isCode": false,
-          "output": null
-        },
-        "postInteractionModules": [
-          {
-            "type": "paragraph",
-            "content": "2를 선택해주세요.",
-            "visibleIf": "wrong"
-          }
-        ]
+        "interactionModule": null,
+        "postInteractionModules": []
       },
       {
         "type": "Interactive",
-        "id": 58994,
+        "id": 67389,
         "index": 1,
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "누락된 닫는 태그를 추가하세요.",
+            "content": "사용자가 클릭할 수 있는 버튼을 만들기 위해서는 여는 `<button>` 태그와 닫는 `</button>` 태그가 필요합니다.",
             "visibleIf": "always"
           }
         ],
@@ -83,106 +46,101 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Ch1\u003EWelcome\u003C/h1\u003E",
+              "content": "<!doctype html>\n<html>\n <body>\n  <p>뉴스레터 구독하기</p>\n  <button>구독하기</button>\n </body>\n</html>",
               "codeLanguage": "html"
             }
           ],
           "interactionOptions": [
             {
-              "startIndex": 11,
-              "endIndex": 16,
-              "startLine": 0,
-              "startPos": 11,
-              "length": 5,
-              "value": "\u003C/h1\u003E",
+              "startIndex": 52,
+              "endIndex": 60,
+              "startLine": 4,
+              "startPos": 2,
+              "length": 8,
+              "value": "<button>",
+              "correct": true
+            },
+            {
+              "startIndex": 64,
+              "endIndex": 73,
+              "startLine": 4,
+              "startPos": 14,
+              "length": 9,
+              "value": "</button>",
               "correct": true
             }
           ],
           "wrongOptions": [
-            "\u003C\\h1\u003E"
+            "<p>"
           ],
           "output": null
         },
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003C/h1\u003E`.",
+            "content": "`<button>`과 `</button>`을 순서대로 선택했는지 확인하세요.",
             "visibleIf": "wrong"
           }
         ]
       },
       {
-        "type": "Interactive",
-        "id": 58993,
+        "type": "Interactive", 
+        "id": 67391,
         "index": 2,
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "올바른 조각을 추가하여 제목을 만들어보세요.",
+            "content": "버튼 태그 사이에 텍스트를 입력하면 버튼에 텍스트가 나타납니다. 버튼 태그 사이에 `로그인`을 입력해보세요.",
+            "visibleIf": "always"
+          },
+          {
+            "type": "paragraph", 
+            "content": "첫 글자는 대문자 `\"ㄹ\"`로 시작해야 합니다.",
             "visibleIf": "always"
           }
         ],
         "interactionModule": {
-          "type": "codeFillTheGap",
+          "type": "codeValidatedInput",
           "files": [
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Ch1\u003E비디오 게임\u003C/h1\u003E\n\u003Ch2\u003E콘솔 게임\u003C/h2\u003E\n\u003Ch2\u003E모바일 게임\u003C/h2\u003E",
+              "content": "<!doctype html>\n<html>\n <body>\n  <h1>페이스북</h1>\n  <p>시작하려면 계정에 로그인하세요</p>\n  <button>로그인</button>\n </body>\n</html>",
               "codeLanguage": "html"
             }
           ],
-          "interactionOptions": [
-            {
-              "startIndex": 0,
-              "endIndex": 4,
-              "startLine": 0,
-              "startPos": 0,
-              "length": 4,
-              "value": "\u003Ch1\u003E",
-              "correct": true
-            },
-            {
-              "startIndex": 21,
-              "endIndex": 25,
-              "startLine": 1,
-              "startPos": 0,
-              "length": 4,
-              "value": "\u003Ch2\u003E",
-              "correct": true
-            },
-            {
-              "startIndex": 44,
-              "endIndex": 48,
-              "startLine": 2,
-              "startPos": 0,
-              "length": 4,
-              "value": "\u003Ch2\u003E",
-              "correct": true
-            }
-          ],
-          "wrongOptions": [
-            "\u003Ch3\u003E",
-            "\u003Ch4\u003E"
-          ],
+          "interactionOption": {
+            "startIndex": 83,
+            "endIndex": 86,
+            "startLine": 5,
+            "startPos": 10,
+            "length": 3,
+            "value": "로그인",
+            "correct": true
+          },
           "output": null
         },
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`\u003Ch1\u003E`, `\u003Ch2\u003E`, `\u003Ch2\u003E`를 선택하세요.",
+            "content": "`로그인`을 정확히 입력했는지 확인하세요.",
             "visibleIf": "wrong"
           }
         ]
       },
       {
         "type": "Interactive",
-        "id": 59039,
+        "id": 67425,
         "index": 3,
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "이 웹페이지에 가장 큰 제목을 주세요.",
+            "content": "Previously, we learned how to emphasize or make text important. We can also use these tags for the text inside a button.",
+            "visibleIf": "always"
+          },
+          {
+            "type": "paragraph",
+            "content": "Try typing `<strong>continue anyway</strong>` between the button tags.",
             "visibleIf": "always"
           }
         ],
@@ -192,176 +150,42 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Ch1\u003EHello, World!\u003C/h1\u003E",
+              "content": "<!doctype html>\n<html>\n <body>\n  <h3>Warning</h3>\n  <p>This site contains humor that may cause uncontrollable laughter.\n  </p>\n  <button><strong>continue anyway</strong></button>\n </body>\n</html>",
               "codeLanguage": "html"
             }
           ],
           "interactionOptions": [
             {
-              "startIndex": 0,
-              "endIndex": 4,
-              "startLine": 0,
-              "startPos": 0,
-              "length": 4,
-              "value": "\u003Ch1\u003E",
-              "correct": true
-            },
-            {
-              "startIndex": 17,
-              "endIndex": 22,
-              "startLine": 0,
-              "startPos": 17,
-              "length": 5,
-              "value": "\u003C/h1\u003E",
+              "startIndex": 137,
+              "endIndex": 169,
+              "startLine": 6,
+              "startPos": 10,
+              "length": 32,
+              "value": "<strong>continue anyway</strong>",
               "correct": true
             }
           ],
           "wrongOptions": [
-            "\u003Ch2\u003E",
-            "\u003C/h2\u003E",
-            "\u003Cp\u003E",
-            "\u003C/p\u003E"
+            "continue anyway"
           ],
           "output": null
         },
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`\u003Ch1\u003E`, `\u003C/h1\u003E`를 선택하세요.",
+            "content": "Make sure to pick `<strong>continue anyway</strong>`.",
             "visibleIf": "wrong"
           }
         ]
       },
       {
         "type": "Interactive",
-        "id": 63940,
+        "id": 67393,
         "index": 4,
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "이 웹페이지에 무엇이 잘못되었습니까?",
-            "visibleIf": "always"
-          },
-          {
-            "type": "codeNone",
-            "files": [
-              {
-                "isInteractive": false,
-                "name": "index.html",
-                "content": "\u003C/h1\u003E3D Printers\u003C/h1\u003E\n\u003Cp\u003EEasy to get started\u003C/p\u003E\n\u003Cp\u003EFun to play with\u003C/p\u003E\n\u003Cp\u003EUnlimited creativity\u003C/p\u003E",
-                "codeLanguage": "html"
-              }
-            ],
-            "output": null
-          }
-        ],
-        "interactionModule": {
-          "type": "multipleChoice",
-          "files": [
-            {
-              "isInteractive": false,
-              "name": "index.html",
-              "content": "\u003C/h1\u003E3D Printers\u003C/h1\u003E\n\u003Cp\u003EEasy to get started\u003C/p\u003E\n\u003Cp\u003EFun to play with\u003C/p\u003E\n\u003Cp\u003EUnlimited creativity\u003C/p\u003E",
-              "codeLanguage": "html"
-            }
-          ],
-          "items": [
-            {
-              "correct": true,
-              "value": 0,
-              "text": "There is no opening `h1` tag"
-            },
-            {
-              "correct": false,
-              "value": 1,
-              "text": "The paragraph tags aren&#039;t assembled correctly"
-            },
-            {
-              "correct": false,
-              "value": 2,
-              "text": "Some closing tags are missing"
-            }
-          ],
-          "isCode": false,
-          "output": null
-        },
-        "postInteractionModules": [
-          {
-            "type": "paragraph",
-            "content": "There is no opening `h1` tag.",
-            "visibleIf": "wrong"
-          }
-        ]
-      },
-      {
-        "type": "Interactive",
-        "id": 59583,
-        "index": 5,
-        "preInteractionModules": [
-          {
-            "type": "paragraph",
-            "content": "이 강조 태그에 무엇이 잘못되었습니까?",
-            "visibleIf": "always"
-          },
-          {
-            "type": "codeNone",
-            "files": [
-              {
-                "isInteractive": false,
-                "name": "index.html",
-                "content": "\u003C/em\u003EPurple Haze\u003C/em\u003E",
-                "codeLanguage": "html"
-              }
-            ],
-            "output": null
-          }
-        ],
-        "interactionModule": {
-          "type": "multipleChoice",
-          "files": [
-            {
-              "isInteractive": false,
-              "name": "index.html",
-              "content": "\u003C/em\u003EPurple Haze\u003C/em\u003E",
-              "codeLanguage": "html"
-            }
-          ],
-          "items": [
-            {
-              "correct": true,
-              "value": 0,
-              "text": "There&#039;s a `/` sign in the opening tag"
-            },
-            {
-              "correct": false,
-              "value": 1,
-              "text": "There&#039;s no closing tag"
-            },
-            {
-              "correct": false,
-              "value": 2,
-              "text": "There&#039;s no content inside them"
-            }
-          ],
-          "isCode": false,
-          "output": null
-        },
-        "postInteractionModules": [
-          {
-            "type": "paragraph",
-            "content": "There's a `/` sign in the opening tag.",
-            "visibleIf": "wrong"
-          }
-        ]
-      },
-      {
-        "type": "Interactive",
-        "id": 59093,
-        "index": 6,
-        "preInteractionModules": [
-          {
-            "type": "paragraph",
-            "content": "중요한 텍스트를 정의하는 열리는 태그를 코딩하세요.",
+            "content": "Buttons display next to each other even if they're on separate lines of code. Place these buttons displaying `First`, `Second`, then `Third`.",
             "visibleIf": "always"
           }
         ],
@@ -371,60 +195,241 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Ch1\u003EDr. Amp's Gold Shovels\u003C/h1\u003E\n\u003Cp\u003E Order now - \u003Cstrong\u003Eonly $29.99\u003C/strong\u003E\u003C/p\u003E",
+              "content": "<!doctype html>\n<html>\n <body>\n  <button>First</button>\n  <button>Second</button>\n  <button>Third</button>\n </body>\n</html>",
               "codeLanguage": "html"
             }
           ],
           "interactionOptions": [
             {
-              "startIndex": 48,
-              "endIndex": 49,
-              "startLine": 1,
-              "startPos": 16,
-              "length": 1,
-              "value": "\u003C",
+              "startIndex": 41,
+              "endIndex": 46,
+              "startLine": 3,
+              "startPos": 10,
+              "length": 5,
+              "value": "First",
               "correct": true
             },
             {
-              "startIndex": 49,
-              "endIndex": 55,
-              "startLine": 1,
-              "startPos": 17,
+              "startIndex": 66,
+              "endIndex": 72,
+              "startLine": 4,
+              "startPos": 10,
               "length": 6,
-              "value": "strong",
+              "value": "Second",
               "correct": true
             },
             {
-              "startIndex": 55,
-              "endIndex": 56,
-              "startLine": 1,
-              "startPos": 23,
-              "length": 1,
-              "value": "\u003E",
+              "startIndex": 92,
+              "endIndex": 97,
+              "startLine": 5,
+              "startPos": 10,
+              "length": 5,
+              "value": "Third",
               "correct": true
             }
           ],
-          "wrongOptions": [
-            "/"
-          ],
+          "wrongOptions": [],
           "output": null
         },
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`\u003C`, `strong`, `\u003E`를 선택하세요.",
+            "content": "Make sure to pick `First`, followed by `Second`, and finally `Third`.",
             "visibleIf": "wrong"
           }
         ]
       },
       {
         "type": "Interactive",
-        "id": 59083,
+        "id": 67402,
+        "index": 5,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "If we want buttons to stack on top of each other, we can use the `<br>` tag to place each button on a new line.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeFillTheGap",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "<!doctype html>\n<html>\n <body>\n  <h3>Stack of Pancakes</h3>\n  <p>Log in or sign up to view the best photos of pancakes across the\n   globe.</p>\n  <button>Login</button>\n  <br>\n  <button>Sign up</button>\n </body>\n</html>",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOptions": [
+            {
+              "startIndex": 171,
+              "endIndex": 172,
+              "startLine": 7,
+              "startPos": 2,
+              "length": 1,
+              "value": "<",
+              "correct": true
+            },
+            {
+              "startIndex": 172,
+              "endIndex": 174,
+              "startLine": 7,
+              "startPos": 3,
+              "length": 2,
+              "value": "br",
+              "correct": true
+            },
+            {
+              "startIndex": 174,
+              "endIndex": 175,
+              "startLine": 7,
+              "startPos": 5,
+              "length": 1,
+              "value": ">",
+              "correct": true
+            }
+          ],
+          "wrongOptions": [],
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `<`, followed by `br`, and finally `>`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 67443,
+        "index": 6,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "What's wrong with this code?",
+            "visibleIf": "always"
+          },
+          {
+            "type": "codeNone",
+            "files": [
+              {
+                "isInteractive": false,
+                "name": "index.html",
+                "content": "<!doctype html>\n<html>\n <body>\n  <button>Click Bait<button>\n </body>\n</html>",
+                "codeLanguage": "html"
+              }
+            ],
+            "output": null
+          }
+        ],
+        "interactionModule": {
+          "type": "multipleChoice",
+          "files": [
+            {
+              "isInteractive": false,
+              "name": "index.html",
+              "content": "<!doctype html>\n<html>\n <body>\n  <button>Click Bait<button>\n </body>\n</html>",
+              "codeLanguage": "html"
+            }
+          ],
+          "items": [
+            {
+              "correct": true,
+              "value": 0,
+              "text": "The button&#039;s closing tag is missing a `/`"
+            },
+            {
+              "correct": false,
+              "value": 1,
+              "text": "The text inside the `button` element has a space"
+            },
+            {
+              "correct": false,
+              "value": 2,
+              "text": "There&#039;s a tag missing inside the `button` element"
+            },
+            {
+              "correct": false,
+              "value": 3,
+              "text": "Nothing&#039;s wrong with the code"
+            }
+          ],
+          "isCode": false,
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "The button's closing tag is missing a `/`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 67444,
         "index": 7,
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "줄바꿈 태그가 빈 태그인 이유는 무엇입니까?",
+            "content": "What does this code display?",
+            "visibleIf": "always"
+          },
+          {
+            "type": "codeNone",
+            "files": [
+              {
+                "isInteractive": false,
+                "name": "index.html",
+                "content": "<!doctype html>\n<html>\n <body>\n  <h1>Kit Kat</h1>\n  <button>Give me a break!</button>\n </body>\n</html>",
+                "codeLanguage": "html"
+              }
+            ],
+            "output": null
+          }
+        ],
+        "interactionModule": {
+          "type": "multipleChoice",
+          "files": [
+            {
+              "isInteractive": false,
+              "name": "index.html",
+              "content": "<!doctype html>\n<html>\n <body>\n  <h1>Kit Kat</h1>\n  <button>Give me a break!</button>\n </body>\n</html>",
+              "codeLanguage": "html"
+            }
+          ],
+          "items": [
+            {
+              "correct": true,
+              "value": 0,
+              "text": "A button displaying `Give me a break!`"
+            },
+            {
+              "correct": false,
+              "value": 1,
+              "text": "A button displaying `Kit Kat`"
+            }
+          ],
+          "isCode": false,
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "A button displaying `Give me a break!`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 67445,
+        "index": 8,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "What happens when we place `<em>Add to Cart</em>` in between opening and closing `button` tags?",
             "visibleIf": "always"
           }
         ],
@@ -435,17 +440,12 @@
             {
               "correct": true,
               "value": 0,
-              "text": "Because it has no closing tag"
+              "text": "A button with emphasized text displays on the webpage"
             },
             {
               "correct": false,
               "value": 1,
-              "text": "Because it has no effect on the structure of a webpage"
-            },
-            {
-              "correct": false,
-              "value": 2,
-              "text": "Because it has no opening tag"
+              "text": "A button displays on a new line"
             }
           ],
           "isCode": false,
@@ -454,128 +454,19 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "닫는 태그가 없기 때문입니다.",
+            "content": "A button with emphasized text displays on the webpage.",
             "visibleIf": "wrong"
           }
         ]
       },
       {
         "type": "Interactive",
-        "id": 67563,
-        "index": 8,
-        "preInteractionModules": [
-          {
-            "type": "paragraph",
-            "content": "Display `Accept` on the button by coding between the opening and closing tags.",
-            "visibleIf": "always"
-          }
-        ],
-        "interactionModule": {
-          "type": "codeFillTheGap",
-          "files": [
-            {
-              "isInteractive": true,
-              "name": "index.html",
-              "content": "\u003Ch4\u003ETerms and Conditions\u003C/h4\u003E\n\u003Cp\u003EBy clicking accept, you agree to helping a friend this weekend.\u003C/p\u003E\n\u003Cbutton\u003EAccept\u003C/button\u003E\n\u003Cbutton\u003ENo way!\u003C/button\u003E",
-              "codeLanguage": "html"
-            }
-          ],
-          "interactionOptions": [
-            {
-              "startIndex": 109,
-              "endIndex": 115,
-              "startLine": 2,
-              "startPos": 8,
-              "length": 6,
-              "value": "Accept",
-              "correct": true
-            }
-          ],
-          "wrongOptions": [
-            "Reject"
-          ],
-          "output": null
-        },
-        "postInteractionModules": [
-          {
-            "type": "paragraph",
-            "content": "`Accept`를 선택하세요.",
-            "visibleIf": "wrong"
-          }
-        ]
-      },
-      {
-        "type": "Interactive",
-        "id": 67567,
+        "id": 67446,
         "index": 9,
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`Book a Room`을 표시하는 버튼의 닫는 태그를 코딩하세요.",
-            "visibleIf": "always"
-          }
-        ],
-        "interactionModule": {
-          "type": "codeFillTheGap",
-          "files": [
-            {
-              "isInteractive": true,
-              "name": "index.html",
-              "content": "\u003Ch1\u003EJoe's Bed and Breakfast\u003C/h1\u003E\n\u003Cp\u003EThere's nothing more relaxing than booking a room at Joe's BnB.\u003C/p\u003E\n\u003Cbutton\u003EBook a Room\u003C/button\u003E",
-              "codeLanguage": "html"
-            }
-          ],
-          "interactionOptions": [
-            {
-              "startIndex": 123,
-              "endIndex": 125,
-              "startLine": 2,
-              "startPos": 19,
-              "length": 2,
-              "value": "\u003C/",
-              "correct": true
-            },
-            {
-              "startIndex": 125,
-              "endIndex": 131,
-              "startLine": 2,
-              "startPos": 21,
-              "length": 6,
-              "value": "button",
-              "correct": true
-            },
-            {
-              "startIndex": 131,
-              "endIndex": 132,
-              "startLine": 2,
-              "startPos": 27,
-              "length": 1,
-              "value": "\u003E",
-              "correct": true
-            }
-          ],
-          "wrongOptions": [
-            "\u003C",
-            "\u003Cbr\u003E"
-          ],
-          "output": null
-        },
-        "postInteractionModules": [
-          {
-            "type": "paragraph",
-            "content": "`\u003C/`, `button`, `\u003E`를 선택하세요.",
-            "visibleIf": "wrong"
-          }
-        ]
-      },
-      {
-        "type": "Interactive",
-        "id": 67535,
-        "index": 10,
-        "preInteractionModules": [
-          {
-            "type": "paragraph",
-            "content": "이 코드에 무엇이 잘못되었습니까?",
+            "content": "What does this code display?",
             "visibleIf": "always"
           },
           {
@@ -584,7 +475,7 @@
               {
                 "isInteractive": false,
                 "name": "index.html",
-                "content": "\u003Cbutton\u003EAdd to Cart\u003C/button\u003E",
+                "content": "<!doctype html>\n<html>\n <body>\n  <button>Sign up</button>\n  <button>Login</button>\n </body>\n</html>",
                 "codeLanguage": "html"
               }
             ],
@@ -597,7 +488,7 @@
             {
               "isInteractive": false,
               "name": "index.html",
-              "content": "\u003Cbutton\u003EAdd to Cart\u003C/button\u003E",
+              "content": "<!doctype html>\n<html>\n <body>\n  <button>Sign up</button>\n  <button>Login</button>\n </body>\n</html>",
               "codeLanguage": "html"
             }
           ],
@@ -605,17 +496,12 @@
             {
               "correct": true,
               "value": 0,
-              "text": "Nothing&#039;s wrong with the code"
+              "text": "One button next to another button"
             },
             {
               "correct": false,
               "value": 1,
-              "text": "The text inside the `button` element has a space"
-            },
-            {
-              "correct": false,
-              "value": 2,
-              "text": "The button&#039;s closing tag is missing a `/`"
+              "text": "One button underneath another"
             }
           ],
           "isCode": false,
@@ -624,19 +510,56 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "코드에 문제가 없습니다.",
+            "content": "One button next to another button.",
             "visibleIf": "wrong"
           }
         ]
       },
       {
         "type": "Interactive",
-        "id": 67550,
+        "id": 67448,
+        "index": 10,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Which tag do we use to place one button underneath another?",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "multipleChoice",
+          "files": [],
+          "items": [
+            {
+              "correct": true,
+              "value": 0,
+              "text": "`<br>`"
+            },
+            {
+              "correct": false,
+              "value": 1,
+              "text": "`<strong></strong>`"
+            }
+          ],
+          "isCode": false,
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `<br>`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 67449,
         "index": 11,
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Place the last button below the other by coding `\u003Cbr\u003E`.",
+            "content": "Code the opening `<button>` tag.",
             "visibleIf": "always"
           }
         ],
@@ -646,61 +569,228 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Ch4\u003EWelcome to Mimo\u003C/h4\u003E\n\u003Cbutton\u003ESign Up\u003C/button\u003E\n\u003Cbr\u003E\n\u003Cbutton\u003ELogin\u003C/button\u003E",
+              "content": "<!doctype html>\n<html>\n <body>\n  <h1>Follow us on Twitter</h1>\n  <button>Follow</button>\n </body>\n</html>",
               "codeLanguage": "html"
             }
           ],
           "interactionOptions": [
             {
-              "startIndex": 50,
-              "endIndex": 51,
-              "startLine": 2,
-              "startPos": 0,
+              "startIndex": 65,
+              "endIndex": 66,
+              "startLine": 4,
+              "startPos": 2,
               "length": 1,
-              "value": "\u003C",
+              "value": "<",
               "correct": true
             },
             {
-              "startIndex": 51,
-              "endIndex": 53,
-              "startLine": 2,
-              "startPos": 1,
+              "startIndex": 66,
+              "endIndex": 72,
+              "startLine": 4,
+              "startPos": 3,
+              "length": 6,
+              "value": "button",
+              "correct": true
+            },
+            {
+              "startIndex": 72,
+              "endIndex": 73,
+              "startLine": 4,
+              "startPos": 9,
+              "length": 1,
+              "value": ">",
+              "correct": true
+            }
+          ],
+          "wrongOptions": [],
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `<`, followed by `button`, and finally `>`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 67450,
+        "index": 12,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Display `Sign up` on the button by coding between the opening and closing tags.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeFillTheGap",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "<!doctype html>\n<html>\n <body>\n  <h1>Snapchat</h1>\n  <p>Sign up for a new account!</p>\n  <button>Sign up</button>\n </body>\n</html>",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOptions": [
+            {
+              "startIndex": 97,
+              "endIndex": 104,
+              "startLine": 5,
+              "startPos": 10,
+              "length": 7,
+              "value": "Sign up",
+              "correct": true
+            }
+          ],
+          "wrongOptions": [],
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `Sign up`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 67454,
+        "index": 13,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Insert text inside `strong` tags to display `Click Me!` on the button.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeFillTheGap",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "<!doctype html>\n<html>\n <body>\n  <h3>Watch Out</h3>\n  <p>Whatever you do, just don't click the button!</p>\n  <button><strong>Click Me!</strong></button>\n </body>\n</html>",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOptions": [
+            {
+              "startIndex": 117,
+              "endIndex": 125,
+              "startLine": 5,
+              "startPos": 10,
+              "length": 8,
+              "value": "<strong>",
+              "correct": true
+            },
+            {
+              "startIndex": 125,
+              "endIndex": 134,
+              "startLine": 5,
+              "startPos": 18,
+              "length": 9,
+              "value": "Click Me!",
+              "correct": true
+            },
+            {
+              "startIndex": 134,
+              "endIndex": 143,
+              "startLine": 5,
+              "startPos": 27,
+              "length": 9,
+              "value": "</strong>",
+              "correct": true
+            }
+          ],
+          "wrongOptions": [
+            "<em>",
+            "</em>"
+          ],
+          "output": null
+        },
+        "postInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Make sure to pick `<strong>`, followed by `Click Me!`, and finally `</strong>`.",
+            "visibleIf": "wrong"
+          }
+        ]
+      },
+      {
+        "type": "Interactive",
+        "id": 67453,
+        "index": 14,
+        "preInteractionModules": [
+          {
+            "type": "paragraph",
+            "content": "Place the last button below the others.",
+            "visibleIf": "always"
+          }
+        ],
+        "interactionModule": {
+          "type": "codeFillTheGap",
+          "files": [
+            {
+              "isInteractive": true,
+              "name": "index.html",
+              "content": "<!doctype html>\n<html>\n <body>\n  <p>Not the gumdrop buttons!</p>\n  <button>Gumdrop</button>\n  <br>\n  <button>Gumdrop</button>\n  <br>\n  <button>Gumdrop</button>\n </body>\n</html>",
+              "codeLanguage": "html"
+            }
+          ],
+          "interactionOptions": [
+            {
+              "startIndex": 128,
+              "endIndex": 129,
+              "startLine": 7,
+              "startPos": 2,
+              "length": 1,
+              "value": "<",
+              "correct": true
+            },
+            {
+              "startIndex": 129,
+              "endIndex": 131,
+              "startLine": 7,
+              "startPos": 3,
               "length": 2,
               "value": "br",
               "correct": true
             },
             {
-              "startIndex": 53,
-              "endIndex": 54,
-              "startLine": 2,
-              "startPos": 3,
+              "startIndex": 131,
+              "endIndex": 132,
+              "startLine": 7,
+              "startPos": 5,
               "length": 1,
-              "value": "\u003E",
+              "value": ">",
               "correct": true
             }
           ],
           "wrongOptions": [
-            "\u003C/",
-            "/\u003E"
+            "<html>"
           ],
           "output": null
         },
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`\u003C`, `br`, `\u003E`를 선택하세요.",
+            "content": "Make sure to pick `<`, followed by `br`, and finally `>`.",
             "visibleIf": "wrong"
           }
         ]
       },
       {
         "type": "Interactive",
-        "id": 67564,
-        "index": 12,
+        "id": 67451,
+        "index": 15,
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Place the button displaying `Copy to Clipboard` next to the other button on the webpage.",
+            "content": "Display the `Share` button next to the other button.",
             "visibleIf": "always"
           }
         ],
@@ -710,149 +800,110 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Ch4\u003EJoke of the Month\u003C/h4\u003E\n\u003Cp\u003EI made a pencil with two erasers. It was pointless.\u003C/p\u003E\n\u003Cbutton\u003EVote\u003C/button\u003E\n\u003Cbutton\u003ECopy to Clipboard\u003C/button\u003E",
+              "content": "<!doctype html>\n<html>\n <body>\n  <p>What a great time to be alive!</p>\n  <button>Like</button>\n  <button>Share</button>\n </body>\n</html>",
               "codeLanguage": "html"
             }
           ],
           "interactionOptions": [
             {
-              "startIndex": 108,
-              "endIndex": 116,
-              "startLine": 3,
-              "startPos": 0,
+              "startIndex": 97,
+              "endIndex": 105,
+              "startLine": 5,
+              "startPos": 2,
               "length": 8,
-              "value": "\u003Cbutton\u003E",
+              "value": "<button>",
               "correct": true
             },
             {
-              "startIndex": 116,
-              "endIndex": 133,
-              "startLine": 3,
-              "startPos": 8,
-              "length": 17,
-              "value": "Copy to Clipboard",
+              "startIndex": 105,
+              "endIndex": 110,
+              "startLine": 5,
+              "startPos": 10,
+              "length": 5,
+              "value": "Share",
               "correct": true
             },
             {
-              "startIndex": 133,
-              "endIndex": 142,
-              "startLine": 3,
-              "startPos": 25,
+              "startIndex": 110,
+              "endIndex": 119,
+              "startLine": 5,
+              "startPos": 15,
               "length": 9,
-              "value": "\u003C/button\u003E",
+              "value": "</button>",
               "correct": true
             }
           ],
           "wrongOptions": [
-            "\u003Cbr\u003E",
-            "\u003Ch1\u003E",
-            "\u003C/h1\u003E"
+            "<br>"
           ],
           "output": null
         },
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`\u003Cbutton\u003E`, `Copy to Clipboard`, `\u003C/button\u003E`를 선택하세요.",
+            "content": "Make sure to pick `<button>`, followed by `Share`, and finally `</button>`.",
             "visibleIf": "wrong"
           }
         ]
       }
     ],
-    "tutorialType": "practiceRequired",
+    "tutorialType": "course",
     "nextTutorial": {
-      "id": 904,
-      "index": 0,
+      "id": 1049,
+      "index": 5,
       "codeLanguage": "html",
-      "descriptionContent": "HTML이 무엇인지 배우고, 웹 개발에서 중요한 역할을 하는 방법을 배워보세요.",
-      "title": "HTML 및 태그 발견",
+      "descriptionContent": "Use tags and attributes to create all sorts of links and turn webpages into websites.",
+      "title": "Creating Links",
       "type": "course",
-      "version": 151,
-      "bannerIconUrl": "/icons/track-icons/tutorial-904-icon-banner.svg",
+      "version": 31,
+      "bannerIconUrl": null,
       "chapters": [
         {
-          "id": 8608,
-          "title": "HTML 태그",
+          "id": 8100,
+          "title": "Links and Attributes",
           "type": "practiceLevel1",
           "lessons": [
             {
-              "id": 76804
+              "id": 71324
             },
             {
-              "id": 75802
+              "id": 70808
             },
             {
-              "id": 75817
+              "id": 70811
             },
             {
-              "id": 75819
+              "id": 70809
             },
             {
-              "id": 75821
+              "id": 70810
             },
             {
-              "id": 75816
+              "id": 117993
             },
             {
-              "id": 76812
+              "id": 70812
             },
             {
-              "id": 130087
+              "id": 70813
             },
             {
-              "id": 75824
+              "id": 70814
             },
             {
-              "id": 75822
+              "id": 70815
             },
             {
-              "id": 75825
+              "id": 70816
             },
             {
-              "id": 75823
-            }
-          ]
-        },
-        {
-          "id": 8716,
-          "title": "Text and Headings",
-          "type": "practiceLevel1",
-          "lessons": [
-            {
-              "id": 76817
+              "id": 70818
             },
             {
-              "id": 76819
+              "id": 70817
             },
             {
-              "id": 76818
-            },
-            {
-              "id": 76820
-            },
-            {
-              "id": 76821
-            },
-            {
-              "id": 76822
-            },
-            {
-              "id": 76824
-            },
-            {
-              "id": 76825
-            },
-            {
-              "id": 76827
-            },
-            {
-              "id": 76828
-            },
-            {
-              "id": 76830
-            },
-            {
-              "id": 76831
+              "id": 70819
             }
           ]
         }
@@ -862,7 +913,7 @@
     "currentChapterIndex": 0,
     "publishSetVersion": 698,
     "trackVersion": 46,
-    "tutorialVersion": 5,
+    "tutorialVersion": 29,
     "sectionIndex": 0,
     "codeLanguage": "html"
   }

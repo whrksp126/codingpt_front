@@ -12,17 +12,17 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "버튼은 프로그램이 사용자의 행동에 따라 웹페이지를 변경합니다. 예를 들어, _Next_를 클릭하면 문자를 순환하는 코드가 실행됩니다.",
+            "content": "버튼을 사용하면 프로그램이 사용자의 행동에 따라 웹페이지를 변경할 수 있습니다. 예를 들어, _다음_을 클릭하면 캐릭터를 순환하는 코드가 실행됩니다.",
             "visibleIf": "always"
           },
           {
             "type": "paragraph",
-            "content": "나중에 그 코드를 배우게 될 것입니다. 지금은 `button` 요소에 집중할 것입니다.",
+            "content": "나중에 그 코드를 작성하는 방법을 배우게 될 것입니다. 지금은 `button` 요소에 집중할 것입니다.",
             "visibleIf": "always"
           },
           {
             "type": "webview",
-            "content": "\u003C!doctype html\u003E\n\u003Chtml\u003E\n \u003Chead\u003E\n  \u003Cstyle\u003E\n   button {\n    touch-action: manipulation;\n   }\n  \u003C/style\u003E\n \u003C/head\u003E\n \u003Cbody style=\"text-align:center;\"\u003E\n  \u003Ch3\u003EChoose Your Character\u003C/h3\u003E \u003Cimg height=180 id=\"character\"\n   src='https://mimo.app/i/dan.png'\u003E \u003Cbr\u003E \u003Cbutton\n   onclick=\"previous()\"\u003EPrevious\u003C/button\u003E \u003Cbutton\n   onclick=\"next()\"\u003ENext\u003C/button\u003E\n  \u003Cscript\u003E\n   let currentIndex = 0;\n   const images = ['https://mimo.app/i/dan.png',\n    'https://mimo.app/i/jon.png'\n   ];\n   \n   function next() {\n    if (currentIndex \u003E= images.length - 1) {\n     currentIndex = 0;\n    } else {\n     currentIndex += 1;\n    }\n    document.getElementById(\"character\").setAttribute(\"src\", images[\n     currentIndex]);\n   }\n   \n   function previous() {\n    if (currentIndex \u003C= 0) {\n     currentIndex = images.length - 1;\n    } else {\n     currentIndex -= 1;\n    }\n    document.getElementById(\"character\").setAttribute(\"src\", images[\n     currentIndex]);\n   }\n  \u003C/script\u003E\n \u003C/body\u003E\n\u003C/html\u003E",
+            "content": "<!doctype html>\n<html>\n <head>\n  <style>\n   button {\n    touch-action: manipulation;\n   }\n  </style>\n </head>\n <body style=\"text-align:center;\">\n  <h3>캐릭터를 선택하세요</h3> <img height=180 id=\"캐릭터\"\n   src='https://mimo.app/i/dan.png'> <br> <button\n   onclick=\"이전()\">이전</button> <button\n   onclick=\"다음()\">다음</button>\n  <script>\n   let 현재인덱스 = 0;\n   const 이미지들 = ['https://mimo.app/i/dan.png',\n    'https://mimo.app/i/jon.png'\n   ];\n   \n   function 다음() {\n    if (현재인덱스 >= 이미지들.length - 1) {\n     현재인덱스 = 0;\n    } else {\n     현재인덱스 += 1;\n    }\n    document.getElementById(\"캐릭터\").setAttribute(\"src\", 이미지들[\n     현재인덱스]);\n   }\n   \n   function 이전() {\n    if (현재인덱스 <= 0) {\n     현재인덱스 = 이미지들.length - 1;\n    } else {\n     현재인덱스 -= 1;\n    }\n    document.getElementById(\"캐릭터\").setAttribute(\"src\", 이미지들[\n     현재인덱스]);\n   }\n  </script>\n </body>\n</html>",
             "visibleIf": "always"
           }
         ],
@@ -36,7 +36,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "사용자가 클릭할 수 있는 버튼을 만들기 위해, 열리는 `\u003Cbutton\u003E` 태그와 닫는 `\u003C/button\u003E` 태그가 필요합니다.",
+            "content": "사용자가 클릭할 수 있는 버튼을 만들기 위해서는 여는 `<button>` 태그와 닫는 `</button>` 태그가 필요합니다.",
             "visibleIf": "always"
           }
         ],
@@ -46,39 +46,39 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003C!doctype html\u003E\n\u003Chtml\u003E\n \u003Cbody\u003E\n  \u003Cp\u003ESubscribe to our Newsletter\u003C/p\u003E\n  \u003Cbutton\u003ESubscribe\u003C/button\u003E\n \u003C/body\u003E\n\u003C/html\u003E",
+              "content": "<!doctype html>\n<html>\n <body>\n  <p>뉴스레터 구독하기</p>\n  <button>구독하기</button>\n </body>\n</html>",
               "codeLanguage": "html"
             }
           ],
           "interactionOptions": [
             {
-              "startIndex": 70,
-              "endIndex": 78,
+              "startIndex": 52,
+              "endIndex": 60,
               "startLine": 4,
               "startPos": 2,
               "length": 8,
-              "value": "\u003Cbutton\u003E",
+              "value": "<button>",
               "correct": true
             },
             {
-              "startIndex": 87,
-              "endIndex": 96,
+              "startIndex": 64,
+              "endIndex": 73,
               "startLine": 4,
-              "startPos": 19,
+              "startPos": 14,
               "length": 9,
-              "value": "\u003C/button\u003E",
+              "value": "</button>",
               "correct": true
             }
           ],
           "wrongOptions": [
-            "\u003Cp\u003E"
+            "<p>"
           ],
           "output": null
         },
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`\u003Cbutton\u003E`를 선택하고, `\u003C/button\u003E`를 선택하세요.",
+            "content": "`<button>`과 `</button>`을 순서대로 선택했는지 확인하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -90,12 +90,12 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "태그 사이에 텍스트를 입력하면 버튼에 텍스트가 나타납니다. `Login`을 버튼 태그 사이에 입력해보세요.",
+            "content": "We can make texts appear on a button by typing them between the tags. Try typing `Login` between the button tags.",
             "visibleIf": "always"
           },
           {
             "type": "paragraph",
-            "content": "대문자 `\"L\"`를 사용하세요.",
+            "content": "Make sure you use an uppercase `\"L\"`.",
             "visibleIf": "always"
           }
         ],
@@ -105,7 +105,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003C!doctype html\u003E\n\u003Chtml\u003E\n \u003Cbody\u003E\n  \u003Ch1\u003EFacebook\u003C/h1\u003E\n  \u003Cp\u003ELog in to your account to get started\u003C/p\u003E\n  \u003Cbutton\u003ELogin\u003C/button\u003E\n \u003C/body\u003E\n\u003C/html\u003E",
+              "content": "<!doctype html>\n<html>\n <body>\n  <h1>Facebook</h1>\n  <p>Log in to your account to get started</p>\n  <button>Login</button>\n </body>\n</html>",
               "codeLanguage": "html"
             }
           ],
@@ -123,7 +123,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`Login`을 입력하세요.",
+            "content": "Make sure to type `Login`.",
             "visibleIf": "wrong"
           }
         ]
@@ -135,12 +135,12 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "이전에는 텍스트를 강조하거나 중요하게 만드는 방법을 배웠습니다. 버튼 태그 사이의 텍스트에도 이 태그를 사용할 수 있습니다.",
+            "content": "이전에 텍스트를 강조하거나 중요하게 만드는 방법을 배웠습니다. 이러한 태그들을 버튼 안의 텍스트에도 사용할 수 있습니다.",
             "visibleIf": "always"
           },
           {
             "type": "paragraph",
-            "content": "`\u003Cstrong\u003Econtinue anyway\u003C/strong\u003E`을 버튼 태그 사이에 입력해보세요.",
+            "content": "버튼 태그 사이에 `<strong>계속하기</strong>`를 입력해보세요.",
             "visibleIf": "always"
           }
         ],
@@ -150,30 +150,30 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003C!doctype html\u003E\n\u003Chtml\u003E\n \u003Cbody\u003E\n  \u003Ch3\u003EWarning\u003C/h3\u003E\n  \u003Cp\u003EThis site contains humor that may cause uncontrollable laughter.\n  \u003C/p\u003E\n  \u003Cbutton\u003E\u003Cstrong\u003Econtinue anyway\u003C/strong\u003E\u003C/button\u003E\n \u003C/body\u003E\n\u003C/html\u003E",
+              "content": "<!doctype html>\n<html>\n <body>\n  <h3>경고</h3>\n  <p>이 사이트는 멈출 수 없는 웃음을 유발할 수 있는 유머를 포함하고 있습니다.\n  </p>\n  <button><strong>계속하기</strong></button>\n </body>\n</html>",
               "codeLanguage": "html"
             }
           ],
           "interactionOptions": [
             {
-              "startIndex": 137,
-              "endIndex": 169,
+              "startIndex": 110,
+              "endIndex": 131,
               "startLine": 6,
               "startPos": 10,
-              "length": 32,
-              "value": "\u003Cstrong\u003Econtinue anyway\u003C/strong\u003E",
+              "length": 21,
+              "value": "<strong>계속하기</strong>",
               "correct": true
             }
           ],
           "wrongOptions": [
-            "continue anyway"
+            "계속하기"
           ],
           "output": null
         },
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`\u003Cstrong\u003Econtinue anyway\u003C/strong\u003E`를 선택하세요.",
+            "content": "`<strong>계속하기</strong>`를 선택했는지 확인하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -184,8 +184,8 @@
         "index": 4,
         "preInteractionModules": [
           {
-            "type": "paragraph",
-            "content": "버튼은 코드 줄에 있는 것이 아니라 서로 붙어있습니다. `First`, `Second`, `Third`를 표시하는 이 버튼을 만들어보세요.",
+            "type": "paragraph", 
+            "content": "버튼은 코드에서 다른 줄에 있더라도 나란히 표시됩니다. `첫번째`, `두번째`, 그리고 `세번째`를 표시하는 버튼들을 배치해보세요.",
             "visibleIf": "always"
           }
         ],
@@ -195,36 +195,36 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003C!doctype html\u003E\n\u003Chtml\u003E\n \u003Cbody\u003E\n  \u003Cbutton\u003EFirst\u003C/button\u003E\n  \u003Cbutton\u003ESecond\u003C/button\u003E\n  \u003Cbutton\u003EThird\u003C/button\u003E\n \u003C/body\u003E\n\u003C/html\u003E",
+              "content": "<!doctype html>\n<html>\n <body>\n  <button>첫번째</button>\n  <button>두번째</button>\n  <button>세번째</button>\n </body>\n</html>",
               "codeLanguage": "html"
             }
           ],
           "interactionOptions": [
             {
               "startIndex": 41,
-              "endIndex": 46,
+              "endIndex": 44,
               "startLine": 3,
               "startPos": 10,
-              "length": 5,
-              "value": "First",
+              "length": 3,
+              "value": "첫번째",
               "correct": true
             },
             {
-              "startIndex": 66,
-              "endIndex": 72,
+              "startIndex": 64,
+              "endIndex": 67,
               "startLine": 4,
               "startPos": 10,
-              "length": 6,
-              "value": "Second",
+              "length": 3,
+              "value": "두번째",
               "correct": true
             },
             {
-              "startIndex": 92,
-              "endIndex": 97,
+              "startIndex": 87,
+              "endIndex": 90,
               "startLine": 5,
               "startPos": 10,
-              "length": 5,
-              "value": "Third",
+              "length": 3,
+              "value": "세번째",
               "correct": true
             }
           ],
@@ -234,7 +234,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`First`, `Second`, `Third`를 선택하세요.",
+            "content": "`첫번째`를 선택하고, 그 다음 `두번째`, 마지막으로 `세번째`를 선택했는지 확인하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -246,7 +246,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "If we want buttons to stack on top of each other, we can use the `\u003Cbr\u003E` tag to place each button on a new line.",
+            "content": "버튼을 서로 위아래로 쌓고 싶다면, `<br>` 태그를 사용하여 각 버튼을 새로운 줄에 배치할 수 있습니다.",
             "visibleIf": "always"
           }
         ],
@@ -256,36 +256,36 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003C!doctype html\u003E\n\u003Chtml\u003E\n \u003Cbody\u003E\n  \u003Ch3\u003EStack of Pancakes\u003C/h3\u003E\n  \u003Cp\u003ELog in or sign up to view the best photos of pancakes across the\n   globe.\u003C/p\u003E\n  \u003Cbutton\u003ELogin\u003C/button\u003E\n  \u003Cbr\u003E\n  \u003Cbutton\u003ESign up\u003C/button\u003E\n \u003C/body\u003E\n\u003C/html\u003E",
+              "content": "<!doctype html>\n<html>\n <body>\n  <h3>팬케이크 모음</h3>\n  <p>전 세계의 가장 맛있는 팬케이크 사진을 보려면 로그인하거나 회원가입하세요.</p>\n  <button>로그인</button>\n  <br>\n  <button>회원가입</button>\n </body>\n</html>",
               "codeLanguage": "html"
             }
           ],
           "interactionOptions": [
             {
-              "startIndex": 171,
-              "endIndex": 172,
-              "startLine": 7,
+              "startIndex": 126,
+              "endIndex": 127,
+              "startLine": 6,
               "startPos": 2,
               "length": 1,
-              "value": "\u003C",
+              "value": "<",
               "correct": true
             },
             {
-              "startIndex": 172,
-              "endIndex": 174,
-              "startLine": 7,
+              "startIndex": 127,
+              "endIndex": 129,
+              "startLine": 6,
               "startPos": 3,
               "length": 2,
               "value": "br",
               "correct": true
             },
             {
-              "startIndex": 174,
-              "endIndex": 175,
-              "startLine": 7,
+              "startIndex": 129,
+              "endIndex": 130,
+              "startLine": 6,
               "startPos": 5,
               "length": 1,
-              "value": "\u003E",
+              "value": ">",
               "correct": true
             }
           ],
@@ -295,7 +295,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`\u003C`, `br`, `\u003E`를 선택하세요.",
+            "content": "`<`를 선택하고, 그 다음 `br`, 마지막으로 `>`를 선택했는지 확인하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -307,7 +307,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "이 코드에 문제가 있습니다.",
+            "content": "What's wrong with this code?",
             "visibleIf": "always"
           },
           {
@@ -316,7 +316,7 @@
               {
                 "isInteractive": false,
                 "name": "index.html",
-                "content": "\u003C!doctype html\u003E\n\u003Chtml\u003E\n \u003Cbody\u003E\n  \u003Cbutton\u003EClick Bait\u003Cbutton\u003E\n \u003C/body\u003E\n\u003C/html\u003E",
+                "content": "<!doctype html>\n<html>\n <body>\n  <button>Click Bait<button>\n </body>\n</html>",
                 "codeLanguage": "html"
               }
             ],
@@ -329,7 +329,7 @@
             {
               "isInteractive": false,
               "name": "index.html",
-              "content": "\u003C!doctype html\u003E\n\u003Chtml\u003E\n \u003Cbody\u003E\n  \u003Cbutton\u003EClick Bait\u003Cbutton\u003E\n \u003C/body\u003E\n\u003C/html\u003E",
+              "content": "<!doctype html>\n<html>\n <body>\n  <button>Click Bait<button>\n </body>\n</html>",
               "codeLanguage": "html"
             }
           ],
@@ -361,7 +361,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "버튼의 닫는 태그에 `/`가 없습니다.",
+            "content": "The button's closing tag is missing a `/`.",
             "visibleIf": "wrong"
           }
         ]
@@ -373,7 +373,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "이 코드는 무엇을 표시합니까?",
+            "content": "What does this code display?",
             "visibleIf": "always"
           },
           {
@@ -382,7 +382,7 @@
               {
                 "isInteractive": false,
                 "name": "index.html",
-                "content": "\u003C!doctype html\u003E\n\u003Chtml\u003E\n \u003Cbody\u003E\n  \u003Ch1\u003EKit Kat\u003C/h1\u003E\n  \u003Cbutton\u003EGive me a break!\u003C/button\u003E\n \u003C/body\u003E\n\u003C/html\u003E",
+                "content": "<!doctype html>\n<html>\n <body>\n  <h1>Kit Kat</h1>\n  <button>Give me a break!</button>\n </body>\n</html>",
                 "codeLanguage": "html"
               }
             ],
@@ -395,7 +395,7 @@
             {
               "isInteractive": false,
               "name": "index.html",
-              "content": "\u003C!doctype html\u003E\n\u003Chtml\u003E\n \u003Cbody\u003E\n  \u003Ch1\u003EKit Kat\u003C/h1\u003E\n  \u003Cbutton\u003EGive me a break!\u003C/button\u003E\n \u003C/body\u003E\n\u003C/html\u003E",
+              "content": "<!doctype html>\n<html>\n <body>\n  <h1>Kit Kat</h1>\n  <button>Give me a break!</button>\n </body>\n</html>",
               "codeLanguage": "html"
             }
           ],
@@ -417,7 +417,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "버튼에 `Give me a break!`가 표시됩니다.",
+            "content": "A button displaying `Give me a break!`.",
             "visibleIf": "wrong"
           }
         ]
@@ -429,7 +429,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`\u003Cem\u003EAdd to Cart\u003C/em\u003E`을 버튼 태그 사이에 입력하면 무슨 일이 일어납니까?",
+            "content": "What happens when we place `<em>Add to Cart</em>` in between opening and closing `button` tags?",
             "visibleIf": "always"
           }
         ],
@@ -454,7 +454,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "강조된 텍스트가 있는 버튼이 웹페이지에 표시됩니다.",
+            "content": "A button with emphasized text displays on the webpage.",
             "visibleIf": "wrong"
           }
         ]
@@ -466,7 +466,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "이 코드는 무엇을 표시합니까?",
+            "content": "What does this code display?",
             "visibleIf": "always"
           },
           {
@@ -475,7 +475,7 @@
               {
                 "isInteractive": false,
                 "name": "index.html",
-                "content": "\u003C!doctype html\u003E\n\u003Chtml\u003E\n \u003Cbody\u003E\n  \u003Cbutton\u003ESign up\u003C/button\u003E\n  \u003Cbutton\u003ELogin\u003C/button\u003E\n \u003C/body\u003E\n\u003C/html\u003E",
+                "content": "<!doctype html>\n<html>\n <body>\n  <button>Sign up</button>\n  <button>Login</button>\n </body>\n</html>",
                 "codeLanguage": "html"
               }
             ],
@@ -488,7 +488,7 @@
             {
               "isInteractive": false,
               "name": "index.html",
-              "content": "\u003C!doctype html\u003E\n\u003Chtml\u003E\n \u003Cbody\u003E\n  \u003Cbutton\u003ESign up\u003C/button\u003E\n  \u003Cbutton\u003ELogin\u003C/button\u003E\n \u003C/body\u003E\n\u003C/html\u003E",
+              "content": "<!doctype html>\n<html>\n <body>\n  <button>Sign up</button>\n  <button>Login</button>\n </body>\n</html>",
               "codeLanguage": "html"
             }
           ],
@@ -510,7 +510,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "하나의 버튼이 다른 버튼 옆에 있습니다.",
+            "content": "One button next to another button.",
             "visibleIf": "wrong"
           }
         ]
@@ -522,7 +522,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "하나의 버튼을 다른 버튼 아래에 배치하기 위해 사용하는 태그는 무엇입니까?",
+            "content": "Which tag do we use to place one button underneath another?",
             "visibleIf": "always"
           }
         ],
@@ -533,12 +533,12 @@
             {
               "correct": true,
               "value": 0,
-              "text": "`\u003Cbr\u003E`"
+              "text": "`<br>`"
             },
             {
               "correct": false,
               "value": 1,
-              "text": "`\u003Cstrong\u003E\u003C/strong\u003E`"
+              "text": "`<strong></strong>`"
             }
           ],
           "isCode": false,
@@ -547,7 +547,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`\u003Cbr\u003E`를 선택하세요.",
+            "content": "Make sure to pick `<br>`.",
             "visibleIf": "wrong"
           }
         ]
@@ -559,7 +559,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "열리는 `\u003Cbutton\u003E` 태그를 코딩하세요.",
+            "content": "Code the opening `<button>` tag.",
             "visibleIf": "always"
           }
         ],
@@ -569,7 +569,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003C!doctype html\u003E\n\u003Chtml\u003E\n \u003Cbody\u003E\n  \u003Ch1\u003EFollow us on Twitter\u003C/h1\u003E\n  \u003Cbutton\u003EFollow\u003C/button\u003E\n \u003C/body\u003E\n\u003C/html\u003E",
+              "content": "<!doctype html>\n<html>\n <body>\n  <h1>Follow us on Twitter</h1>\n  <button>Follow</button>\n </body>\n</html>",
               "codeLanguage": "html"
             }
           ],
@@ -580,7 +580,7 @@
               "startLine": 4,
               "startPos": 2,
               "length": 1,
-              "value": "\u003C",
+              "value": "<",
               "correct": true
             },
             {
@@ -598,7 +598,7 @@
               "startLine": 4,
               "startPos": 9,
               "length": 1,
-              "value": "\u003E",
+              "value": ">",
               "correct": true
             }
           ],
@@ -608,7 +608,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`\u003C`, `button`, `\u003E`를 선택하세요.",
+            "content": "Make sure to pick `<`, followed by `button`, and finally `>`.",
             "visibleIf": "wrong"
           }
         ]
@@ -620,7 +620,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "열리는 태그와 닫는 태그 사이에 `Sign up`을 코딩하세요.",
+            "content": "Display `Sign up` on the button by coding between the opening and closing tags.",
             "visibleIf": "always"
           }
         ],
@@ -630,7 +630,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003C!doctype html\u003E\n\u003Chtml\u003E\n \u003Cbody\u003E\n  \u003Ch1\u003ESnapchat\u003C/h1\u003E\n  \u003Cp\u003ESign up for a new account!\u003C/p\u003E\n  \u003Cbutton\u003ESign up\u003C/button\u003E\n \u003C/body\u003E\n\u003C/html\u003E",
+              "content": "<!doctype html>\n<html>\n <body>\n  <h1>Snapchat</h1>\n  <p>Sign up for a new account!</p>\n  <button>Sign up</button>\n </body>\n</html>",
               "codeLanguage": "html"
             }
           ],
@@ -651,7 +651,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`Sign up`를 선택하세요.",
+            "content": "Make sure to pick `Sign up`.",
             "visibleIf": "wrong"
           }
         ]
@@ -663,7 +663,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`strong` 태그 사이에 텍스트를 입력하여 `Click Me!`를 버튼에 표시하세요.",
+            "content": "Insert text inside `strong` tags to display `Click Me!` on the button.",
             "visibleIf": "always"
           }
         ],
@@ -673,7 +673,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003C!doctype html\u003E\n\u003Chtml\u003E\n \u003Cbody\u003E\n  \u003Ch3\u003EWatch Out\u003C/h3\u003E\n  \u003Cp\u003EWhatever you do, just don't click the button!\u003C/p\u003E\n  \u003Cbutton\u003E\u003Cstrong\u003EClick Me!\u003C/strong\u003E\u003C/button\u003E\n \u003C/body\u003E\n\u003C/html\u003E",
+              "content": "<!doctype html>\n<html>\n <body>\n  <h3>Watch Out</h3>\n  <p>Whatever you do, just don't click the button!</p>\n  <button><strong>Click Me!</strong></button>\n </body>\n</html>",
               "codeLanguage": "html"
             }
           ],
@@ -684,7 +684,7 @@
               "startLine": 5,
               "startPos": 10,
               "length": 8,
-              "value": "\u003Cstrong\u003E",
+              "value": "<strong>",
               "correct": true
             },
             {
@@ -702,20 +702,20 @@
               "startLine": 5,
               "startPos": 27,
               "length": 9,
-              "value": "\u003C/strong\u003E",
+              "value": "</strong>",
               "correct": true
             }
           ],
           "wrongOptions": [
-            "\u003Cem\u003E",
-            "\u003C/em\u003E"
+            "<em>",
+            "</em>"
           ],
           "output": null
         },
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`\u003Cstrong\u003E`, `Click Me!`, `\u003C/strong\u003E`를 선택하세요.",
+            "content": "Make sure to pick `<strong>`, followed by `Click Me!`, and finally `</strong>`.",
             "visibleIf": "wrong"
           }
         ]
@@ -727,7 +727,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "마지막 버튼을 다른 버튼 아래에 배치하세요.",
+            "content": "Place the last button below the others.",
             "visibleIf": "always"
           }
         ],
@@ -737,7 +737,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003C!doctype html\u003E\n\u003Chtml\u003E\n \u003Cbody\u003E\n  \u003Cp\u003ENot the gumdrop buttons!\u003C/p\u003E\n  \u003Cbutton\u003EGumdrop\u003C/button\u003E\n  \u003Cbr\u003E\n  \u003Cbutton\u003EGumdrop\u003C/button\u003E\n  \u003Cbr\u003E\n  \u003Cbutton\u003EGumdrop\u003C/button\u003E\n \u003C/body\u003E\n\u003C/html\u003E",
+              "content": "<!doctype html>\n<html>\n <body>\n  <p>Not the gumdrop buttons!</p>\n  <button>Gumdrop</button>\n  <br>\n  <button>Gumdrop</button>\n  <br>\n  <button>Gumdrop</button>\n </body>\n</html>",
               "codeLanguage": "html"
             }
           ],
@@ -748,7 +748,7 @@
               "startLine": 7,
               "startPos": 2,
               "length": 1,
-              "value": "\u003C",
+              "value": "<",
               "correct": true
             },
             {
@@ -766,19 +766,19 @@
               "startLine": 7,
               "startPos": 5,
               "length": 1,
-              "value": "\u003E",
+              "value": ">",
               "correct": true
             }
           ],
           "wrongOptions": [
-            "\u003Chtml\u003E"
+            "<html>"
           ],
           "output": null
         },
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`\u003C`, `br`, `\u003E`를 선택하세요.",
+            "content": "Make sure to pick `<`, followed by `br`, and finally `>`.",
             "visibleIf": "wrong"
           }
         ]
@@ -790,7 +790,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`Share` 버튼을 다른 버튼 옆에 표시하세요.",
+            "content": "Display the `Share` button next to the other button.",
             "visibleIf": "always"
           }
         ],
@@ -800,7 +800,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003C!doctype html\u003E\n\u003Chtml\u003E\n \u003Cbody\u003E\n  \u003Cp\u003EWhat a great time to be alive!\u003C/p\u003E\n  \u003Cbutton\u003ELike\u003C/button\u003E\n  \u003Cbutton\u003EShare\u003C/button\u003E\n \u003C/body\u003E\n\u003C/html\u003E",
+              "content": "<!doctype html>\n<html>\n <body>\n  <p>What a great time to be alive!</p>\n  <button>Like</button>\n  <button>Share</button>\n </body>\n</html>",
               "codeLanguage": "html"
             }
           ],
@@ -811,7 +811,7 @@
               "startLine": 5,
               "startPos": 2,
               "length": 8,
-              "value": "\u003Cbutton\u003E",
+              "value": "<button>",
               "correct": true
             },
             {
@@ -829,19 +829,19 @@
               "startLine": 5,
               "startPos": 15,
               "length": 9,
-              "value": "\u003C/button\u003E",
+              "value": "</button>",
               "correct": true
             }
           ],
           "wrongOptions": [
-            "\u003Cbr\u003E"
+            "<br>"
           ],
           "output": null
         },
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`\u003Cbutton\u003E`, `Share`, `\u003C/button\u003E`를 선택하세요.",
+            "content": "Make sure to pick `<button>`, followed by `Share`, and finally `</button>`.",
             "visibleIf": "wrong"
           }
         ]
@@ -852,15 +852,15 @@
       "id": 1049,
       "index": 5,
       "codeLanguage": "html",
-      "descriptionContent": "태그와 속성을 사용하여 모든 종류의 링크를 만들고, 웹페이지를 웹사이트로 만들어보세요.",
-      "title": "링크 만들기",
+      "descriptionContent": "Use tags and attributes to create all sorts of links and turn webpages into websites.",
+      "title": "Creating Links",
       "type": "course",
       "version": 31,
       "bannerIconUrl": null,
       "chapters": [
         {
           "id": 8100,
-          "title": "링크와 속성",
+          "title": "Links and Attributes",
           "type": "practiceLevel1",
           "lessons": [
             {

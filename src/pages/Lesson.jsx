@@ -145,15 +145,11 @@ const Lesson = () => {
   }
 
   // option 클릭 시
-  const clickOptionItem = (event) => {
+  const clickOptionItem = (event, index) => {
     const selectedValue = event.target.textContent; 
-    const index = event.target.dataset.index; 
-    
     if(currentStepData?.interactionModule?.type === "codeFillTheGap") {
       const emptyInputIndex = inputRefs.current.findIndex((input) => input && !input.value);
       const emptyInput = inputRefs.current[emptyInputIndex];
-
-
       if (emptyInput) {
         currentStepData.interactionModule.interactionOptions[emptyInputIndex].userValue = selectedValue;
         emptyInput.value = selectedValue; 
@@ -200,7 +196,7 @@ const Lesson = () => {
         <button
           key={`option-${index}`}
           data-index={index}
-          onClick={(event) => clickOptionItem(event)}
+          onClick={(event) => clickOptionItem(event, index)}
           className={`
             flex items-center 
             h-8 
@@ -341,10 +337,7 @@ const Lesson = () => {
         if(type == "codeFillTheGap"){
           const lineOptions = options.filter((option) => option.startLine === lineIndex);
           lineOptions.forEach((option, optionIndex) => {
-            const { startIndex, endIndex, startPos, length, value, userValue } = option;
-            console.log(option)
-            console.log(line)
-            
+            const { startIndex, endIndex, startPos, length, value, userValue } = option;           
             // `<code>` 태그 추가 (startPos 이전의 텍스트)
             if (startIndex > lastIndex) {
               lineElements.push(
@@ -637,7 +630,7 @@ const Lesson = () => {
                   <div key={index} className="relative w-full max-w-[480px]">
                     <button 
                       data-index={index}
-                      onClick={(event) => clickOptionItem(event)}
+                      onClick={(event) => clickOptionItem(event, index)}
                       className={`
                         flex items-center justify-between space-x-2 
                         min-h-10 w-full 
