@@ -153,7 +153,13 @@ const Lesson = () => {
       if (emptyInput) {
         currentStepData.interactionModule.interactionOptions[emptyInputIndex].userValue = selectedValue;
         emptyInput.value = selectedValue; 
+
+        // optionIndex > 사용자가 정답을 선택한 옵션 인덱스
         emptyInput.dataset.optionIndex = index; 
+        // inputIndex > 사용자가 선택한 정답을 입력한 인풋 인덱스
+        emptyInput.dataset.inputIndex = emptyInputIndex;
+        
+
         emptyInput.dispatchEvent(new Event("input", { bubbles: true })); 
         setDisabledOptions((prev) => [...prev, parseInt(index)]);
       }
@@ -167,15 +173,14 @@ const Lesson = () => {
   };
   // input value 제거
   const clearInputValue = (event) => {
-    console.log("클릭함")
-    const input = event.target;
-    const optionIndex = input.dataset.optionIndex; // 연결된 옵션 인덱스 가져오기
-
+    const input = event.currentTarget.querySelector('input');
+    // optionIndex > 사용자가 정답을 선택한 옵션 인덱스
+    const optionIndex = input.dataset.optionIndex; 
+    // inputIndex > 사용자가 선택한 정답을 입력한 인풋 인덱스
+    const inputIndex = input.dataset.inputIndex; 
     if (optionIndex !== undefined) {
-      // input 값 제거
-      input.value = "";
       delete input.dataset.optionIndex;
-      currentStepData.interactionModule.interactionOptions[optionIndex].userValue = "";
+      currentStepData.interactionModule.interactionOptions[inputIndex].userValue = "";
       // 해당 옵션 활성화
       setDisabledOptions((prev) =>
         prev.filter((index) => index !== parseInt(optionIndex))
@@ -363,38 +368,46 @@ const Lesson = () => {
             }
             // `<input>` 태그 추가
             lineEls.push(
-              <input
-                key={`input-${lineIndex}-${optionIndex}`}
-                ref={(el) => {
-                  if (el) {
-                    // 중복 방지 및 null 값 제외
-                    if (!inputRefs.current.includes(el)) {
-                      inputRefs.current.push(el);
-                    }
-                  } else {
-                    // 요소가 삭제되면 배열에서 제거
-                    inputRefs.current = inputRefs.current.filter((ref) => ref !== null);
-                  }
-                }}
-                className={`
+              <label key={`input-${lineIndex}-${optionIndex}`}onClick={(event) => clearInputValue(event)}>
+                <span className={`
                   h-5 
-                  ${lineEls.length != 0 ? 'ml-1' : ''} 
+                  ${lineEls.length != 0 ? 'ml-1' : ''} px-1.5
                   min-w-[21px] 
                   border border-[#282828] rounded-md 
-                  
-                  text-center text-sm text-white 
-                  caret-blue-400 
                   bg-[#282828]
-                  focus:border-blue-500 
-                  focus:ring 
-                  focus:ring-blue-300 
-                  focus:outline-none
-                `}
-                style={{ width: `calc(${length}ch + 12px)` }}
-                readOnly // 읽기 전용
-                value={userValue ? userValue : ""}
-                onClick={(event) => clearInputValue(event)}
-              />
+                  ${userValue ? 'block' : 'hidden'}
+                `}>
+                  {userValue}
+                </span>
+                  <input
+                    hidden={userValue ? true : false}
+                    ref={(el) => {
+                      if (el) {
+                        // 중복 방지 및 null 값 제외
+                        if (!inputRefs.current.includes(el)) {
+                          inputRefs.current.push(el);
+                        }
+                      } else {
+                        // 요소가 삭제되면 배열에서 제거
+                        inputRefs.current = inputRefs.current.filter((ref) => ref !== null);
+                      }
+                    }}
+                    className={`
+                      h-5 
+                      ${lineEls.length != 0 ? 'ml-1' : ''} 
+                      min-w-[21px] 
+                      border border-[#282828] rounded-md 
+                      
+                      text-center text-sm text-white 
+                      caret-blue-400 
+                      bg-[#282828]
+                      focus:outline-none
+                    `}
+                    style={{ width: `calc(${length}ch + 12px)` }}
+                    readOnly
+                    value={userValue ? userValue : ""}
+                  />
+                </label>
             );
             lastIndex = startPos + length;
           });
@@ -522,7 +535,7 @@ const Lesson = () => {
                           Browser
                         </button>
                       </div>
-                      <div className="max-h-56 overflow-y-auto bg-[#fff]">
+                      <div className="max-h-56 h-full overflow-y-auto bg-[#fff]">
                         <iframe className={`w-full h-full flex-grow bg-product-background-primary-light`} srcDoc={data.content}></iframe>
                       </div>
                     </div>
@@ -661,7 +674,7 @@ const Lesson = () => {
                     </div>
                     {/* programming language */}
                     {languageNav == currentStepData.interactionModule.files.length ? 
-                    <div className="max-h-56 overflow-y-auto bg-[#fff]">
+                    <div className="max-h-56 h-full overflow-y-auto bg-[#fff]">
                       {generateBrowswer()}
                     </div>
                     :
