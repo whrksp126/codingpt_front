@@ -167,6 +167,7 @@ const Lesson = () => {
   };
   // input value 제거
   const clearInputValue = (event) => {
+    console.log("클릭함")
     const input = event.target;
     const optionIndex = input.dataset.optionIndex; // 연결된 옵션 인덱스 가져오기
 
@@ -234,13 +235,15 @@ const Lesson = () => {
       }else{
         if(type == "codeValidatedInput"){
           const option = currentStepData.interactionModule.interactionOption;
-          const { startPos, length, userValue } = option;
+          const { startLine, startPos, length, userValue } = option;
+          if(startLine == lineIndex){
             if (startPos > lastIndex) {
               lineElements.push(line.slice(lastIndex, startPos));
               lastIndex = startPos + length; 
             }
             lineElements.push(userValue || "");
             lastIndex = startPos + length; 
+          }
         }
         if(type == "codeFillTheGap"){
           const options = currentStepData.interactionModule.interactionOptions
@@ -261,42 +264,49 @@ const Lesson = () => {
       }
       elements.push(lineElements.join(''))
     })
-    
     return elements.join('');
   }
   
-  // JSON 데이터를 기반으로 라인별 코드와 `<input>` 태그를 생성
-  const generateCodeWithInputs = (interactionModule, fileIndex) => {
-    // (type, isInteractive, content. options, fileIndex)
-    const type = interactionModule.type;
-    const isInteractive = interactionModule.files[fileIndex].isInteractive;
-    const content = interactionModule.files[fileIndex].content;
-    const options = interactionModule.interactionOptions
-    const lines = content.split("\n"); // 전체 내용을 라인 단위로 분리
+  // JSON 데이터를 기반으로 Browser `<Iframe>` 태그를 생성
+  const generateBrowswer = () => {
+    return <iframe className={`w-full h-full`} srcDoc={combineUserInputsWithTemplate()}></iframe>
+  }
+
+  const postModule = currentStepData.postInteractionModules.find(
+    ({ visibleIf }) => visibleIf === (isCorrect ? "correct" : "wrong")
+  );
+
+  // 코드 에디터 세팅
+  const getCodeEditor = (type, isInteractive, content, options) => {
+    const lines = content.split("\n");
     const elements = [];
-    lines.forEach((line, lineIndex) => {
-      let lineElements = [];
-      let lastIndex = 0;
-      if(!isInteractive){
-        lineElements.push(
-        <code className={`${lineElements.length != 0 ? 'ml-1' : ''} text-white`}>
-          {line}
-        </code>
-        )
-      }else{
+    if(!isInteractive){
+      lines.forEach((line, lineIndex) => {
+        elements.push(
+          <div key={`line-${lineIndex}`} className="flex items-center">
+            <code key={`code-${lineIndex}-0`} className={`${lineIndex.length != 0 && 'ml-1'} text-white`}>
+              {line}
+            </code>
+          </div>
+        );
+      });
+    }else{
+      lines.forEach((line, lineIndex) => {
+        let lineEls = [];
+        let lastIndex = 0;
         if(type == "codeValidatedInput"){
-          const { startPos, startLine, endIndex, length, value, userValue } = interactionModule.interactionOption;
+          const { startPos, startLine, endIndex, length, value, userValue } = options[0];
           if(startLine == lineIndex){
             if (startPos > lastIndex) {
-              lineElements.push(
-                <code key={`code-${lineIndex}-0`} className={`${lineElements.length != 0 && 'ml-1'} text-white`}>
+              lineEls.push(
+                <code key={`code-${lineIndex}-0`} className={`${lineEls.length != 0 && 'ml-1'} text-white`}>
                   {line.slice(lastIndex, startPos)}
                 </code>
               );
               lastIndex = startPos + length;
             }
             
-            lineElements.push(
+            lineEls.push(
               <input
                 key={`input-${lineIndex}-0`}
                 ref={(el) => {
@@ -312,10 +322,9 @@ const Lesson = () => {
                 }}
                 className={`
                   h-5 
-                  ${lineElements.length != 0 ? 'ml-1' : ''} 
+                  ${lineEls.length != 0 ? 'ml-1' : ''} 
                   min-w-[21px] 
                   border border-[#282828] rounded-md 
-                  
                   
                   text-center text-sm text-white 
                   caret-blue-400 
@@ -344,16 +353,16 @@ const Lesson = () => {
             const { startIndex, endIndex, startPos, length, value, userValue } = option;           
             // `<code>` 태그 추가 (startPos 이전의 텍스트)
             if (startIndex > lastIndex) {
-              lineElements.push(
-                <code key={`code-${lineIndex}-${optionIndex}`} className={`${lineElements.length != 0 && 'ml-1'} text-white`}>
+              lineEls.push(
+                <code key={`code-${lineIndex}-${optionIndex}`} className={`${lineEls.length != 0 && 'ml-1'} text-white`}>
                   {line.slice(lastIndex, startPos)}
                 </code>
               );
               lastIndex = startPos + length;
-
+  
             }
             // `<input>` 태그 추가
-            lineElements.push(
+            lineEls.push(
               <input
                 key={`input-${lineIndex}-${optionIndex}`}
                 ref={(el) => {
@@ -369,7 +378,7 @@ const Lesson = () => {
                 }}
                 className={`
                   h-5 
-                  ${lineElements.length != 0 ? 'ml-1' : ''} 
+                  ${lineEls.length != 0 ? 'ml-1' : ''} 
                   min-w-[21px] 
                   border border-[#282828] rounded-md 
                   
@@ -387,42 +396,27 @@ const Lesson = () => {
                 onClick={(event) => clearInputValue(event)}
               />
             );
-    
             lastIndex = startPos + length;
           });
+        }      
+        // 마지막 `<code>` 태그 처리
+        if (lastIndex < line.length) {
+          lineEls.push(
+            <code key={`code-last-${lineIndex}`} className={`text-white ml-1`}>
+              {line.slice(lastIndex)}
+            </code>
+          );
         }
-        
-
-      }
-      
-      
-      // 마지막 `<code>` 태그 처리
-      if (lastIndex < line.length) {
-        lineElements.push(
-          <code key={`code-last-${lineIndex}`} className={`text-white ml-1`}>
-            {line.slice(lastIndex)}
-          </code>
+        elements.push(
+          <div key={`line-${lineIndex}`} className="flex items-center">
+            {lineEls}
+          </div>
         );
-      }
-      
-      elements.push(
-        <div key={`line-${lineIndex}`} className="flex items-center">
-          {lineElements}
-        </div>
-      );
-    });
+      });
+    }
     return elements;
-  };
-
-  // JSON 데이터를 기반으로 Browser `<Iframe>` 태그를 생성
-  const generateBrowswer = (step) => {
-    return <iframe className={`w-full h-full flex-grow bg-product-background-primary-light`} srcDoc={combineUserInputsWithTemplate()}></iframe>
-    // return <Iframe src={`/src/assets/lesson_files/html/step_0/${step}/index.html`} />  
   }
 
-  const postModule = currentStepData.postInteractionModules.find(
-    ({ visibleIf }) => visibleIf === (isCorrect ? "correct" : "wrong")
-  );
   return (
     <div className="relative flex flex-col items-center justify-center max-w-96 h-screen mx-auto">
       <div
@@ -443,12 +437,11 @@ const Lesson = () => {
             <div className="flex flex-1 items-center h-full">
               <div className={`flex flex-col text-center gap-4 w-full text-[#f1f7fb] font-semibold`}>
                 {currentStepData.preInteractionModules.map((data, index)=> {
-                  console.log(data)
                 return (
                 <div key={index}>
                   {data.type === "image" && <img src={`https://images.getmimo.com/images/${data.src}`} alt="Lesson Content" className="rounded-lg" />}
                   {data.type === "paragraph" && <ReactMarkdown>{data.content}</ReactMarkdown>}
-                  {/* {data.type === "codeNone" && 
+                  {data.type === "codeNone" && 
                   <div className={`min-w-[300px] max-w-[664px] flex-1`}>
                     <div className={`
                     relative 
@@ -480,12 +473,27 @@ const Lesson = () => {
                         </button>
                         )})}
                       </div>
-                      <pre key={`pre_${index}`} className="h-56 overflow-y-auto bg-[#1c1c1c] px-4 py-3 text-sm text-white">
-                        {generateCodeWithInputs(currentStepData.interactionModule, index)}
-                      </pre>
+                      
+                      {languageNav == data.files.length ? 
+                      <div className="max-h-56 overflow-y-auto bg-[#fff]">
+                        {generateBrowswer()}
+                      </div>
+                      :
+                      data.files.map((file, index)=>{
+                        const type = data.type;
+                        const isInteractive = file.isInteractive;
+                        const content = file.content;
+                        const options = [];
+                        return (
+                        <pre key={`preInteractionModules_${index}`} className="max-h-56 overflow-y-auto bg-[#1c1c1c] px-4 py-3 text-sm text-white">
+                          {getCodeEditor(type, isInteractive, content, options)}
+                        </pre>
+                        )
+                      })
+                      }
                     </div>
                   </div>
-                  } */}
+                  }
                   {data.type === "webview" && 
                   <div className={`min-w-[300px] max-w-[664px] flex-1`}>
                     <div className={`
@@ -514,7 +522,7 @@ const Lesson = () => {
                           Browser
                         </button>
                       </div>
-                      <div className="h-56 overflow-y-auto bg-[#fff]">
+                      <div className="max-h-56 overflow-y-auto bg-[#fff]">
                         <iframe className={`w-full h-full flex-grow bg-product-background-primary-light`} srcDoc={data.content}></iframe>
                       </div>
                     </div>
@@ -581,14 +589,20 @@ const Lesson = () => {
                     </div>
                     {/* programming language */}
                     {languageNav == currentStepData.interactionModule.files.length ? 
-                    <div className="h-56 overflow-y-auto bg-[#fff] px-4 py-3 text-sm">
-                      {generateBrowswer(currentStepData.index)}
+                    <div className="max-h-56 overflow-y-auto bg-[#fff]">
+                      {generateBrowswer()}
                     </div>
                     :
                     currentStepData.interactionModule.files.map((file, index)=>{
-                      return <pre key={`pre_${index}`} className="h-56 overflow-y-auto bg-[#1c1c1c] px-4 py-3 text-sm text-white">
-                        {generateCodeWithInputs(currentStepData.interactionModule, index)}
+                      const type = currentStepData.interactionModule.type;
+                      const isInteractive = file.isInteractive;
+                      const content = file.content;
+                      const options = [currentStepData.interactionModule.interactionOption];
+                      return (
+                      <pre key={`pre_${index}`} className="max-h-56 overflow-y-auto bg-[#1c1c1c] px-4 py-3 text-sm text-white">
+                        {getCodeEditor(type, isInteractive, content, options)}
                       </pre>
+                      )
                     })
                     }
                   </div>
@@ -647,14 +661,20 @@ const Lesson = () => {
                     </div>
                     {/* programming language */}
                     {languageNav == currentStepData.interactionModule.files.length ? 
-                    <div className="h-56 overflow-y-auto bg-[#fff]">
-                      {generateBrowswer(currentStepData.index)}
+                    <div className="max-h-56 overflow-y-auto bg-[#fff]">
+                      {generateBrowswer()}
                     </div>
                     :
                     currentStepData.interactionModule.files.map((file, index)=>{
-                      return <pre key={`pre_${index}`} className="h-56 overflow-y-auto bg-[#1c1c1c] px-4 py-3 text-sm text-white">
-                        {generateCodeWithInputs(currentStepData.interactionModule, index)}
+                      const type = currentStepData.interactionModule.type;
+                      const isInteractive = file.isInteractive;
+                      const content = file.content;
+                      const options = currentStepData.interactionModule.interactionOptions;
+                      return (
+                      <pre key={`pre_${index}`} className="max-h-56 overflow-y-auto bg-[#1c1c1c] px-4 py-3 text-sm text-white">
+                        {getCodeEditor(type, isInteractive, content, options)}
                       </pre>
+                      )
                     })
                     }
                   </div>
@@ -704,7 +724,9 @@ const Lesson = () => {
           }
         </div>
         <div 
-          className={`fixed bottom-0 left-0 right-0 px-4 py-6`}
+          className={`fixed bottom-0 left-0 right-0 px-4 py-6 
+            bg-[#131f24]/40 backdrop-blur-md
+            `}
           >
           {isCorrect !== null ? 
           <div className={`

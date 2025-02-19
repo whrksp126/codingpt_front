@@ -89,13 +89,13 @@
         "index": 2,
         "preInteractionModules": [
           {
-            "type": "paragraph",
-            "content": "버튼 태그 사이에 텍스트를 입력하면 버튼에 텍스트가 나타납니다. 버튼 태그 사이에 `Login`을 입력해보세요.",
+            "type": "paragraph", 
+            "content": "버튼 태그 사이에 텍스트를 입력하면 버튼에 텍스트가 나타납니다. 버튼 태그 사이에 `로그인`을 입력해보세요.",
             "visibleIf": "always"
           },
           {
             "type": "paragraph",
-            "content": "대문자 `\"L\"`을 사용해야 합니다.",
+            "content": "한글로 `\"로그인\"`을 입력하세요.",
             "visibleIf": "always"
           }
         ],
@@ -123,7 +123,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`Login`을 정확하게 입력했는지 확인하세요.",
+            "content": "`로그인`을 정확하게 입력했는지 확인하세요.",
             "visibleIf": "wrong"
           }
         ]
