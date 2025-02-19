@@ -267,6 +267,7 @@ const Lesson = () => {
   
   // JSON 데이터를 기반으로 라인별 코드와 `<input>` 태그를 생성
   const generateCodeWithInputs = (interactionModule, fileIndex) => {
+    // (type, isInteractive, content. options, fileIndex)
     const type = interactionModule.type;
     const isInteractive = interactionModule.files[fileIndex].isInteractive;
     const content = interactionModule.files[fileIndex].content;
@@ -284,55 +285,58 @@ const Lesson = () => {
         )
       }else{
         if(type == "codeValidatedInput"){
-          const { startPos, endIndex, length, value, userValue } = interactionModule.interactionOption;
-          if (startPos > lastIndex) {
+          const { startPos, startLine, endIndex, length, value, userValue } = interactionModule.interactionOption;
+          if(startLine == lineIndex){
+            if (startPos > lastIndex) {
+              lineElements.push(
+                <code key={`code-${lineIndex}-0`} className={`${lineElements.length != 0 && 'ml-1'} text-white`}>
+                  {line.slice(lastIndex, startPos)}
+                </code>
+              );
+              lastIndex = startPos + length;
+            }
+            
             lineElements.push(
-              <code key={`code-${lineIndex}-0`} className={`${lineElements.length != 0 && 'ml-1'} text-white`}>
-                {line.slice(lastIndex, startPos)}
-              </code>
-            );
+              <input
+                key={`input-${lineIndex}-0`}
+                ref={(el) => {
+                  if (el) {
+                    // 중복 방지 및 null 값 제외
+                    if (!inputRefs.current.includes(el)) {
+                      inputRefs.current.push(el);
+                    }
+                  } else {
+                    // 요소가 삭제되면 배열에서 제거
+                    inputRefs.current = inputRefs.current.filter((ref) => ref !== null);
+                  }
+                }}
+                className={`
+                  h-5 
+                  ${lineElements.length != 0 ? 'ml-1' : ''} 
+                  min-w-[21px] 
+                  border border-[#282828] rounded-md 
+                  
+                  
+                  text-center text-sm text-white 
+                  caret-blue-400 
+                  bg-[#282828]
+                  focus:border-blue-500 
+                  focus:ring 
+                  focus:ring-blue-300 
+                  focus:outline-none
+                `}
+                style={{ width: `calc(${length}ch + 12px)` }}
+                value={userValue ? userValue : ""}
+                onChange={(event) => {
+                  const input = event.target;
+                  currentStepData.interactionModule.interactionOption.userValue = input.value;
+                  forceUpdate({})
+                  checkAllInputsFilled()
+                }}
+              /> 
+            )
             lastIndex = startPos + length;
           }
-          lineElements.push(
-            <input
-              key={`input-${lineIndex}-0`}
-              ref={(el) => {
-                if (el) {
-                  // 중복 방지 및 null 값 제외
-                  if (!inputRefs.current.includes(el)) {
-                    inputRefs.current.push(el);
-                  }
-                } else {
-                  // 요소가 삭제되면 배열에서 제거
-                  inputRefs.current = inputRefs.current.filter((ref) => ref !== null);
-                }
-              }}
-              className={`
-                h-5 
-                ${lineElements.length != 0 ? 'ml-1' : ''} 
-                min-w-[21px] 
-                border border-[#282828] rounded-md 
-                
-                
-                text-center text-sm text-white 
-                caret-blue-400 
-                bg-[#282828]
-                focus:border-blue-500 
-                focus:ring 
-                focus:ring-blue-300 
-                focus:outline-none
-              `}
-              style={{ width: `calc(${length}ch + 12px)` }}
-              value={userValue ? userValue : ""}
-              onChange={(event) => {
-                const input = event.target;
-                currentStepData.interactionModule.interactionOption.userValue = input.value;
-                forceUpdate({})
-                checkAllInputsFilled()
-              }}
-            /> 
-          )
-          lastIndex = startPos + length;
         }
         if(type == "codeFillTheGap"){
           const lineOptions = options.filter((option) => option.startLine === lineIndex);
@@ -439,10 +443,49 @@ const Lesson = () => {
             <div className="flex flex-1 items-center h-full">
               <div className={`flex flex-col text-center gap-4 w-full text-[#f1f7fb] font-semibold`}>
                 {currentStepData.preInteractionModules.map((data, index)=> {
+                  console.log(data)
                 return (
                 <div key={index}>
                   {data.type === "image" && <img src={`https://images.getmimo.com/images/${data.src}`} alt="Lesson Content" className="rounded-lg" />}
                   {data.type === "paragraph" && <ReactMarkdown>{data.content}</ReactMarkdown>}
+                  {/* {data.type === "codeNone" && 
+                  <div className={`min-w-[300px] max-w-[664px] flex-1`}>
+                    <div className={`
+                    relative 
+                    flex flex-col 
+                    max-h-[440px] w-full 
+                    rounded-[4px] border border-[#181818]
+                    overflow-hidden
+                    `}>
+                      <div className={`    
+                        flex flex-shrink-0 
+                        h-10 
+                        bg-[#1f1f1f]
+                        overflow-x-auto 
+                        `}>
+                        {data.files.map((file, index)=>{ return (
+                        <button 
+                          key={index}
+                          className={`
+                            flex items-center justify-center 
+                          h-full 
+                          space-x-2 
+                          px-4 
+                          whitespace-nowrap 
+                          text-xs font-semibold text-white
+                          bg-[#1c1c1c] border border-[#2b2b2b] border-b-0 border-t-[#49c0f8]
+                          `}
+                        >
+                        {file.name}
+                        </button>
+                        )})}
+                      </div>
+                      <pre key={`pre_${index}`} className="h-56 overflow-y-auto bg-[#1c1c1c] px-4 py-3 text-sm text-white">
+                        {generateCodeWithInputs(currentStepData.interactionModule, index)}
+                      </pre>
+                    </div>
+                  </div>
+                  } */}
                   {data.type === "webview" && 
                   <div className={`min-w-[300px] max-w-[664px] flex-1`}>
                     <div className={`
