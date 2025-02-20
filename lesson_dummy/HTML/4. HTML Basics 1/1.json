@@ -143,23 +143,23 @@
               "correct": true
             },
             {
-              "startIndex": 15,
-              "endIndex": 19,
-              "startLine": 0,
-              "startPos": 15,
+              "startIndex": 16,
+              "endIndex": 20,
+              "startLine": 1,
+              "startPos": 0,
               "length": 4,
               "value": "<h2>",
               "correct": true
             },
             {
-              "startIndex": 30,
-              "endIndex": 34,
-              "startLine": 1,
-              "startPos": 14,
+              "startIndex": 31,
+              "endIndex": 35,
+              "startLine": 2,
+              "startPos": 0,
               "length": 4,
               "value": "<h2>",
               "correct": true
-            }
+              }
           ],
           "wrongOptions": [
             "<h3>",
@@ -377,32 +377,32 @@
           ],
           "interactionOptions": [
             {
-              "startIndex": 48,
-              "endIndex": 49,
+              "startIndex": 36,
+              "endIndex": 37,
               "startLine": 1,
-              "startPos": 16,
+              "startPos": 15,
               "length": 1,
               "value": "<",
               "correct": true
             },
             {
-              "startIndex": 49,
-              "endIndex": 55,
+              "startIndex": 37,
+              "endIndex": 43,
               "startLine": 1,
-              "startPos": 17,
+              "startPos": 16,
               "length": 6,
               "value": "strong",
               "correct": true
             },
             {
-              "startIndex": 55,
-              "endIndex": 56,
+              "startIndex": 43,
+              "endIndex": 44,
               "startLine": 1,
-              "startPos": 23,
+              "startPos": 22,
               "length": 1,
               "value": ">",
               "correct": true
-            }
+              }
           ],
           "wrongOptions": [
             "/"
@@ -482,11 +482,11 @@
           ],
           "interactionOptions": [
             {
-              "startIndex": 109,
-              "endIndex": 115,
+              "startIndex": 67,
+              "endIndex": 69,
               "startLine": 2,
               "startPos": 8,
-              "length": 6,
+              "length": 2,
               "value": "동의",
               "correct": true
             }
@@ -527,28 +527,28 @@
           ],
           "interactionOptions": [
             {
-              "startIndex": 123,
-              "endIndex": 125,
+              "startIndex": 69,
+              "endIndex": 71,
               "startLine": 2,
-              "startPos": 19,
+              "startPos": 12,
               "length": 2,
               "value": "</",
               "correct": true
             },
             {
-              "startIndex": 125,
-              "endIndex": 131,
+              "startIndex": 71,
+              "endIndex": 77,
               "startLine": 2,
-              "startPos": 21,
+              "startPos": 14,
               "length": 6,
               "value": "button",
               "correct": true
             },
             {
-              "startIndex": 131,
-              "endIndex": 132,
+              "startIndex": 77,
+              "endIndex": 78,
               "startLine": 2,
-              "startPos": 27,
+              "startPos": 20,
               "length": 1,
               "value": ">",
               "correct": true
@@ -646,14 +646,14 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "<h4>미모에 오신 것을 환영합니다</h4>\n<button>회원가입</button>\n<br>\n<button>로그인</button>",
+              "content": "<h4>코딩PT에 오신 것을 환영합니다</h4>\n<button>회원가입</button>\n<br>\n<button>로그인</button>",
               "codeLanguage": "html"
             }
           ],
           "interactionOptions": [
             {
-              "startIndex": 50,
-              "endIndex": 51,
+              "startIndex": 49,
+              "endIndex": 50,
               "startLine": 2,
               "startPos": 0,
               "length": 1,
@@ -661,8 +661,8 @@
               "correct": true
             },
             {
-              "startIndex": 51,
-              "endIndex": 53,
+              "startIndex": 50,
+              "endIndex": 52,
               "startLine": 2,
               "startPos": 1,
               "length": 2,
@@ -670,8 +670,8 @@
               "correct": true
             },
             {
-              "startIndex": 53,
-              "endIndex": 54,
+              "startIndex": 52,
+              "endIndex": 53,
               "startLine": 2,
               "startPos": 3,
               "length": 1,
@@ -716,8 +716,8 @@
           ],
           "interactionOptions": [
             {
-              "startIndex": 108,
-              "endIndex": 116,
+              "startIndex": 73,
+              "endIndex": 81,
               "startLine": 3,
               "startPos": 0,
               "length": 8,
@@ -725,19 +725,19 @@
               "correct": true
             },
             {
-              "startIndex": 116,
-              "endIndex": 133,
+              "startIndex": 81,
+              "endIndex": 89,
               "startLine": 3,
               "startPos": 8,
-              "length": 17,
+              "length": 8,
               "value": "클립보드에 복사",
               "correct": true
             },
             {
-              "startIndex": 133,
-              "endIndex": 142,
+              "startIndex": 89,
+              "endIndex": 98,
               "startLine": 3,
-              "startPos": 25,
+              "startPos": 16,
               "length": 9,
               "value": "</button>",
               "correct": true

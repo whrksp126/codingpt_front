@@ -17,7 +17,7 @@
           },
           {
             "type": "webview",
-            "content": "\u003C!doctype html\u003E\n\u003Chead\u003E\n \u003Cstyle\u003E\n  body {\n   background-image: linear-gradient(45deg, #a1c4fd, #c2e9fb);\n   text-align: center;\n   font-family: \"Verdana\", Sans-serif;\n  }\n  \n  img {\n   margin: 40px;\n   height: 40px;\n   width: 150px;\n  }\n  \n  h1 {\n   margin-top: 30px;\n  }\n  \n  h3 {\n   margin: 20px;\n   font-weight: normal;\n  }\n  \n  p {\n   margin-top: 80px;\n   margin-left: 30px;\n   margin-right: 30px;\n   padding: 20px;\n   background-color: DimGray;\n  }\n \u003C/style\u003E\n\u003C/head\u003E\n\u003Cbody\u003E\n \u003Ch1\u003ENeed five?\u003C/h1\u003E \u003Ca\n  href=\"https://google.com\"\u003ETake a\n  break!\u003C/a\u003E\n\u003C/body\u003E\n\u003C/html\u003E",
+            "content": "<!doctype html>\n<head>\n <style>\n  body {\n   background-image: linear-gradient(45deg, #a1c4fd, #c2e9fb);\n   text-align: center;\n   font-family: \"Verdana\", Sans-serif;\n  }\n  \n  img {\n   margin: 40px;\n   height: 40px;\n   width: 150px;\n  }\n  \n  h1 {\n   margin-top: 30px;\n  }\n  \n  h3 {\n   margin: 20px;\n   font-weight: normal;\n  }\n  \n  p {\n   margin-top: 80px;\n   margin-left: 30px;\n   margin-right: 30px;\n   padding: 20px;\n   background-color: DimGray;\n  }\n </style>\n</head>\n<body>\n <h1>Need five?</h1> <a\n  href=\"https://google.com\">Take a\n  break!</a>\n</body>\n</html>",
             "visibleIf": "always"
           }
         ],
@@ -31,12 +31,12 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "링크를 만들기 위해, 텍스트를 `\u003Ca\u003E`와 `\u003C/a\u003E` 태그 사이에 넣습니다. 이것은 텍스트를 아직 강조하지 않습니다.",
+            "content": "링크를 만들기 위해, 텍스트를 `<a>`와 `</a>` 태그 사이에 넣습니다. 이것은 텍스트를 아직 강조하지 않습니다.",
             "visibleIf": "always"
           },
           {
             "type": "paragraph",
-            "content": "`\u003Ca\u003E`는 \"Anchor\" 태그를 의미합니다.",
+            "content": "`<a>`는 \"Anchor\" 태그를 의미합니다.",
             "visibleIf": "always"
           }
         ],
@@ -46,7 +46,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Ca\u003ELearn to Code\u003C/a\u003E",
+              "content": "<a>Learn to Code</a>",
               "codeLanguage": "html"
             }
           ],
@@ -57,7 +57,7 @@
               "startLine": 0,
               "startPos": 0,
               "length": 3,
-              "value": "\u003Ca\u003E",
+              "value": "<a>",
               "correct": true
             },
             {
@@ -66,7 +66,7 @@
               "startLine": 0,
               "startPos": 16,
               "length": 4,
-              "value": "\u003C/a\u003E",
+              "value": "</a>",
               "correct": true
             }
           ],
@@ -76,7 +76,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`\u003Ca\u003E`, `\u003C/a\u003E`를 선택하세요.",
+            "content": "`<a>`, `</a>`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -98,7 +98,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Ca href=\"https://mimo.org\"\u003ELearn to Code\u003C/a\u003E",
+              "content": "<a href=\"https://mimo.org\">Learn to Code</a>",
               "codeLanguage": "html"
             }
           ],
@@ -154,7 +154,7 @@
           },
           {
             "type": "paragraph",
-            "content": "Attributes are added after the name of the tag, and before the `\u003E` closing sign.",
+            "content": "Attributes are added after the name of the tag, and before the `>` closing sign.",
             "visibleIf": "always"
           }
         ],
@@ -164,7 +164,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Ca href=\"https://mimo.org\"\u003ELearn to Code\u003C/a\u003E",
+              "content": "<a href=\"https://mimo.org\">Learn to Code</a>",
               "codeLanguage": "html"
             }
           ],
@@ -207,7 +207,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003C!doctype html\u003E\n\u003Chtml\u003E\n \u003Cbody\u003E\n  \u003Ca href=\"https://mimo.org\"\u003ELearn to Code\u003C/a\u003E\n \u003C/body\u003E\n\u003C/html\u003E",
+              "content": "<!doctype html>\n<html>\n <body>\n  <a href=\"https://mimo.org\">Learn to Code</a>\n </body>\n</html>",
               "codeLanguage": "html"
             }
           ],
@@ -267,7 +267,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Create an opening `\u003Ca\u003E` tag with the `href` attribute set to `\"https://mimo.org\"`.",
+            "content": "Create an opening `<a>` tag with the `href` attribute set to `\"https://mimo.org\"`.",
             "visibleIf": "always"
           }
         ],
@@ -277,7 +277,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Ca href=\"https://mimo.org\"\u003ELearn to Code\u003C/a\u003E",
+              "content": "<a href=\"https://mimo.org\">Learn to Code</a>",
               "codeLanguage": "html"
             }
           ],
@@ -288,7 +288,7 @@
               "startLine": 0,
               "startPos": 0,
               "length": 1,
-              "value": "\u003C",
+              "value": "<",
               "correct": true
             },
             {
@@ -333,7 +333,7 @@
               "startLine": 0,
               "startPos": 26,
               "length": 1,
-              "value": "\u003E",
+              "value": ">",
               "correct": true
             }
           ],
@@ -343,7 +343,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`\u003C`, `a`, `href`, `=`, `\"https://mimo.org\"`, `\u003E`를 선택하세요.",
+            "content": "`<`, `a`, `href`, `=`, `\"https://mimo.org\"`, `>`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -401,7 +401,7 @@
               {
                 "isInteractive": false,
                 "name": "index.html",
-                "content": "\u003Ca\u003ELearn to Code\u003C/a\u003E",
+                "content": "<a>Learn to Code</a>",
                 "codeLanguage": "html"
               }
             ],
@@ -414,7 +414,7 @@
             {
               "isInteractive": false,
               "name": "index.html",
-              "content": "\u003Ca\u003ELearn to Code\u003C/a\u003E",
+              "content": "<a>Learn to Code</a>",
               "codeLanguage": "html"
             }
           ],
@@ -427,7 +427,7 @@
             {
               "correct": false,
               "value": 1,
-              "text": "Because it has no text between `\u003Ca\u003E` and `\u003C/a\u003E`"
+              "text": "Because it has no text between `<a>` and `</a>`"
             }
           ],
           "isCode": false,
@@ -457,7 +457,7 @@
               {
                 "isInteractive": false,
                 "name": "index.html",
-                "content": "\u003Ca href=\"https://mimo.org\"\u003EWhere Developers Learn, Share,\n   & Build Careers\u003C/a\u003E",
+                "content": "<a href=\"https://mimo.org\">Where Developers Learn, Share,\n   & Build Careers</a>",
                 "codeLanguage": "html"
               }
             ],
@@ -470,7 +470,7 @@
             {
               "isInteractive": false,
               "name": "index.html",
-              "content": "\u003Ca href=\"https://mimo.org\"\u003EWhere Developers Learn, Share,\n   & Build Careers\u003C/a\u003E",
+              "content": "<a href=\"https://mimo.org\">Where Developers Learn, Share,\n   & Build Careers</a>",
               "codeLanguage": "html"
             }
           ],
@@ -551,7 +551,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Ca href=\"https://cars.com\"\u003EBuy a car\u003C/a\u003E",
+              "content": "<a href=\"https://cars.com\">Buy a car</a>",
               "codeLanguage": "html"
             }
           ],
@@ -562,19 +562,19 @@
               "startLine": 0,
               "startPos": 0,
               "length": 27,
-              "value": "\u003Ca href=\"https://cars.com\"\u003E",
+              "value": "<a href=\"https://cars.com\">",
               "correct": true
             }
           ],
           "wrongOptions": [
-            "\u003Ca\u003E"
+            "<a>"
           ],
           "output": null
         },
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`\u003Ca href=\"https://cars.com\"\u003E`를 선택하세요.",
+            "content": "`<a href=\"https://cars.com\">`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -596,7 +596,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Ca href=\"https://facebook.com\"\u003ELike us on Facebook\u003C/a\u003E",
+              "content": "<a href=\"https://facebook.com\">Like us on Facebook</a>",
               "codeLanguage": "html"
             }
           ],
@@ -657,7 +657,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Ca href=\"https://www.snap.com/\"\u003EOpen Snapchat\u003C/a\u003E",
+              "content": "<a href=\"https://www.snap.com/\">Open Snapchat</a>",
               "codeLanguage": "html"
             }
           ],
@@ -668,7 +668,7 @@
               "startLine": 0,
               "startPos": 45,
               "length": 2,
-              "value": "\u003C/",
+              "value": "</",
               "correct": true
             },
             {
@@ -686,7 +686,7 @@
               "startLine": 0,
               "startPos": 48,
               "length": 1,
-              "value": "\u003E",
+              "value": ">",
               "correct": true
             }
           ],
@@ -696,7 +696,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`\u003C/`, `a`, `\u003E`를 선택하세요.",
+            "content": "`</`, `a`, `>`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -718,7 +718,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Ca href=\"https://abc.com\"\u003EWatch some news\u003C/a\u003E",
+              "content": "<a href=\"https://abc.com\">Watch some news</a>",
               "codeLanguage": "html"
             }
           ],
