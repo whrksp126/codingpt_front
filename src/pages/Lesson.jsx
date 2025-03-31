@@ -1,11 +1,9 @@
 // src/pages/Lesson.js
-import {useEffect, useRef, useState} from 'react';
+import {useRef, useState} from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
-import { X, Star} from "@phosphor-icons/react";
 import Btn from '../components/component/Btn';
 import Iframe from '../components/component/Iframe';
 // import LottieAnimation from '../components/LottieAnimation';
-import { LessonDummy } from '../dummys/LessonDummy';
 import { curriculumList } from '../assets/lesson_dummy/curriculumList';
 
 import ReactMarkdown from 'react-markdown';
@@ -17,13 +15,28 @@ const sectionId = urlParams.get('section_id');
 const unitId = urlParams.get('unit_id');
 const stageId = urlParams.get('stage_id');
 
+const curriculum = curriculumList.find((curriculum) => curriculum.id === Number(curriculumId));
+const section = curriculum.sections.find((section)=>section.id === Number(sectionId));
+const unit = section.units.find((unit)=>unit.id === Number(unitId));
+const stage = unit.stages.find((stage)=>stage.id === Number(stageId));
+
+stage.lessons[0].content.pageProps.lessons.forEach((dummy)=>{
+  if(dummy?.interactionModule?.interactionOptions){
+    const values = dummy.interactionModule.interactionOptions.map(({value})=>{return value})
+    dummy.options = [...dummy.interactionModule.wrongOptions, ...values];
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const randomIndex = Math.floor(Math.random() * (i + 1));
+        [array[i], array[randomIndex]] = [array[randomIndex], array[i]]; // Swap
+      }
+      return array;
+    }
+    dummy.options = shuffleArray(dummy.options);
+  }
+})
 
 const Lesson = () => {
-  const curriculum = curriculumList.find((curriculum) => curriculum.id === Number(curriculumId));
-  const section = curriculum.sections.find((section)=>section.id === Number(sectionId));
-  const unit = section.units.find((unit)=>unit.id === Number(unitId));
-  const stage = unit.stages.find((stage)=>stage.id === Number(stageId));
-
+  
   const inputRefs = useRef([]);
   const [disabledOptions, setDisabledOptions] = useState([]); // 비활성화된 옵션 상태
   const [allInputsFilled, setAllInputsFilled] = useState(false); // 모든 input이 채워졌는지 상태 확인
@@ -31,7 +44,6 @@ const Lesson = () => {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
 
-  // const [stepsData, setStepsData] = useState(LessonDummy);
   const [stepsData, setStepsData] = useState(stage.lessons[0].content.pageProps.lessons);
   const [lessonStep, setLessonStep] = useState(parseInt(searchParams.get('lessonStep')) || 0);
   const [languageNav, setLanguageNav] = useState(0);
@@ -39,24 +51,6 @@ const Lesson = () => {
   const currentStepData = stepsData.find((step) => step.index === lessonStep);
   const [isCorrect, setIsCorrect] = useState(null);
   const [, forceUpdate] = useState({});  // 강제 리렌더링을 위한 state 추가
-
-  useEffect(()=>{
-    // options 세팅
-    stage.lessons[0].content.pageProps.lessons.forEach((dummy)=>{
-      if(dummy?.interactionModule?.interactionOptions){
-        const values = dummy.interactionModule.interactionOptions.map(({value})=>{return value})
-        dummy.options = [...dummy.interactionModule.wrongOptions, ...values];
-        function shuffleArray(array) {
-          for (let i = array.length - 1; i > 0; i--) {
-            const randomIndex = Math.floor(Math.random() * (i + 1));
-            [array[i], array[randomIndex]] = [array[randomIndex], array[i]]; // Swap
-          }
-          return array;
-        }
-        dummy.options = shuffleArray(dummy.options);
-      }
-    })
-  },[])
 
   const resetInputRefs = () => {
     // 기존 참조 초기화
@@ -85,6 +79,18 @@ const Lesson = () => {
         }
       }
       if(currentStepData?.interactionModule?.type === "codeFillTheGap"){
+        
+        const codeLanguage = currentStepData?.interactionModule?.files[0].codeLanguage
+        if(codeLanguage === "python"){
+          console.log("python")
+        }
+        if(codeLanguage === "javascript"){
+          console.log("javascript")
+        }
+        if(codeLanguage === "html"){
+          console.log("html")
+        }
+
         const interactionOptions = currentStepData?.interactionModule?.interactionOptions
         if(interactionOptions){
           const hasIncorrectAnswer = interactionOptions.some((option, index) => option.value !== inputRefs.current[index]?.value);
@@ -196,7 +202,6 @@ const Lesson = () => {
   // JSON 데이터를 기반으로 옵션 `<button>` 태그 생성 및 랜덤 섞기
   const generateOptionBtns = (options) => {
     const elements = [];
-
     options.forEach((option, index) => {
       elements.push(
         <button
@@ -269,12 +274,14 @@ const Lesson = () => {
       }
       elements.push(lineElements.join(''))
     })
+    console.log(elements.join(''))
     return elements.join('');
   }
   
   // JSON 데이터를 기반으로 Browser `<Iframe>` 태그를 생성
   const generateBrowswer = () => {
-    return <iframe className={`w-full h-full`} srcDoc={combineUserInputsWithTemplate()}></iframe>
+    // TODO : Iframe 영역에서 터미널, 콘솔, 뷰 해당 언어 결과 리턴에 맞는 화면 출력
+    return <Iframe content={combineUserInputsWithTemplate()} />;
   }
 
   const postModule = currentStepData.postInteractionModules.find(
@@ -536,7 +543,10 @@ const Lesson = () => {
                         </button>
                       </div>
                       <div className="max-h-56 h-full overflow-y-auto bg-[#fff]">
-                        <iframe className={`w-full h-full flex-grow bg-product-background-primary-light`} srcDoc={data.content}></iframe>
+                        <Iframe 
+                          content={data.content}
+                          className="w-full h-full flex-grow bg-product-background-primary-light"
+                        />
                       </div>
                     </div>
 

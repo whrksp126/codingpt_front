@@ -1,20 +1,20 @@
 // program < curriculum < section < unit < stages < lesson < problem
 // 지금은 학습 데이터가 충분하지 않아 stage 별 하나의 lesson만 사용한다.
 // 데이터 확보 후 stage에 다양한 lesson을 추가해야함.
-import lesson_html_1_1 from '../../../lesson_dummy/HTML/1. Discovering HTML and Tags/1.json';
-import lesson_html_1_2 from '../../../lesson_dummy/HTML/1. Discovering HTML and Tags/2.json';
+import lesson_html_1_1 from '../../../lesson_dummy/HTML/1. HTML과 태그 알아보기/1.json';
+import lesson_html_1_2 from '../../../lesson_dummy/HTML/1. HTML과 태그 알아보기/2.json';
 
-import lesson_html_2_1 from '../../../lesson_dummy/HTML/2. Structuring Text with Tags/1.json';
+import lesson_html_2_1 from '../../../lesson_dummy/HTML/2. 태그로 텍스트 구조화하기/1.json';
 
-import lesson_html_3_1 from '../../../lesson_dummy/HTML/3. Building Buttons/1.json';
+import lesson_html_3_1 from '../../../lesson_dummy/HTML/3. 버튼 만들기/1.json';
 
-import lesson_html_4_1 from '../../../lesson_dummy/HTML/4. HTML Basics 1/1.json';
+import lesson_html_4_1 from '../../../lesson_dummy/HTML/4. HTML 기초 1/1.json';
 
-import lesson_html_5_1 from '../../../lesson_dummy/HTML/5. Creating Links/1.json';
+import lesson_html_5_1 from '../../../lesson_dummy/HTML/5. 링크 만들기/1.json';
 
-import lesson_html_6_1 from '../../../lesson_dummy/HTML/6. Adding Images/1.json';
+import lesson_html_6_1 from '../../../lesson_dummy/HTML/6. 이미지 추가하기/1.json';
 
-import lesson_html_7_1 from '../../../lesson_dummy/HTML/7. HTML Basics 2/1.json';
+import lesson_html_7_1 from '../../../lesson_dummy/HTML/7. HTML 기초 2/1.json';
 
 const stage_html_1 = {
   "id": 1,
@@ -182,23 +182,23 @@ const section_html_1 = {
 
 
 
-import lesson_javascript_1_1 from '../../../lesson_dummy/JavaScript/1. Creating Variables/1.json';
-import lesson_javascript_1_2 from '../../../lesson_dummy/JavaScript/1. Creating Variables/2.json';
-import lesson_javascript_1_3 from '../../../lesson_dummy/JavaScript/1. Creating Variables/3.json';
-import lesson_javascript_1_4 from '../../../lesson_dummy/JavaScript/1. Creating Variables/4.json';
+import lesson_javascript_1_1 from '../../../lesson_dummy/JavaScript/1. 변수 만들기/1.json';
+import lesson_javascript_1_2 from '../../../lesson_dummy/JavaScript/1. 변수 만들기/2.json';
+import lesson_javascript_1_3 from '../../../lesson_dummy/JavaScript/1. 변수 만들기/3.json';
+import lesson_javascript_1_4 from '../../../lesson_dummy/JavaScript/1. 변수 만들기/4.json';
 
-import lesson_javascript_2_1 from '../../../lesson_dummy/JavaScript/2. Using Variables/1.json';
-import lesson_javascript_2_2 from '../../../lesson_dummy/JavaScript/2. Using Variables/2.json';
-import lesson_javascript_2_3 from '../../../lesson_dummy/JavaScript/2. Using Variables/3.json';
+import lesson_javascript_2_1 from '../../../lesson_dummy/JavaScript/2. 변수 사용하기/1.json';
+import lesson_javascript_2_2 from '../../../lesson_dummy/JavaScript/2. 변수 사용하기/2.json';
+import lesson_javascript_2_3 from '../../../lesson_dummy/JavaScript/2. 변수 사용하기/3.json';
 
-import lesson_javascript_3_1 from '../../../lesson_dummy/JavaScript/3. Using True and False/1.json';
-import lesson_javascript_3_2 from '../../../lesson_dummy/JavaScript/3. Using True and False/2.json';
+import lesson_javascript_3_1 from '../../../lesson_dummy/JavaScript/3. 참과 거짓 사용하기/1.json';
+import lesson_javascript_3_2 from '../../../lesson_dummy/JavaScript/3. 참과 거짓 사용하기/2.json';
 
-import lesson_javascript_4_1 from '../../../lesson_dummy/JavaScript/4. Checking Number Equality/1.json';
-import lesson_javascript_4_2 from '../../../lesson_dummy/JavaScript/4. Checking Number Equality/2.json';
+import lesson_javascript_4_1 from '../../../lesson_dummy/JavaScript/4. 숫자 비교하기/1.json';
+import lesson_javascript_4_2 from '../../../lesson_dummy/JavaScript/4. 숫자 비교하기/2.json';
 
-import lesson_javascript_5_1 from '../../../lesson_dummy/JavaScript/5. JavaScript Basics/1.json';
-import lesson_javascript_5_2 from '../../../lesson_dummy/JavaScript/5. JavaScript Basics/2.json';
+import lesson_javascript_5_1 from '../../../lesson_dummy/JavaScript/5. JavaScript 기초/1.json';
+import lesson_javascript_5_2 from '../../../lesson_dummy/JavaScript/5. JavaScript 기초/2.json';
 
 const stage_javascript_1 = {
   "id": 1,
@@ -416,21 +416,23 @@ const section_javascript_1 = {
 
 
 
-import lesson_python_1_1 from '../../../lesson_dummy/Python/1. Creating Variables/1.json';
+import lesson_python_1_1 from '../../../lesson_dummy/Python/1. 변수 만들기/1.json';
+import lesson_python_1_2 from '../../../lesson_dummy/Python/1. 변수 만들기/2.json';
+import lesson_python_1_3 from '../../../lesson_dummy/Python/1. 변수 만들기/3.json';
 
-import lesson_python_2_1 from '../../../lesson_dummy/Python/2. Using Variables/1.json';
-import lesson_python_2_2 from '../../../lesson_dummy/Python/2. Using Variables/2.json';
-import lesson_python_2_3 from '../../../lesson_dummy/Python/2. Using Variables/3.json';
+import lesson_python_2_1 from '../../../lesson_dummy/Python/2. 변수 사용하기/1.json';
+import lesson_python_2_2 from '../../../lesson_dummy/Python/2. 변수 사용하기/2.json';
+import lesson_python_2_3 from '../../../lesson_dummy/Python/2. 변수 사용하기/3.json';
 
-import lesson_python_3_1 from '../../../lesson_dummy/Python/3. True and False/1.json';
-import lesson_python_3_2 from '../../../lesson_dummy/Python/3. True and False/2.json';
+import lesson_python_3_1 from '../../../lesson_dummy/Python/3. 참과 거짓 사용하기/1.json';
+import lesson_python_3_2 from '../../../lesson_dummy/Python/3. 참과 거짓 사용하기/2.json';
 
-import lesson_python_4_1 from '../../../lesson_dummy/Python/4. Checking Number Equality/1.json';
-import lesson_python_4_2 from '../../../lesson_dummy/Python/4. Checking Number Equality/2.json';
+import lesson_python_4_1 from '../../../lesson_dummy/Python/4. 숫자 비교하기/1.json';
+import lesson_python_4_2 from '../../../lesson_dummy/Python/4. 숫자 비교하기/2.json';
 
-import lesson_python_5_1 from '../../../lesson_dummy/Python/5. Formatting Strings/1.json';
+import lesson_python_5_1 from '../../../lesson_dummy/Python/5. 문자열 포맷팅/1.json';
 
-import lesson_python_6_1 from '../../../lesson_dummy/Python/6. Python Basics/1.json';
+import lesson_python_6_1 from '../../../lesson_dummy/Python/6. Python 기초/1.json';
 
 const stage_python_1 = {
   "id": 1,
@@ -443,15 +445,39 @@ const stage_python_1 = {
     },
   ]
 } 
+const stage_python_2 = {
+  "id": 2,
+  "title": "변수 만들기",
+  "lessons": [
+    {
+      "id": 1,
+      "title": "변수 만들기",
+      "content": lesson_python_1_2,
+    },
+  ]
+} 
+const stage_python_3 = {
+  "id": 3,
+  "title": "변수 만들기",
+  "lessons": [
+    {
+      "id": 1,
+      "title": "변수 만들기",
+      "content": lesson_python_1_3,
+    },
+  ]
+} 
 const unit_python_1 = {
   "id": 1,
   "title": "변수 사용하기",
   "stages": [
     stage_python_1,
+    stage_python_2,
+    stage_python_3,
   ]
 }
-const stage_python_2 = {
-  "id": 2,
+const stage_python_4 = {
+  "id": 4,
   "title": "변수 사용하기",
   "lessons": [
     {
@@ -461,8 +487,8 @@ const stage_python_2 = {
     },
   ]
 }  
-const stage_python_3 = {
-  "id": 3,
+const stage_python_5 = {
+  "id": 5,
   "title": "변수 사용하기",
   "lessons": [
     {
@@ -472,8 +498,8 @@ const stage_python_3 = {
     },
   ]
 }   
-const stage_python_4 = {
-  "id": 4,
+const stage_python_6 = {
+  "id": 6,
   "title": "변수 사용하기",
   "lessons": [
     {
@@ -487,13 +513,13 @@ const unit_python_2 = {
   "id": 2,
   "title": "변수 사용하기",
   "stages": [
-    stage_python_2,
-    stage_python_3,
     stage_python_4,
+    stage_python_5,
+    stage_python_6,
   ]
 }
-const stage_python_5 = {
-  "id": 5,
+const stage_python_7 = {
+  "id": 7,
   "title": "참과 거짓",  
   "lessons": [
     {
@@ -503,8 +529,8 @@ const stage_python_5 = {
     },
   ]
 } 
-const stage_python_6 = {
-  "id": 6,
+const stage_python_8 = {
+  "id": 8,
   "title": "참과 거짓",
   "lessons": [
     {
@@ -518,12 +544,12 @@ const unit_python_3 = {
   "id": 3,
   "title": "참과 거짓",
   "stages": [
-    stage_python_5,
-    stage_python_6,
+    stage_python_7,
+    stage_python_8,
   ]
 } 
-const stage_python_7 = {
-  "id": 7,
+const stage_python_9 = {
+  "id": 9,
   "title": "숫자 비교하기",
   "lessons": [
     {
@@ -533,8 +559,8 @@ const stage_python_7 = {
     },
   ]
 }  
-const stage_python_8 = {
-  "id": 8,
+const stage_python_10 = {
+  "id": 10,
   "title": "숫자 비교하기",
   "lessons": [
     {
@@ -548,12 +574,12 @@ const unit_python_4 = {
   "id": 4,
   "title": "숫자 비교하기",
   "stages": [
-    stage_python_7,
-    stage_python_8,
+    stage_python_9,
+    stage_python_10,
   ]
 } 
-const stage_python_9 = {
-  "id": 9,
+const stage_python_11 = {
+  "id": 11,
   "title": "문자열 포맷팅",
   "lessons": [
     {
@@ -567,11 +593,11 @@ const unit_python_5 = {
   "id": 5,
   "title": "문자열 포맷팅",
   "stages": [
-    stage_python_9,
+    stage_python_11,
   ]
 }  
-const stage_python_10 = { 
-  "id": 11,
+const stage_python_12 = { 
+  "id": 12,
   "title": "파이썬 기초",
   "lessons": [
     {
@@ -585,7 +611,7 @@ const unit_python_6 = {
   "id": 6,
   "title": "파이썬 기초",
   "stages": [
-    stage_python_10,
+    stage_python_12,
   ]
 }  
 const section_python_1 = {

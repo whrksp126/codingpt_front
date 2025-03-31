@@ -12,12 +12,12 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "링크가 작동하는 방식을 살펴보고, **웹페이지**를 **웹사이트**로 결합하는 방법을 배워보세요. `Take a break!`을 클릭하여 링크를 사용하세요.",
+            "content": "링크가 작동하는 방식을 살펴보고, **웹페이지**를 **웹사이트**로 결합하는 방법을 배워보세요. `구글로 이동!`을 클릭하여 링크를 사용하세요.",
             "visibleIf": "always"
           },
           {
             "type": "webview",
-            "content": "<!doctype html>\n<head>\n <style>\n  body {\n   background-image: linear-gradient(45deg, #a1c4fd, #c2e9fb);\n   text-align: center;\n   font-family: \"Verdana\", Sans-serif;\n  }\n  \n  img {\n   margin: 40px;\n   height: 40px;\n   width: 150px;\n  }\n  \n  h1 {\n   margin-top: 30px;\n  }\n  \n  h3 {\n   margin: 20px;\n   font-weight: normal;\n  }\n  \n  p {\n   margin-top: 80px;\n   margin-left: 30px;\n   margin-right: 30px;\n   padding: 20px;\n   background-color: DimGray;\n  }\n </style>\n</head>\n<body>\n <h1>Need five?</h1> <a\n  href=\"https://google.com\">Take a\n  break!</a>\n</body>\n</html>",
+            "content": "<!doctype html>\n<head>\n <style>\n  body {\n   background-image: linear-gradient(45deg, #a1c4fd, #c2e9fb);\n   text-align: center;\n   font-family: \"Verdana\", Sans-serif;\n  }\n  \n  img {\n   margin: 40px;\n   height: 40px;\n   width: 150px;\n  }\n  \n  h1 {\n   margin-top: 30px;\n  }\n  \n  h3 {\n   margin: 20px;\n   font-weight: normal;\n  }\n  \n  p {\n   margin-top: 80px;\n   margin-left: 30px;\n   margin-right: 30px;\n   padding: 20px;\n   background-color: DimGray;\n  }\n </style>\n</head>\n<body>\n <h1>구글로 이동하실래요?</h1> <a\n  href=\"https://google.com\">구글로 이동 \n  시간!</a>\n</body>\n</html>",
             "visibleIf": "always"
           }
         ],
@@ -267,17 +267,17 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Create an opening `<a>` tag with the `href` attribute set to `\"https://mimo.org\"`.",
+            "content": "`href` 속성을 `\"https://mimo.org\"`로 설정하여 `<a>` 태그를 만들어보세요.",
             "visibleIf": "always"
           }
         ],
         "interactionModule": {
-          "type": "codeFillTheGap",
+          "type": "codeFillTheGap", 
           "files": [
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "<a href=\"https://mimo.org\">Learn to Code</a>",
+              "content": "<a href=\"https://mimo.org\">코딩 배우기</a>",
               "codeLanguage": "html"
             }
           ],
@@ -295,7 +295,7 @@
               "startIndex": 1,
               "endIndex": 2,
               "startLine": 0,
-              "startPos": 1,
+              "startPos": 1, 
               "length": 1,
               "value": "a",
               "correct": true
@@ -343,7 +343,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "`<`, `a`, `href`, `=`, `\"https://mimo.org\"`, `>`를 선택하세요.",
+            "content": "`<`, `a`, `href`, `=`, `\"https://mimo.org\"`, `>`를 순서대로 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -366,12 +366,12 @@
             {
               "correct": true,
               "value": 0,
-              "text": "Link webpages to other webpages and websites"
+              "text": "웹페이지를 다른 웹페이지와 웹사이트에 연결합니다"
             },
             {
               "correct": false,
               "value": 1,
-              "text": "Emphasize text"
+              "text": "텍스트를 강조합니다"
             }
           ],
           "isCode": false,
@@ -391,7 +391,7 @@
         "index": 7,
         "preInteractionModules": [
           {
-            "type": "paragraph",
+            "type": "paragraph", 
             "content": "링크가 작동하지 않는 이유는 무엇입니까?",
             "visibleIf": "always"
           },
@@ -401,7 +401,7 @@
               {
                 "isInteractive": false,
                 "name": "index.html",
-                "content": "<a>Learn to Code</a>",
+                "content": "<a>코딩 배우기</a>",
                 "codeLanguage": "html"
               }
             ],
@@ -413,8 +413,8 @@
           "files": [
             {
               "isInteractive": false,
-              "name": "index.html",
-              "content": "<a>Learn to Code</a>",
+              "name": "index.html", 
+              "content": "<a>코딩 배우기</a>",
               "codeLanguage": "html"
             }
           ],
@@ -422,12 +422,12 @@
             {
               "correct": true,
               "value": 0,
-              "text": "Because it has no `href` attribute"
+              "text": "`href` 속성이 없기 때문입니다"
             },
             {
               "correct": false,
               "value": 1,
-              "text": "Because it has no text between `<a>` and `</a>`"
+              "text": "`<a>`와 `</a>` 사이에 텍스트가 없기 때문입니다"
             }
           ],
           "isCode": false,
@@ -457,7 +457,7 @@
               {
                 "isInteractive": false,
                 "name": "index.html",
-                "content": "<a href=\"https://mimo.org\">Where Developers Learn, Share,\n   & Build Careers</a>",
+                "content": "<a href=\"https://mimo.org\">개발자가 배우고, 공유하고,\n   & 경력을 쌓는 곳</a>",
                 "codeLanguage": "html"
               }
             ],
@@ -470,7 +470,7 @@
             {
               "isInteractive": false,
               "name": "index.html",
-              "content": "<a href=\"https://mimo.org\">Where Developers Learn, Share,\n   & Build Careers</a>",
+              "content": "<a href=\"https://mimo.org\">개발자가 배우고, 공유하고,\n   & 경력을 쌓는 곳</a>",
               "codeLanguage": "html"
             }
           ],
@@ -478,12 +478,12 @@
             {
               "correct": true,
               "value": 0,
-              "text": "The link directs the user to another website"
+              "text": "링크가 사용자를 다른 웹사이트로 이동시킵니다"
             },
             {
               "correct": false,
               "value": 1,
-              "text": "Nothing, because the `href` attribute is missing"
+              "text": "`href` 속성이 없어서 아무 일도 일어나지 않습니다"
             }
           ],
           "isCode": false,
@@ -515,12 +515,12 @@
             {
               "correct": true,
               "value": 0,
-              "text": "To provide additional information about tags"
+              "text": "태그에 대한 추가 정보를 제공하기 위한 것입니다"
             },
             {
               "correct": false,
               "value": 1,
-              "text": "To turn all tags into links"
+              "text": "모든 태그를 링크로 바꾸기 위한 것입니다"
             }
           ],
           "isCode": false,
@@ -596,7 +596,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "<a href=\"https://facebook.com\">Like us on Facebook</a>",
+              "content": "<a href=\"https://facebook.com\">좋아요 누르기</a>",
               "codeLanguage": "html"
             }
           ],
@@ -647,7 +647,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Put together the tag to direct users to the Snapchat website.",
+            "content": "Snapchat 웹사이트로 사용자를 이동시키는 태그를 만들어보세요.",
             "visibleIf": "always"
           }
         ],
@@ -657,7 +657,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "<a href=\"https://www.snap.com/\">Open Snapchat</a>",
+              "content": "<a href=\"https://www.snap.com/\">스냅챗 열기</a>",
               "codeLanguage": "html"
             }
           ],
@@ -708,7 +708,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Type the `href` attribute.",
+            "content": "`href` 속성을 입력하세요.",
             "visibleIf": "always"
           }
         ],
@@ -718,7 +718,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "<a href=\"https://abc.com\">Watch some news</a>",
+              "content": "<a href=\"https://abc.com\">뉴스 보기</a>",
               "codeLanguage": "html"
             }
           ],
