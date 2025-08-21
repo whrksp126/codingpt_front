@@ -52,11 +52,9 @@ docker push whrksp126/codingpt_front:dev
 ## 서버 적용
 sudo systemctl restart codingpt_back_dev
 
-
 ---
 
 ### 스테이징(stg) 개발 환경
-
 
 ## 컨테이너 중지(필요시)
 docker stop codingpt_front_stg
@@ -84,3 +82,5 @@ docker push whrksp126/codingpt_front:stg
 
 ## 서버 적용
 sudo systemctl restart codingpt_back_stg
+
+---
