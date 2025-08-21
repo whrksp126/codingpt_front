@@ -1,22 +1,16 @@
-version: '3.8'
-
+version: "3.8"
 services:
-  front-end:
+  front-stg:
+    image: whrksp126/codingpt_front:stg
     container_name: codingpt_front_stg
-    image: whrksp126/codingpt_front:staging
     build:
       context: .
       dockerfile: Dockerfile.stg
-      args:
-        - NODE_ENV=staging
+      platforms: [linux/amd64]
+      args:                           # ← 빌드 타임에만 쓰임 (Vite용)
+        VITE_BACKEND_URL: https://stg-codingpt-back.ghmate.com
+        VITE_DEBUG: "false"
+        NODE_ENV: staging
     ports:
       - "3101:80"
-    env_file:
-      - .env.stg
-    networks:
-      - codingpt_front_stg_network
     restart: unless-stopped
-
-networks:
-  codingpt_front_stg_network:
-    driver: bridge
