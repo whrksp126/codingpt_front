@@ -4,11 +4,11 @@ services:
   front-end:
     container_name: codingpt_front_local
     image: whrksp126/codingpt_front:local
-    build:
+    build: 
       context: .
-      dockerfile: Dockerfile.local
+      dockerfile: Dockerfile
     ports:
-      - "3100:3100"
+      - "5173:5173"
     volumes:
       - .:/app
       - /app/node_modules

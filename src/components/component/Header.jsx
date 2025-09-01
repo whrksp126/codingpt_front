@@ -1,4 +1,4 @@
-// src/components/home/header
+// src/components/component/header
 const Header = () => {
   return (
     <header 
@@ -10,7 +10,7 @@ const Header = () => {
         select-none
       "
     >
-      CodingPT
+      <img src="/src/assets/images/codingPT.png" alt="CodingPT Logo" />
     </header>
   )
 }

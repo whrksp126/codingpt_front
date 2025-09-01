@@ -12,12 +12,12 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "In HTML, the keywords of some tags are obvious, but there are some tags that use a shortened form. For example, we use `p` for a paragraph.",
+            "content": "HTML에서 일부 태그의 키워드는 명확하지만, 줄임말을 사용하는 태그들도 있어요. 예를 들어, 문단을 나타내는 태그는 `p`를 사용합니다.",
             "visibleIf": "always"
           },
           {
             "type": "paragraph",
-            "content": "Which one of these HTML tags creates a **paragraph**?",
+            "content": "다음 중 **문단**을 만드는 HTML 태그는 무엇인가요?",
             "visibleIf": "always"
           }
         ],
@@ -28,12 +28,12 @@
             {
               "correct": true,
               "value": 0,
-              "text": "`\u003Cp\u003E`"
+              "text": "`<p>`"
             },
             {
               "correct": false,
               "value": 1,
-              "text": "`\u003Cbutton\u003E`"
+              "text": "`<button>`"
             }
           ],
           "isCode": false,
@@ -42,7 +42,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003Cp\u003E`.",
+            "content": "`<p>`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -54,7 +54,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Let's remember how to code a button. Code a button that has the text `Post`.",
+            "content": "버튼을 만드는 방법을 기억해봅시다. `Post` 텍스트를 가진 버튼을 만들어 보세요.",
             "visibleIf": "always"
           }
         ],
@@ -64,18 +64,18 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Cbutton\u003EPost\u003C/button\u003E",
+              "content": "<button>Post</button>",
               "codeLanguage": "html"
             }
           ],
           "interactionOptions": [
             {
-              "startIndex": 12,
-              "endIndex": 21,
+              "startIndex": 0,
+              "endIndex": 8,
               "startLine": 0,
-              "startPos": 12,
-              "length": 9,
-              "value": "\u003C/button\u003E",
+              "startPos": 0,
+              "length": 8,
+              "value": "<button>",
               "correct": true
             },
             {
@@ -88,12 +88,12 @@
               "correct": true
             },
             {
-              "startIndex": 0,
-              "endIndex": 8,
+              "startIndex": 12,
+              "endIndex": 21,
               "startLine": 0,
-              "startPos": 0,
-              "length": 8,
-              "value": "\u003Cbutton\u003E",
+              "startPos": 12,
+              "length": 9,
+              "value": "</button>",
               "correct": true
             }
           ],
@@ -104,11 +104,11 @@
           {
             "visibleIf": "correct",
             "type": "webview",
-            "content": "\u003C!doctype html\u003E\n\u003Chtml\u003E\n \u003Chead\u003E\n  \u003Cstyle\u003E\n   body {\n    padding: 8px;\n   }\n  \u003C/style\u003E\n \u003C/head\u003E\n \u003Cbody\u003E\n  \u003Cbutton\u003EPost\u003C/button\u003E\n \u003C/body\u003E\n\u003C/html\u003E"
+            "content": "<!doctype html>\n<html>\n <head>\n  <style>\n   body {\n    padding: 8px;\n   }\n  </style>\n </head>\n <body>\n  <button>Post</button>\n </body>\n</html>"
           },
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003Cbutton\u003E`, followed by `Post`, and finally `\u003C/button\u003E`.",
+            "content": "`<button>`를 선택하고, `Post`를 선택한 다음, `</button>`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -120,12 +120,12 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Coding a paragraph is very similar to coding a button. You need an opening tag, followed by your text, and a closing tag.",
+            "content": "문단을 만드는 방법은 버튼을 만드는 방법과 비슷합니다. 열리는 태그, 텍스트, 닫는 태그가 필요해요.",
             "visibleIf": "always"
           },
           {
             "type": "paragraph",
-            "content": "Code a paragraph that displays `Mimo is Fun!`.",
+            "content": "`CodingPT is Fun!`이라는 텍스트가 있는 문단을 코딩해보세요.",
             "visibleIf": "always"
           }
         ],
@@ -135,7 +135,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Cp\u003EMimo is Fun!\u003C/p\u003E",
+              "content": "<p>CodingPT is Fun!</p>",
               "codeLanguage": "html"
             }
           ],
@@ -146,25 +146,25 @@
               "startLine": 0,
               "startPos": 0,
               "length": 3,
-              "value": "\u003Cp\u003E",
+              "value": "<p>",
               "correct": true
             },
             {
               "startIndex": 3,
-              "endIndex": 15,
+              "endIndex": 19,
               "startLine": 0,
               "startPos": 3,
-              "length": 12,
-              "value": "Mimo is Fun!",
+              "length": 16,
+              "value": "CodingPT is Fun!",
               "correct": true
             },
             {
-              "startIndex": 15,
-              "endIndex": 19,
+              "startIndex": 19,
+              "endIndex": 23,
               "startLine": 0,
-              "startPos": 15,
+              "startPos": 19,
               "length": 4,
-              "value": "\u003C/p\u003E",
+              "value": "</p>",
               "correct": true
             }
           ],
@@ -175,11 +175,11 @@
           {
             "visibleIf": "correct",
             "type": "webview",
-            "content": "\u003C!doctype html\u003E\n\u003Chtml\u003E\n \u003Chead\u003E\n  \u003Cstyle\u003E\n   body {\n    padding: 8px;\n   }\n  \u003C/style\u003E\n \u003C/head\u003E\n \u003Cbody\u003E\n  \u003Cp\u003EMimo is Fun!\u003C/p\u003E\n \u003C/body\u003E\n\u003C/html\u003E"
+            "content": "<!doctype html>\n<html>\n <head>\n  <style>\n   body {\n    padding: 8px;\n   }\n  </style>\n </head>\n <body>\n  <p>Mimo is Fun!</p>\n </body>\n</html>"
           },
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003Cp\u003E`, followed by `Mimo is Fun!`, and finally `\u003C/p\u003E`.",
+            "content": "`<p>`를 선택하고, `Mimo is Fun!`를 선택한 다음, `</p>`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -191,7 +191,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Code `hello` in between the opening and closing `p` tags.",
+            "content": "열리는 태그와 닫는 태그 사이에 `hello`를 코딩해보세요.",
             "visibleIf": "always"
           }
         ],
@@ -201,7 +201,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Cp\u003Ehello\u003C/p\u003E",
+              "content": "<p>hello</p>",
               "codeLanguage": "html"
             }
           ],
@@ -220,11 +220,11 @@
           {
             "visibleIf": "correct",
             "type": "webview",
-            "content": "\u003C!doctype html\u003E\n\u003Chtml\u003E\n \u003Chead\u003E\n  \u003Cstyle\u003E\n   body {\n    padding: 8px;\n   }\n  \u003C/style\u003E\n \u003C/head\u003E\n \u003Cbody\u003E\n  \u003Cp\u003Ehello\u003C/p\u003E\n \u003C/body\u003E\n\u003C/html\u003E"
+            "content": "<!doctype html>\n<html>\n <head>\n  <style>\n   body {\n    padding: 8px;\n   }\n  </style>\n </head>\n <body>\n  <p>hello</p>\n </body>\n</html>"
           },
           {
             "type": "paragraph",
-            "content": "Make sure to type `hello`.",
+            "content": "`hello`를 코딩하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -236,12 +236,12 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "We can create headings in HTML to emphasize certain texts. There are 6 sizes of heading in HTML, from h1 to h6.",
+            "content": "HTML에서 특정 텍스트를 강조하기 위해 제목을 만들 수 있어요. HTML에는 6가지 크기의 제목이 있어요. 제목은 h1부터 h6까지 있어요.",
             "visibleIf": "always"
           },
           {
             "type": "paragraph",
-            "content": "Which one of these HTML tags creates a **heading**?",
+            "content": "다음 중 **제목**을 만드는 HTML 태그는 무엇인가요?",
             "visibleIf": "always"
           }
         ],
@@ -252,22 +252,22 @@
             {
               "correct": true,
               "value": 0,
-              "text": "`\u003Ch1\u003E`"
+              "text": "`<h1>`"
             },
             {
               "correct": false,
               "value": 1,
-              "text": "`\u003Cbutton\u003E`"
+              "text": "`<button>`"
             },
             {
               "correct": false,
               "value": 2,
-              "text": "`\u003Cp\u003E`"
+              "text": "`<p>`"
             },
             {
               "correct": false,
               "value": 3,
-              "text": "`\u003Cvideo\u003E`"
+              "text": "`<video>`"
             }
           ],
           "isCode": false,
@@ -276,7 +276,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003Ch1\u003E`.",
+            "content": "`<h1>`을 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -288,7 +288,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Code a heading that displays `SnapCat`.",
+            "content": "`CodingPT`이라는 텍스트가 있는 제목을 코딩해보세요.",
             "visibleIf": "always"
           }
         ],
@@ -298,7 +298,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Ch1\u003ESnapCat\u003C/h1\u003E",
+              "content": "<h1>CodingPT</h1>",
               "codeLanguage": "html"
             }
           ],
@@ -309,31 +309,31 @@
               "startLine": 0,
               "startPos": 0,
               "length": 4,
-              "value": "\u003Ch1\u003E",
+              "value": "<h1>",
               "correct": true
             },
             {
               "startIndex": 4,
-              "endIndex": 11,
+              "endIndex": 12,
               "startLine": 0,
               "startPos": 4,
-              "length": 7,
-              "value": "SnapCat",
+              "length": 8,
+              "value": "CodingPT",
               "correct": true
             },
             {
-              "startIndex": 11,
-              "endIndex": 16,
+              "startIndex": 12,
+              "endIndex": 17,
               "startLine": 0,
-              "startPos": 11,
+              "startPos": 12,
               "length": 5,
-              "value": "\u003C/h1\u003E",
+              "value": "</h1>",
               "correct": true
             }
           ],
           "wrongOptions": [
-            "\u003Cp\u003E",
-            "\u003C/button\u003E"
+            "<p>",
+            "</button>"
           ],
           "output": null
         },
@@ -341,11 +341,11 @@
           {
             "visibleIf": "correct",
             "type": "webview",
-            "content": "\u003C!doctype html\u003E\n\u003Chtml\u003E\n \u003Chead\u003E\n  \u003Cstyle\u003E\n   body {\n    padding: 8px;\n   }\n  \u003C/style\u003E\n \u003C/head\u003E\n \u003Cbody\u003E\n  \u003Ch1\u003ESnapCat\u003C/h1\u003E\n \u003C/body\u003E\n\u003C/html\u003E"
+            "content": "<!doctype html>\n<html>\n <head>\n  <style>\n   body {\n    padding: 8px;\n   }\n  </style>\n </head>\n <body>\n  <h1>SnapCat</h1>\n </body>\n</html>"
           },
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003Ch1\u003E`, followed by `SnapCat`, and finally `\u003C/h1\u003E`.",
+            "content": "`<h1>`을 선택하고, `CodingPT`를 선택한 다음, `</h1>`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -357,7 +357,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Add the closing tag.",
+            "content": "닫는 태그를 추가해보세요.",
             "visibleIf": "always"
           }
         ],
@@ -367,24 +367,24 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Cbutton\u003EAccept\u003C/button\u003E",
+              "content": "<button>버튼</button>",
               "codeLanguage": "html"
             }
           ],
           "interactionOptions": [
             {
-              "startIndex": 14,
-              "endIndex": 23,
+              "startIndex": 10,
+              "endIndex": 19,
               "startLine": 0,
-              "startPos": 14,
+              "startPos": 10,
               "length": 9,
-              "value": "\u003C/button\u003E",
+              "value": "</button>",
               "correct": true
             }
           ],
           "wrongOptions": [
-            "\u003Cbutton\u003E",
-            "\u003C/p\u003E"
+            "<button>",
+            "</p>"
           ],
           "output": null
         },
@@ -392,11 +392,11 @@
           {
             "visibleIf": "correct",
             "type": "webview",
-            "content": "\u003C!doctype html\u003E\n\u003Chtml\u003E\n \u003Chead\u003E\n  \u003Cstyle\u003E\n   body {\n    padding: 8px;\n   }\n  \u003C/style\u003E\n \u003C/head\u003E\n \u003Cbody\u003E\n  \u003Cbutton\u003EAccept\u003C/button\u003E\n \u003C/body\u003E\n\u003C/html\u003E"
+            "content": "<!doctype html>\n<html>\n <head>\n  <style>\n   body {\n    padding: 8px;\n   }\n  </style>\n </head>\n <body>\n  <button>Accept</button>\n </body>\n</html>"
           },
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003C/button\u003E`.",
+            "content": "`</button>`을 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -408,12 +408,12 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "The heading tag emphasizes texts by making them bigger and bolder. h1 is the biggest and boldest and h6 is the smallest and least bold.",
+            "content": "제목 태그는 텍스트를 더 크고 굵게 만들어요. h1은 가장 크고 굵고, h6는 가장 작고 가장 얇아요.",
             "visibleIf": "always"
           },
           {
             "type": "paragraph",
-            "content": "Which one of these HTML tags creates a **smaller heading** than `\u003Ch1\u003E`?",
+            "content": "다음 중 `<h1>`보다 작고 얇은 **제목**을 만드는 HTML 태그는 무엇인가요?",
             "visibleIf": "always"
           }
         ],
@@ -424,22 +424,22 @@
             {
               "correct": true,
               "value": 0,
-              "text": "`\u003Ch6\u003E`"
+              "text": "`<h6>`"
             },
             {
               "correct": false,
               "value": 1,
-              "text": "`\u003Cbutton\u003E`"
+              "text": "`<button>`"
             },
             {
               "correct": false,
               "value": 2,
-              "text": "`\u003Cvideo\u003E`"
+              "text": "`<video>`"
             },
             {
               "correct": false,
               "value": 3,
-              "text": "`\u003Cp\u003E`"
+              "text": "`<p>`"
             }
           ],
           "isCode": false,
@@ -448,7 +448,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003Ch6\u003E`.",
+            "content": "`<h6>`을 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -460,7 +460,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Code a heading with opening and closing `h6` tags.",
+            "content": "열리는 태그와 닫는 태그를 추가해보세요.",
             "visibleIf": "always"
           }
         ],
@@ -470,7 +470,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Ch6\u003ELittle Things\u003C/h6\u003E",
+              "content": "<h6>작은 것들</h6>",
               "codeLanguage": "html"
             }
           ],
@@ -481,25 +481,25 @@
               "startLine": 0,
               "startPos": 0,
               "length": 4,
-              "value": "\u003Ch6\u003E",
-              "correct": true
-            },
-            {
-              "startIndex": 17,
-              "endIndex": 22,
-              "startLine": 0,
-              "startPos": 17,
-              "length": 5,
-              "value": "\u003C/h6\u003E",
+              "value": "<h6>",
               "correct": true
             },
             {
               "startIndex": 4,
-              "endIndex": 17,
+              "endIndex": 9,
               "startLine": 0,
               "startPos": 4,
-              "length": 13,
-              "value": "Little Things",
+              "length": 5,
+              "value": "작은 것들",
+              "correct": true
+            },
+            {
+              "startIndex": 9,
+              "endIndex": 14,
+              "startLine": 0,
+              "startPos": 9,
+              "length": 5,
+              "value": "</h6>",
               "correct": true
             }
           ],
@@ -510,11 +510,11 @@
           {
             "visibleIf": "correct",
             "type": "webview",
-            "content": "\u003C!doctype html\u003E\n\u003Chtml\u003E\n \u003Chead\u003E\n  \u003Cstyle\u003E\n   body {\n    padding: 8px;\n   }\n  \u003C/style\u003E\n \u003C/head\u003E\n \u003Cbody\u003E\n  \u003Ch6\u003ELittle Things\u003C/h6\u003E\n \u003C/body\u003E\n\u003C/html\u003E"
+            "content": "<!doctype html>\n<html>\n <head>\n  <style>\n   body {\n    padding: 8px;\n   }\n  </style>\n </head>\n <body>\n  <h6>Little Things</h6>\n </body>\n</html>"
           },
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003Ch6\u003E`, followed by `Little Things`, and finally `\u003C/h6\u003E`.",
+            "content": "`<h6>`을 선택하고, `작은 것들`를 선택한 다음, `</h6>`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -526,7 +526,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Code the opening tag for the biggest heading.",
+            "content": "가장 큰 제목을 만들기 위한 열리는 태그를 코딩해보세요.",
             "visibleIf": "always"
           }
         ],
@@ -536,7 +536,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Ch1\u003EMy Blog\u003C/h1\u003E",
+              "content": "<h1>My Blog</h1>",
               "codeLanguage": "html"
             }
           ],
@@ -546,7 +546,7 @@
             "startLine": 0,
             "startPos": 0,
             "length": 4,
-            "value": "\u003Ch1\u003E",
+            "value": "<h1>",
             "correct": true
           },
           "output": null
@@ -555,11 +555,11 @@
           {
             "visibleIf": "correct",
             "type": "webview",
-            "content": "\u003C!doctype html\u003E\n\u003Chtml\u003E\n \u003Chead\u003E\n  \u003Cstyle\u003E\n   body {\n    padding: 8px;\n   }\n  \u003C/style\u003E\n \u003C/head\u003E\n \u003Cbody\u003E\n  \u003Ch1\u003EMy Blog\u003C/h1\u003E\n \u003C/body\u003E\n\u003C/html\u003E"
+            "content": "<!doctype html>\n<html>\n <head>\n  <style>\n   body {\n    padding: 8px;\n   }\n  </style>\n </head>\n <body>\n  <h1>My Blog</h1>\n </body>\n</html>"
           },
           {
             "type": "paragraph",
-            "content": "Make sure to type `\u003Ch1\u003E`.",
+            "content": "`<h1>`을 입력하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -571,7 +571,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Code the opening tag for the second biggest heading.",
+            "content": "두 번째로 큰 제목을 만들기 위한 열리는 태그를 코딩해보세요.",
             "visibleIf": "always"
           }
         ],
@@ -581,7 +581,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Ch2\u003EMy Favorite Things\u003C/h2\u003E",
+              "content": "<h2>My Favorite Things</h2>",
               "codeLanguage": "html"
             }
           ],
@@ -592,7 +592,7 @@
               "startLine": 0,
               "startPos": 0,
               "length": 1,
-              "value": "\u003C",
+              "value": "<",
               "correct": true
             },
             {
@@ -610,7 +610,7 @@
               "startLine": 0,
               "startPos": 3,
               "length": 1,
-              "value": "\u003E",
+              "value": ">",
               "correct": true
             }
           ],
@@ -623,11 +623,11 @@
           {
             "visibleIf": "correct",
             "type": "webview",
-            "content": "\u003C!doctype html\u003E\n\u003Chtml\u003E\n \u003Chead\u003E\n  \u003Cstyle\u003E\n   body {\n    padding: 8px;\n   }\n  \u003C/style\u003E\n \u003C/head\u003E\n \u003Cbody\u003E\n  \u003Ch2\u003EMy Favorite Things\u003C/h2\u003E\n \u003C/body\u003E\n\u003C/html\u003E"
+            "content": "<!doctype html>\n<html>\n <head>\n  <style>\n   body {\n    padding: 8px;\n   }\n  </style>\n </head>\n <body>\n  <h2>My Favorite Things</h2>\n </body>\n</html>"
           },
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003C`, followed by `h2`, and finally `\u003E`.",
+            "content": "`<h2>`을 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -639,7 +639,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Which one of these HTML tags creates the smallest heading?",
+            "content": "다음 중 가장 작고 얇은 **제목**을 만드는 HTML 태그는 무엇인가요?",
             "visibleIf": "always"
           }
         ],
@@ -650,22 +650,22 @@
             {
               "correct": true,
               "value": 0,
-              "text": "`\u003Ch6\u003E`"
+              "text": "`<h6>`"
             },
             {
               "correct": false,
               "value": 1,
-              "text": "`\u003Ch3\u003E`"
+              "text": "`<h3>`"
             },
             {
               "correct": false,
               "value": 2,
-              "text": "`\u003Ch4\u003E`"
+              "text": "`<h4>`"
             },
             {
               "correct": false,
               "value": 3,
-              "text": "`\u003Ch1\u003E`"
+              "text": "`<h1>`"
             }
           ],
           "isCode": false,
@@ -674,7 +674,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003Ch6\u003E`.",
+            "content": "`<h6>`을 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -685,15 +685,15 @@
       "id": 906,
       "index": 1,
       "codeLanguage": "html",
-      "descriptionContent": "Create stylish text for websites using tags and learn what the head of an HTML page does.",
-      "title": "Structuring Text with Tags",
+      "descriptionContent": "HTML 태그를 사용하여 웹사이트에 스타일을 입혀보고, HTML 페이지의 헤드가 무엇을 하는지 배워보세요.",
+      "title": "HTML 태그를 사용한 스타일링 텍스트",
       "type": "course",
       "version": 73,
       "bannerIconUrl": null,
       "chapters": [
         {
           "id": 15309,
-          "title": "Line Breaks, Emphasis and Importance",
+          "title": "줄바꿈, 강조와 중요도",
           "type": "practiceLevel1",
           "lessons": [
             {

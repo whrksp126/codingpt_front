@@ -47,9 +47,14 @@ export default defineConfig({
       languageWorkers: ['editorWorkerService', 'typescript', 'css', 'html', 'json'],
     }),
   ],
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
+  server: {
+    host: true,
+    port: 5173,
+    watch: {
+      usePolling: true
+    },
+    mimeTypes: {
+      'application/javascript': ['js', 'mjs', 'worker.js'],
     },
   },
   base: NODE_ENV === 'production' ? '/' : '/',

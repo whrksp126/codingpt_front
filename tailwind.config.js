@@ -1,10 +1,32 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'body': '#131F24',
+        'main': '#37464F',
+      },
+      backgroundColor: {
+        'body': '#131F24',
+        'main': '#37464F',
+      },
+      borderColor: {
+        'main': '#37464F',
+      },
+      borderWidth: {
+        '1': '1px', 
+      },
+      marginTop:{
+        'header': '88px',
+      },
+      height:{
+        'header': '88px',
+      }
+    },
   },
   plugins: [],
 }

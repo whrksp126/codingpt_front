@@ -1,14 +1,26 @@
+import PropTypes from 'prop-types';
+import { useEffect, useRef } from 'react';
 
-const Iframe = ({ src }) => {
-  // TODO : 레슨 생성 시 만들어진 파일 구조를 경로를 이용해서 성공 iframe을 그려준다.
+const Iframe = ({ src, content, className = "w-full h-full" }) => {
+  const iframeRef = useRef(null);
+
 
   return (
     <iframe
+      ref={iframeRef}
       src={src}
+      srcDoc={content}
+      className={className}
+      sandbox="allow-scripts allow-same-origin"
       title="Dynamic Iframe"
-      className="w-full h-full"
-    ></iframe>
+    />
   );
+};
+
+Iframe.propTypes = {
+  src: PropTypes.string,
+  content: PropTypes.string,
+  className: PropTypes.string
 };
 
 export default Iframe;
