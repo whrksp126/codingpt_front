@@ -12,12 +12,12 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Let's take a look at how links work to combine **webpages** into **websites**. Click on `Take a break!` to use the link.",
+            "content": "링크가 작동하는 방식을 살펴보고, **웹페이지**를 **웹사이트**로 결합하는 방법을 배워보세요. `구글로 이동!`을 클릭하여 링크를 사용하세요.",
             "visibleIf": "always"
           },
           {
             "type": "webview",
-            "content": "\u003C!doctype html\u003E\n\u003Chead\u003E\n \u003Cstyle\u003E\n  body {\n   background-image: linear-gradient(45deg, #a1c4fd, #c2e9fb);\n   text-align: center;\n   font-family: \"Verdana\", Sans-serif;\n  }\n  \n  img {\n   margin: 40px;\n   height: 40px;\n   width: 150px;\n  }\n  \n  h1 {\n   margin-top: 30px;\n  }\n  \n  h3 {\n   margin: 20px;\n   font-weight: normal;\n  }\n  \n  p {\n   margin-top: 80px;\n   margin-left: 30px;\n   margin-right: 30px;\n   padding: 20px;\n   background-color: DimGray;\n  }\n \u003C/style\u003E\n\u003C/head\u003E\n\u003Cbody\u003E\n \u003Ch1\u003ENeed five?\u003C/h1\u003E \u003Ca\n  href=\"https://google.com\"\u003ETake a\n  break!\u003C/a\u003E\n\u003C/body\u003E\n\u003C/html\u003E",
+            "content": "<!doctype html>\n<head>\n <style>\n  body {\n   background-image: linear-gradient(45deg, #a1c4fd, #c2e9fb);\n   text-align: center;\n   font-family: \"Verdana\", Sans-serif;\n  }\n  \n  img {\n   margin: 40px;\n   height: 40px;\n   width: 150px;\n  }\n  \n  h1 {\n   margin-top: 30px;\n  }\n  \n  h3 {\n   margin: 20px;\n   font-weight: normal;\n  }\n  \n  p {\n   margin-top: 80px;\n   margin-left: 30px;\n   margin-right: 30px;\n   padding: 20px;\n   background-color: DimGray;\n  }\n </style>\n</head>\n<body>\n <h1>구글로 이동하실래요?</h1> <a\n  href=\"https://google.com\">구글로 이동 \n  시간!</a>\n</body>\n</html>",
             "visibleIf": "always"
           }
         ],
@@ -31,12 +31,12 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "To start creating a link, we add the text in between the `\u003Ca\u003E` and `\u003C/a\u003E` tags. This won't highlight the text yet.",
+            "content": "링크를 만들기 위해, 텍스트를 `<a>`와 `</a>` 태그 사이에 넣습니다. 이것은 텍스트를 아직 강조하지 않습니다.",
             "visibleIf": "always"
           },
           {
             "type": "paragraph",
-            "content": "`\u003Ca\u003E` stands for \"Anchor\" tag.",
+            "content": "`<a>`는 \"Anchor\" 태그를 의미합니다.",
             "visibleIf": "always"
           }
         ],
@@ -46,7 +46,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Ca\u003ELearn to Code\u003C/a\u003E",
+              "content": "<a>Learn to Code</a>",
               "codeLanguage": "html"
             }
           ],
@@ -57,7 +57,7 @@
               "startLine": 0,
               "startPos": 0,
               "length": 3,
-              "value": "\u003Ca\u003E",
+              "value": "<a>",
               "correct": true
             },
             {
@@ -66,7 +66,7 @@
               "startLine": 0,
               "startPos": 16,
               "length": 4,
-              "value": "\u003C/a\u003E",
+              "value": "</a>",
               "correct": true
             }
           ],
@@ -76,7 +76,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003Ca\u003E`, followed by `\u003C/a\u003E`.",
+            "content": "`<a>`, `</a>`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -88,7 +88,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "To link the text to a webpage, we add `href=\"\"` along with a Uniform Resource Locator (**URL**). `href` is short for \"hypertext reference\".",
+            "content": "텍스트를 웹페이지에 연결하기 위해, `href=\"\"`와 함께 유니폼 리소스 로케이터(**URL**)를 추가합니다. `href`는 \"하이퍼텍스트 참조\"를 의미합니다.",
             "visibleIf": "always"
           }
         ],
@@ -98,7 +98,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Ca href=\"https://mimo.org\"\u003ELearn to Code\u003C/a\u003E",
+              "content": "<a href=\"https://mimo.org\">Learn to Code</a>",
               "codeLanguage": "html"
             }
           ],
@@ -137,7 +137,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `href`, followed by `=`, and finally `\"https://mimo.org\"`.",
+            "content": "`href`, `=`, `\"https://mimo.org\"`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -154,7 +154,7 @@
           },
           {
             "type": "paragraph",
-            "content": "Attributes are added after the name of the tag, and before the `\u003E` closing sign.",
+            "content": "Attributes are added after the name of the tag, and before the `>` closing sign.",
             "visibleIf": "always"
           }
         ],
@@ -164,7 +164,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Ca href=\"https://mimo.org\"\u003ELearn to Code\u003C/a\u003E",
+              "content": "<a href=\"https://mimo.org\">Learn to Code</a>",
               "codeLanguage": "html"
             }
           ],
@@ -185,7 +185,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `href`.",
+            "content": "`href`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -197,7 +197,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "We link to a webpage by adding `=` after the attribute and a URL as a value in between quotes.",
+            "content": "우리는 `=` 뒤에 속성을 추가하고, 따옴표 사이에 URL을 값으로 추가하여 웹페이지에 링크를 추가합니다.",
             "visibleIf": "always"
           }
         ],
@@ -207,7 +207,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003C!doctype html\u003E\n\u003Chtml\u003E\n \u003Cbody\u003E\n  \u003Ca href=\"https://mimo.org\"\u003ELearn to Code\u003C/a\u003E\n \u003C/body\u003E\n\u003C/html\u003E",
+              "content": "<!doctype html>\n<html>\n <body>\n  <a href=\"https://mimo.org\">Learn to Code</a>\n </body>\n</html>",
               "codeLanguage": "html"
             }
           ],
@@ -255,7 +255,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `=` followed by `\"` and then `https://mimo.org`, `\"`.",
+            "content": "`=`, `\"`, `https://mimo.org`, `\"`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -267,17 +267,17 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Create an opening `\u003Ca\u003E` tag with the `href` attribute set to `\"https://mimo.org\"`.",
+            "content": "`href` 속성을 `\"https://mimo.org\"`로 설정하여 `<a>` 태그를 만들어보세요.",
             "visibleIf": "always"
           }
         ],
         "interactionModule": {
-          "type": "codeFillTheGap",
+          "type": "codeFillTheGap", 
           "files": [
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Ca href=\"https://mimo.org\"\u003ELearn to Code\u003C/a\u003E",
+              "content": "<a href=\"https://mimo.org\">코딩 배우기</a>",
               "codeLanguage": "html"
             }
           ],
@@ -288,14 +288,14 @@
               "startLine": 0,
               "startPos": 0,
               "length": 1,
-              "value": "\u003C",
+              "value": "<",
               "correct": true
             },
             {
               "startIndex": 1,
               "endIndex": 2,
               "startLine": 0,
-              "startPos": 1,
+              "startPos": 1, 
               "length": 1,
               "value": "a",
               "correct": true
@@ -333,7 +333,7 @@
               "startLine": 0,
               "startPos": 26,
               "length": 1,
-              "value": "\u003E",
+              "value": ">",
               "correct": true
             }
           ],
@@ -343,7 +343,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003C` followed by `a` and then `href`, `=`, `\"https://mimo.org\"`, `\u003E`.",
+            "content": "`<`, `a`, `href`, `=`, `\"https://mimo.org\"`, `>`를 순서대로 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -355,7 +355,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "What do links do?",
+            "content": "링크는 무엇을 합니까?",
             "visibleIf": "always"
           }
         ],
@@ -366,12 +366,12 @@
             {
               "correct": true,
               "value": 0,
-              "text": "Link webpages to other webpages and websites"
+              "text": "웹페이지를 다른 웹페이지와 웹사이트에 연결합니다"
             },
             {
               "correct": false,
               "value": 1,
-              "text": "Emphasize text"
+              "text": "텍스트를 강조합니다"
             }
           ],
           "isCode": false,
@@ -380,7 +380,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Link webpages to other webpages and websites.",
+            "content": "웹페이지를 다른 웹페이지와 웹사이트에 연결합니다.",
             "visibleIf": "wrong"
           }
         ]
@@ -391,8 +391,8 @@
         "index": 7,
         "preInteractionModules": [
           {
-            "type": "paragraph",
-            "content": "Why is the link not working?",
+            "type": "paragraph", 
+            "content": "링크가 작동하지 않는 이유는 무엇입니까?",
             "visibleIf": "always"
           },
           {
@@ -401,7 +401,7 @@
               {
                 "isInteractive": false,
                 "name": "index.html",
-                "content": "\u003Ca\u003ELearn to Code\u003C/a\u003E",
+                "content": "<a>코딩 배우기</a>",
                 "codeLanguage": "html"
               }
             ],
@@ -413,8 +413,8 @@
           "files": [
             {
               "isInteractive": false,
-              "name": "index.html",
-              "content": "\u003Ca\u003ELearn to Code\u003C/a\u003E",
+              "name": "index.html", 
+              "content": "<a>코딩 배우기</a>",
               "codeLanguage": "html"
             }
           ],
@@ -422,12 +422,12 @@
             {
               "correct": true,
               "value": 0,
-              "text": "Because it has no `href` attribute"
+              "text": "`href` 속성이 없기 때문입니다"
             },
             {
               "correct": false,
               "value": 1,
-              "text": "Because it has no text between `\u003Ca\u003E` and `\u003C/a\u003E`"
+              "text": "`<a>`와 `</a>` 사이에 텍스트가 없기 때문입니다"
             }
           ],
           "isCode": false,
@@ -436,7 +436,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Because it has no `href` attribute.",
+            "content": "`href` 속성이 없기 때문입니다.",
             "visibleIf": "wrong"
           }
         ]
@@ -448,7 +448,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "What happens when a visitor clicks the link on this webpage?",
+            "content": "이 웹페이지에서 링크를 클릭하면 무엇이 일어납니까?",
             "visibleIf": "always"
           },
           {
@@ -457,7 +457,7 @@
               {
                 "isInteractive": false,
                 "name": "index.html",
-                "content": "\u003Ca href=\"https://mimo.org\"\u003EWhere Developers Learn, Share,\n   & Build Careers\u003C/a\u003E",
+                "content": "<a href=\"https://mimo.org\">개발자가 배우고, 공유하고,\n   & 경력을 쌓는 곳</a>",
                 "codeLanguage": "html"
               }
             ],
@@ -470,7 +470,7 @@
             {
               "isInteractive": false,
               "name": "index.html",
-              "content": "\u003Ca href=\"https://mimo.org\"\u003EWhere Developers Learn, Share,\n   & Build Careers\u003C/a\u003E",
+              "content": "<a href=\"https://mimo.org\">개발자가 배우고, 공유하고,\n   & 경력을 쌓는 곳</a>",
               "codeLanguage": "html"
             }
           ],
@@ -478,12 +478,12 @@
             {
               "correct": true,
               "value": 0,
-              "text": "The link directs the user to another website"
+              "text": "링크가 사용자를 다른 웹사이트로 이동시킵니다"
             },
             {
               "correct": false,
               "value": 1,
-              "text": "Nothing, because the `href` attribute is missing"
+              "text": "`href` 속성이 없어서 아무 일도 일어나지 않습니다"
             }
           ],
           "isCode": false,
@@ -492,7 +492,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "The link directs the user to another website.",
+            "content": "링크는 사용자를 다른 웹사이트로 이동시킵니다.",
             "visibleIf": "wrong"
           }
         ]
@@ -504,7 +504,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "What are `attributes` for?",
+            "content": "`attributes`는 무엇을 위한 것입니까?",
             "visibleIf": "always"
           }
         ],
@@ -515,12 +515,12 @@
             {
               "correct": true,
               "value": 0,
-              "text": "To provide additional information about tags"
+              "text": "태그에 대한 추가 정보를 제공하기 위한 것입니다"
             },
             {
               "correct": false,
               "value": 1,
-              "text": "To turn all tags into links"
+              "text": "모든 태그를 링크로 바꾸기 위한 것입니다"
             }
           ],
           "isCode": false,
@@ -529,7 +529,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "To provide additional information about tags.",
+            "content": "태그에 대한 추가 정보를 제공하기 위한 것입니다.",
             "visibleIf": "wrong"
           }
         ]
@@ -541,7 +541,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Pick the opening tag that makes the link clickable.",
+            "content": "링크를 클릭할 수 있도록 하는 열리는 태그를 선택하세요.",
             "visibleIf": "always"
           }
         ],
@@ -551,7 +551,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Ca href=\"https://cars.com\"\u003EBuy a car\u003C/a\u003E",
+              "content": "<a href=\"https://cars.com\">Buy a car</a>",
               "codeLanguage": "html"
             }
           ],
@@ -562,19 +562,19 @@
               "startLine": 0,
               "startPos": 0,
               "length": 27,
-              "value": "\u003Ca href=\"https://cars.com\"\u003E",
+              "value": "<a href=\"https://cars.com\">",
               "correct": true
             }
           ],
           "wrongOptions": [
-            "\u003Ca\u003E"
+            "<a>"
           ],
           "output": null
         },
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003Ca href=\"https://cars.com\"\u003E`.",
+            "content": "`<a href=\"https://cars.com\">`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -586,7 +586,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Add the attribute and its value so that clicking the link directs users to the Facebook website.",
+            "content": "링크를 클릭하면 사용자가 Facebook 웹사이트로 이동하도록 하는 속성과 값을 추가하세요.",
             "visibleIf": "always"
           }
         ],
@@ -596,7 +596,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Ca href=\"https://facebook.com\"\u003ELike us on Facebook\u003C/a\u003E",
+              "content": "<a href=\"https://facebook.com\">좋아요 누르기</a>",
               "codeLanguage": "html"
             }
           ],
@@ -635,7 +635,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `href`, followed by `=`, and finally `\"https://facebook.com\"`.",
+            "content": "`href`, `=`, `\"https://facebook.com\"`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -647,7 +647,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Put together the tag to direct users to the Snapchat website.",
+            "content": "Snapchat 웹사이트로 사용자를 이동시키는 태그를 만들어보세요.",
             "visibleIf": "always"
           }
         ],
@@ -657,7 +657,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Ca href=\"https://www.snap.com/\"\u003EOpen Snapchat\u003C/a\u003E",
+              "content": "<a href=\"https://www.snap.com/\">스냅챗 열기</a>",
               "codeLanguage": "html"
             }
           ],
@@ -668,7 +668,7 @@
               "startLine": 0,
               "startPos": 45,
               "length": 2,
-              "value": "\u003C/",
+              "value": "</",
               "correct": true
             },
             {
@@ -686,7 +686,7 @@
               "startLine": 0,
               "startPos": 48,
               "length": 1,
-              "value": "\u003E",
+              "value": ">",
               "correct": true
             }
           ],
@@ -696,7 +696,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003C/`, followed by `a`, and finally `\u003E`.",
+            "content": "`</`, `a`, `>`를 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -708,7 +708,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Type the `href` attribute.",
+            "content": "`href` 속성을 입력하세요.",
             "visibleIf": "always"
           }
         ],
@@ -718,7 +718,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Ca href=\"https://abc.com\"\u003EWatch some news\u003C/a\u003E",
+              "content": "<a href=\"https://abc.com\">뉴스 보기</a>",
               "codeLanguage": "html"
             }
           ],
@@ -736,7 +736,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to type `href`.",
+            "content": "`href`를 입력하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -747,15 +747,15 @@
       "id": 907,
       "index": 6,
       "codeLanguage": "html",
-      "descriptionContent": "Learn how to edit images with attributes and how to add them to your webpage with URLs.",
-      "title": "Adding Images",
+      "descriptionContent": "이미지를 편집하고, 웹페이지에 추가하는 방법을 배워보세요.",
+      "title": "이미지 추가",
       "type": "course",
       "version": 45,
       "bannerIconUrl": null,
       "chapters": [
         {
           "id": 6824,
-          "title": "Images",
+          "title": "이미지",
           "type": "practiceLevel1",
           "lessons": [
             {

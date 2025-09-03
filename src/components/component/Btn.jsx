@@ -6,16 +6,16 @@ import { motion } from "framer-motion";
 const Btn = ({ text, color='cyan', onClick=()=>{}, disabled }) => {
   let buttonColorClass;
   if(color === 'cyan'){
-    buttonColorClass = 'bg-cyan-500 text-white active:bg-cyan-600 border-b-cyan-100';
+    buttonColorClass = 'text-[#131f24] active:text-[#131f24] before:bg-[#93d333] before:shadow-[0_4px_0_#79b933]';
   }
   if(color === 'white'){
-    buttonColorClass = 'bg-white text-cyan-500 active:bg-gray-50 ';
+    buttonColorClass = 'bg-white text-[#93d333] active:bg-gray-50 ';
   }
   if(color === 'red'){
-    buttonColorClass = 'bg-red-500 text-white active:bg-red-600 border-b-red-100'
+    buttonColorClass = 'text-[#131f24] active:text-[#131f24] before:bg-[#e55] before:shadow-[0_4px_0_#d84848]'
   }
   if(disabled) {
-    buttonColorClass = 'border-b-gray-100 bg-gray-200 text-gray-300'
+    buttonColorClass = 'text-[#52656d] before:bg-[#37464f] before:shadow-none'
   }
   return (
     <div className="
@@ -23,7 +23,48 @@ const Btn = ({ text, color='cyan', onClick=()=>{}, disabled }) => {
       flex 
       w-full h-12 
     ">
-      <motion.button
+      
+      <button 
+        className={`
+          relative z-0
+          w-full h-[50px]
+          px-4 
+          border-solid border-b-4 rounded-2xl
+          text-[15px] font-bold
+          
+          outline: none;
+          border-transparent
+          select-none
+
+
+          
+          active:translate-y-[2px]
+          active:before:shadow-none
+          
+          before:content-['']
+          before:absolute
+          before:right-0
+          before:top-0
+          before:bottom-0
+          before:left-0
+          before:-z-[1]
+          
+          before:rounded-2xl
+          before:shadow-[0_4px_0]
+          before:text-white/70
+          
+          before:active:translate-y-[2px]
+
+          ${buttonColorClass}
+          ${disabled ? 'cursor-not-allowed pointer-events-none' : ``}
+        `}
+        disabled={disabled}
+        onClick={onClick}
+      >
+        {text}
+      </button>
+
+      {/* <motion.button
         className={`
           z-0
           h-12 w-full
@@ -41,8 +82,7 @@ const Btn = ({ text, color='cyan', onClick=()=>{}, disabled }) => {
         onClick={onClick}
       >
         {text}
-      </motion.button>
-
+      </motion.button> */}
     </div>
   );
 }

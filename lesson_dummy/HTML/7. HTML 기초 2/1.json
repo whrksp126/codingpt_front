@@ -12,7 +12,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "What do attributes do?",
+            "content": "속성은 무엇을 합니까?",
             "visibleIf": "always"
           }
         ],
@@ -23,22 +23,22 @@
             {
               "correct": true,
               "value": 0,
-              "text": "They add additional information to tags"
+              "text": "태그에 추가 정보를 추가합니다."
             },
             {
               "correct": false,
               "value": 1,
-              "text": "Attributes create links"
+              "text": "속성은 링크를 만듭니다."
             },
             {
               "correct": false,
               "value": 2,
-              "text": "They create empty tags"
+              "text": "빈 태그를 만듭니다."
             },
             {
               "correct": false,
               "value": 3,
-              "text": "Attributes create URLs"
+              "text": "속성은 URL을 만듭니다."
             }
           ],
           "isCode": false,
@@ -47,7 +47,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "They add additional information to tags.",
+            "content": "태그에 추가 정보를 추가합니다.",
             "visibleIf": "wrong"
           }
         ]
@@ -59,7 +59,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "How does the link appear in the browser?",
+            "content": "브라우저에서 링크가 어떻게 나타납니까?",
             "visibleIf": "always"
           },
           {
@@ -125,7 +125,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "What's wrong with this code?",
+            "content": "이 코드에 무엇이 잘못되었습니까?",
             "visibleIf": "always"
           },
           {
@@ -155,22 +155,22 @@
             {
               "correct": true,
               "value": 0,
-              "text": "The attribute name should be `href`"
+              "text": "속성 이름은 `href`여야 합니다."
             },
             {
               "correct": false,
               "value": 1,
-              "text": "It has no text between `\u003Ca\u003E` and `\u003C/a\u003E`"
+              "text": "`\u003Ca\u003E`와 `\u003C/a\u003E` 사이에 텍스트가 없습니다."
             },
             {
               "correct": false,
               "value": 2,
-              "text": "Nothing&#039;s wrong with the code"
+              "text": "코드에 문제가 없습니다."
             },
             {
               "correct": false,
               "value": 3,
-              "text": "The opening tag `\u003Ca\u003E` is missing"
+              "text": "열리는 태그 `\u003Ca\u003E`가 없습니다."
             }
           ],
           "isCode": false,
@@ -179,7 +179,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "The attribute name should be `href`.",
+            "content": "속성 이름은 `href`여야 합니다.",
             "visibleIf": "wrong"
           }
         ]
@@ -191,7 +191,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Complete the code to make it work properly.",
+            "content": "코드를 완성하여 제대로 작동하도록 합니다.",
             "visibleIf": "always"
           }
         ],
@@ -219,7 +219,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to type `\u003C/a\u003E`.",
+            "content": "`\u003C/a\u003E`를 입력하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -231,7 +231,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Add the correct attribute to the opening `\u003Ca\u003E` tag.",
+            "content": "열리는 `\u003Ca\u003E` 태그에 올바른 속성을 추가하세요.",
             "visibleIf": "always"
           }
         ],
@@ -259,7 +259,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to type `href`.",
+            "content": "`href`를 입력하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -271,7 +271,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "What's wrong with this `img` element?",
+            "content": "이 `img` 요소에 무엇이 잘못되었습니까?",
             "visibleIf": "always"
           },
           {
@@ -301,22 +301,22 @@
             {
               "correct": true,
               "value": 0,
-              "text": "The tag should have `img` as the tag name, not the `a` tag"
+              "text": "태그 이름은 `img`이어야 하고, `a` 태그가 아닙니다."
             },
             {
               "correct": false,
               "value": 1,
-              "text": "Nothing"
+              "text": "아무것도 없습니다."
             },
             {
               "correct": false,
               "value": 2,
-              "text": "The `img` element is missing a closing tag"
+              "text": "`img` 요소에 닫는 태그가 없습니다."
             },
             {
               "correct": false,
               "value": 3,
-              "text": "It&#039;s missing a URL to access the image"
+              "text": "이미지에 접근하기 위한 URL이 없습니다."
             }
           ],
           "isCode": false,
@@ -325,7 +325,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "The tag should have `img` as the tag name, not the `a` tag.",
+            "content": "태그 이름은 `img`이어야 하고, `a` 태그가 아닙니다.",
             "visibleIf": "wrong"
           }
         ]
@@ -337,7 +337,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Set the `width` attribute in this image tag to `\"300\"`.",
+            "content": "이 `img` 태그에 `width` 속성을 `\"300\"`로 설정하세요.",
             "visibleIf": "always"
           }
         ],
@@ -365,7 +365,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to type `\"300\"`.",
+            "content": "`\"300\"`를 입력하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -405,7 +405,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to type `height=\"200\"`.",
+            "content": "`height=\"200\"`를 입력하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -417,7 +417,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "How many `img` elements does this code have?",
+            "content": "이 코드에 몇 개의 `img` 요소가 있습니까?",
             "visibleIf": "always"
           },
           {
@@ -466,7 +466,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick One.",
+            "content": "One을 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -478,7 +478,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Set the `height` and `width` attributes so that the height is bigger than the width.",
+            "content": "`height`와 `width` 속성을 설정하여 높이가 너비보다 크도록 합니다.",
             "visibleIf": "always"
           }
         ],
@@ -521,7 +521,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\"300\"`, followed by `\"220\"`.",
+            "content": "`\"300\"`, 다음으로 `\"220\"`을 선택하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -532,15 +532,15 @@
       "id": 904,
       "index": 0,
       "codeLanguage": "html",
-      "descriptionContent": "Learn what HTML is and its importance in coding for the web.",
-      "title": "Discovering HTML and Tags",
+      "descriptionContent": "HTML이 무엇인지 배우고, 웹 개발에서 중요한 역할을 하는 방법을 배워보세요.",
+      "title": "HTML 및 태그 발견",
       "type": "course",
       "version": 151,
       "bannerIconUrl": "/icons/track-icons/tutorial-904-icon-banner.svg",
       "chapters": [
         {
           "id": 8608,
-          "title": "HTML Tags",
+          "title": "HTML 태그",
           "type": "practiceLevel1",
           "lessons": [
             {
@@ -583,7 +583,7 @@
         },
         {
           "id": 8716,
-          "title": "Text and Headings",
+          "title": "텍스트 및 제목",
           "type": "practiceLevel1",
           "lessons": [
             {

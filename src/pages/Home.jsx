@@ -1,22 +1,19 @@
 // src/pages/Home.js
 import React from 'react';
 import Main from '../components/home/Main';
-import Header from '../components/component/Header';
+import Header from '../components/home/Header';
 
 const Home = () => {
   return (
-    <div 
-      className="
-        flex flex-col items-center justify-center 
-        h-screen 
-        mx-auto
-      "
-      style={{ paddingTop: '70px' }}
-    >
+    <div className="
+      flex flex-col items-center justify-center
+      mx-auto
+    ">
       <Header />
       <Main />
     </div>
   );
+
 };
 
 export default Home;

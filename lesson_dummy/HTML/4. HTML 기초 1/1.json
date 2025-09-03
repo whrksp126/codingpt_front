@@ -11,8 +11,8 @@
         "index": 0,
         "preInteractionModules": [
           {
-            "type": "paragraph",
-            "content": "How many paragraphs will this webpage have?",
+            "type": "paragraph", 
+            "content": "이 웹페이지에는 몇 개의 문단이 있나요?",
             "visibleIf": "always"
           },
           {
@@ -21,7 +21,7 @@
               {
                 "isInteractive": false,
                 "name": "index.html",
-                "content": "\u003Ch1\u003EMy favorite things\u003C/h1\u003E\n\u003Cp\u003ERaindrops on roses Whiskers on kittens\u003C/p\u003E\n\u003Cp\u003EBright copper kettles Warm woolen mittens\u003C/p\u003E",
+                "content": "<h1>내가 좋아하는 것들</h1>\n<p>장미꽃 위의 빗방울 고양이의 수염</p>\n<p>밝은 구리 주전자 따뜻한 양모 장갑</p>",
                 "codeLanguage": "html"
               }
             ],
@@ -34,7 +34,7 @@
             {
               "isInteractive": false,
               "name": "index.html",
-              "content": "\u003Ch1\u003EMy favorite things\u003C/h1\u003E\n\u003Cp\u003ERaindrops on roses Whiskers on kittens\u003C/p\u003E\n\u003Cp\u003EBright copper kettles Warm woolen mittens\u003C/p\u003E",
+              "content": "<h1>내가 좋아하는 것들</h1>\n<p>장미꽃 위의 빗방울 고양이의 수염</p>\n<p>밝은 구리 주전자 따뜻한 양모 장갑</p>",
               "codeLanguage": "html"
             }
           ],
@@ -61,7 +61,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick 2.",
+            "content": "2를 선택했는지 확인하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -72,8 +72,8 @@
         "index": 1,
         "preInteractionModules": [
           {
-            "type": "paragraph",
-            "content": "Add the missing closing tag.",
+            "type": "paragraph", 
+            "content": "닫는 태그를 추가하세요.",
             "visibleIf": "always"
           }
         ],
@@ -83,30 +83,30 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Ch1\u003EWelcome\u003C/h1\u003E",
+              "content": "<h1>환영합니다</h1>",
               "codeLanguage": "html"
             }
           ],
           "interactionOptions": [
             {
-              "startIndex": 11,
-              "endIndex": 16,
+              "startIndex": 9,
+              "endIndex": 14,
               "startLine": 0,
-              "startPos": 11,
+              "startPos": 9,
               "length": 5,
-              "value": "\u003C/h1\u003E",
+              "value": "</h1>",
               "correct": true
             }
           ],
           "wrongOptions": [
-            "\u003C\\h1\u003E"
+            "<\\h1>"
           ],
           "output": null
         },
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003C/h1\u003E`.",
+            "content": "`</h1>`를 선택했는지 확인하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -118,7 +118,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Add the right snippets to make the headings.",
+            "content": "제목을 만들기 위해 올바른 코드를 추가하세요.",
             "visibleIf": "always"
           }
         ],
@@ -128,7 +128,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Ch1\u003EVideo games\u003C/h1\u003E\n\u003Ch2\u003EConsole games\u003C/h2\u003E\n\u003Ch2\u003EMobile games\u003C/h2\u003E",
+              "content": "<h1>비디오 게임</h1>\n<h2>콘솔 게임</h2>\n<h2>모바일 게임</h2>",
               "codeLanguage": "html"
             }
           ],
@@ -139,38 +139,38 @@
               "startLine": 0,
               "startPos": 0,
               "length": 4,
-              "value": "\u003Ch1\u003E",
+              "value": "<h1>",
               "correct": true
             },
             {
-              "startIndex": 21,
-              "endIndex": 25,
+              "startIndex": 16,
+              "endIndex": 20,
               "startLine": 1,
               "startPos": 0,
               "length": 4,
-              "value": "\u003Ch2\u003E",
+              "value": "<h2>",
               "correct": true
             },
             {
-              "startIndex": 44,
-              "endIndex": 48,
+              "startIndex": 31,
+              "endIndex": 35,
               "startLine": 2,
               "startPos": 0,
               "length": 4,
-              "value": "\u003Ch2\u003E",
+              "value": "<h2>",
               "correct": true
-            }
+              }
           ],
           "wrongOptions": [
-            "\u003Ch3\u003E",
-            "\u003Ch4\u003E"
+            "<h3>",
+            "<h4>"
           ],
           "output": null
         },
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003Ch1\u003E`, followed by `\u003Ch2\u003E`, and finally `\u003Ch2\u003E`.",
+            "content": "`<h1>`, 그 다음 `<h2>`, 마지막으로 `<h2>`를 선택했는지 확인하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -181,8 +181,8 @@
         "index": 3,
         "preInteractionModules": [
           {
-            "type": "paragraph",
-            "content": "Give this webpage the biggest heading.",
+            "type": "paragraph", 
+            "content": "이 웹페이지에 가장 큰 제목을 추가해보세요.",
             "visibleIf": "always"
           }
         ],
@@ -192,7 +192,7 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Ch1\u003EHello, World!\u003C/h1\u003E",
+              "content": "<h1>안녕하세요!</h1>",
               "codeLanguage": "html"
             }
           ],
@@ -203,31 +203,31 @@
               "startLine": 0,
               "startPos": 0,
               "length": 4,
-              "value": "\u003Ch1\u003E",
+              "value": "<h1>",
               "correct": true
             },
             {
-              "startIndex": 17,
-              "endIndex": 22,
+              "startIndex": 10,
+              "endIndex": 15,
               "startLine": 0,
-              "startPos": 17,
+              "startPos": 10,
               "length": 5,
-              "value": "\u003C/h1\u003E",
+              "value": "</h1>",
               "correct": true
             }
           ],
           "wrongOptions": [
-            "\u003Ch2\u003E",
-            "\u003C/h2\u003E",
-            "\u003Cp\u003E",
-            "\u003C/p\u003E"
+            "<h2>",
+            "</h2>",
+            "<p>",
+            "</p>"
           ],
           "output": null
         },
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003Ch1\u003E`, followed by `\u003C/h1\u003E`.",
+            "content": "`<h1>`을 선택하고, 그 다음 `</h1>`을 선택했는지 확인하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -238,8 +238,8 @@
         "index": 4,
         "preInteractionModules": [
           {
-            "type": "paragraph",
-            "content": "What's wrong with this webpage?",
+            "type": "paragraph", 
+            "content": "이 웹페이지에서 무엇이 잘못되었나요?",
             "visibleIf": "always"
           },
           {
@@ -248,7 +248,7 @@
               {
                 "isInteractive": false,
                 "name": "index.html",
-                "content": "\u003C/h1\u003E3D Printers\u003C/h1\u003E\n\u003Cp\u003EEasy to get started\u003C/p\u003E\n\u003Cp\u003EFun to play with\u003C/p\u003E\n\u003Cp\u003EUnlimited creativity\u003C/p\u003E",
+                "content": "</h1>3D 프린터</h1>\n<p>시작하기 쉽습니다</p>\n<p>가지고 놀기 재미있습니다</p>\n<p>무한한 창의성</p>",
                 "codeLanguage": "html"
               }
             ],
@@ -261,7 +261,7 @@
             {
               "isInteractive": false,
               "name": "index.html",
-              "content": "\u003C/h1\u003E3D Printers\u003C/h1\u003E\n\u003Cp\u003EEasy to get started\u003C/p\u003E\n\u003Cp\u003EFun to play with\u003C/p\u003E\n\u003Cp\u003EUnlimited creativity\u003C/p\u003E",
+              "content": "</h1>3D 프린터</h1>\n<p>시작하기 쉽습니다</p>\n<p>가지고 놀기 재미있습니다</p>\n<p>무한한 창의성</p>",
               "codeLanguage": "html"
             }
           ],
@@ -269,17 +269,17 @@
             {
               "correct": true,
               "value": 0,
-              "text": "There is no opening `h1` tag"
+              "text": "`h1` 여는 태그가 없습니다"
             },
             {
               "correct": false,
               "value": 1,
-              "text": "The paragraph tags aren&#039;t assembled correctly"
+              "text": "단락 태그가 올바르게 구성되지 않았습니다"
             },
             {
               "correct": false,
               "value": 2,
-              "text": "Some closing tags are missing"
+              "text": "일부 닫는 태그가 누락되었습니다"
             }
           ],
           "isCode": false,
@@ -288,7 +288,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "There is no opening `h1` tag.",
+            "content": "`h1` 여는 태그가 없는지 확인하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -300,7 +300,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "What's wrong with these emphasis tags?",
+            "content": "이 강조 태그에서 무엇이 잘못되었나요?",
             "visibleIf": "always"
           },
           {
@@ -309,7 +309,7 @@
               {
                 "isInteractive": false,
                 "name": "index.html",
-                "content": "\u003C/em\u003EPurple Haze\u003C/em\u003E",
+                "content": "</em>퍼플 헤이즈</em>",
                 "codeLanguage": "html"
               }
             ],
@@ -322,7 +322,7 @@
             {
               "isInteractive": false,
               "name": "index.html",
-              "content": "\u003C/em\u003EPurple Haze\u003C/em\u003E",
+              "content": "</em>퍼플 헤이즈</em>",
               "codeLanguage": "html"
             }
           ],
@@ -330,17 +330,17 @@
             {
               "correct": true,
               "value": 0,
-              "text": "There&#039;s a `/` sign in the opening tag"
+              "text": "여는 태그에 `/` 기호가 있습니다"
             },
             {
               "correct": false,
               "value": 1,
-              "text": "There&#039;s no closing tag"
+              "text": "닫는 태그가 없습니다"
             },
             {
               "correct": false,
               "value": 2,
-              "text": "There&#039;s no content inside them"
+              "text": "태그 안에 내용이 없습니다"
             }
           ],
           "isCode": false,
@@ -349,7 +349,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "There's a `/` sign in the opening tag.",
+            "content": "여는 태그에 `/` 기호가 있는지 확인하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -360,8 +360,8 @@
         "index": 6,
         "preInteractionModules": [
           {
-            "type": "paragraph",
-            "content": "Code the opening tag that defines text as important.",
+            "type": "paragraph", 
+            "content": "텍스트를 중요하게 표시하는 여는 태그를 작성하세요.",
             "visibleIf": "always"
           }
         ],
@@ -371,38 +371,38 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Ch1\u003EDr. Amp's Gold Shovels\u003C/h1\u003E\n\u003Cp\u003E Order now - \u003Cstrong\u003Eonly $29.99\u003C/strong\u003E\u003C/p\u003E",
+              "content": "<h1>닥터 앰프의 황금 삽</h1>\n<p> 지금 주문하세요 - <strong>단 29,900원</strong></p>",
               "codeLanguage": "html"
             }
           ],
           "interactionOptions": [
             {
-              "startIndex": 48,
-              "endIndex": 49,
+              "startIndex": 36,
+              "endIndex": 37,
               "startLine": 1,
-              "startPos": 16,
+              "startPos": 15,
               "length": 1,
-              "value": "\u003C",
+              "value": "<",
               "correct": true
             },
             {
-              "startIndex": 49,
-              "endIndex": 55,
+              "startIndex": 37,
+              "endIndex": 43,
               "startLine": 1,
-              "startPos": 17,
+              "startPos": 16,
               "length": 6,
               "value": "strong",
               "correct": true
             },
             {
-              "startIndex": 55,
-              "endIndex": 56,
+              "startIndex": 43,
+              "endIndex": 44,
               "startLine": 1,
-              "startPos": 23,
+              "startPos": 22,
               "length": 1,
-              "value": "\u003E",
+              "value": ">",
               "correct": true
-            }
+              }
           ],
           "wrongOptions": [
             "/"
@@ -412,7 +412,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003C`, followed by `strong`, and finally `\u003E`.",
+            "content": "`<`를 선택하고, 그 다음 `strong`, 마지막으로 `>`를 선택했는지 확인하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -423,8 +423,8 @@
         "index": 7,
         "preInteractionModules": [
           {
-            "type": "paragraph",
-            "content": "Why is the line break tag an empty tag?",
+            "type": "paragraph", 
+            "content": "줄바꿈 태그가 빈 태그인 이유는 무엇일까요?",
             "visibleIf": "always"
           }
         ],
@@ -435,17 +435,17 @@
             {
               "correct": true,
               "value": 0,
-              "text": "Because it has no closing tag"
+              "text": "닫는 태그가 없기 때문입니다"
             },
             {
               "correct": false,
               "value": 1,
-              "text": "Because it has no effect on the structure of a webpage"
+              "text": "웹페이지 구조에 영향을 주지 않기 때문입니다"
             },
             {
               "correct": false,
               "value": 2,
-              "text": "Because it has no opening tag"
+              "text": "여는 태그가 없기 때문입니다"
             }
           ],
           "isCode": false,
@@ -454,7 +454,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Because it has no closing tag.",
+            "content": "닫는 태그가 없기 때문입니다.",
             "visibleIf": "wrong"
           }
         ]
@@ -466,7 +466,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Display `Accept` on the button by coding between the opening and closing tags.",
+            "content": "여는 태그와 닫는 태그 사이에 `동의`를 입력하세요.",
             "visibleIf": "always"
           }
         ],
@@ -475,31 +475,31 @@
           "files": [
             {
               "isInteractive": true,
-              "name": "index.html",
-              "content": "\u003Ch4\u003ETerms and Conditions\u003C/h4\u003E\n\u003Cp\u003EBy clicking accept, you agree to helping a friend this weekend.\u003C/p\u003E\n\u003Cbutton\u003EAccept\u003C/button\u003E\n\u003Cbutton\u003ENo way!\u003C/button\u003E",
+              "name": "index.html", 
+              "content": "<h4>이용약관</h4>\n<p>동의를 클릭하면 이번 주말에 친구를 도와주는 것에 동의하게 됩니다.</p>\n<button>동의</button>\n<button>거절!</button>",
               "codeLanguage": "html"
             }
           ],
           "interactionOptions": [
             {
-              "startIndex": 109,
-              "endIndex": 115,
+              "startIndex": 67,
+              "endIndex": 69,
               "startLine": 2,
               "startPos": 8,
-              "length": 6,
-              "value": "Accept",
+              "length": 2,
+              "value": "동의",
               "correct": true
             }
           ],
           "wrongOptions": [
-            "Reject"
+            "거절"
           ],
           "output": null
         },
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `Accept`.",
+            "content": "`동의`를 선택했는지 확인하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -511,7 +511,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Code the closing tag of the button displaying `Book a Room`.",
+            "content": "`예약하기` 버튼의 닫는 태그를 작성하세요.",
             "visibleIf": "always"
           }
         ],
@@ -521,49 +521,49 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Ch1\u003EJoe's Bed and Breakfast\u003C/h1\u003E\n\u003Cp\u003EThere's nothing more relaxing than booking a room at Joe's BnB.\u003C/p\u003E\n\u003Cbutton\u003EBook a Room\u003C/button\u003E",
+              "content": "<h1>조의 민박</h1>\n<p>조의 민박에서 방을 예약하는 것보다 더 편안한 것은 없습니다.</p>\n<button>예약하기</button>",
               "codeLanguage": "html"
             }
           ],
           "interactionOptions": [
             {
-              "startIndex": 123,
-              "endIndex": 125,
+              "startIndex": 69,
+              "endIndex": 71,
               "startLine": 2,
-              "startPos": 19,
+              "startPos": 12,
               "length": 2,
-              "value": "\u003C/",
+              "value": "</",
               "correct": true
             },
             {
-              "startIndex": 125,
-              "endIndex": 131,
+              "startIndex": 71,
+              "endIndex": 77,
               "startLine": 2,
-              "startPos": 21,
+              "startPos": 14,
               "length": 6,
               "value": "button",
               "correct": true
             },
             {
-              "startIndex": 131,
-              "endIndex": 132,
+              "startIndex": 77,
+              "endIndex": 78,
               "startLine": 2,
-              "startPos": 27,
+              "startPos": 20,
               "length": 1,
-              "value": "\u003E",
+              "value": ">",
               "correct": true
             }
           ],
           "wrongOptions": [
-            "\u003C",
-            "\u003Cbr\u003E"
+            "<",
+            "<br>"
           ],
           "output": null
         },
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003C/`, followed by `button`, and finally `\u003E`.",
+            "content": "`</`를 선택하고, 그 다음 `button`, 마지막으로 `>`를 선택했는지 확인하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -574,8 +574,8 @@
         "index": 10,
         "preInteractionModules": [
           {
-            "type": "paragraph",
-            "content": "What's wrong with this code?",
+            "type": "paragraph", 
+            "content": "이 코드에서 무엇이 잘못되었나요?",
             "visibleIf": "always"
           },
           {
@@ -584,7 +584,7 @@
               {
                 "isInteractive": false,
                 "name": "index.html",
-                "content": "\u003Cbutton\u003EAdd to Cart\u003C/button\u003E",
+                "content": "<button>장바구니에 추가</button>",
                 "codeLanguage": "html"
               }
             ],
@@ -596,8 +596,8 @@
           "files": [
             {
               "isInteractive": false,
-              "name": "index.html",
-              "content": "\u003Cbutton\u003EAdd to Cart\u003C/button\u003E",
+              "name": "index.html", 
+              "content": "<button>장바구니에 추가</button>",
               "codeLanguage": "html"
             }
           ],
@@ -605,17 +605,17 @@
             {
               "correct": true,
               "value": 0,
-              "text": "Nothing&#039;s wrong with the code"
+              "text": "코드에 문제가 없습니다"
             },
             {
               "correct": false,
               "value": 1,
-              "text": "The text inside the `button` element has a space"
+              "text": "`button` 요소 안의 텍스트에 공백이 있습니다"
             },
             {
               "correct": false,
               "value": 2,
-              "text": "The button&#039;s closing tag is missing a `/`"
+              "text": "버튼의 닫는 태그에 `/`가 빠졌습니다"
             }
           ],
           "isCode": false,
@@ -624,7 +624,7 @@
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Nothing's wrong with the code.",
+            "content": "코드에 문제가 없습니다.",
             "visibleIf": "wrong"
           }
         ]
@@ -635,8 +635,8 @@
         "index": 11,
         "preInteractionModules": [
           {
-            "type": "paragraph",
-            "content": "Place the last button below the other by coding `\u003Cbr\u003E`.",
+            "type": "paragraph", 
+            "content": "`<br>` 태그를 사용하여 마지막 버튼을 다른 버튼 아래에 배치하세요.",
             "visibleIf": "always"
           }
         ],
@@ -646,23 +646,23 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Ch4\u003EWelcome to Mimo\u003C/h4\u003E\n\u003Cbutton\u003ESign Up\u003C/button\u003E\n\u003Cbr\u003E\n\u003Cbutton\u003ELogin\u003C/button\u003E",
+              "content": "<h4>코딩PT에 오신 것을 환영합니다</h4>\n<button>회원가입</button>\n<br>\n<button>로그인</button>",
               "codeLanguage": "html"
             }
           ],
           "interactionOptions": [
             {
-              "startIndex": 50,
-              "endIndex": 51,
+              "startIndex": 49,
+              "endIndex": 50,
               "startLine": 2,
               "startPos": 0,
               "length": 1,
-              "value": "\u003C",
+              "value": "<",
               "correct": true
             },
             {
-              "startIndex": 51,
-              "endIndex": 53,
+              "startIndex": 50,
+              "endIndex": 52,
               "startLine": 2,
               "startPos": 1,
               "length": 2,
@@ -670,25 +670,25 @@
               "correct": true
             },
             {
-              "startIndex": 53,
-              "endIndex": 54,
+              "startIndex": 52,
+              "endIndex": 53,
               "startLine": 2,
               "startPos": 3,
               "length": 1,
-              "value": "\u003E",
+              "value": ">",
               "correct": true
             }
           ],
           "wrongOptions": [
-            "\u003C/",
-            "/\u003E"
+            "</",
+            "/>"
           ],
           "output": null
         },
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003C`, followed by `br`, and finally `\u003E`.",
+            "content": "`<`를 선택하고, 그 다음 `br`, 마지막으로 `>`를 선택했는지 확인하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -700,7 +700,7 @@
         "preInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Place the button displaying `Copy to Clipboard` next to the other button on the webpage.",
+            "content": "웹페이지의 다른 버튼 옆에 `클립보드에 복사` 버튼을 배치하세요.",
             "visibleIf": "always"
           }
         ],
@@ -710,50 +710,50 @@
             {
               "isInteractive": true,
               "name": "index.html",
-              "content": "\u003Ch4\u003EJoke of the Month\u003C/h4\u003E\n\u003Cp\u003EI made a pencil with two erasers. It was pointless.\u003C/p\u003E\n\u003Cbutton\u003EVote\u003C/button\u003E\n\u003Cbutton\u003ECopy to Clipboard\u003C/button\u003E",
+              "content": "<h4>이달의 유머</h4>\n<p>지우개가 두 개 달린 연필을 만들었어요. 쓸모없었죠.</p>\n<button>투표</button>\n<button>클립보드에 복사</button>",
               "codeLanguage": "html"
             }
           ],
           "interactionOptions": [
             {
-              "startIndex": 108,
-              "endIndex": 116,
+              "startIndex": 73,
+              "endIndex": 81,
               "startLine": 3,
               "startPos": 0,
               "length": 8,
-              "value": "\u003Cbutton\u003E",
+              "value": "<button>",
               "correct": true
             },
             {
-              "startIndex": 116,
-              "endIndex": 133,
+              "startIndex": 81,
+              "endIndex": 89,
               "startLine": 3,
               "startPos": 8,
-              "length": 17,
-              "value": "Copy to Clipboard",
+              "length": 8,
+              "value": "클립보드에 복사",
               "correct": true
             },
             {
-              "startIndex": 133,
-              "endIndex": 142,
+              "startIndex": 89,
+              "endIndex": 98,
               "startLine": 3,
-              "startPos": 25,
+              "startPos": 16,
               "length": 9,
-              "value": "\u003C/button\u003E",
+              "value": "</button>",
               "correct": true
             }
           ],
           "wrongOptions": [
-            "\u003Cbr\u003E",
-            "\u003Ch1\u003E",
-            "\u003C/h1\u003E"
+            "<br>",
+            "<h1>",
+            "</h1>"
           ],
           "output": null
         },
         "postInteractionModules": [
           {
             "type": "paragraph",
-            "content": "Make sure to pick `\u003Cbutton\u003E`, followed by `Copy to Clipboard`, and finally `\u003C/button\u003E`.",
+            "content": "`<button>`을 선택하고, 그 다음 `클립보드에 복사`, 마지막으로 `</button>`을 선택했는지 확인하세요.",
             "visibleIf": "wrong"
           }
         ]
@@ -764,15 +764,15 @@
       "id": 904,
       "index": 0,
       "codeLanguage": "html",
-      "descriptionContent": "Learn what HTML is and its importance in coding for the web.",
-      "title": "Discovering HTML and Tags",
-      "type": "course",
+      "descriptionContent": "웹 코딩에서 HTML이 무엇이고 왜 중요한지 배워봅시다.",
+      "title": "HTML과 태그 알아보기",
+      "type": "course", 
       "version": 151,
       "bannerIconUrl": "/icons/track-icons/tutorial-904-icon-banner.svg",
       "chapters": [
         {
           "id": 8608,
-          "title": "HTML Tags",
+          "title": "HTML 태그",
           "type": "practiceLevel1",
           "lessons": [
             {

@@ -10,6 +10,10 @@ import Learn from './pages/Learn';
 import Admin from './pages/Admin';
 import Code from './pages/Code';
 
+import Curriculums from './pages/Curriculums';
+import Curriculum from './pages/Curriculum';
+import Sections from './pages/Sections';
+
 function App() {
   return (
     <BrowserRouter>
