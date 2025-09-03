@@ -18,16 +18,16 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} /> {/* 루트 */}
-        <Route path="/register" element={<Register />} /> 
-        <Route path="/welcome" element={<Welcome />} /> 
-        {/* <Route path="/lesson" element={<Lesson />} />  */}
-        <Route path="/learn" element={<Learn />} /> 
+        <Route path="/" element={<Home />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/welcome" element={<Welcome />} />
+        <Route path="/lesson" element={<Lesson />} />
+        <Route path="/learn" element={<Learn />} />
 
-        <Route path="/curriculums" element={<Curriculums />} /> {/* 커리큘럼 리스트 페이지 */}
-        <Route path="/sections" element={<Sections />} /> {/* 섹션 리스트 페이지 */}
-        <Route path="/curriculum" element={<Curriculum />} /> {/* 커리큘럼 페이지 */}
-        <Route path="/lesson" element={<Lesson />} /> {/* 레슨 페이지 */}
+
+        
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/code/:id" element={<Code />} />
       </Routes>
     </BrowserRouter>
   );
