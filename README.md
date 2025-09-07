@@ -50,7 +50,7 @@ docker images | grep codingpt_front
 docker push whrksp126/codingpt_front:dev
 
 ## 서버 적용
-sudo systemctl restart codingpt_back_dev
+sudo systemctl restart codingpt_front_dev
 
 ---
 
@@ -81,6 +81,6 @@ docker images | grep codingpt_front
 docker push whrksp126/codingpt_front:stg
 
 ## 서버 적용
-sudo systemctl restart codingpt_back_stg
+sudo systemctl restart codingpt_front_stg
 
 ---
