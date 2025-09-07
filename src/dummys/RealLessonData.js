@@ -68,7 +68,7 @@ const HTML_1 = {
               "visibility": { "type": "step", "value": 5 }
             },
             {
-              "id": 1,
+              "id": 5,
               "type": "multipleChoice",
               "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/007_화면에_직접_표시되는_내용을_담는_태그는_무엇일까요.mp3",
               "questions": [
@@ -107,7 +107,7 @@ const HTML_1 = {
               }
             },
             {
-              "id": 2,
+              "id": 6,
               "type": "codeFillTheGap",
               "title": "빈칸에 들어갈 코드를 선택해 주세요.",
               "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/010_빈칸에_들어갈_코드를_선택해_주세요.mp3",
@@ -159,7 +159,7 @@ const HTML_1 = {
               }
             },
             {
-              "id": 3,
+              "id": 7,
               "type": "webview",
               "tabs": [
                 {
@@ -448,7 +448,7 @@ const HTML_1 = {
                     { "id": "option-4", "value": "</button>", "disabled": false }
                   ],
                   "answers": [
-                    { "isCorrect": null, "answer": "<ul>", "userAnswer": null, "optionElIndex": null },
+                    { "isCorrect": null, "answer": "<li>", "userAnswer": null, "optionElIndex": null },
                     { "isCorrect": null, "answer": "</button>", "userAnswer": null, "optionElIndex": null }
                   ]
                 }
@@ -1192,7 +1192,7 @@ const HTML_2 = {
                 {
                   "name": "index.html",
                   "language": "html",
-                  "content": "<p>저장하려면 <{{BLANK-1}}>Ctrl</{{BLANK-1}}> + <{{BLANK-1}}>S</{{BLANK-1}}>를 누르세요.</p>\n<p>코드 예: <{{BLANK-2}}>console.log('Hello');</{{BLANK-2}}></p>",
+                  "content": "<p>저장하려면 <{{BLANK-0}}>Ctrl</{{BLANK-0}}> + <{{BLANK-1}}>S</{{BLANK-1}}>를 누르세요.</p>\n<p>코드 예: <{{BLANK-2}}>console.log('Hello');</{{BLANK-2}}></p>",
                   "url": "/code/19",
                   "isInteractive": true,
                   "inputLength": 2,
