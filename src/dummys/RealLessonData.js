@@ -37,35 +37,35 @@ const HTML_1 = {
               "type": "paragraph",
               "content": "# 🧱 HTML 문서의 뼈대",
               "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/002_HTML_문서의_뼈대.mp3",
-              "visibility": { "type": "step", "value": 0 }
+              "visibility": { "type": "step", "value": 1 }
             },
             {
               "id": 1,
               "type": "paragraph",
               "content": "## <!DOCTYPE html>\n문서가 **HTML5**임을 선언",
               "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/003_독타입_html은_문서가아_HTML5_임을_선언_합니다.mp3",
-              "visibility": { "type": "step", "value": 1 }
+              "visibility": { "type": "step", "value": 2 }
             },
             {
               "id": 2,
               "type": "paragraph",
               "content": "## <html>\n문서의 **루트 요소**",
               "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/004_html_태그는_문서의_루트_요소.mp3",
-              "visibility": { "type": "step", "value": 2 }
+              "visibility": { "type": "step", "value": 3 }
             },
             {
               "id": 3,
               "type": "paragraph",
               "content": "## <head>\n메타데이터(문서 정보, 인코딩, 외부 리소스)",
               "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/005_head_태그는_메타데이터.mp3",
-              "visibility": { "type": "step", "value": 3 }
+              "visibility": { "type": "step", "value": 4 }
             },
             {
               "id": 4,
               "type": "paragraph",
               "content": "## <body>\n화면에 표시되는 **콘텐츠**",
               "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/006_body_태그는_화면에_표시되는_콘텐츠_입니다.mp3",
-              "visibility": { "type": "step", "value": 4 }
+              "visibility": { "type": "step", "value": 5 }
             },
             {
               "id": 1,
@@ -83,7 +83,7 @@ const HTML_1 = {
                   "answer": { "isCorrect": null, "answer": 3, "userAnswer": null }
                 }
               ],
-              "visibility": { "type": "step", "value": 5 },
+              "visibility": { "type": "step", "value": 6 },
               "result": {
                 "totalStep": 1,
                 "modules": [
@@ -117,6 +117,7 @@ const HTML_1 = {
                   "language": "html",
                   "content": "",
                   "url": "/code/9",
+                  "height": 245,
                   "isInteractive": true,
                   "inputLength": 3,
                   "interactionOptions": [
@@ -132,7 +133,7 @@ const HTML_1 = {
                   ]
                 }
               ],
-              "visibility": { "type": "step", "value": 6 },
+              "visibility": { "type": "step", "value": 7 },
               "result": {
                 "totalStep": 1,
                 "modules": [
@@ -166,7 +167,7 @@ const HTML_1 = {
                   "content": "<!DOCTYPE html><html lang=\"ko\"><head><meta charset=\"UTF-8\"><title>미리보기</title><style>body{font-family:system-ui;padding:16px}</style></head><body><h1>안녕하세요</h1><p>HTML 문서 구조를 배우는 중!</p></body></html>"
                 }
               ],
-              "visibility": { "type": "step", "value": 7 }
+              "visibility": { "type": "step", "value": 8 }
             }
           ]
         },
@@ -226,6 +227,7 @@ const HTML_1 = {
                   "language": "html",
                   "content": "<h{{BLANK-1}}>나의 블로그</h{{BLANK-1}}>\n<{{BLANK-2}}>첫 글입니다.</{{BLANK-2}}>",
                   "url": "/code/10",
+                  "height": 85,
                   "isInteractive": true,
                   "inputLength": 2,
                   "interactionOptions": [
@@ -330,6 +332,7 @@ const HTML_1 = {
 						      "language": "html",
 						      "content": "<p>더 배우려면 <a {{BLANK-1}}=\"\">MDN</a>으로 이동!</p>\n<img {{BLANK-2}}=\"/images/logo.png\" {{BLANK-3}}=\"로고 이미지\" />",
 						      "url": "/code/11",
+                  "height": 130,
 						      "isInteractive": true,
 						      "inputLength": 3,
 						      "interactionOptions": [
@@ -435,6 +438,7 @@ const HTML_1 = {
                   "language": "html",
                   "content": "<h2>할 일</h2>\n<{{BLANK-1}}>\n  <li>HTML 공부</li>\n  <li>CSS 연습</li>\n</{{BLANK-1}}>\n<{{BLANK-2}}>확인</{{BLANK-2}}>",
                   "url": "/code/12",
+                  "height": 175,
                   "isInteractive": true,
                   "inputLength": 2,
                   "interactionOptions": [
@@ -539,6 +543,7 @@ const HTML_1 = {
                   "language": "html",
                   "content": "<{{BLANK-1}}>\n  <h1>MySite</h1>\n  <{{BLANK-2}}>\n    <a href=\"#\">Home</a>\n    <a href=\"#\">Docs</a>\n  </{{BLANK-2}}>\n</{{BLANK-1}}>\n<{{BLANK-3}}>\n  <section>\n    <article>\n      <h2>소개</h2>\n      <p>시맨틱 태그 연습</p>\n    </article>\n  </section>\n</{{BLANK-3}}>",
                   "url": "/code/13",
+                  "height": 380,
                   "isInteractive": true,
                   "inputLength": 3,
                   "interactionOptions": [
@@ -644,6 +649,7 @@ const HTML_1 = {
                   "language": "html",
                   "content": "<{{BLANK-1}}>\n  <tr>\n    <{{BLANK-2}}>이름</{{BLANK-2}}>\n    <{{BLANK-2}}>나이</{{BLANK-2}}>\n  </tr>\n  <tr>\n    <{{BLANK-3}}>홍길동</{{BLANK-3}}>\n    <{{BLANK-3}}>17</{{BLANK-3}}>\n  </tr>\n</{{BLANK-1}}>",
                   "url": "/code/14",
+                  "height": 270,
                   "isInteractive": true,
                   "inputLength": 3,
                   "interactionOptions": [
@@ -780,6 +786,7 @@ const HTML_2 = {
                   "language": "html",
                   "content": "<p>오늘 발표는 <{{BLANK-1}}>매우 중요</{{BLANK-1}}>합니다. 특히 일정은 <{{BLANK-2}}>꼭</{{BLANK-2}}> 지켜주세요.</p>",
                   "url": "/code/15",
+                  "height": 85,
                   "isInteractive": true,
                   "inputLength": 2,
                   "interactionOptions": [

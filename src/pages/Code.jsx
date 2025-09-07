@@ -19,6 +19,10 @@ const Code = () => {
   return (
     <div style={{ flex: 1, position: 'relative' }}>
       <style>{`
+      body {
+        height: 100vh;
+        background: #272822;
+      }
       pre {
           background: #272822;
           color: #fff;
