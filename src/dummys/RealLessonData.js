@@ -3,7 +3,7 @@ const HTML_1 = {
   "lessons": [
     {
       "id": 1,
-      "title": "문서 구조와 핵심 태그",
+      "title": "웹은 어떻게 생겼을까?🧐",
       "isCompleted": false,
       "sliders": [
         {
@@ -21,76 +21,75 @@ const HTML_1 = {
             {
               "id": 1,
               "type": "paragraph",
-              "content": "# html 구조와 태그에 대해 알아볼까?",
-              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/001_html_구조와_태그에_대해_알아볼까.mp3",
+              "content": "# 반가워요👋 \n## 오늘은 HTML을 맛보기로 알아봐요!",
+              "tts" : "",
               "visibility": { "type": "step", "value": 1 }
             }
           ]
         },
         {
           "id": 1,
-          "title": "HTML 문서의 뼈대(doctype, html, head, body)",
+          "title": "HTML은 뼈대🦴, 태그는 이름표🔖",
           "role": "📖 개념",
           "modules": [
             {
               "id": 0,
-              "type": "paragraph",
-              "content": "# 🧱 HTML 문서의 뼈대",
-              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/002_HTML_문서의_뼈대.mp3",
+              "type": "image",
+              "src": "https://s3.ghmate.com/codingpt/class/1/1/1/image/001_concept.png",
+              "size": "lg",
               "visibility": { "type": "step", "value": 1 }
             },
             {
               "id": 1,
               "type": "paragraph",
-              "content": "## <!DOCTYPE html>\n문서가 **HTML5**임을 선언",
-              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/003_독타입_html은_문서가아_HTML5_임을_선언_합니다.mp3",
-              "visibility": { "type": "step", "value": 2 }
+              "content": "## 웹페이지는 **📌제목·🖼️그림·▶️버튼** 같은 \n## **블록이 모여** 만들어져요.",
+              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/001_html_구조와_태그에_대해_알아볼까.mp3",
+              "visibility": { "type": "step", "value": 1 }
             },
             {
               "id": 2,
               "type": "paragraph",
-              "content": "## <html>\n문서의 **루트 요소**",
-              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/004_html_태그는_문서의_루트_요소.mp3",
-              "visibility": { "type": "step", "value": 3 }
+              "content": "- HTML은 **웹의 뼈대🦴**이고,\n  태그(tag)는 `< >` **안에 적는 🔖이름표**에요.",
+              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/002_HTML_문서의_뼈대.mp3",
+              "visibility": { "type": "step", "value": 2 }
             },
             {
               "id": 3,
               "type": "paragraph",
-              "content": "## <head>\n메타데이터(문서 정보, 인코딩, 외부 리소스)",
-              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/005_head_태그는_메타데이터.mp3",
-              "visibility": { "type": "step", "value": 4 }
-            },
+              "content": "- 큰 제목은 `<h1>`, 문단은 `<p>`, 이미지는 `<img>` 등\n  **다양한 태그**의 종류가 있어요.",
+              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/003_독타입_html은_문서가아_HTML5_임을_선언_합니다.mp3",
+              "visibility": { "type": "step", "value": 3 }
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "제목 태그는 뭘까?",
+          "role": "✏️ 실습",
+          "modules": [
             {
-              "id": 4,
-              "type": "paragraph",
-              "content": "## <body>\n화면에 표시되는 **콘텐츠**",
-              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/006_body_태그는_화면에_표시되는_콘텐츠_입니다.mp3",
-              "visibility": { "type": "step", "value": 5 }
-            },
-            {
-              "id": 5,
+              "id": 0,
               "type": "multipleChoice",
               "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/007_화면에_직접_표시되는_내용을_담는_태그는_무엇일까요.mp3",
               "questions": [
                 {
-                  "title": "화면에 직접 표시되는 내용을 담는 태그는 무엇일까요?",
+                  "title": "가장 큰 제목을 나타내는 태그🔖는 뭘까?",
                   "interactionOptions": [
-                    { "label": "<head>" },
-                    { "label": "<meta>" },
-                    { "label": "<link>" },
-                    { "label": "<body>" }
+                    { "label": "<p>" },
+                    { "label": "<img>" },
+                    { "label": "<h1>" }
                   ],
-                  "answer": { "isCorrect": null, "answer": 3, "userAnswer": null }
+                  "answer": { "isCorrect": null, "answer": 2, "userAnswer": null }
                 }
               ],
-              "visibility": { "type": "step", "value": 6 },
+              "visibility": { "type": "step", "value": 1 },
               "result": {
                 "totalStep": 1,
                 "modules": [
                   {
                     "id": 0,
                     "type": "paragraph",
-                    "content": "🎉 정답! 화면에 보이는 콘텐츠는 `<body>` 안에 작성합니다.",
+                    "content": "## 🙆‍♀️ 잘했어요!\n제목은 h1~h6 계열 태그를 사용하고,\n  그중 **<h1>이 가장 커요.**",
                     "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_정답_화면에_보이는_콘텐츠는_body_태그_안에_작성합니다.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "correct"
@@ -98,7 +97,8 @@ const HTML_1 = {
                   {
                     "id": 1,
                     "type": "paragraph",
-                    "content": "❌ 정답은 `<body>`입니다. `<head>`는 문서 정보, `<meta>/<link>`는 설정·연결에 사용돼요.",
+                    "content": "## 🙅‍♀️ 정답은 `<h1>`이에요.\n**<p>**는 문단, **<img>**는 이미지 태그입니다!",
+                    "tts" : "",
                     "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/009_정답은_body_태그입니다_head_태그는_문서_정보_meta_태그와_link_태그는_.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "wrong"
@@ -107,111 +107,77 @@ const HTML_1 = {
               }
             },
             {
-              "id": 6,
-              "type": "codeFillTheGap",
-              "title": "빈칸에 들어갈 코드를 선택해 주세요.",
-              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/010_빈칸에_들어갈_코드를_선택해_주세요.mp3",
+              "id": 1,
+              "type": "paragraph",
+              "content": "👇아래 코드와 브라우저를 보면서 \n**제목 태그**를 더 자세히 알아봐요! 🤓",
+              "tts" : "",
+              "visibility": { "type": "step", "value": 2 }
+            },
+            {
+              "id": 2,
+              "type": "code",
+              "title": "제목 태그 (h1~h6)",
+              "tts": "",
+              "height": 180,
               "files": [
                 {
                   "name": "index.html",
-                  "language": "html",
-                  "content": "",
-                  "url": "/code/9",
-                  "height": 245,
-                  "isInteractive": true,
-                  "inputLength": 3,
-                  "interactionOptions": [
-                    { "id": "option-1", "value": "<html>", "disabled": false },
-                    { "id": "option-2", "value": "</head>", "disabled": false },
-                    { "id": "option-3", "value": "<style>", "disabled": false },
-                    { "id": "option-4", "value": "</body>", "disabled": false }
-                  ],
-                  "answers": [
-                    { "isCorrect": null, "answer": "<html>", "userAnswer": null, "optionElIndex": null },
-                    { "isCorrect": null, "answer": "</head>", "userAnswer": null, "optionElIndex": null },
-                    { "isCorrect": null, "answer": "</body>", "userAnswer": null, "optionElIndex": null }
-                  ]
+                  "language": "markup",
+                  "content": "<h1>Hellow world</h1>\n<h2>Hellow world</h2>\n<h3>Hellow world</h3>\n<h4>Hellow world</h4>\n<h5>Hellow world</h5>\n<h6>Hellow world</h6>"
                 }
               ],
-              "visibility": { "type": "step", "value": 7 },
-              "result": {
-                "totalStep": 1,
-                "modules": [
-                
-                  {
-                    "id": 0,
-                    "type": "paragraph",
-                    "content": "## 🎉 **잘했어요!**\n구조가 올바르게 완성됐어요. \n\n👉 아래 **결과 브라우저**를 확인해보세요!",
-                    "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/011_잘했어요_구조가_올바르게_완성됐어요_아래_결과_브라우저를_확인해보세요.mp3",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "correct"
-                  },
-                  {
-                    "id": 1,
-                    "type": "paragraph",
-                    "content": "## ❌ **틀렸어요!**\n`<html>` 안에는 `<head>`와 `<body>`가 **나란히** 있어야 해요.  \n\n⚠️ 그리고 `<body>`는 반드시 `<head>` **바깥**에 있어야 합니다.",
-                    "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/012_틀렸어요_html_태그_안에는_head_태그와_body_태그가_나란히_있어야_하며_bo.mp3",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "wrong"
-                  }
-                
-                ]
-              }
+              "visibility": { "type": "step", "value": 3 }
             },
             {
-              "id": 7,
+              "id": 3,
               "type": "webview",
               "tabs": [
                 {
                   "type": "html",
-                  "content": "<!DOCTYPE html><html lang=\"ko\"><head><meta charset=\"UTF-8\"><title>미리보기</title><style>body{font-family:system-ui;padding:16px}</style></head><body><h1>안녕하세요</h1><p>HTML 문서 구조를 배우는 중!</p></body></html>"
+                  "content": "<!DOCTYPE html><html lang='ko'><head><meta charset='UTF-8'><title>결과보기</title><style>body{font-family:system-ui;padding:16px}</style></head><body><h1>Hellow world</h1><h2>Hellow world</h2><h3>Hellow world</h3><h4>Hellow world</h4><h5>Hellow world</h5><h6>Hellow world</h6></body></html>"
                 }
               ],
-              "visibility": { "type": "step", "value": 8 }
+              "visibility": { "type": "step", "value": 4 }
             }
           ]
         },
         {
-          "id": 2,
-          "title": "제목과 문단(h1~h6, p)",
-          "role": "📖 개념",
+          "id": 3,
+          "title": "🪄 문장을 하나의 덩어리로 묶는 태그",
+          "role": "✏️ 실습",
           "modules": [
             {
               "id": 0,
-              "type": "paragraph",
-              "content": "### 📝 텍스트의 골격: 제목과 문단\n- `<h1>` ~ `<h6>`: **중요도**에 따른 제목\n- `<p>`: 하나의 **문단**을 의미\n> 핵심 제목은 보통 `h1`을 한 페이지에 1개만 사용합니다.",
-              "visibility": { "type": "step", "value": 1 }
-            },
-            {
-              "id": 1,
               "type": "multipleChoice",
+              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/007_화면에_직접_표시되는_내용을_담는_태그는_무엇일까요.mp3",
               "questions": [
                 {
-                  "title": "페이지의 핵심 제목에 가장 적합한 태그는?",
+                  "title": "문장을 하나의 덩어리로 묶는 태그는 뭘까?",
                   "interactionOptions": [
-                    { "label": "<h6>" },
-                    { "label": "<h1>" },
+                    { "label": "<div>" },
                     { "label": "<p>" },
                     { "label": "<span>" }
                   ],
                   "answer": { "isCorrect": null, "answer": 1, "userAnswer": null }
                 }
               ],
-              "visibility": { "type": "step", "value": 2 },
+              "visibility": { "type": "step", "value": 1 },
               "result": {
                 "totalStep": 1,
                 "modules": [
                   {
                     "id": 0,
                     "type": "paragraph",
-                    "content": "🎉 정답! 핵심 제목은 `<h1>`을 사용하고, 하위 제목은 `<h2>~<h6>`로 계층화해요.",
+                    "content": "## 🙆‍♀️ 정답!\n`<p>`는 paragraph(문단)의 약자예요 🤓",
+                    "tts" : "",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "correct"
                   },
                   {
                     "id": 1,
                     "type": "paragraph",
-                    "content": "❌ 정답은 `<h1>`입니다. 핵심 제목은 보통 한 페이지에 1개만 두는 편이에요.",
+                    "content": "## 🙅‍♀️ 정답은 `<p>`이에요.\n`<div>`는 문단, `<span>`은 텍스트 덩어리입니다! 😊",
+                    "tts" : "",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "wrong"
                   }
@@ -219,14 +185,56 @@ const HTML_1 = {
               }
             },
             {
+              "id": 1,
+              "type": "paragraph",
+              "content": "👇아래 코드와 브라우저를 보면서 \n**문단 태그**를 더 자세히 알아봐요! 🧑‍💻",
+              "tts" : "",
+              "visibility": { "type": "step", "value": 2 }
+            },
+            {
               "id": 2,
+              "type": "code",
+              "title": "문단 태그 (p)",
+              "tts": "",
+              "height": 120,
+              "files": [
+                {
+                  "name": "index.html",
+                  "language": "markup",
+                  "content": "<h1>문단 예시</h1>\n<p>안녕하세요! 이것은 첫 번째 문단입니다.</p>\n<p>HTML의 p 태그는 이렇게 문장을 하나의 단락으로 묶어줘요.</p>"
+                }
+              ],
+              "visibility": { "type": "step", "value": 3 }
+            },
+            {
+              "id": 3,
+              "type": "webview",
+              "tabs": [
+                {
+                  "type": "html",
+                  "content": "<!DOCTYPE html><html lang='ko'><head><meta charset='UTF-8'><title>결과보기</title><style>body{font-family:system-ui;padding:16px}</style></head><body><h1>문단 예시</h1><p>안녕하세요! 이것은 첫 번째 문단입니다.</p><p>HTML의 p 태그는 이렇게 문장을 하나의 단락으로 묶어줘요.</p></body></html>"
+                }
+              ],
+              "visibility": { "type": "step", "value": 4 }
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "👩‍💻 코드 빈칸 채우기: 인사 페이지 만들기",
+          "role": "🎮 실습",
+          "modules": [
+            {
+              "id": 0,
               "type": "codeFillTheGap",
+              "title": "빈칸을 채워서 간단한 인사 페이지를 만들어봐요! ✨",
+              "tts" : "",
               "files": [
                 {
                   "name": "index.html",
                   "language": "html",
-                  "content": "<h{{BLANK-1}}>나의 블로그</h{{BLANK-1}}>\n<{{BLANK-2}}>첫 글입니다.</{{BLANK-2}}>",
-                  "url": "/code/10",
+                  "content": "",
+                  "url": "/code/1",
                   "height": 85,
                   "isInteractive": true,
                   "inputLength": 2,
@@ -242,460 +250,68 @@ const HTML_1 = {
                   ]
                 }
               ],
-              "visibility": { "type": "step", "value": 3 },
+              "visibility": { "type": "step", "value": 1 },
               "result": {
                 "totalStep": 1,
                 "modules": [
                   {
                     "id": 0,
                     "type": "paragraph",
-                    "content": "🎉 잘했어요! 제목은 `<h1>`, 문단은 `<p>`로 마크업합니다.",
+                    "content": "## 🎉 **멋져요!**\n제목과 문단이 올바르게 들어갔어요. \n🧑‍💻 아래 **내가 만든 인사 페이지**를 볼까요?",
+                    "tts" : "",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "correct"
                   },
                   {
                     "id": 1,
                     "type": "paragraph",
-                    "content": "❌ 시작·종료 태그가 **항상 짝**을 이뤄야 해요. 제목과 문단 모두 예외가 아닙니다.",
+                    "content": "## **틀렸어요**🥹\n**제목은** `<h1>`, **문단은** `<p>`를 사용해요.\n그리고 **태그는** `<>,</>` **쌍으로 사용한다는 점**을 기억해요!\n\n👇 이제 아래 **결과 브라우저**를 볼까요?",
+                    "tts" : "",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "wrong"
                   }
+                
                 ]
               }
-            },
-            {
-              "id": 3,
-              "type": "webview",
-              "tabs": [
-                {
-                  "type": "html",
-                  "content": "<!DOCTYPE html><html lang=\"ko\"><head><meta charset=\"UTF-8\"><title>미리보기</title><style>body{font-family:system-ui;padding:16px}</style></head><body><h1>나의 블로그</h1><p>첫 글입니다.</p></body></html>"
-                }
-              ],
-              "visibility": { "type": "step", "value": 4 }
-            }
-          ]
-        },
-        {
-          "id": 3,
-          "title": "링크와 이미지(a, img / href, src, alt)",
-          "role": "📖 개념",
-          "modules": [
-            {
-              "id": 0,
-              "type": "paragraph",
-              "content": "### 🔗🖼️ 링크와 이미지\n- `<a href=\"...\">`: 다른 문서/사이트로 이동하는 **링크**\n- `<img src=\"...\" alt=\"...\">`: 이미지를 표시, `alt`는 대체 텍스트(접근성 핵심)",
-              "visibility": { "type": "step", "value": 1 }
             },
             {
               "id": 1,
-              "type": "multipleChoice",
-              "questions": [
-                {
-                  "title": "접근성 관점에서 이미지에 꼭 필요한 속성은?",
-                  "interactionOptions": [
-                    { "label": "title" },
-                    { "label": "alt" },
-                    { "label": "width" },
-                    { "label": "loading" }
-                  ],
-                  "answer": { "isCorrect": null, "answer": 1, "userAnswer": null }
-                }
-              ],
-              "visibility": { "type": "step", "value": 2 },
-              "result": {
-                "totalStep": 1,
-                "modules": [
-                  {
-                    "id": 0,
-                    "type": "paragraph",
-                    "content": "🎉 맞아요! `alt`는 이미지를 설명해 스크린리더가 내용을 전달할 수 있게 해요.",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "correct"
-                  },
-                  {
-                    "id": 1,
-                    "type": "paragraph",
-                    "content": "❌ 정답은 `alt`입니다. 시각정보를 텍스트로 대체해 접근성을 보장합니다.",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "wrong"
-                  }
-                ]
-              }
-            },
-            {
-						  "id": 2,
-						  "type": "codeFillTheGap",
-						  "files": [
-						    {
-						      "name": "index.html",
-						      "language": "html",
-						      "content": "<p>더 배우려면 <a {{BLANK-1}}=\"\">MDN</a>으로 이동!</p>\n<img {{BLANK-2}}=\"/images/logo.png\" {{BLANK-3}}=\"로고 이미지\" />",
-						      "url": "/code/11",
-                  "height": 130,
-						      "isInteractive": true,
-						      "inputLength": 3,
-						      "interactionOptions": [
-						        { "id": "option-1", "value": "alt", "disabled": false },
-						        { "id": "option-2", "value": "src", "disabled": false },
-						        { "id": "option-3", "value": "link", "disabled": false },
-						        { "id": "option-4", "value": "href", "disabled": false }
-						      ],
-						      "answers": [
-						        { "isCorrect": null, "answer": "href", "userAnswer": null, "optionElIndex": null },
-						        { "isCorrect": null, "answer": "src", "userAnswer": null, "optionElIndex": null },
-						        { "isCorrect": null, "answer": "alt", "userAnswer": null, "optionElIndex": null }
-						      ]
-						    }
-						  ],
-						  "visibility": { "type": "step", "value": 3 },
-						  "result": {
-						    "totalStep": 1,
-						    "modules": [
-						      {
-						        "id": 0,
-						        "type": "paragraph",
-						        "content": "🎉 잘했어요! 링크는 `href`, 이미지는 `src`와 `alt` 속성이 꼭 필요해요.",
-						        "visibility": { "type": "step", "value": 1 },
-						        "condition": "correct"
-						      },
-						      {
-						        "id": 1,
-						        "type": "paragraph",
-						        "content": "❌ 정답은 `href`, `src`, `alt`입니다. 각각 링크 주소, 이미지 경로, 대체 텍스트를 의미합니다.",
-						        "visibility": { "type": "step", "value": 1 },
-						        "condition": "wrong"
-						      }
-						    ]
-						  }
-						},
-            {
-              "id": 3,
               "type": "webview",
               "tabs": [
                 {
                   "type": "html",
-                  "content": "<!DOCTYPE html><html lang=\"ko\"><head><meta charset=\"UTF-8\"><title>미리보기</title><style>body{font-family:system-ui;padding:16px}img{height:40px}</style></head><body><p>더 배우려면 <a href=\"https://developer.mozilla.org/ko/\">MDN 문서</a>로 이동!</p><img src=\"/images/logo.png\" alt=\"로고 이미지\" /></body></html>"
+                  "content": "<!DOCTYPE html><html lang='ko'><head><meta charset='UTF-8'><title>결과보기</title><style>body{font-family:system-ui;padding:16px}</style></head><body><h1>안녕하세요.</h1><p>저는 HTML을 배우고 있어요!🤓</p></body></html>"
                 }
               ],
-              "visibility": { "type": "step", "value": 4 }
-            }
-          ]
-        },
-        {
-          "id": 4,
-          "title": "목록과 버튼(ul/ol/li, button)",
-          "role": "📖 개념",
-          "modules": [
-            {
-              "id": 0,
-              "type": "paragraph",
-              "content": "### ✅ 목록과 상호작용 요소\n- `<ul>/<ol>`: 비순서/순서 목록\n- `<li>`: 목록 항목\n- `<button>`: 클릭 가능한 버튼",
-              "visibility": { "type": "step", "value": 1 }
-            },
-            {
-              "id": 1,
-              "type": "multipleChoice",
-              "questions": [
-                {
-                  "title": "번호가 자동으로 매겨지는 목록에 알맞은 태그 조합은?",
-                  "interactionOptions": [
-                    { "label": "<ul> + <li>" },
-                    { "label": "<ol> + <li>" },
-                    { "label": "<div> + <li>" },
-                    { "label": "<p> + <li>" }
-                  ],
-                  "answer": { "isCorrect": null, "answer": 1, "userAnswer": null }
-                }
-              ],
-              "visibility": { "type": "step", "value": 2 },
-              "result": {
-                "totalStep": 1,
-                "modules": [
-                  {
-                    "id": 0,
-                    "type": "paragraph",
-                    "content": "🎉 맞아요! `<ol>`은 순서(번호) 목록이고 `<ul>`은 불릿 목록이에요.",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "correct"
-                  },
-                  {
-                    "id": 1,
-                    "type": "paragraph",
-                    "content": "❌ 정답은 `<ol> + <li>`입니다. `<ul>`은 불릿(•) 목록이에요.",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "wrong"
-                  }
-                ]
-              }
-            },
-            {
-              "id": 2,
-              "type": "codeFillTheGap",
-              "files": [
-                {
-                  "name": "index.html",
-                  "language": "html",
-                  "content": "<h2>할 일</h2>\n<{{BLANK-1}}>\n  <li>HTML 공부</li>\n  <li>CSS 연습</li>\n</{{BLANK-1}}>\n<{{BLANK-2}}>확인</{{BLANK-2}}>",
-                  "url": "/code/12",
-                  "height": 175,
-                  "isInteractive": true,
-                  "inputLength": 2,
-                  "interactionOptions": [
-                    { "id": "option-1", "value": "<li>", "disabled": false },
-                    { "id": "option-2", "value": "</li>", "disabled": false },
-                    { "id": "option-3", "value": "<button>", "disabled": false },
-                    { "id": "option-4", "value": "</button>", "disabled": false }
-                  ],
-                  "answers": [
-                    { "isCorrect": null, "answer": "<li>", "userAnswer": null, "optionElIndex": null },
-                    { "isCorrect": null, "answer": "</button>", "userAnswer": null, "optionElIndex": null }
-                  ]
-                }
-              ],
-              "visibility": { "type": "step", "value": 3 },
-              "result": {
-                "totalStep": 1,
-                "modules": [
-                  {
-                    "id": 0,
-                    "type": "paragraph",
-                    "content": "🎉 좋아요! 목록과 버튼이 올바르게 마크업되었습니다.",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "correct"
-                  },
-                  {
-                    "id": 1,
-                    "type": "paragraph",
-                    "content": "❌ `<li>`는 **반드시** `<ul>` 또는 `<ol>`로 감싸야 해요. 시작/종료 태그 매칭도 확인!",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "wrong"
-                  }
-                ]
-              }
-            },
-            {
-              "id": 3,
-              "type": "webview",
-              "tabs": [
-                {
-                  "type": "html",
-                  "content": "<!DOCTYPE html><html lang=\"ko\"><head><meta charset=\"UTF-8\"><title>미리보기</title><style>body{font-family:system-ui;padding:16px}button{padding:8px 12px;border:1px solid #ccc;border-radius:8px}</style></head><body><h2>할 일</h2><ul><li>HTML 공부</li><li>CSS 연습</li></ul><button>확인</button></body></html>"
-                }
-              ],
-              "visibility": { "type": "step", "value": 4 }
+              "visibility": { "type": "step", "value": 2 }
             }
           ]
         },
         {
           "id": 5,
-          "title": "시맨틱 구조 태그(header/nav/main/section/article/footer)",
-          "role": "📖 개념",
+          "title": "🎯 오늘 배운 것 정리",
+          "role": "🎉 엔딩",
           "modules": [
             {
               "id": 0,
-              "type": "paragraph",
-              "content": "### 🧩 시맨틱 태그로 구조 잡기\n- `<header>`: 상단 영역(로고, 제목)\n- `<nav>`: 내비게이션\n- `<main>`: 페이지 **핵심 콘텐츠**\n- `<section>/<article>`: 논리적 구획/독립 콘텐츠\n- `<footer>`: 하단 정보",
+              "type": "image",
+              "src": "https://s3.ghmate.com/codingpt/lessons/intro_img.png",
+              "size": "lg",
               "visibility": { "type": "step", "value": 1 }
             },
             {
               "id": 1,
-              "type": "multipleChoice",
-              "questions": [
-                {
-                  "title": "페이지의 **주요 콘텐츠** 영역을 나타내는 태그는?",
-                  "interactionOptions": [
-                    { "label": "<header>" },
-                    { "label": "<main>" },
-                    { "label": "<nav>" },
-                    { "label": "<footer>" }
-                  ],
-                  "answer": { "isCorrect": null, "answer": 1, "userAnswer": null }
-                }
-              ],
-              "visibility": { "type": "step", "value": 2 },
-              "result": {
-                "totalStep": 1,
-                "modules": [
-                  {
-                    "id": 0,
-                    "type": "paragraph",
-                    "content": "🎉 정답! 주요 콘텐츠는 `<main>` 안에 배치합니다.",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "correct"
-                  },
-                  {
-                    "id": 1,
-                    "type": "paragraph",
-                    "content": "❌ 정답은 `<main>`입니다. `<header>/<nav>/<footer>`는 주변 구조를 담당해요.",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "wrong"
-                  }
-                ]
-              }
-            },
-            {
-              "id": 2,
-              "type": "codeFillTheGap",
-              "files": [
-                {
-                  "name": "index.html",
-                  "language": "html",
-                  "content": "<{{BLANK-1}}>\n  <h1>MySite</h1>\n  <{{BLANK-2}}>\n    <a href=\"#\">Home</a>\n    <a href=\"#\">Docs</a>\n  </{{BLANK-2}}>\n</{{BLANK-1}}>\n<{{BLANK-3}}>\n  <section>\n    <article>\n      <h2>소개</h2>\n      <p>시맨틱 태그 연습</p>\n    </article>\n  </section>\n</{{BLANK-3}}>",
-                  "url": "/code/13",
-                  "height": 380,
-                  "isInteractive": true,
-                  "inputLength": 3,
-                  "interactionOptions": [
-                    { "id": "option-1", "value": "<header>", "disabled": false },
-                    { "id": "option-2", "value": "<nav>", "disabled": false },
-                    { "id": "option-3", "value": "<main>", "disabled": false },
-                    { "id": "option-4", "value": "<footer>", "disabled": false }
-                  ],
-                  "answers": [
-                    { "isCorrect": null, "answer": "<header>", "userAnswer": null, "optionElIndex": null },
-                    { "isCorrect": null, "answer": "<nav>", "userAnswer": null, "optionElIndex": null },
-                    { "isCorrect": null, "answer": "<main>", "userAnswer": null, "optionElIndex": null }
-                  ]
-                }
-              ],
-              "visibility": { "type": "step", "value": 3 },
-              "result": {
-                "totalStep": 1,
-                "modules": [
-                  {
-                    "id": 0,
-                    "type": "paragraph",
-                    "content": "🎉 좋아요! 시맨틱 태그로 구조가 한눈에 들어옵니다.",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "correct"
-                  },
-                  {
-                    "id": 1,
-                    "type": "paragraph",
-                    "content": "❌ 각 영역의 역할에 맞는 시맨틱 태그를 사용해야 접근성과 유지보수가 좋아집니다.",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "wrong"
-                  }
-                ]
-              }
-            },
-            {
-              "id": 3,
-              "type": "webview",
-              "tabs": [
-                {
-                  "type": "html",
-                  "content": "<!DOCTYPE html><html lang=\"ko\"><head><meta charset=\"UTF-8\"><title>미리보기</title><style>body{font-family:system-ui;padding:16px}header,main,footer{padding:12px;border:1px solid #ddd;border-radius:8px;margin-bottom:8px}nav a{margin-right:8px}</style></head><body><header><h1>MySite</h1><nav><a href=\"#\">Home</a><a href=\"#\">Docs</a></nav></header><main><section><article><h2>소개</h2><p>시맨틱 태그 연습</p></article></section></main><footer>© 2025</footer></body></html>"
-                }
-              ],
-              "visibility": { "type": "step", "value": 4 }
-            }
-          ]
-        },
-        {
-          "id": 6,
-          "title": "표의 기초(table, tr, th, td)",
-          "role": "📖 개념",
-          "modules": [
-            {
-              "id": 0,
               "type": "paragraph",
-              "content": "### 📊 표의 기초\n- `<table>`: 표 전체\n- `<tr>`: 행(row)\n- `<th>`: 제목 셀(헤더)\n- `<td>`: 일반 데이터 셀",
+              "content": "# 🎯 오늘 배운 내용 정리\n- **HTML=뼈대🦴**\n- **태그=이름표🔖**",
+              "tts" : "",
               "visibility": { "type": "step", "value": 1 }
             },
             {
-              "id": 1,
-              "type": "multipleChoice",
-              "questions": [
-                {
-                  "title": "표의 **제목 셀**을 나타내는 태그는 무엇일까요?",
-                  "interactionOptions": [
-                    { "label": "<td>" },
-                    { "label": "<tr>" },
-                    { "label": "<th>" },
-                    { "label": "<caption>" }
-                  ],
-                  "answer": { "isCorrect": null, "answer": 2, "userAnswer": null }
-                }
-              ],
-              "visibility": { "type": "step", "value": 2 },
-              "result": {
-                "totalStep": 1,
-                "modules": [
-                  {
-                    "id": 0,
-                    "type": "paragraph",
-                    "content": "🎉 정답! `<th>`는 헤더 셀로, 기본적으로 굵게/가운데 정렬됩니다(브라우저 기본 스타일).",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "correct"
-                  },
-                  {
-                    "id": 1,
-                    "type": "paragraph",
-                    "content": "❌ 정답은 `<th>`입니다. `<td>`는 일반 데이터 셀, `<tr>`는 행을 의미합니다.",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "wrong"
-                  }
-                ]
-              }
-            },
-            {
               "id": 2,
-              "type": "codeFillTheGap",
-              "files": [
-                {
-                  "name": "index.html",
-                  "language": "html",
-                  "content": "<{{BLANK-1}}>\n  <tr>\n    <{{BLANK-2}}>이름</{{BLANK-2}}>\n    <{{BLANK-2}}>나이</{{BLANK-2}}>\n  </tr>\n  <tr>\n    <{{BLANK-3}}>홍길동</{{BLANK-3}}>\n    <{{BLANK-3}}>17</{{BLANK-3}}>\n  </tr>\n</{{BLANK-1}}>",
-                  "url": "/code/14",
-                  "height": 270,
-                  "isInteractive": true,
-                  "inputLength": 3,
-                  "interactionOptions": [
-                    { "id": "option-1", "value": "<td>", "disabled": false },
-                    { "id": "option-2", "value": "<tr>", "disabled": false },
-                    { "id": "option-3", "value": "<th>", "disabled": false },
-                    { "id": "option-4", "value": "<table>", "disabled": false }
-                  ],
-                  "answers": [
-                    { "isCorrect": null, "answer": "<table>", "userAnswer": null, "optionElIndex": null },
-                    { "isCorrect": null, "answer": "<th>", "userAnswer": null, "optionElIndex": null },
-                    { "isCorrect": null, "answer": "<td>", "userAnswer": null, "optionElIndex": null }
-                  ]
-                }
-              ],
-              "visibility": { "type": "step", "value": 3 },
-              "result": {
-                "totalStep": 1,
-                "modules": [
-                  {
-                    "id": 0,
-                    "type": "paragraph",
-                    "content": "🎉 잘했습니다! `<th>`는 제목, `<td>`는 일반 셀이에요.",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "correct"
-                  },
-                  {
-                    "id": 1,
-                    "type": "paragraph",
-                    "content": "❌ 제목 셀은 `<th>`, 데이터 셀은 `<td>`로 구분해야 표 구조가 명확해집니다.",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "wrong"
-                  }
-                ]
-              }
-            },
-            {
-              "id": 3,
-              "type": "webview",
-              "tabs": [
-                {
-                  "type": "html",
-                  "content": "<!DOCTYPE html><html lang=\"ko\"><head><meta charset=\"UTF-8\"><title>미리보기</title><style>body{font-family:system-ui;padding:16px}table{border-collapse:collapse}th,td{border:1px solid #ddd;padding:8px 12px}</style></head><body><table><tr><th>이름</th><th>나이</th></tr><tr><td>홍길동</td><td>17</td></tr></table></body></html>"
-                }
-              ],
-              "visibility": { "type": "step", "value": 4 }
+              "type": "paragraph",
+              "content": "## 다음 레슨에서 만나요! 🚀",
+              "tts" : "",
+              "visibility": { "type": "step", "value": 1 }
             }
           ]
         }
