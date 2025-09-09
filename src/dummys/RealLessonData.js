@@ -35,28 +35,28 @@ const HTML_1 = {
             {
               "id": 0,
               "type": "image",
-              "src": "https://s3.ghmate.com/codingpt/class/1/1/1/image/001_concept.png",
+              "src": "https://s3.ghmate.com/codingpt/class/1/1/1/image/002_concept.png",
               "size": "lg",
               "visibility": { "type": "step", "value": 1 }
             },
             {
               "id": 1,
               "type": "paragraph",
-              "content": "## 웹페이지는 **📌제목·🖼️그림·▶️버튼** 같은 \n## **블록이 모여** 만들어져요.",
+              "content": "## 웹페이지는 제목·그림·버튼 같은 블록이\n## 모여 만들어져요.",
               "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/002_웹페이지는_블록이_모여_만들어져요.mp3",
               "visibility": { "type": "step", "value": 1 }
             },
             {
               "id": 2,
               "type": "paragraph",
-              "content": "- HTML은 **웹의 뼈대🦴**이고,\n  태그(tag)는 `< >` **안에 적는 🔖이름표**에요.",
+              "content": "HTML은 **웹의 뼈대🦴**이고,\n  태그(tag)는 `< >` **안에 적는 🔖이름표**에요.",
               "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/003_HTML은_웹의_뼈대.mp3",
               "visibility": { "type": "step", "value": 2 }
             },
             {
               "id": 3,
               "type": "paragraph",
-              "content": "- 큰 제목은 `<h1>`, 문단은 `<p>`, 이미지는 `<img>` 등\n  **다양한 태그**의 종류가 있어요.",
+              "content": "큰 제목은 `<h1>`, 문단은 `<p>`, 이미지는 `<img>` 등\n **다양한 태그**의 종류가 있어요.",
               "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/004_다양한_종류의_태그가_있어요.mp3",
               "visibility": { "type": "step", "value": 3 }
             }
@@ -107,15 +107,9 @@ const HTML_1 = {
             },
             {
               "id": 1,
-              "type": "paragraph",
-              "content": "👇아래 코드와 브라우저를 보면서 \n **제목 태그**를 더 자세히 알아봐요! 🤓",
-              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_제목_태그를_더_알아봐요.mp3",
-              "visibility": { "type": "step", "value": 2 }
-            },
-            {
-              "id": 2,
               "type": "code",
-              "title": "제목 태그 (h1~h6)",
+              "title": "👇아래 코드와 브라우저를 보면서 제목 태그를\n 더 자세히 알아봐요! 🤓",
+              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_제목_태그를_더_알아봐요.mp3",
               "height": 180,
               "files": [
                 {
@@ -124,10 +118,10 @@ const HTML_1 = {
                   "content": "<h1>Hellow world</h1>\n<h2>Hellow world</h2>\n<h3>Hellow world</h3>\n<h4>Hellow world</h4>\n<h5>Hellow world</h5>\n<h6>Hellow world</h6>"
                 }
               ],
-              "visibility": { "type": "step", "value": 3 }
+              "visibility": { "type": "step", "value": 2 }
             },
             {
-              "id": 3,
+              "id": 2,
               "type": "webview",
               "tabs": [
                 {
@@ -135,7 +129,7 @@ const HTML_1 = {
                   "content": "<!DOCTYPE html><html lang='ko'><head><meta charset='UTF-8'><title>결과보기</title><style>body{font-family:system-ui;padding:16px}</style></head><body><h1>Hellow world</h1><h2>Hellow world</h2><h3>Hellow world</h3><h4>Hellow world</h4><h5>Hellow world</h5><h6>Hellow world</h6></body></html>"
                 }
               ],
-              "visibility": { "type": "step", "value": 4 }
+              "visibility": { "type": "step", "value": 3 }
             }
           ]
         },
@@ -184,15 +178,9 @@ const HTML_1 = {
             },
             {
               "id": 1,
-              "type": "paragraph",
-              "content": "👇아래 코드와 브라우저를 보면서 \n **문단 태그**를 더 자세히 알아봐요! 🧑‍💻",
-              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/012_문단_태그를_더_알아봐요.mp3",
-              "visibility": { "type": "step", "value": 2 }
-            },
-            {
-              "id": 2,
               "type": "code",
-              "title": "문단 태그 (p)",
+              "title": "👇아래 코드와 브라우저를 보면서 문단 태그를\n 더 자세히 알아봐요! 🧑‍💻",
+              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/012_문단_태그를_더_알아봐요.mp3",
               "height": 120,
               "files": [
                 {
@@ -201,10 +189,10 @@ const HTML_1 = {
                   "content": "<h1>문단 예시</h1>\n<p>안녕하세요! 이것은 첫 번째 문단입니다.</p>\n<p>HTML의 p 태그는 이렇게 문장을 하나의 단락으로 묶어줘요.</p>"
                 }
               ],
-              "visibility": { "type": "step", "value": 3 }
+              "visibility": { "type": "step", "value": 2 }
             },
             {
-              "id": 3,
+              "id": 2,
               "type": "webview",
               "tabs": [
                 {
@@ -212,7 +200,7 @@ const HTML_1 = {
                   "content": "<!DOCTYPE html><html lang='ko'><head><meta charset='UTF-8'><title>결과보기</title><style>body{font-family:system-ui;padding:16px}</style></head><body><h1>문단 예시</h1><p>안녕하세요! 이것은 첫 번째 문단입니다.</p><p>HTML의 p 태그는 이렇게 문장을 하나의 단락으로 묶어줘요.</p></body></html>"
                 }
               ],
-              "visibility": { "type": "step", "value": 4 }
+              "visibility": { "type": "step", "value": 3 }
             }
           ]
         },
@@ -254,16 +242,16 @@ const HTML_1 = {
                   {
                     "id": 0,
                     "type": "paragraph",
-                    "content": "## 🎉 **멋져요!**\n제목과 문단이 올바르게 들어갔어요. \n🧑‍💻 아래 **내가 만든 인사 페이지**를 볼까요?",
-                    "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/014_멋져요_제목과_문단이_올바르게_들어갔어요.mp3",
+                    "content": "## 🎉 정답이에요!",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/014_정답이에요.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "correct"
                   },
                   {
                     "id": 1,
                     "type": "paragraph",
-                    "content": "## **틀렸어요**🥹\n **제목은** `<h1>`, **문단은** `<p>`를 사용해요.\n그리고 **태그는** `<>,</>` **쌍으로 사용한다는 점**을 기억해요!\n\n👇 이제 아래 **결과 브라우저**를 볼까요?",
-                    "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/015_틀렸어요_제목은_h1_태그_문단은_p_태그를_사용해요.mp3",
+                    "content": "## **틀렸어요**🥹\n **제목은** `<h1>`, **문단은** `<p>`를 사용해요.",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/015_틀렸어요_제목은_h1태그_문단은_p태그를_사용해요.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "wrong"
                   }
@@ -274,6 +262,8 @@ const HTML_1 = {
             {
               "id": 1,
               "type": "webview",
+              "title": "🧑‍💻 아래 완성된 페이지를 볼까요?",
+              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/018_아래_완성된_페이지를_볼까요.mp3",
               "tabs": [
                 {
                   "type": "html",
@@ -299,7 +289,7 @@ const HTML_1 = {
             {
               "id": 1,
               "type": "paragraph",
-              "content": "# 🎯 오늘 배운 내용 정리\n- **HTML=뼈대🦴**\n- **태그=이름표🔖**",
+              "content": "# 🎯 오늘 배운 내용 정리\n- **HTML=뼈대🦴**\n- **태그=이름표🔖**\n- 제목: `<h1>`, 문단: `<p>`",
               "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/016_오늘_배운_내용_정리_html은_뼈대_태그는_이름표.mp3",
               "visibility": { "type": "step", "value": 1 }
             },
@@ -354,7 +344,7 @@ const HTML_2 = {
             {
               "id": 0,
               "type": "image",
-              "src": "https://s3.ghmate.com/codingpt/class/1/1/1/image/001_concept.png",
+              "src": "https://s3.ghmate.com/codingpt/class/1/1/1/image/002_concept.png",
               "size": "lg",
               "visibility": { "type": "step", "value": 1 }
             },
@@ -440,15 +430,9 @@ const HTML_2 = {
             },
             {
               "id": 1,
-              "type": "paragraph",
-              "content": "아래 코드와 브라우저를 보면서 `<body>`를\n더 자세히 알아봐요! ✨",
-              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/2/audio/010_body_태그를_더_알아봐요.mp3",
-              "visibility": { "type": "step", "value": 2 }
-            },
-            {
-              "id": 2,
               "type": "code",
-              "title": "<body> 예시",
+              "title": "아래 코드와 브라우저를 보면서 `<body>`를 더 자세히\n 알아봐요! ✨",
+              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/2/audio/010_body_태그를_더_알아봐요.mp3",
               "height": 150,
               "files": [
                 {
@@ -457,10 +441,10 @@ const HTML_2 = {
                   "content": "<body>\n  <h1>안녕하세요! 👋</h1>\n  <p>여기는 <strong>body</strong> 안에 있는 내용이에요.</p>\n  <button>버튼도 만들 수 있어요!</button>\n</body>"
                 }
               ],
-              "visibility": { "type": "step", "value": 3 }
+              "visibility": { "type": "step", "value": 2 }
             },
             {
-              "id": 3,
+              "id": 2,
               "type": "webview",
               "tabs": [
                 {
@@ -468,7 +452,7 @@ const HTML_2 = {
                   "content": "<!DOCTYPE html><html lang='ko'><head><meta charset='UTF-8'><title>body 태그 예시</title></head><body><h1>안녕하세요! 👋</h1><p>여기는 <strong>body</strong> 안에 있는 내용이에요.</p><button>버튼도 만들 수 있어요!</button></body></html>"
                 }
               ],
-              "visibility": { "type": "step", "value": 4 }
+              "visibility": { "type": "step", "value": 3 }
             }
           ]
         },
@@ -517,35 +501,29 @@ const HTML_2 = {
             },
             {
               "id": 1,
-              "type": "paragraph",
-              "content": "👇아래 코드와 브라우저를 보면서 `<head>`를\n더 자세히 알아봐요! 🧑‍💻",
-              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/012_문단_태그를_더_알아봐요.mp3",
-              "visibility": { "type": "step", "value": 2 }
-            },
-            {
-              "id": 2,
               "type": "code",
-              "title": "<head> 예시",
+              "title": "👇아래 코드와 브라우저를 보면서 `<head>`를\n더 자세히 알아봐요! 🧑‍💻",
+              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/2/audio/014_head_태그를_더_알아봐요.mp3",
               "height": 120,
               "files": [
                 {
                   "name": "index.html",
                   "language": "html",
-                  "content": "<head>\n  <meta charset='UTF-8'>\n  <title>이것이 브라우저 탭 제목!</title>\n</head>"
+                  "content": "<head>\n  <meta charset='UTF-8'>\n  <title>페이지 제목</title>\n</head>"
                 }
               ],
-              "visibility": { "type": "step", "value": 3 }
+              "visibility": { "type": "step", "value": 2 }
             },
             {
-              "id": 3,
+              "id": 2,
               "type": "webview",
               "tabs": [
                 {
                   "type": "html",
-                  "content": "<!DOCTYPE html><html lang='ko'><head><meta charset='UTF-8'><title>이것이 브라우저 탭 제목!</title></head><body><h1>본문 내용은 여기 👇</h1><p>여기는 body 안에 표시돼요.</p></body></html>"
+                  "content": "<!DOCTYPE html><html lang='ko'><head><meta charset='UTF-8'><title>페이지 제목</title></head><body><h1>본문 내용은 여기 👇</h1><p>여기는 body 안에 표시돼요.</p></body></html>"
                 }
               ],
-              "visibility": { "type": "step", "value": 4 }
+              "visibility": { "type": "step", "value": 3 }
             }
           ]
         },
@@ -558,7 +536,7 @@ const HTML_2 = {
               "id": 0,
               "type": "codeFillTheGap",
               "title": "빈칸을 채워서 간단한 html 문서를 만들어봐요! ✨",
-              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/013_빈칸을_채워_간단한_인사_페이지를_만들어봐요.mp3",
+              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/2/audio/015_빈칸을_채워_간단한_html_문서를_만들어봐요.mp3",
               "files": [
                 {
                   "name": "index.html",
@@ -587,16 +565,16 @@ const HTML_2 = {
                   {
                     "id": 0,
                     "type": "paragraph",
-                    "content": "## 🎉 **멋져요!**\n문서의 뼈대가 올바르게 들어갔어요. \n🧑‍💻 아래 **내가 만든 html 문서**를 볼까요?",
-                    "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/014_멋져요_제목과_문단이_올바르게_들어갔어요.mp3",
+                    "content": "## 🎉 **정답이에요!**\n문서의 뼈대가 올바르게 들어갔어요.",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/1/1/2/audio/016_정답이에요_문서의_뼈대가_올바르게_들어갔어요.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "correct"
                   },
                   {
                     "id": 1,
                     "type": "paragraph",
-                    "content": "## **틀렸어요**🥹\n**문서의 뼈대는** `<html>`, **머리는** `<head>`,\n**몸은** `<body>`를 사용해요.\n\n👇 이제 아래 **결과 브라우저**를 볼까요?",
-                    "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/015_틀렸어요_제목은_h1_태그_문단은_p_태그를_사용해요.mp3",
+                    "content": "## **틀렸어요**🥹\n**문서의 뼈대는** `<html>`, **머리는** `<head>`,\n**몸은** `<body>`를 사용해요.",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/1/1/2/audio/017_틀렸어요_문서의_뼈대는_html_머리는_head_몸은_body를_사용해요_.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "wrong"
                   }
@@ -607,6 +585,8 @@ const HTML_2 = {
             {
               "id": 1,
               "type": "webview",
+              "title": "🧑‍💻 아래 완성된 페이지를 볼까요?",
+              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/2/audio/018_아래_완성된_페이지를_볼까요.mp3",
               "tabs": [
                 {
                   "type": "html",
@@ -633,14 +613,14 @@ const HTML_2 = {
               "id": 1,
               "type": "paragraph",
               "content": "# 🎯 오늘 배운 내용 정리\n- **`<!DOCTYPE html>`**: HTML5 선언\n- **`<html>`**: 문서 전체 + 언어\n- **`<head>`**: 정보(제목/문자셋)\n- **`<body>`**: 화면에 보이는 내용",
-              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/016_오늘_배운_내용_정리_html은_뼈대_태그는_이름표.mp3",
+              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/2/audio/019_오늘_배운_내용_정리.mp3",
               "visibility": { "type": "step", "value": 1 }
             },
             {
               "id": 2,
               "type": "paragraph",
               "content": "## 다음 레슨에서 만나요! 🚀",
-              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/017_다음_레슨에서_만나요.mp3",
+              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/2/audio/020_다음_레슨에서_만나요.mp3",
               "visibility": { "type": "step", "value": 2 }
             }
           ]
@@ -2536,7 +2516,7 @@ const CSS_1 = {
             {
               "id": 1,
               "type": "paragraph",
-              "content": "## HTML은 **뼈대**🦴, \n## CSS는 **꾸미는 법(스타일)🎨** 이에요.",
+              "content": "## HTML은 **뼈대**🦴 \n## CSS는 꾸미는 법(스타일)🎨",
               "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/001_html_구조와_태그에_대해_알아볼까.mp3",
               "visibility": { "type": "step", "value": 1 }
             },
@@ -2575,7 +2555,7 @@ const CSS_1 = {
                   {
                     "id": 0,
                     "type": "paragraph",
-                    "content": "## 🙆‍♀️ 잘했어요!\n**color** 는 글자의 색을 바꿔요.",
+                    "content": "## 🙆‍♀️ 잘했어요!",
                     "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_정답_화면에_보이는_콘텐츠는_body_태그_안에_작성합니다.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "correct"
@@ -2583,7 +2563,7 @@ const CSS_1 = {
                   {
                     "id": 1,
                     "type": "paragraph",
-                    "content": "## 🙅‍♀️ 정답은 **color**입니다! \n`background-color`는 **바탕색**, `font-size`는 **글자 크기**를 설정해요.",
+                    "content": "## 🙅‍♀️ 정답은 `color`입니다! \n💡 `background-color`: 바탕색, `font-size`: 글자 크기",
                     "tts" : "",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "wrong"
@@ -2593,15 +2573,8 @@ const CSS_1 = {
             },
             {
               "id": 1,
-              "type": "paragraph",
-              "content": "👇아래 예시 코드와 브라우저를 보면서 **color 속성**을\n 더 자세히 알아봐요! ✨",
-              "tts" : "",
-              "visibility": { "type": "step", "value": 2 }
-            },
-            {
-              "id": 2,
               "type": "code",
-              "title": "color 속성",
+              "title": "👇아래 예시 코드와 브라우저를 보면서 color 속성을\n 더 자세히 알아봐요! ✨",
               "tts": "",
               "height": 150,
               "files": [
@@ -2616,10 +2589,10 @@ const CSS_1 = {
                   "content": ".red-text{color:red;}\n.blue-text{color:blue;}\n.green-text{color:green;}"
                 }
               ],
-              "visibility": { "type": "step", "value": 3 }
+              "visibility": { "type": "step", "value": 2 }
             },
             {
-              "id": 3,
+              "id": 2,
               "type": "webview",
               "tabs": [
                 {
@@ -2627,7 +2600,7 @@ const CSS_1 = {
                   "content": "<!DOCTYPE html><html lang='ko'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1'><title>결과보기</title><style>body{font-family:system-ui;padding:16px}h1{margin:0 0 12px}p{margin:6px 0}.red-text{color:red}.blue-text{color:blue}.green-text{color:green}</style></head><body><h1>CSS color 속성 연습</h1><p class='red-text'>이 문장은 빨간색이에요.</p><p class='blue-text'>이 문장은 파란색이에요.</p><p class='green-text'>이 문장은 초록색이에요.</p></body></html>"
                 }
               ],
-              "visibility": { "type": "step", "value": 4 }
+              "visibility": { "type": "step", "value": 3 }
             }
           ]
         },
@@ -2658,7 +2631,7 @@ const CSS_1 = {
                   {
                     "id": 0,
                     "type": "paragraph",
-                    "content": "## 🙆‍♀️ 정답이에요!\n**background-color** 가 배경색을 바꿔요.",
+                    "content": "## 🙆‍♀️ 정답이에요!",
                     "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_정답_화면에_보이는_콘텐츠는_body_태그_안에_작성합니다.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "correct"
@@ -2666,7 +2639,7 @@ const CSS_1 = {
                   {
                     "id": 1,
                     "type": "paragraph",
-                    "content": "## 🙅‍♀️ 정답은 **background-color: blue**에요. \n`background-color`로 배경색을 바꾸고, \n`color`로 글자색을 바꿔요!",
+                    "content": "## 🙅‍♀️ 정답은 `background-color: blue`에요.\n💡 `color`는 글자색을 바꿔요.",
                     "tts" : "",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "wrong"
@@ -2676,15 +2649,8 @@ const CSS_1 = {
             },
             {
               "id": 1,
-              "type": "paragraph",
-              "content": "👇아래 예시 코드와 브라우저를 보면서 \n**background-color 속성**을 더 자세히 알아봐요! ✨",
-              "tts" : "",
-              "visibility": { "type": "step", "value": 2 }
-            },
-            {
-              "id": 2,
               "type": "code",
-              "title": "background-color 속성",
+              "title": "👇아래 예시 코드와 브라우저를 보면서\nbackground-color 속성을 더 알아봐요! ✨",
               "tts": "",
               "height": 130,
               "files": [
@@ -2699,10 +2665,10 @@ const CSS_1 = {
                   "content": ".box-purple { background-color: purple; color: white; } \n.box-tomato { background-color: tomato; color: white } \n.box-blue { background-color: blue; color: white }"
                 }
               ],
-              "visibility": { "type": "step", "value": 3 }
+              "visibility": { "type": "step", "value": 2 }
             },
             {
-              "id": 3,
+              "id": 2,
               "type": "webview",
               "tabs": [
                 {
@@ -2710,7 +2676,7 @@ const CSS_1 = {
                   "content": "<!DOCTYPE html><html lang='ko'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>배경색 연습</title><style>body{font-family:system-ui;padding:16px}h1{margin-bottom:12px}.box-purple{background-color:purple;color:white;padding:8px;border-radius:6px}.box-tomato{background-color:tomato;color:white;padding:8px;border-radius:6px}.box-blue{background-color:blue;color:white;padding:8px;border-radius:6px}</style></head><body><h1>배경색 연습</h1><p class='box-purple'>보라색 배경</p><p class='box-tomato'>토마토색 배경</p><p class='box-blue'>파란색 배경</p></body></html>"
                 }
               ],
-              "visibility": { "type": "step", "value": 4 }
+              "visibility": { "type": "step", "value": 3 }
             }
           ]
         },
@@ -2741,7 +2707,7 @@ const CSS_1 = {
                   {
                     "id": 0,
                     "type": "paragraph",
-                    "content": "## 🙆‍♀️ 맞아요!\n**font-size** 가 글자 크기를 바꿔요.",
+                    "content": "## 🙆‍♀️ 정답이에요!",
                     "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_정답_화면에_보이는_콘텐츠는_body_태그_안에_작성합니다.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "correct"
@@ -2749,7 +2715,7 @@ const CSS_1 = {
                   {
                     "id": 1,
                     "type": "paragraph",
-                    "content": "## 🙅‍♀️ 정답은 **font-size** 입니다. \n`font-weight`는 **굵기**, `line-height`는 **줄 간격**을 설정해요!",
+                    "content": "## 🙅‍♀️ 정답은 `font-size`입니다. \n💡 `font-weight`: 굵기, `line-height`: 줄 간격",
                     "tts" : "",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "wrong"
@@ -2759,15 +2725,8 @@ const CSS_1 = {
             },
             {
               "id": 1,
-              "type": "paragraph",
-              "content": "👇아래 예시 코드와 브라우저를 보면서 **font-size 속성**을\n 더 자세히 알아봐요! ✨",
-              "tts" : "",
-              "visibility": { "type": "step", "value": 2 }
-            },
-            {
-              "id": 2,
               "type": "code",
-              "title": "font-size 속성",
+              "title": "👇아래 예시 코드와 브라우저를 보며\nfont-size에 대해 자세히 알아봐요! ✨",
               "tts": "",
               "height": 150,
               "files": [
@@ -2782,10 +2741,10 @@ const CSS_1 = {
                   "content": ".small-text { font-size: 12px; } \n.medium-text { font-size: 16px; } \n.large-text { font-size: 24px; } \n.xlarge-text { font-size: 32px; }"
                 }
               ],
-              "visibility": { "type": "step", "value": 3 }
+              "visibility": { "type": "step", "value": 2 }
             },
             {
-              "id": 3,
+              "id": 2,
               "type": "webview",
               "tabs": [
                 {
@@ -2793,7 +2752,7 @@ const CSS_1 = {
                   "content": "<!DOCTYPE html><html lang='ko'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>글자 크기 연습</title><style>body{font-family:system-ui;padding:16px}.small-text{font-size:12px}.medium-text{font-size:16px}.large-text{font-size:24px}.xlarge-text{font-size:32px}</style></head><body><h1>글자 크기 연습</h1><p class='small-text'>이 문장은 작은 글씨(12px)</p><p class='medium-text'>이 문장은 중간 크기(16px)</p><p class='large-text'>이 문장은 큰 글씨(24px)</p><p class='xlarge-text'>이 문장은 아주 큰 글씨(32px)</p></body></html>"
                 }
               ],
-              "visibility": { "type": "step", "value": 4 }
+              "visibility": { "type": "step", "value": 3 }
             }
           ]
         },
@@ -2805,7 +2764,7 @@ const CSS_1 = {
             {
               "id": 0,
               "type": "codeFillTheGap",
-              "title": "아래 빈칸을 채워서 [글자색=빨강], [배경=노랑], \n[제목 크기=32px] 으로 만들어보세요! ✨",
+              "title": "아래 빈칸을 채워서 [배경=노랑], [글자색=빨강],\n[제목 크기=32px]으로 만들어보세요! ✨",
               "tts" : "",
               "files": [
                 {
@@ -2846,7 +2805,7 @@ const CSS_1 = {
                   {
                     "id": 0,
                     "type": "paragraph",
-                    "content": "## 🎉 **잘했어요!**\n분리한 **style.css** 덕분에 HTML과 스타일이 깔끔히 나뉘었어요. \n\n🧑‍💻 아래 **결과 브라우저**를 볼까요?",
+                    "content": "## 🎉 잘했어요!\n분리한 **style.css** 덕분에 HTML과 스타일이 깔끔히 나뉘었어요.",
                     "tts" : "",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "correct"
@@ -2854,7 +2813,7 @@ const CSS_1 = {
                   {
                     "id": 1,
                     "type": "paragraph",
-                    "content": "## **아쉬워요**🥹\n💡힌트: 배경=**background-color**, \n글자색=**color**, 글자 크기=**font-size**\n\n👇 이제 아래 **결과 브라우저**를 볼까요?",
+                    "content": "## 틀렸어요 🥹\n💡배경=**background-color**, \n글자색=**color**, 글자 크기=**font-size**",
                     "tts" : "",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "wrong"
@@ -2865,6 +2824,8 @@ const CSS_1 = {
             {
               "id": 1,
               "type": "webview",
+              "title": "🧑‍💻 아래 결과 브라우저를 볼까요?",
+              "tts": "",
               "tabs": [
                 {
                   "type": "html",
@@ -2890,16 +2851,22 @@ const CSS_1 = {
             {
               "id": 1,
               "type": "paragraph",
-              "content": "# 오늘은 CSS로 🎨글자색, 🖼️배경색, \n# 📏글자 크기를 바꿔봤어요!",
+              "content": "# 오늘은 CSS로 글자색, 배경색, \n# 글자 크기를 바꿔봤어요!",
               "tts" : "",
               "visibility": { "type": "step", "value": 1 }
             },
             {
               "id": 2,
               "type": "paragraph",
+              "content": "`color`: blue; ➡️ 글자색: 파랑\n`backgroud-color`: yellow; ➡️ 배경색: 노랑\n`font-size`: 32px; ➡️ 글자 크기: 32px",
+              "visibility": { "type": "step", "value": 2 }
+            },
+            {
+              "id": 3,
+              "type": "paragraph",
               "content": "## 다음 레슨에서 또 만나요! 🚀",
               "tts" : "",
-              "visibility": { "type": "step", "value": 1 }
+              "visibility": { "type": "step", "value": 3 }
             }
           ]
         }
@@ -2958,21 +2925,21 @@ const CSS_2 = {
             {
               "id": 2,
               "type": "paragraph",
-              "content": "- **이름**: 🟥`red`, 🟦`blue`, 🟩`green` 처럼\n 쉽고 직관적이에요",
+              "content": "**이름**: 🟥`red`, 🟦`blue`, 🟩`green` 처럼 쉽고 직관적이에요",
               "tts" : "",
               "visibility": { "type": "step", "value": 2 }
             },
             {
               "id": 3,
               "type": "paragraph",
-              "content": "- **색상코드**: `#ff0000`(빨강), `#0000ff`(파랑)처럼\n **색상코드**로 더 많은 색을 표현해요.",
+              "content": "**색상코드**: `#ff0000`(빨강), `#0000ff`(파랑)처럼 색상코드로\n 더 많은 색을 표현해요.",
               "tts" : "",
               "visibility": { "type": "step", "value": 3 }
             },
             {
               "id": 4,
               "type": "paragraph",
-              "content": "- **RGB**: 🟥`rgb(255, 0, 0)`, 🟦`rgb(0, 0, 255)`처럼\n **RGB 값**으로 더 많은 색을 표현해요.",
+              "content": "**RGB**: 🟥`rgb(255, 0, 0)`, 🟦`rgb(0, 0, 255)`처럼\nRGB 값으로 더 많은 색을 표현해요.",
               "tts" : "",
               "visibility": { "type": "step", "value": 4 }
             }
@@ -3005,7 +2972,7 @@ const CSS_2 = {
                   {
                     "id": 0,
                     "type": "paragraph",
-                    "content": "## 🙆‍♀️ 잘했어요!\n **color 속성** 은 글자색을 바꿔요.",
+                    "content": "## 🙆‍♀️ 잘했어요!",
                     "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_정답_화면에_보이는_콘텐츠는_body_태그_안에_작성합니다.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "correct"
@@ -3023,15 +2990,8 @@ const CSS_2 = {
             },
             {
               "id": 1,
-              "type": "paragraph",
-              "content": "👇아래 예시 코드와 브라우저를 보면서 **color 속성**을\n 더 자세히 알아봐요! ✨",
-              "tts" : "",
-              "visibility": { "type": "step", "value": 2 }
-            },
-            {
-              "id": 2,
               "type": "code",
-              "title": "color 속성",
+              "title": "👇아래 예시 코드와 브라우저를 보면서 **color 속성**을\n 더 자세히 알아봐요! ✨",
               "tts": "",
               "height": 100,
               "files": [
@@ -3046,10 +3006,10 @@ const CSS_2 = {
                   "content": ".red-text { color: #ff0000; }"
                 }
               ],
-              "visibility": { "type": "step", "value": 3 }
+              "visibility": { "type": "step", "value": 2 }
             },
             {
-              "id": 3,
+              "id": 2,
               "type": "webview",
               "tabs": [
                 {
@@ -3057,19 +3017,19 @@ const CSS_2 = {
                   "content": "<!DOCTYPE html><html lang='ko'><head><meta charset='UTF-8'><title>글자색 예시</title></head><body><p style='color:#ff0000'>이 문장은 빨간색이에요 🔴</p></body></html>"
                 }
               ],
-              "visibility": { "type": "step", "value": 4 }
+              "visibility": { "type": "step", "value": 3 }
             }
           ]
         },
         {
-          "id": 4,
+          "id": 3,
           "title": "👩‍💻 코드 빈칸 채우기: 버튼 색 바꾸기",
           "role": "🎮 실습",
           "modules": [
             {
               "id": 0,
               "type": "codeFillTheGap",
-              "title": "아래 조건을 만족하도록 빈칸을 채워요 ✨\n- 버튼 배경: 색상코드 빨강\n- 안내 박스 배경: 파랑 50% 투명(반투명)",
+              "title": "아래 조건을 만족하도록 빈칸을 채워요 ✨\n- 버튼 배경: 빨간색(색상코드)\n- 안내 박스 배경: 파랑색 50% 투명(반투명)",
               "tts" : "",
               "files": [
                 {
@@ -3093,7 +3053,7 @@ const CSS_2 = {
                   "inputLength": 2,
                   "interactionOptions": [
                     { "id": "option-1", "value": "#ff0000", "disabled": false },
-                    { "id": "option-2", "value": "red", "disabled": false },
+                    { "id": "option-2", "value": "blue", "disabled": false },
                     { "id": "option-3", "value": "rgba(0,0,255,0.5)", "disabled": false }
                   ],
                   "answers": [
@@ -3109,7 +3069,7 @@ const CSS_2 = {
                   {
                     "id": 0,
                     "type": "paragraph",
-                    "content": "## 🎉 **잘했어요!**\n 배경은 **색상코드**로, 반투명은 **RGBA**로 표현했어요. \n\n🧑‍💻 아래 **결과 브라우저**를 볼까요?",
+                    "content": "## 🎉 잘했어요!\n 버튼 배경은 **색상코드**로, 안내 박스 배경은 **RGBA**로 투명도를 표현했어요.",
                     "tts" : "",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "correct"
@@ -3117,7 +3077,7 @@ const CSS_2 = {
                   {
                     "id": 1,
                     "type": "paragraph",
-                    "content": "## **틀렸어요**🥹\n- 빨간색 색상코드 → `#ff0000`\n- 파랑색 50% 투명 → `rgba(0,0,255,0.5)`\n\n👇 이제 아래 **결과 브라우저**를 볼까요?",
+                    "content": "## 틀렸어요 🥹\n- 빨간색 색상코드 → `#ff0000`\n- 파랑색 50% 투명 → `rgba(0,0,255,0.5)`",
                     "tts" : "",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "wrong"
@@ -3128,6 +3088,8 @@ const CSS_2 = {
             {
               "id": 1,
               "type": "webview",
+              "title": "🧑‍💻 아래 결과 브라우저를 확인해봐요!",
+              "tts": "",
               "tabs": [
                 {
                   "type": "html",
@@ -3139,7 +3101,7 @@ const CSS_2 = {
           ]
         },
         {
-          "id": 6,
+          "id": 4,
           "title": "🎯 오늘 배운 것 정리",
           "role": "🎉 엔딩",
           "modules": [
@@ -3160,9 +3122,16 @@ const CSS_2 = {
             {
               "id": 2,
               "type": "paragraph",
-              "content": "## 다음 레슨에서 또 만나요! 🚀",
+              "content": "1) **이름**: 🟥`red`, 🟦`blue``\n2) **색상코드**: `#ff0000`(빨강), `#0000ff`(파랑)\n3) **RGB**: 🟥`rgb(255, 0, 0)`, 🟦`rgb(0, 0, 255)`",
               "tts" : "",
               "visibility": { "type": "step", "value": 2 }
+            },
+            {
+              "id": 3,
+              "type": "paragraph",
+              "content": "## 다음 레슨에서 또 만나요! 🚀",
+              "tts" : "",
+              "visibility": { "type": "step", "value": 3 }
             }
           ]
         }
@@ -4894,7 +4863,7 @@ const JS_1 = {
             {
               "id": 1,
               "type": "paragraph",
-              "content": "## HTML이 뼈대🦴, CSS가 옷👗이라면\n## JS는 **움직이는 힘(엔진⚡)** 이에요!",
+              "content": "## HTML이 뼈대🦴\n## CSS가 옷👗\n## JS는 움직이는 힘(엔진⚡)",
               "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/001_html_구조와_태그에_대해_알아볼까.mp3",
               "visibility": { "type": "step", "value": 1 }
             }
@@ -4935,7 +4904,7 @@ const JS_1 = {
                   {
                     "id": 1,
                     "type": "paragraph",
-                    "content": "## 🙅‍♀️ 정답은 '웹을 움직이게 하기'입니다.\n**구조는 HTML**, **꾸미기는 CSS** 담당이에요!",
+                    "content": "## 🙅‍♀️ 정답은 '웹을 움직이게 하기'입니다.\n구조는 HTML, 꾸미기는 CSS",
                     "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_정답_화면에_보이는_콘텐츠는_body_태그_안에_작성합니다.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "wrong"
@@ -4945,41 +4914,34 @@ const JS_1 = {
             },
             {
               "id": 1,
-              "type": "paragraph",
-              "content": "👇아래 예시 코드와 브라우저를 보면서 더 자세히 알아봐요!",
-              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_정답_화면에_보이는_콘텐츠는_body_태그_안에_작성합니다.mp3",
-              "visibility": { "type": "step", "value": 2 }
-            },
-            {
-              "id": 2,
               "type": "code",
-              "title": "웹을 움직이게 하는 JS",
+              "title": "👇아래 예시 코드와 브라우저를 보면서\n더 자세히 알아봐요!",
               "tts": "",
-              "height": 150,
+              "height": 300,
               "files": [
                 {
                   "name": "index.html",
                   "language": "html",
-                  "content": "<h1>JavaScript 동작 예시</h1>\n<button id='btn'>눌러보세요</button>\n<p id='text'>아직 버튼을 누르지 않았습니다.</p>\n\n<script src='script.js'></script>"
+                  "content": "<h1>JS 동작 맛보기</h1>\n<button id='btn'>눌러보세요</button>\n<p id='text'>아직 버튼을 누르지 않았습니다.</p>\n\n<script src='script.js'></script>"
                 },
                 {
                   "name": "script.js",
                   "language": "javascript",
-                  "content": "document.getElementById('btn').addEventListener('click', function() {\n  document.getElementById('text').textContent = '버튼을 눌렀어요! 🎉';\n});"
+                  "content": "let count = 0; // 버튼 클릭 횟수 저장 변수\n\ndocument.getElementById('btn').addEventListener('click', function() {\n  count++; // 버튼 클릭 시 횟수 증가\n\n  // 클릭 횟수에 따라 출력 내용 변경\n  if (count === 1) {\n    document.getElementById('text').textContent = '버튼을 눌렀어요! 🎉';\n  } else {\n    document.getElementById('text').textContent = '버튼을 눌렀어요! 🎉: (+${count}번 클릭);\n  }\n});"
                 }
               ],
-              "visibility": { "type": "step", "value": 3 }
+              "visibility": { "type": "step", "value": 2 }
             },
             {
-              "id": 3,
+              "id": 2,
               "type": "webview",
               "tabs": [
                 {
                   "type": "html",
-                  "content": "<!DOCTYPE html><html lang='ko'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>JavaScript 동작 예시</title><style>body{font-family:system-ui;padding:10px 20px;}#btn{padding:10px 20px;background:#58CC02;color:#fff;border:none;cursor:pointer;border-radius:6px}#text{margin-top:20px;font-size:18px}</style></head><body><h1>JavaScript 동작 예시</h1><button id='btn'>눌러보세요</button><p id='text'>아직 버튼을 누르지 않았습니다.</p><script>document.getElementById('btn').addEventListener('click',function(){document.getElementById('text').textContent='버튼을 눌렀어요! 🎉';});</script></body></html>"
+                  "content": "<!DOCTYPE html><html lang='ko'><head><meta charset='UTF-8'><title>JS 동작 맛보기</title></head><body><h1>JS 동작 맛보기</h1><button id='btn'>눌러보세요</button><p id='text'>아직 버튼을 누르지 않았습니다.</p><script>let count=0;document.getElementById('btn').addEventListener('click',function(){count++;if(count===1){document.getElementById('text').textContent='버튼을 눌렀어요! 🎉';}else{document.getElementById('text').textContent=`버튼을 눌렀어요! 🎉 (+${count}번 클릭)`;}});</script></body></html>"
                 }
               ],
-              "visibility": { "type": "step", "value": 4 }
+              "visibility": { "type": "step", "value": 3 }
             }
           ]
         },
@@ -5010,7 +4972,7 @@ const JS_1 = {
                   {
                     "id": 0,
                     "type": "paragraph",
-                    "content": "## 🙆‍♀️ 정답이에요!\n **alert()** 함수는 알림창을 띄워줘요.",
+                    "content": "## 🙆‍♀️ 정답이에요!\n`console.log`는 콘솔 출력이에요.",
                     "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_정답_화면에_보이는_콘텐츠는_body_태그_안에_작성합니다.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "correct"
@@ -5018,7 +4980,7 @@ const JS_1 = {
                   {
                     "id": 1,
                     "type": "paragraph",
-                    "content": "## 🙅‍♀️ 정답은 `alert('안녕 JS!');`입니다. \n`console.log`는 콘솔 출력이에요.",
+                    "content": "## 🙅‍♀️ 정답은 `alert('안녕 JS!');`입니다.\n`console.log`는 콘솔 출력이에요.",
                     "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_정답_화면에_보이는_콘텐츠는_body_태그_안에_작성합니다.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "wrong"
@@ -5028,15 +4990,8 @@ const JS_1 = {
             },
             {
               "id": 1,
-              "type": "paragraph",
-              "content": "👇아래 예시 코드와 브라우저를 보면서 **alert()** 함수를\n더 자세히 알아봐요! ✨",
-              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_정답_화면에_보이는_콘텐츠는_body_태그_안에_작성합니다.mp3",
-              "visibility": { "type": "step", "value": 2 }
-            },
-            {
-              "id": 2,
               "type": "code",
-              "title": "자바스크립트로 알림 띄우기",
+              "title": "👇아래 예시 코드와 브라우저를 보면서\nalert() 함수를 더 자세히 알아봐요! ✨",
               "tts": "",
               "height": 130,
               "files": [
@@ -5051,10 +5006,10 @@ const JS_1 = {
                   "content": "document.getElementById('btn').addEventListener('click', function () {\n  alert('안녕 JS!');\n});"
                 }
               ],
-              "visibility": { "type": "step", "value": 3 }
+              "visibility": { "type": "step", "value": 2 }
             },
             {
-              "id": 3,
+              "id": 2,
               "type": "webview",
               "tabs": [
                 {
@@ -5062,7 +5017,7 @@ const JS_1 = {
                   "content": "<!DOCTYPE html><html lang='ko'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>alert 예시</title><style>body{font-family:system-ui;padding:16px}button{padding:10px 20px;background:#58CC02;color:#fff;border:none;border-radius:6px;cursor:pointer}</style></head><body><h1>버튼을 눌러보세요</h1><button onclick='alert(\"안녕 JS!\")'>알림 띄우기</button></body></html>"
                 }
               ],
-              "visibility": { "type": "step", "value": 4 }
+              "visibility": { "type": "step", "value": 3 }
             }
           ]
         },
@@ -5113,7 +5068,7 @@ const JS_1 = {
                   {
                     "id": 0,
                     "type": "paragraph",
-                    "content": "## 🎉 **정답!**\n자바스크립트로 계산에 성공했어요. \n\n🧑‍💻 아래 **결과 브라우저**를 볼까요?",
+                    "content": "## 🎉 **정답!**\n자바스크립트로 계산에 성공했어요.",
                     "tts" : "",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "correct"
@@ -5121,7 +5076,7 @@ const JS_1 = {
                   {
                     "id": 1,
                     "type": "paragraph",
-                    "content": "## **아쉬워요**🥹\n덧셈 연산자는 `+`, 뺄셈 연산자는 `-`, 곱셈 연산자는 `*` 입니다.\n\n👇 이제 아래 **결과 브라우저**를 볼까요?",
+                    "content": "## 틀렸어요 🥹\n덧셈 연산자는 `+`, 뺄셈 연산자는 `-`, 곱셈 연산자는 `*`",
                     "tts" : "",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "wrong"
@@ -5132,10 +5087,12 @@ const JS_1 = {
             {
               "id": 1,
               "type": "webview",
+              "title": "🧑‍💻 아래 결과 브라우저를 볼까요?",
+              "tts": "",
               "tabs": [
                 {
                   "type": "html",
-                  "content": "<!DOCTYPE html><html lang='ko'><head><meta charset='UTF-8'><title>JS 계산</title></head><body><h1>JS 계산 결과</h1><p id='out'>아직 실행 전이에요. 아래 버튼을 눌러보세요!</p><button id='runBtn'>결과 실행</button><script>function __run(){const sum=1+2;document.getElementById('out').textContent='결과는 '+sum;}document.getElementById('runBtn').addEventListener('click',__run);</script></body></html>"
+                  "content": "<!DOCTYPE html><html lang='ko'><head><meta charset='UTF-8'><title>JS 계산 결과</title></head><body><h1>1 + 2 =</h1><p id='out'>아직 실행 전이에요. 아래 버튼을 눌러보세요!</p><button id='runBtn'>결과 실행</button><script>function __run(){const sum=1+2;document.getElementById('out').textContent='결과는 '+sum;}document.getElementById('runBtn').addEventListener('click',__run);</script></body></html>"
                 }
               ],
               "visibility": { "type": "step", "value": 2 }
@@ -5143,7 +5100,7 @@ const JS_1 = {
           ]
         },
         {
-          "id": 6,
+          "id": 5,
           "title": "🎯 오늘 배운 것 정리",
           "role": "🎉 엔딩",
           "modules": [
@@ -5166,7 +5123,7 @@ const JS_1 = {
               "type": "paragraph",
               "content": "## 다음 레슨에서 또 만나요! 🚀",
               "tts" : "",
-              "visibility": { "type": "step", "value": 1 }
+              "visibility": { "type": "step", "value": 2 }
             }
           ]
         }
@@ -5219,14 +5176,14 @@ const JS_2 = {
             {
               "id": 1,
               "type": "paragraph",
-              "content": "## 변수는 값을 담아두는 이름표 달린 상자📦예요.",
+              "content": "## 변수는 값을 담아두는 이름표 달린 상자📦",
               "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/001_html_구조와_태그에_대해_알아볼까.mp3",
               "visibility": { "type": "step", "value": 1 }
             },
             {
               "id": 2,
               "type": "paragraph",
-              "content": "- `let`은 값을 **바꿀 수 있는 변수**, \n `const`는 값을 **바꾸지 않는 상수**에 사용돼요.",
+              "content": "`let`은 값을 **바꿀 수 있는 변수** \n`const`는 값을 **바꾸지 않는 상수**",
               "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/001_html_구조와_태그에_대해_알아볼까.mp3",
               "visibility": { "type": "step", "value": 2 }
             }
@@ -5259,7 +5216,7 @@ const JS_2 = {
                   {
                     "id": 0,
                     "type": "paragraph",
-                    "content": "## 🙆‍♀️ 잘했어요!\n`const`는 **값을 바꾸지 않는 상수**예요.",
+                    "content": "## 🙆‍♀️ 잘했어요!",
                     "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_정답_화면에_보이는_콘텐츠는_body_태그_안에_작성합니다.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "correct"
@@ -5267,7 +5224,7 @@ const JS_2 = {
                   {
                     "id": 1,
                     "type": "paragraph",
-                    "content": "## 🙅‍♀️ 정답은 'const'입니다.\n **let**은 값을 **바꿀 수 있는 변수**, \n **var**는 옛날 방식이라 초보자는 **지양**해요!",
+                    "content": "## 🙅‍♀️ 정답은 'const'입니다.\n **let**은 값을 **바꿀 수 있는 변수**\n **var**는 옛날 방식이라 초보자는 **지양**해요!",
                     "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_정답_화면에_보이는_콘텐츠는_body_태그_안에_작성합니다.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "wrong"
@@ -5277,15 +5234,8 @@ const JS_2 = {
             },
             {
               "id": 1,
-              "type": "paragraph",
-              "content": "👇아래 예시 코드와 브라우저를 보면서 더 자세히 알아봐요!",
-              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_정답_화면에_보이는_콘텐츠는_body_태그_안에_작성합니다.mp3",
-              "visibility": { "type": "step", "value": 2 }
-            },
-            {
-              "id": 2,
               "type": "code",
-              "title": "웹을 움직이게 하는 JS",
+              "title": "👇아래 예시 코드와 브라우저를 보면서\n더 자세히 알아봐요!",
               "tts": "",
               "height": 300,
               "files": [
@@ -5300,10 +5250,10 @@ const JS_2 = {
                   "content": "// 한 번 정하면 바꾸지 않을 값 → const\nconst MAX_HEARTS = 5;\n\ntry {\n  // ❌ const 재할당 시도 → 에러 발생\n  MAX_HEARTS = 10;\n} catch (e) {\n  msg += `const는 재할당 불가! (${e.name})`;\n}\n\n document.getElementById('out').textContent = msg;\n};"
                 }
               ],
-              "visibility": { "type": "step", "value": 3 }
+              "visibility": { "type": "step", "value": 2 }
             },
             {
-              "id": 3,
+              "id": 2,
               "type": "webview",
               "tabs": [
                 {
@@ -5311,7 +5261,7 @@ const JS_2 = {
                   "content": "<!DOCTYPE html><html lang='ko'><head><meta charset='UTF-8'><title>const 예시</title></head><body style='font-family:system-ui;padding:16px'><button id='runBtn'>실행</button><p id='out'>아직 실행 전</p><script>const MAX_HEARTS=5;document.getElementById('runBtn').onclick=function(){var msg='MAX_HEARTS 초기값 = '+MAX_HEARTS;try{MAX_HEARTS=10;}catch(e){ msg+='const는 재할당 불가!';}document.getElementById('out').textContent=msg;};</script></body></html>"
                 }
               ],
-              "visibility": { "type": "step", "value": 4 }
+              "visibility": { "type": "step", "value": 3 }
             }
           ]
         },
@@ -5342,7 +5292,7 @@ const JS_2 = {
                   {
                     "id": 0,
                     "type": "paragraph",
-                    "content": "## 🙆‍♀️ 정답이에요!\n`userName`은 올바른 변수 이름이에요.",
+                    "content": "## 🙆‍♀️ 정답이에요!",
                     "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_정답_화면에_보이는_콘텐츠는_body_태그_안에_작성합니다.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "correct"
@@ -5360,15 +5310,8 @@ const JS_2 = {
             },
             {
               "id": 1,
-              "type": "paragraph",
-              "content": "아래 예시 코드와 브라우저를 보며 더 알아봐요! ✨",
-              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_정답_화면에_보이는_콘텐츠는_body_태그_안에_작성합니다.mp3",
-              "visibility": { "type": "step", "value": 2 }
-            },
-            {
-              "id": 2,
               "type": "code",
-              "title": "잘못된 변수 사용 예시",
+              "title": "아래 예시 코드와 브라우저를 보며 더 알아봐요! ✨",
               "tts": "",
               "height": 300,
               "files": [
@@ -5383,10 +5326,10 @@ const JS_2 = {
                   "content": "const 2count = 5;\nconst user-name = 'mina';\n\ndocument.getElementById('runBtn').onclick = function () {\n  try {\n    const msg = `2count = ${2count}, user-name = ${user-name}`;\n    document.getElementById('out').textContent = msg;\n  } catch (e) {\n    msg += `에러 발생! (${e.name})`;\n    document.getElementById('out').textContent = msg;\n  }\n};"
                 }
               ],
-              "visibility": { "type": "step", "value": 3 }
+              "visibility": { "type": "step", "value": 2 }
             },
             {
-              "id": 3,
+              "id": 2,
               "type": "webview",
               "tabs": [
                 {
@@ -5394,7 +5337,7 @@ const JS_2 = {
                   "content": "<!DOCTYPE html><html lang='ko'><head><meta charset='UTF-8'><title>잘못된 변수 사용 예시</title></head><body style='font-family:system-ui;padding:16px'><h1>잘못된 변수 사용 예시</h1><button id='runBtn'>실행</button><p id='out'>아직 실행 전</p><script>document.getElementById('runBtn').onclick=function(){var out=document.getElementById('out'),msg='';try{eval('const 2count=5;');msg+='2count 선언 성공? ';}catch(e){msg+='2count 오류: '+e.name+'. ';}try{eval('const user-name=1;');msg+='user-name 선언 성공? ';}catch(e){msg+='user-name 오류: '+e.name+'. ';}out.textContent=msg;};</script></body></html>"
                 }
               ],
-              "visibility": { "type": "step", "value": 4 }
+              "visibility": { "type": "step", "value": 3 }
             }
           ]
         },
@@ -5406,7 +5349,7 @@ const JS_2 = {
             {
               "id": 0,
               "type": "codeFillTheGap",
-              "title": "👉 조건에 맞게 변수를 선언하고 값을 넣어보세요\n- 점수(score)는 **바뀔 수 있음** → `let`\n- 별명(nick)은 **바뀌지 않음** → `const`\n- `=` 로 값을 담기",
+              "title": "👉 조건에 맞게 변수를 선언하고 값을 넣어보세요\n- 점수(score)는 바뀔 수 있음\n- 별명(nick)은 바뀌지 않음",
               "tts" : "",
               "files": [
                 {
@@ -5448,7 +5391,7 @@ const JS_2 = {
                   {
                     "id": 0,
                     "type": "paragraph",
-                    "content": "## 🎉 **정답!**\n`let`은 바뀌는 값, `const`는 고정 값, `=`는 값 **대입**이에요. \n\n🧑‍💻 아래 **결과 브라우저**를 볼까요?",
+                    "content": "## 🎉 정답!\n`let`은 바뀌는 값, `const`는 고정 값, `=`는 값 대입",
                     "tts" : "",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "correct"
@@ -5456,7 +5399,7 @@ const JS_2 = {
                   {
                     "id": 1,
                     "type": "paragraph",
-                    "content": "## **아쉬워요**🥹\n바뀌는 값 → **let**, 고정 값 → **const**\n값을 넣을 때 → **=**\n\n👇 이제 아래 **결과 브라우저**를 볼까요?",
+                    "content": "## 틀렸어요 🥹\n바뀌는 값 → **let**, 고정 값 → **const**\n값을 넣을 때 → **=**",
                     "tts" : "",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "wrong"
@@ -5467,6 +5410,8 @@ const JS_2 = {
             {
               "id": 1,
               "type": "webview",
+              "title": "🧑‍💻 아래 결과 브라우저를 볼까요?",
+              "tts": "",
               "tabs": [
                 {
                   "type": "html",
@@ -5492,7 +5437,7 @@ const JS_2 = {
             {
               "id": 1,
               "type": "paragraph",
-              "content": "# 👌3가지만 기억해요!\n- **변수는 값 상자**: 이름 붙여 관리\n- **let/const**: 바뀌는 값 vs 고정 값\n- **=**: 값을 변수에 대입",
+              "content": "# 👌3가지만 기억해요!\n1) **변수는 값 상자**: 이름 붙여 관리\n2) **let/const**: 바뀌는 값 vs 고정 값\n3) **=**: 값을 변수에 대입",
               "tts" : "",
               "visibility": { "type": "step", "value": 1 }
             },
@@ -5501,7 +5446,7 @@ const JS_2 = {
               "type": "paragraph",
               "content": "## 다음 레슨에서 또 만나요! 🚀",
               "tts" : "",
-              "visibility": { "type": "step", "value": 1 }
+              "visibility": { "type": "step", "value": 2 }
             }
           ]
         }
