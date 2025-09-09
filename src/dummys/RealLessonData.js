@@ -35,29 +35,29 @@ const HTML_1 = {
             {
               "id": 0,
               "type": "image",
-              "src": "https://s3.ghmate.com/codingpt/class/1/1/1/image/001_concept.png",
+              "src": "https://s3.ghmate.com/codingpt/class/1/1/1/image/002_concept.png",
               "size": "lg",
               "visibility": { "type": "step", "value": 1 }
             },
             {
               "id": 1,
               "type": "paragraph",
-              "content": "## 웹페이지는 **📌제목·🖼️그림·▶️버튼** 같은 \n## **블록이 모여** 만들어져요.",
-              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/001_html_구조와_태그에_대해_알아볼까.mp3",
+              "content": "## 웹페이지는 제목·그림·버튼 같은 블록이\n## 모여 만들어져요.",
+              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/002_웹페이지는_블록이_모여_만들어져요.mp3",
               "visibility": { "type": "step", "value": 1 }
             },
             {
               "id": 2,
               "type": "paragraph",
-              "content": "- HTML은 **웹의 뼈대🦴**이고,\n  태그(tag)는 `< >` **안에 적는 🔖이름표**에요.",
-              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/002_HTML_문서의_뼈대.mp3",
+              "content": "HTML은 **웹의 뼈대🦴**이고,\n  태그(tag)는 `< >` **안에 적는 🔖이름표**에요.",
+              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/003_HTML은_웹의_뼈대.mp3",
               "visibility": { "type": "step", "value": 2 }
             },
             {
               "id": 3,
               "type": "paragraph",
-              "content": "- 큰 제목은 `<h1>`, 문단은 `<p>`, 이미지는 `<img>` 등\n  **다양한 태그**의 종류가 있어요.",
-              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/003_독타입_html은_문서가아_HTML5_임을_선언_합니다.mp3",
+              "content": "큰 제목은 `<h1>`, 문단은 `<p>`, 이미지는 `<img>` 등\n **다양한 태그**의 종류가 있어요.",
+              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/004_다양한_종류의_태그가_있어요.mp3",
               "visibility": { "type": "step", "value": 3 }
             }
           ]
@@ -108,16 +108,9 @@ const HTML_1 = {
             },
             {
               "id": 1,
-              "type": "paragraph",
-              "content": "👇아래 코드와 브라우저를 보면서 \n**제목 태그**를 더 자세히 알아봐요! 🤓",
-              "tts" : "",
-              "visibility": { "type": "step", "value": 2 }
-            },
-            {
-              "id": 2,
               "type": "code",
-              "title": "제목 태그 (h1~h6)",
-              "tts": "",
+              "title": "👇아래 코드와 브라우저를 보면서 제목 태그를\n 더 자세히 알아봐요! 🤓",
+              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_제목_태그를_더_알아봐요.mp3",
               "height": 180,
               "files": [
                 {
@@ -126,10 +119,10 @@ const HTML_1 = {
                   "content": "<h1>Hellow world</h1>\n<h2>Hellow world</h2>\n<h3>Hellow world</h3>\n<h4>Hellow world</h4>\n<h5>Hellow world</h5>\n<h6>Hellow world</h6>"
                 }
               ],
-              "visibility": { "type": "step", "value": 3 }
+              "visibility": { "type": "step", "value": 2 }
             },
             {
-              "id": 3,
+              "id": 2,
               "type": "webview",
               "tabs": [
                 {
@@ -137,7 +130,7 @@ const HTML_1 = {
                   "content": "<!DOCTYPE html><html lang='ko'><head><meta charset='UTF-8'><title>결과보기</title><style>body{font-family:system-ui;padding:16px}</style></head><body><h1>Hellow world</h1><h2>Hellow world</h2><h3>Hellow world</h3><h4>Hellow world</h4><h5>Hellow world</h5><h6>Hellow world</h6></body></html>"
                 }
               ],
-              "visibility": { "type": "step", "value": 4 }
+              "visibility": { "type": "step", "value": 3 }
             }
           ]
         },
@@ -186,16 +179,9 @@ const HTML_1 = {
             },
             {
               "id": 1,
-              "type": "paragraph",
-              "content": "👇아래 코드와 브라우저를 보면서 \n**문단 태그**를 더 자세히 알아봐요! 🧑‍💻",
-              "tts" : "",
-              "visibility": { "type": "step", "value": 2 }
-            },
-            {
-              "id": 2,
               "type": "code",
-              "title": "문단 태그 (p)",
-              "tts": "",
+              "title": "👇아래 코드와 브라우저를 보면서 문단 태그를\n 더 자세히 알아봐요! 🧑‍💻",
+              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/012_문단_태그를_더_알아봐요.mp3",
               "height": 120,
               "files": [
                 {
@@ -204,10 +190,10 @@ const HTML_1 = {
                   "content": "<h1>문단 예시</h1>\n<p>안녕하세요! 이것은 첫 번째 문단입니다.</p>\n<p>HTML의 p 태그는 이렇게 문장을 하나의 단락으로 묶어줘요.</p>"
                 }
               ],
-              "visibility": { "type": "step", "value": 3 }
+              "visibility": { "type": "step", "value": 2 }
             },
             {
-              "id": 3,
+              "id": 2,
               "type": "webview",
               "tabs": [
                 {
@@ -215,7 +201,7 @@ const HTML_1 = {
                   "content": "<!DOCTYPE html><html lang='ko'><head><meta charset='UTF-8'><title>결과보기</title><style>body{font-family:system-ui;padding:16px}</style></head><body><h1>문단 예시</h1><p>안녕하세요! 이것은 첫 번째 문단입니다.</p><p>HTML의 p 태그는 이렇게 문장을 하나의 단락으로 묶어줘요.</p></body></html>"
                 }
               ],
-              "visibility": { "type": "step", "value": 4 }
+              "visibility": { "type": "step", "value": 3 }
             }
           ]
         },
@@ -257,16 +243,16 @@ const HTML_1 = {
                   {
                     "id": 0,
                     "type": "paragraph",
-                    "content": "## 🎉 **멋져요!**\n제목과 문단이 올바르게 들어갔어요. \n🧑‍💻 아래 **내가 만든 인사 페이지**를 볼까요?",
-                    "tts" : "",
+                    "content": "## 🎉 정답이에요!",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/014_정답이에요.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "correct"
                   },
                   {
                     "id": 1,
                     "type": "paragraph",
-                    "content": "## **틀렸어요**🥹\n**제목은** `<h1>`, **문단은** `<p>`를 사용해요.\n그리고 **태그는** `<>,</>` **쌍으로 사용한다는 점**을 기억해요!\n\n👇 이제 아래 **결과 브라우저**를 볼까요?",
-                    "tts" : "",
+                    "content": "## **틀렸어요**🥹\n **제목은** `<h1>`, **문단은** `<p>`를 사용해요.",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/015_틀렸어요_제목은_h1태그_문단은_p태그를_사용해요.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "wrong"
                   }
@@ -277,6 +263,8 @@ const HTML_1 = {
             {
               "id": 1,
               "type": "webview",
+              "title": "🧑‍💻 아래 완성된 페이지를 볼까요?",
+              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/018_아래_완성된_페이지를_볼까요.mp3",
               "tabs": [
                 {
                   "type": "html",
@@ -302,8 +290,8 @@ const HTML_1 = {
             {
               "id": 1,
               "type": "paragraph",
-              "content": "# 🎯 오늘 배운 내용 정리\n- **HTML=뼈대🦴**\n- **태그=이름표🔖**",
-              "tts" : "",
+              "content": "# 🎯 오늘 배운 내용 정리\n- **HTML=뼈대🦴**\n- **태그=이름표🔖**\n- 제목: `<h1>`, 문단: `<p>`",
+              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/016_오늘_배운_내용_정리_html은_뼈대_태그는_이름표.mp3",
               "visibility": { "type": "step", "value": 1 }
             },
             {
@@ -353,8 +341,9 @@ const HTML_2 = {
           "modules": [
             {
               "id": 0,
-              "type": "paragraph",
-              "content": "### ✍️ 의미로 강조하기\n- `<strong>`: **강한 중요성**(의미 강조, 스크린리더 강세)\n- `<em>`: *강조(어조 변화)*, 중첩 시 강조 단계 상승\n시각 스타일뿐 아니라 **의미**가 중요합니다.",
+              "type": "image",
+              "src": "https://s3.ghmate.com/codingpt/class/1/1/1/image/002_concept.png",
+              "size": "lg",
               "visibility": { "type": "step", "value": 1 }
             },
             {
@@ -498,49 +487,22 @@ const HTML_2 = {
               }
             },
             {
-              "id": 2,
-              "type": "codeFillTheGap",
+              "id": 1,
+              "type": "code",
+              "title": "아래 코드와 브라우저를 보면서 `<body>`를 더 자세히\n 알아봐요! ✨",
+              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/2/audio/010_body_태그를_더_알아봐요.mp3",
+              "height": 150,
               "files": [
                 {
                   "name": "index.html",
                   "language": "html",
-                  "content": "음식 주문",
-                  "url": "/code/16",
-                  "isInteractive": true,
-                  "inputLength": 1,
-                  "interactionOptions": [
-                    { "id": "option-1", "value": "<p>", "disabled": false },
-                    { "id": "option-2", "value": "<br>", "disabled": false },
-                    { "id": "option-3", "value": "</p>", "disabled": false }
-                  ],
-                  "answers": [
-                    { "isCorrect": null, "answer": "<br>", "userAnswer": null, "optionElIndex": null }
-                  ]
+                  "content": "<body>\n  <h1>안녕하세요! 👋</h1>\n  <p>여기는 <strong>body</strong> 안에 있는 내용이에요.</p>\n  <button>버튼도 만들 수 있어요!</button>\n</body>"
                 }
               ],
-              "visibility": { "type": "step", "value": 3 },
-              "result": {
-                "totalStep": 1,
-                "modules": [
-                  {
-                    "id": 0,
-                    "type": "paragraph",
-                    "content": "🎉 잘했어요! 문단 내부 줄바꿈은 `<br>`이 간단합니다.",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "correct"
-                  },
-                  {
-                    "id": 1,
-                    "type": "paragraph",
-                    "content": "❌ 문단을 바꿀 땐 `<p>`, 한 문단에서 줄만 바꿀 땐 `<br>`을 쓰세요.",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "wrong"
-                  }
-                ]
-              }
+              "visibility": { "type": "step", "value": 2 }
             },
             {
-              "id": 3,
+              "id": 2,
               "type": "webview",
               "tabs": [
                 {
@@ -548,7 +510,7 @@ const HTML_2 = {
                   "content": "<!DOCTYPE html><html lang=\"ko\"><head><meta charset=\"UTF-8\"><title>미리보기</title><style>body{font-family:system-ui;padding:16px}</style></head><body><p>서울특별시 강남구 테헤란로 123<br>코딩빌딩 5층</p></body></html>"
                 }
               ],
-              "visibility": { "type": "step", "value": 4 }
+              "visibility": { "type": "step", "value": 3 }
             }
           ]
         },
@@ -665,93 +627,29 @@ const HTML_2 = {
             },
             {
               "id": 1,
-              "type": "multipleChoice",
-              "questions": [
-                {
-                  "title": "검색 키워드에 색 배경으로 하이라이트하려면?",
-                  "interactionOptions": [
-                    { "label": "<strong>" },
-                    { "label": "<em>" },
-                    { "label": "<mark>" },
-                    { "label": "<small>" }
-                  ],
-                  "answer": { "isCorrect": null, "answer": 2, "userAnswer": null }
-                }
-              ],
-              "visibility": { "type": "step", "value": 2 },
-              "result": {
-                "totalStep": 1,
-                "modules": [
-                  {
-                    "id": 0,
-                    "type": "paragraph",
-                    "content": "🎉 맞아요! `<mark>`는 시각적 하이라이트에 적합합니다.",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "correct"
-                  },
-                  {
-                    "id": 1,
-                    "type": "paragraph",
-                    "content": "❌ 정답은 `<mark>`입니다. `<small>`은 덜 중요한 정보를 표시할 때 사용해요.",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "wrong"
-                  }
-                ]
-              }
-            },
-            {
-              "id": 2,
-              "type": "codeFillTheGap",
+              "type": "code",
+              "title": "👇아래 코드와 브라우저를 보면서 `<head>`를\n더 자세히 알아봐요! 🧑‍💻",
+              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/2/audio/014_head_태그를_더_알아봐요.mp3",
+              "height": 120,
               "files": [
                 {
                   "name": "index.html",
                   "language": "html",
-                  "content": "<p>검색어: <{{BLANK-1}}>HTML</{{BLANK-1}}></p>\n<p><{{BLANK-2}}>© 2025 CodingPT</{{BLANK-2}}></p>",
-                  "url": "/code/18",
-                  "isInteractive": true,
-                  "inputLength": 2,
-                  "interactionOptions": [
-                    { "id": "option-1", "value": "<small>", "disabled": false },
-                    { "id": "option-2", "value": "<mark>", "disabled": false },
-                    { "id": "option-3", "value": "<span>", "disabled": false }
-                  ],
-                  "answers": [
-                    { "isCorrect": null, "answer": "<mark>", "userAnswer": null, "optionElIndex": null },
-                    { "isCorrect": null, "answer": "<small>", "userAnswer": null, "optionElIndex": null }
-                  ]
+                  "content": "<head>\n  <meta charset='UTF-8'>\n  <title>페이지 제목</title>\n</head>"
                 }
               ],
-              "visibility": { "type": "step", "value": 3 },
-              "result": {
-                "totalStep": 1,
-                "modules": [
-                  {
-                    "id": 0,
-                    "type": "paragraph",
-                    "content": "🎉 좋아요! `<mark>`와 `<small>`의 용도가 분명해졌어요.",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "correct"
-                  },
-                  {
-                    "id": 1,
-                    "type": "paragraph",
-                    "content": "❌ `<mark>`는 강조 표시, `<small>`은 보조/각주 같은 부가 텍스트에 사용합니다.",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "wrong"
-                  }
-                ]
-              }
+              "visibility": { "type": "step", "value": 2 }
             },
             {
-              "id": 3,
+              "id": 2,
               "type": "webview",
               "tabs": [
                 {
                   "type": "html",
-                  "content": "<!DOCTYPE html><html lang=\"ko\"><head><meta charset=\"UTF-8\"><title>미리보기</title><style>body{font-family:system-ui;padding:16px}</style></head><body><p>검색어: <mark>HTML</mark></p><p><small>© 2025 CodingPT</small></p></body></html>"
+                  "content": "<!DOCTYPE html><html lang='ko'><head><meta charset='UTF-8'><title>페이지 제목</title></head><body><h1>본문 내용은 여기 👇</h1><p>여기는 body 안에 표시돼요.</p></body></html>"
                 }
               ],
-              "visibility": { "type": "step", "value": 4 }
+              "visibility": { "type": "step", "value": 3 }
             }
           ]
         },
@@ -804,6 +702,8 @@ const HTML_2 = {
             {
               "id": 2,
               "type": "codeFillTheGap",
+              "title": "빈칸을 채워서 간단한 html 문서를 만들어봐요! ✨",
+              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/2/audio/015_빈칸을_채워_간단한_html_문서를_만들어봐요.mp3",
               "files": [
                 {
                   "name": "index.html",
@@ -830,14 +730,16 @@ const HTML_2 = {
                   {
                     "id": 0,
                     "type": "paragraph",
-                    "content": "🎉 좋아요! `<kbd>`와 `<code>`의 차이를 잘 구분했어요.",
+                    "content": "## 🎉 **정답이에요!**\n문서의 뼈대가 올바르게 들어갔어요.",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/1/1/2/audio/016_정답이에요_문서의_뼈대가_올바르게_들어갔어요.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "correct"
                   },
                   {
                     "id": 1,
                     "type": "paragraph",
-                    "content": "❌ 키 입력은 `<kbd>`, 코드 조각은 `<code>`로 의미를 구분하세요.",
+                    "content": "## **틀렸어요**🥹\n**문서의 뼈대는** `<html>`, **머리는** `<head>`,\n**몸은** `<body>`를 사용해요.",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/1/1/2/audio/017_틀렸어요_문서의_뼈대는_html_머리는_head_몸은_body를_사용해요_.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "wrong"
                   }
@@ -847,6 +749,8 @@ const HTML_2 = {
             {
               "id": 3,
               "type": "webview",
+              "title": "🧑‍💻 아래 완성된 페이지를 볼까요?",
+              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/2/audio/018_아래_완성된_페이지를_볼까요.mp3",
               "tabs": [
                 {
                   "type": "html",
@@ -869,93 +773,17 @@ const HTML_2 = {
             },
             {
               "id": 1,
-              "type": "multipleChoice",
-              "questions": [
-                {
-                  "title": "`1 < 2 && 3 > 1`을 텍스트로 안전하게 출력하려면 `<`은 무엇으로 바꿔야 할까요?",
-                  "interactionOptions": [
-                    { "label": "&lt;" },
-                    { "label": "&gt;" },
-                    { "label": "&amp;" },
-                    { "label": "&quot;" }
-                  ],
-                  "answer": { "isCorrect": null, "answer": 0, "userAnswer": null }
-                }
-              ],
-              "visibility": { "type": "step", "value": 2 },
-              "result": {
-                "totalStep": 1,
-                "modules": [
-                  {
-                    "id": 0,
-                    "type": "paragraph",
-                    "content": "🎉 정답! `<`는 `&lt;`로 바꿔야 태그로 인식되지 않습니다.",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "correct"
-                  },
-                  {
-                    "id": 1,
-                    "type": "paragraph",
-                    "content": "❌ `<`는 `&lt;`, `>`는 `&gt;`, `&`는 `&amp;`로 바꿉니다.",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "wrong"
-                  }
-                ]
-              }
+              "type": "paragraph",
+              "content": "# 🎯 오늘 배운 내용 정리\n- **`<!DOCTYPE html>`**: HTML5 선언\n- **`<html>`**: 문서 전체 + 언어\n- **`<head>`**: 정보(제목/문자셋)\n- **`<body>`**: 화면에 보이는 내용",
+              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/2/audio/019_오늘_배운_내용_정리.mp3",
+              "visibility": { "type": "step", "value": 1 }
             },
             {
               "id": 2,
-              "type": "codeFillTheGap",
-              "files": [
-                {
-                  "name": "index.html",
-                  "language": "html",
-                  "content": "<p>표현식: {{BLANK-1}}1 {{BLANK-2}} 2 {{BLANK-3}}{{BLANK-2}}{{BLANK-2}} 3 {{BLANK-4}} 1</p>",
-                  "url": "/code/20",
-                  "isInteractive": true,
-                  "inputLength": 1,
-                  "interactionOptions": [
-                    { "id": "option-1", "value": "&lt;", "disabled": false },
-                    { "id": "option-2", "value": "&gt;", "disabled": false },
-                    { "id": "option-3", "value": "&amp;", "disabled": false },
-                    { "id": "option-4", "value": "", "disabled": false }
-                  ],
-                  "answers": [
-                    { "isCorrect": null, "answer": "&lt;", "userAnswer": null, "optionElIndex": null }
-                  ]
-                }
-              ],
-              "visibility": { "type": "step", "value": 3 },
-              "result": {
-                "totalStep": 1,
-                "modules": [
-                  {
-                    "id": 0,
-                    "type": "paragraph",
-                    "content": "🎉 좋습니다! 이제 기호가 안전하게 텍스트로 출력됩니다.",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "correct"
-                  },
-                  {
-                    "id": 1,
-                    "type": "paragraph",
-                    "content": "❌ `<`→`&lt;`, `>`→`&gt;`, `&`→`&amp;`를 기억하세요. (빈칸은 텍스트 시작용)",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "wrong"
-                  }
-                ]
-              }
-            },
-            {
-              "id": 3,
-              "type": "webview",
-              "tabs": [
-                {
-                  "type": "html",
-                  "content": "<!DOCTYPE html><html lang=\"ko\"><head><meta charset=\"UTF-8\"><title>미리보기</title><style>body{font-family:system-ui;padding:16px}</style></head><body><p>표현식: 1 &lt; 2 &amp;&amp; 3 &gt; 1</p></body></html>"
-                }
-              ],
-              "visibility": { "type": "step", "value": 4 }
+              "type": "paragraph",
+              "content": "## 다음 레슨에서 만나요! 🚀",
+              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/2/audio/020_다음_레슨에서_만나요.mp3",
+              "visibility": { "type": "step", "value": 2 }
             }
           ]
         }
@@ -3162,39 +2990,10 @@ const CSS_1 = {
             },
             {
               "id": 1,
-              "type": "multipleChoice",
-              "questions": [
-                {
-                  "title": "외부 스타일시트를 올바르게 연결한 마크업은?",
-                  "interactionOptions": [
-                    { "label": "<link rel=\"stylesheet\" href=\"styles.css\">" },
-                    { "label": "<style src=\"styles.css\"></style>" },
-                    { "label": "<script src=\"styles.css\"></script>" },
-                    { "label": "<a href=\"styles.css\"></a>" }
-                  ],
-                  "answer": { "isCorrect": null, "answer": 0, "userAnswer": null }
-                }
-              ],
-              "visibility": { "type": "step", "value": 2 },
-              "result": {
-                "totalStep": 1,
-                "modules": [
-                  {
-                    "id": 0,
-                    "type": "paragraph",
-                    "content": "🎉 정답! 외부 파일을 연결할 땐 `<link rel=\"stylesheet\" href=\"...\">`를 사용합니다.",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "correct"
-                  },
-                  {
-                    "id": 1,
-                    "type": "paragraph",
-                    "content": "❌ `<style>`은 내부 스타일용이며, 외부 파일 연결은 `<link rel=\"stylesheet\" ...>`가 정답이에요.",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "wrong"
-                  }
-                ]
-              }
+              "type": "paragraph",
+              "content": "## HTML은 **뼈대**🦴 \n## CSS는 꾸미는 법(스타일)🎨",
+              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/001_html_구조와_태그에_대해_알아볼까.mp3",
+              "visibility": { "type": "step", "value": 1 }
             },
             {
               "id": 2,
@@ -3283,14 +3082,16 @@ const CSS_1 = {
                   {
                     "id": 0,
                     "type": "paragraph",
-                    "content": "🎉 정답! 아이디는 `#id` 형태로 선택합니다. 클래스는 `.class`예요.",
+                    "content": "## 🙆‍♀️ 잘했어요!",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_정답_화면에_보이는_콘텐츠는_body_태그_안에_작성합니다.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "correct"
                   },
                   {
                     "id": 1,
                     "type": "paragraph",
-                    "content": "❌ 아이디 선택자는 `#id`입니다. 클래스와 혼동하지 마세요(`.class`).",
+                    "content": "## 🙅‍♀️ 정답은 `color`입니다! \n💡 `background-color`: 바탕색, `font-size`: 글자 크기",
+                    "tts" : "",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "wrong"
                   }
@@ -3298,50 +3099,27 @@ const CSS_1 = {
               }
             },
             {
-              "id": 2,
-              "type": "codeFillTheGap",
+              "id": 1,
+              "type": "code",
+              "title": "👇아래 예시 코드와 브라우저를 보면서 color 속성을\n 더 자세히 알아봐요! ✨",
+              "tts": "",
+              "height": 150,
               "files": [
                 {
                   "name": "index.html",
                   "language": "html",
-                  "content": "<!DOCTYPE html>\n<html lang=\"ko\">\n<head>\n  <style>\n    {{BLANK-1}} { color:#111 }\n    {{BLANK-2}} { padding:8px 12px }\n  </style>\n</head>\n<body>\n  <h1 id=\"title\">제목</h1>\n  <button class=\"btn\">확인</button>\n</body>\n</html>",
-                  "url": "/code/40",
-                  "isInteractive": true,
-                  "inputLength": 2,
-                  "interactionOptions": [
-                    { "id": "option-1", "value": "-", "disabled": false },
-                    { "id": "option-2", "value": ".", "disabled": false },
-                    { "id": "option-3", "value": "#", "disabled": false }
-                  ],
-                  "answers": [
-                    { "isCorrect": null, "answer": "#", "userAnswer": null, "optionElIndex": null },
-                    { "isCorrect": null, "answer": ".", "userAnswer": null, "optionElIndex": null }
-                  ]
+                  "content": "<h1>CSS color 속성 연습</h1>\n<p class='red-text'>이 문장은 빨간색이에요.</p>\n<p class='blue-text'>이 문장은 파란색이에요.</p>\n<p class='green-text'>이 문장은 초록색이에요.</p>"
+                },
+                {
+                  "name": "style.css",
+                  "language": "css",
+                  "content": ".red-text{color:red;}\n.blue-text{color:blue;}\n.green-text{color:green;}"
                 }
               ],
-              "visibility": { "type": "step", "value": 3 },
-              "result": {
-                "totalStep": 1,
-                "modules": [
-                  {
-                    "id": 0,
-                    "type": "paragraph",
-                    "content": "🎉 좋아요! 아이디/클래스 선택자를 올바르게 사용했어요.",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "correct"
-                  },
-                  {
-                    "id": 1,
-                    "type": "paragraph",
-                    "content": "❌ `#title`은 아이디, `.btn`은 클래스 선택자입니다. 각각의 표기를 확인하세요.",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "wrong"
-                  }
-                ]
-              }
+              "visibility": { "type": "step", "value": 2 }
             },
             {
-              "id": 3,
+              "id": 2,
               "type": "webview",
               "tabs": [
                 {
@@ -3349,7 +3127,7 @@ const CSS_1 = {
                   "content": "<!DOCTYPE html><html lang=\"ko\"><head><meta charset=\"UTF-8\"><title>미리보기</title><style>#title{color:#111}.btn{padding:8px 12px;border:1px solid #ccc;border-radius:8px}</style></head><body><h1 id=\"title\">제목</h1><button class=\"btn\">확인</button></body></html>"
                 }
               ],
-              "visibility": { "type": "step", "value": 4 }
+              "visibility": { "type": "step", "value": 3 }
             }
           ]
         },
@@ -3385,14 +3163,16 @@ const CSS_1 = {
                   {
                     "id": 0,
                     "type": "paragraph",
-                    "content": "🎉 정답! `선택자 { 속성: 값; }` 형태를 지켜야 합니다.",
+                    "content": "## 🙆‍♀️ 정답이에요!",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_정답_화면에_보이는_콘텐츠는_body_태그_안에_작성합니다.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "correct"
                   },
                   {
                     "id": 1,
                     "type": "paragraph",
-                    "content": "❌ 콜론(`:`)과 세미콜론(`;`) 위치를 확인하세요: `p { color: red; }`가 맞습니다.",
+                    "content": "## 🙅‍♀️ 정답은 `background-color: blue`에요.\n💡 `color`는 글자색을 바꿔요.",
+                    "tts" : "",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "wrong"
                   }
@@ -3400,49 +3180,27 @@ const CSS_1 = {
               }
             },
             {
-              "id": 2,
-              "type": "codeFillTheGap",
+              "id": 1,
+              "type": "code",
+              "title": "👇아래 예시 코드와 브라우저를 보면서\nbackground-color 속성을 더 알아봐요! ✨",
+              "tts": "",
+              "height": 130,
               "files": [
                 {
                   "name": "index.html",
                   "language": "html",
-                  "content": "<!DOCTYPE html>\n<html lang=\"ko\"><head>\n  <style>\n    p{ {{BLANK-1}}: #222; {{BLANK-2}}: #f3f4f6; }\n  </style>\n</head>\n<body>\n  <p>선언 연습</p>\n</body></html>",
-                  "url": "/code/41",
-                  "isInteractive": true,
-                  "inputLength": 1,
-                  "interactionOptions": [
-                    { "id": "option-1", "value": "color", "disabled": false },
-                    { "id": "option-2", "value": "background-color", "disabled": false },
-                    { "id": "option-3", "value": "font-color", "disabled": false }
-                  ],
-                  "answers": [
-                    { "isCorrect": null, "answer": "color", "userAnswer": null, "optionElIndex": null }
-                  ]
+                  "content": "<h1>배경색 연습</h1>\n<p class='box-purple'>보라색 배경</p>\n<p class='box-tomato'>토마토색 배경</p>\n<p class='box-blue'>파란색 배경</p>"
+                },
+                {
+                  "name": "style.css",
+                  "language": "css",
+                  "content": ".box-purple { background-color: purple; color: white; } \n.box-tomato { background-color: tomato; color: white } \n.box-blue { background-color: blue; color: white }"
                 }
               ],
-              "visibility": { "type": "step", "value": 3 },
-              "result": {
-                "totalStep": 1,
-                "modules": [
-                  {
-                    "id": 0,
-                    "type": "paragraph",
-                    "content": "🎉 좋아요! 텍스트 색상과 배경색 속성을 올바르게 선택했어요.",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "correct"
-                  },
-                  {
-                    "id": 1,
-                    "type": "paragraph",
-                    "content": "❌ `font-color`는 존재하지 않습니다. `color`와 `background-color`를 사용하세요.",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "wrong"
-                  }
-                ]
-              }
+              "visibility": { "type": "step", "value": 2 }
             },
             {
-              "id": 3,
+              "id": 2,
               "type": "webview",
               "tabs": [
                 {
@@ -3450,7 +3208,7 @@ const CSS_1 = {
                   "content": "<!DOCTYPE html><html lang=\"ko\"><head><meta charset=\"UTF-8\"><title>미리보기</title><style>body{font-family:system-ui;padding:16px}p{color:#222;background-color:#f3f4f6;padding:10px;border-radius:8px}</style></head><body><p>선언 연습</p></body></html>"
                 }
               ],
-              "visibility": { "type": "step", "value": 4 }
+              "visibility": { "type": "step", "value": 3 }
             }
           ]
         },
@@ -3486,14 +3244,16 @@ const CSS_1 = {
                   {
                     "id": 0,
                     "type": "paragraph",
-                    "content": "🎉 정답! 인라인 스타일이 가장 강력합니다. (다만 유지보수는 어려워요)",
+                    "content": "## 🙆‍♀️ 정답이에요!",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_정답_화면에_보이는_콘텐츠는_body_태그_안에_작성합니다.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "correct"
                   },
                   {
                     "id": 1,
                     "type": "paragraph",
-                    "content": "❌ 우선순위는 Inline > #id > .class > tag 순서입니다. 동점이면 **나중 선언**이 적용돼요.",
+                    "content": "## 🙅‍♀️ 정답은 `font-size`입니다. \n💡 `font-weight`: 굵기, `line-height`: 줄 간격",
+                    "tts" : "",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "wrong"
                   }
@@ -3501,49 +3261,27 @@ const CSS_1 = {
               }
             },
             {
-              "id": 2,
-              "type": "codeFillTheGap",
+              "id": 1,
+              "type": "code",
+              "title": "👇아래 예시 코드와 브라우저를 보며\nfont-size에 대해 자세히 알아봐요! ✨",
+              "tts": "",
+              "height": 150,
               "files": [
                 {
                   "name": "index.html",
                   "language": "html",
-                  "content": "<!DOCTYPE html>\n<html lang=\"ko\"><head>\n  <style>\n    p{ color: green }\n    #msg{ color: blue }\n  </style>\n</head>\n<body>\n  <p id=\"msg\" style=\"{{BLANK-1}}: red;\">우선순위 테스트</p>\n</body></html>",
-                  "url": "/code/42",
-                  "isInteractive": true,
-                  "inputLength": 1,
-                  "interactionOptions": [
-                    { "id": "option-1", "value": "background", "disabled": false },
-                    { "id": "option-2", "value": "color", "disabled": false },
-                    { "id": "option-3", "value": "font-weight", "disabled": false }
-                  ],
-                  "answers": [
-                    { "isCorrect": null, "answer": "color", "userAnswer": null, "optionElIndex": null }
-                  ]
+                  "content": "<h1>글자 크기 연습</h1>\n<p class='small-text'>이 문장은 작은 글씨(12px)</p>\n<p class='medium-text'>이 문장은 중간 크기(16px)</p>\n<p class='large-text'>이 문장은 큰 글씨(24px)</p>\n<p class='xlarge-text'>이 문장은 아주 큰 글씨(32px)</p>"
+                },
+                {
+                  "name": "style.css",
+                  "language": "css",
+                  "content": ".small-text { font-size: 12px; } \n.medium-text { font-size: 16px; } \n.large-text { font-size: 24px; } \n.xlarge-text { font-size: 32px; }"
                 }
               ],
-              "visibility": { "type": "step", "value": 3 },
-              "result": {
-                "totalStep": 1,
-                "modules": [
-                  {
-                    "id": 0,
-                    "type": "paragraph",
-                    "content": "🎉 좋아요! 인라인 `color: red;`가 가장 높은 우선순위로 적용됩니다.",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "correct"
-                  },
-                  {
-                    "id": 1,
-                    "type": "paragraph",
-                    "content": "❌ 인라인 스타일은 가장 강력합니다. `style=\"color: red;\"`가 최종적으로 적용돼요.",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "wrong"
-                  }
-                ]
-              }
+              "visibility": { "type": "step", "value": 2 }
             },
             {
-              "id": 3,
+              "id": 2,
               "type": "webview",
               "tabs": [
                 {
@@ -3551,7 +3289,7 @@ const CSS_1 = {
                   "content": "<!DOCTYPE html><html lang=\"ko\"><head><meta charset=\"UTF-8\"><title>미리보기</title><style>p{color:green}#msg{color:blue}body{font-family:system-ui;padding:16px}</style></head><body><p id=\"msg\" style=\"color:red\">우선순위 테스트</p></body></html>"
                 }
               ],
-              "visibility": { "type": "step", "value": 4 }
+              "visibility": { "type": "step", "value": 3 }
             }
           ]
         },
@@ -3604,6 +3342,8 @@ const CSS_1 = {
             {
               "id": 2,
               "type": "codeFillTheGap",
+              "title": "아래 빈칸을 채워서 [배경=노랑], [글자색=빨강],\n[제목 크기=32px]으로 만들어보세요! ✨",
+              "tts" : "",
               "files": [
                 {
                   "name": "index.html",
@@ -3629,14 +3369,16 @@ const CSS_1 = {
                   {
                     "id": 0,
                     "type": "paragraph",
-                    "content": "🎉 좋아요! HEX 표기로 배경색을 지정했습니다. 다른 표기법도 같은 색을 표현할 수 있어요.",
+                    "content": "## 🎉 잘했어요!\n분리한 **style.css** 덕분에 HTML과 스타일이 깔끔히 나뉘었어요.",
+                    "tts" : "",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "correct"
                   },
                   {
                     "id": 1,
                     "type": "paragraph",
-                    "content": "❌ 이번 문제는 **HEX** 표기를 요구했어요. `#2563eb`가 정답입니다. (RGB/HSL도 올바른 표기이지만 요구 조건과 달라요)",
+                    "content": "## 틀렸어요 🥹\n💡배경=**background-color**, \n글자색=**color**, 글자 크기=**font-size**",
+                    "tts" : "",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "wrong"
                   }
@@ -3646,6 +3388,8 @@ const CSS_1 = {
             {
               "id": 3,
               "type": "webview",
+              "title": "🧑‍💻 아래 결과 브라우저를 볼까요?",
+              "tts": "",
               "tabs": [
                 {
                   "type": "html",
@@ -3668,93 +3412,23 @@ const CSS_1 = {
             },
             {
               "id": 1,
-              "type": "multipleChoice",
-              "questions": [
-                {
-                  "title": "루트(`html`) 폰트 크기를 기준으로 하는 단위는?",
-                  "interactionOptions": [
-                    { "label": "px" },
-                    { "label": "%" },
-                    { "label": "rem" },
-                    { "label": "vh" }
-                  ],
-                  "answer": { "isCorrect": null, "answer": 2, "userAnswer": null }
-                }
-              ],
-              "visibility": { "type": "step", "value": 2 },
-              "result": {
-                "totalStep": 1,
-                "modules": [
-                  {
-                    "id": 0,
-                    "type": "paragraph",
-                    "content": "🎉 정답! `rem`은 루트 폰트 크기(기본 16px)를 기준으로 계산됩니다.",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "correct"
-                  },
-                  {
-                    "id": 1,
-                    "type": "paragraph",
-                    "content": "❌ `rem`이 루트 기준 단위예요. `%`는 부모 기준 비율, `px`는 절대 단위입니다.",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "wrong"
-                  }
-                ]
-              }
+              "type": "paragraph",
+              "content": "# 오늘은 CSS로 글자색, 배경색, \n# 글자 크기를 바꿔봤어요!",
+              "tts" : "",
+              "visibility": { "type": "step", "value": 1 }
             },
             {
               "id": 2,
-              "type": "codeFillTheGap",
-              "files": [
-                {
-                  "name": "index.html",
-                  "language": "html",
-                  "content": "<!DOCTYPE html>\n<html lang=\"ko\"><head>\n  <style>\n    .container{ width: {{BLANK-1}}; border:1px solid #ddd; padding:12px }\n    .title{ font-size: {{BLANK-2}}; }\n  </style>\n</head>\n<body>\n  <div class=\"container\">\n    <p class=\"title\">단위 연습</p>\n  </div>\n</body></html>",
-                  "url": "/code/44",
-                  "isInteractive": true,
-                  "inputLength": 2,
-                  "interactionOptions": [
-                    { "id": "option-1", "value": "200px", "disabled": false },
-                    { "id": "option-2", "value": "2rem", "disabled": false },
-                    { "id": "option-3", "value": "80%", "disabled": false }
-                  ],
-                  "answers": [
-                    { "isCorrect": null, "answer": "80%", "userAnswer": null, "optionElIndex": null },
-                    { "isCorrect": null, "answer": "2rem", "userAnswer": null, "optionElIndex": null }
-                  ]
-                }
-              ],
-              "visibility": { "type": "step", "value": 3 },
-              "result": {
-                "totalStep": 1,
-                "modules": [
-                  {
-                    "id": 0,
-                    "type": "paragraph",
-                    "content": "🎉 좋아요! 너비는 부모 기준 비율로, 글자는 루트 기준으로 설정했어요(가독성↑, 반응형에 유리).",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "correct"
-                  },
-                  {
-                    "id": 1,
-                    "type": "paragraph",
-                    "content": "❌ 컨테이너 폭은 비율(%)이 유연하고, 텍스트는 `rem`이 접근성에 유리합니다. 상황에 맞는 단위를 선택해 보세요.",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "wrong"
-                  }
-                ]
-              }
+              "type": "paragraph",
+              "content": "`color`: blue; ➡️ 글자색: 파랑\n`backgroud-color`: yellow; ➡️ 배경색: 노랑\n`font-size`: 32px; ➡️ 글자 크기: 32px",
+              "visibility": { "type": "step", "value": 2 }
             },
             {
               "id": 3,
-              "type": "webview",
-              "tabs": [
-                {
-                  "type": "html",
-                  "content": "<!DOCTYPE html><html lang=\"ko\"><head><meta charset=\"UTF-8\"><title>미리보기</title><style>html{font-size:16px}body{font-family:system-ui;padding:16px}.container{width:80%;border:1px solid #ddd;padding:12px;border-radius:10px}.title{font-size:2rem}</style></head><body><div class=\"container\"><p class=\"title\">단위 연습</p></div></body></html>"
-                }
-              ],
-              "visibility": { "type": "step", "value": 4 }
+              "type": "paragraph",
+              "content": "## 다음 레슨에서 또 만나요! 🚀",
+              "tts" : "",
+              "visibility": { "type": "step", "value": 3 }
             }
           ]
         }
@@ -3802,77 +3476,30 @@ const CSS_2 = {
             },
             {
               "id": 1,
-              "type": "multipleChoice",
-              "questions": [
-                {
-                  "title": "요소의 **테두리 바깥쪽** 공간을 늘리는 속성은?",
-                  "interactionOptions": [
-                    { "label": "padding" },
-                    { "label": "margin" },
-                    { "label": "border" },
-                    { "label": "outline" }
-                  ],
-                  "answer": { "isCorrect": null, "answer": 1, "userAnswer": null }
-                }
-              ],
-              "visibility": { "type": "step", "value": 2 },
-              "result": {
-                "totalStep": 1,
-                "modules": [
-                  {
-                    "id": 0,
-                    "type": "paragraph",
-                    "content": "🎉 정답! **margin**은 바깥 여백, **padding**은 안쪽 여백입니다.",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "correct"
-                  },
-                  {
-                    "id": 1,
-                    "type": "paragraph",
-                    "content": "❌ 바깥 여백은 `margin`, 안쪽 여백은 `padding`이에요. 헷갈리지 않게 기억해요! ",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "wrong"
-                  }
-                ]
-              }
+              "type": "paragraph",
+              "content": "## 🎨 색을 표현하는 세 가지 방법",
+              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/001_html_구조와_태그에_대해_알아볼까.mp3",
+              "visibility": { "type": "step", "value": 1 }
             },
             {
               "id": 2,
-              "type": "codeFillTheGap",
-              "files": [
-                {
-                  "name": "index.html",
-                  "language": "html",
-                  "content": "<!DOCTYPE html><html lang=\"ko\"><head><style>.card{ {{BLANK-1}}:16px; {{BLANK-2}}:20px; border:2px solid #cbd5e1; background:#f8fafc; width:260px; border-radius:10px; }</style></head><body><div class=\"card\">박스 모델 연습</div></body></html>",
-                  "url": "/code/45",
-                  "isInteractive": true,
-                  "inputLength": 2,
-                  "interactionOptions": [
-                    { "id": "option-1", "value": "border", "disabled": false },
-                    { "id": "option-2", "value": "margin", "disabled": false },
-                    { "id": "option-3", "value": "padding", "disabled": false }
-                  ],
-                  "answers": [
-                    { "isCorrect": null, "answer": "padding", "userAnswer": null, "optionElIndex": null },
-                    { "isCorrect": null, "answer": "margin", "userAnswer": null, "optionElIndex": null }
-                  ]
-                }
-              ],
-              "visibility": { "type": "step", "value": 3 },
-              "result": {
-                "totalStep": 1,
-                "modules": [
-                  { "id": 0, "type": "paragraph", "content": "🎉 잘했어요! 카드 내부(패딩)와 외부(마진)가 구분됐어요.", "visibility": { "type": "step", "value": 1 }, "condition": "correct" },
-                  { "id": 1, "type": "paragraph", "content": "❌ 안쪽은 `padding`, 바깥은 `margin`이에요. 다시 채워보세요!", "visibility": { "type": "step", "value": 1 }, "condition": "wrong" }
-                ]
-              }
+              "type": "paragraph",
+              "content": "**이름**: 🟥`red`, 🟦`blue`, 🟩`green` 처럼 쉽고 직관적이에요",
+              "tts" : "",
+              "visibility": { "type": "step", "value": 2 }
             },
             {
               "id": 3,
-              "type": "webview",
-              "tabs": [
-                { "type": "html", "content": "<!DOCTYPE html><html lang=\"ko\"><head><meta charset=\"UTF-8\"><title>미리보기</title><style>body{font-family:system-ui;padding:16px}.card{padding:16px;margin:20px;border:2px solid #cbd5e1;background:#f8fafc;width:260px;border-radius:10px}</style></head><body><div class=\"card\">박스 모델 연습</div></body></html>" }
-              ],
+              "type": "paragraph",
+              "content": "**색상코드**: `#ff0000`(빨강), `#0000ff`(파랑)처럼 색상코드로\n 더 많은 색을 표현해요.",
+              "tts" : "",
+              "visibility": { "type": "step", "value": 3 }
+            },
+            {
+              "id": 4,
+              "type": "paragraph",
+              "content": "**RGB**: 🟥`rgb(255, 0, 0)`, 🟦`rgb(0, 0, 255)`처럼\nRGB 값으로 더 많은 색을 표현해요.",
+              "tts" : "",
               "visibility": { "type": "step", "value": 4 }
             }
           ]
@@ -3906,128 +3533,59 @@ const CSS_2 = {
               "result": {
                 "totalStep": 1,
                 "modules": [
-                  { "id": 0, "type": "paragraph", "content": "🎉 정답! `inline-block`은 한 줄 유지 + 크기 지정이 가능해요.", "visibility": { "type": "step", "value": 1 }, "condition": "correct" },
-                  { "id": 1, "type": "paragraph", "content": "❌ `inline-block`을 사용하면 한 줄 배치와 크기 지정이 모두 가능합니다.", "visibility": { "type": "step", "value": 1 }, "condition": "wrong" }
+                  {
+                    "id": 0,
+                    "type": "paragraph",
+                    "content": "## 🙆‍♀️ 잘했어요!",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_정답_화면에_보이는_콘텐츠는_body_태그_안에_작성합니다.mp3",
+                    "visibility": { "type": "step", "value": 1 },
+                    "condition": "correct"
+                  },
+                  {
+                    "id": 1,
+                    "type": "paragraph",
+                    "content": "## 🙅‍♀️ 정답은 **color: #ff0000**입니다! \n`background-color`는 **배경색**을 설정해요.",
+                    "tts" : "",
+                    "visibility": { "type": "step", "value": 1 },
+                    "condition": "wrong"
+                  }
                 ]
               }
             },
             {
-              "id": 2,
-              "type": "codeFillTheGap",
+              "id": 1,
+              "type": "code",
+              "title": "👇아래 예시 코드와 브라우저를 보면서 **color 속성**을\n 더 자세히 알아봐요! ✨",
+              "tts": "",
+              "height": 100,
               "files": [
                 {
                   "name": "index.html",
                   "language": "html",
-                  "content": "<!DOCTYPE html><html lang=\"ko\"><head><style>.tag{ display: {{BLANK-1}}; width:100px; height:40px; background:#e0f2fe; border-radius:8px; text-align:center; line-height:40px; margin-right:8px }</style></head><body><span class=\"tag\">버튼</span><span class=\"tag\">배지</span></body></html>",
-                  "url": "/code/46",
-                  "isInteractive": true,
-                  "inputLength": 1,
-                  "interactionOptions": [
-                    { "id": "option-1", "value": "position", "disabled": false },
-                    { "id": "option-2", "value": "justify-contents", "disabled": false },
-                    { "id": "option-3", "value": "inline-block", "disabled": false }
-                  ],
-                  "answers": [
-                    { "isCorrect": null, "answer": "inline-block", "userAnswer": null, "optionElIndex": null }
-                  ]
+                  "content": "<p class='red-text'>이 문장은 빨간색이에요 🔴</p>"
+                },
+                {
+                  "name": "style.css",
+                  "language": "css",
+                  "content": ".red-text { color: #ff0000; }"
                 }
               ],
-              "visibility": { "type": "step", "value": 3 },
-              "result": {
-                "totalStep": 1,
-                "modules": [
-                  { "id": 0, "type": "paragraph", "content": "🎉 좋아요! 태그들이 한 줄에 배치되면서 크기도 적용됩니다.", "visibility": { "type": "step", "value": 1 }, "condition": "correct" },
-                  { "id": 1, "type": "paragraph", "content": "❌ `inline`은 크기 지정이 어렵고, `block`은 줄이 바뀝니다. `inline-block`을 사용하세요.", "visibility": { "type": "step", "value": 1 }, "condition": "wrong" }
-                ]
-              }
+              "visibility": { "type": "step", "value": 2 }
             },
             {
-              "id": 3,
+              "id": 2,
               "type": "webview",
               "tabs": [
-                { "type": "html", "content": "<!DOCTYPE html><html lang=\"ko\"><head><meta charset=\"UTF-8\"><title>미리보기</title><style>.tag{display:inline-block;width:100px;height:40px;background:#e0f2fe;border-radius:8px;text-align:center;line-height:40px;margin-right:8px}body{font-family:system-ui;padding:16px}</style></head><body><span class=\"tag\">버튼</span><span class=\"tag\">배지</span></body></html>" }
+                { "type": "html", "content": "<!DOCTYPE html><html lang=\"ko\"><head><meta charset=\"UTF-8\"><title>미리보기</title><style>body{font-family:system-ui;padding:16px}.box{border:1px solid #ddd;padding:12px;margin:10px 20px;width:220px;border-radius:8px}</style></head><body><div class=\"box\">여백 단축 연습</div></body></html>" }
               ],
-              "visibility": { "type": "step", "value": 4 }
+              "visibility": { "type": "step", "value": 3 }
             }
           ]
         },
         {
           "id": 3,
-          "title": "여백 단축 표기: margin/padding shorthand",
-          "modules": [
-            {
-              "id": 0,
-              "type": "paragraph",
-              "content": "### ✂️ 여백 단축 규칙\n- 1값: 모든 방향 동일 (`margin: 12px`)\n- 2값: **상·하 / 좌·우** (`margin: 10px 20px`)\n- 3값: **상 / 좌·우 / 하**\n- 4값: **상 → 우 → 하 → 좌**(시계방향, TRBL)",
-              "visibility": { "type": "step", "value": 1 }
-            },
-            {
-              "id": 1,
-              "type": "multipleChoice",
-              "questions": [
-                {
-                  "title": "`margin: 10px 20px`의 의미로 알맞은 것은?",
-                  "interactionOptions": [
-                    { "label": "상·하 10px, 좌·우 20px" },
-                    { "label": "상·하 20px, 좌·우 10px" },
-                    { "label": "상10 우20 하10 좌20 (TRBL)" },
-                    { "label": "네 방향 모두 10px" }
-                  ],
-                  "answer": { "isCorrect": null, "answer": 0, "userAnswer": null }
-                }
-              ],
-              "visibility": { "type": "step", "value": 2 },
-              "result": {
-                "totalStep": 1,
-                "modules": [
-                  { "id": 0, "type": "paragraph", "content": "🎉 정답! 두 값 표기는 **상·하 / 좌·우** 순서예요.", "visibility": { "type": "step", "value": 1 }, "condition": "correct" },
-                  { "id": 1, "type": "paragraph", "content": "❌ 두 값일 때는 상·하가 첫 번째, 좌·우가 두 번째입니다.", "visibility": { "type": "step", "value": 1 }, "condition": "wrong" }
-                ]
-              }
-            },
-            {
-              "id": 2,
-              "type": "codeFillTheGap",
-              "files": [
-                {
-                  "name": "index.html",
-                  "language": "html",
-                  "content": "<!DOCTYPE html><html lang=\"ko\"><head><style>.box{ border:1px solid #ddd; padding:12px; margin: {{BLANK-1}} {{BLANK-2}}; width:220px; }</style></head><body><div class=\"box\">여백 단축 연습</div></body></html>",
-                  "url": "/code/47",
-                  "isInteractive": true,
-                  "inputLength": 1,
-                  "interactionOptions": [
-                    { "id": "option-1", "value": "20cm", "disabled": false },
-                    { "id": "option-2", "value": "20px", "disabled": false },
-                    { "id": "option-3", "value": "20%", "disabled": false }
-                  ],
-                  "answers": [
-                    { "isCorrect": null, "answer": "20px", "userAnswer": null, "optionElIndex": null }
-                  ]
-                }
-              ],
-              "visibility": { "type": "step", "value": 3 },
-              "result": {
-                "totalStep": 1,
-                "modules": [
-                  { "id": 0, "type": "paragraph", "content": "🎉 좋아요! 상·하는 10px, 좌·우는 20px로 적용됐습니다.", "visibility": { "type": "step", "value": 1 }, "condition": "correct" },
-                  { "id": 1, "type": "paragraph", "content": "❌ `margin: 10px 20px;` 형태로 상·하/좌·우 순서를 기억하세요.", "visibility": { "type": "step", "value": 1 }, "condition": "wrong" }
-                ]
-              }
-            },
-            {
-              "id": 3,
-              "type": "webview",
-              "tabs": [
-                { "type": "html", "content": "<!DOCTYPE html><html lang=\"ko\"><head><meta charset=\"UTF-8\"><title>미리보기</title><style>body{font-family:system-ui;padding:16px}.box{border:1px solid #ddd;padding:12px;margin:10px 20px;width:220px;border-radius:8px}</style></head><body><div class=\"box\">여백 단축 연습</div></body></html>" }
-              ],
-              "visibility": { "type": "step", "value": 4 }
-            }
-          ]
-        },
-        {
-          "id": 4,
-          "title": "box-sizing: content-box vs border-box",
+          "title": "👩‍💻 코드 빈칸 채우기: 버튼 색 바꾸기",
+          "role": "🎮 실습",
           "modules": [
             {
               "id": 0,
@@ -4062,6 +3620,8 @@ const CSS_2 = {
             {
               "id": 2,
               "type": "codeFillTheGap",
+              "title": "아래 조건을 만족하도록 빈칸을 채워요 ✨\n- 버튼 배경: 빨간색(색상코드)\n- 안내 박스 배경: 파랑색 50% 투명(반투명)",
+              "tts" : "",
               "files": [
                 {
                   "name": "index.html",
@@ -4071,9 +3631,9 @@ const CSS_2 = {
                   "isInteractive": true,
                   "inputLength": 1,
                   "interactionOptions": [
-                    { "id": "option-1", "value": "content-box", "disabled": false },
-                    { "id": "option-2", "value": "box-width", "disabled": false },
-                    { "id": "option-3", "value": "border-box", "disabled": false }
+                    { "id": "option-1", "value": "#ff0000", "disabled": false },
+                    { "id": "option-2", "value": "blue", "disabled": false },
+                    { "id": "option-3", "value": "rgba(0,0,255,0.5)", "disabled": false }
                   ],
                   "answers": [
                     { "isCorrect": null, "answer": "border-box", "userAnswer": null, "optionElIndex": null }
@@ -4084,59 +3644,31 @@ const CSS_2 = {
               "result": {
                 "totalStep": 1,
                 "modules": [
-                  { "id": 0, "type": "paragraph", "content": "🎉 좋아요! 패딩/보더를 포함해도 폭이 일정합니다.", "visibility": { "type": "step", "value": 1 }, "condition": "correct" },
-                  { "id": 1, "type": "paragraph", "content": "❌ `box-sizing: border-box;`를 사용하면 폭 계산이 단순해집니다.", "visibility": { "type": "step", "value": 1 }, "condition": "wrong" }
+                  {
+                    "id": 0,
+                    "type": "paragraph",
+                    "content": "## 🎉 잘했어요!\n 버튼 배경은 **색상코드**로, 안내 박스 배경은 **RGBA**로 투명도를 표현했어요.",
+                    "tts" : "",
+                    "visibility": { "type": "step", "value": 1 },
+                    "condition": "correct"
+                  },
+                  {
+                    "id": 1,
+                    "type": "paragraph",
+                    "content": "## 틀렸어요 🥹\n- 빨간색 색상코드 → `#ff0000`\n- 파랑색 50% 투명 → `rgba(0,0,255,0.5)`",
+                    "tts" : "",
+                    "visibility": { "type": "step", "value": 1 },
+                    "condition": "wrong"
+                  }
                 ]
               }
-            },
-            {
-              "id": 3,
-              "type": "webview",
-              "tabs": [
-                { "type": "html", "content": "<!DOCTYPE html><html lang=\"ko\"><head><meta charset=\"UTF-8\"><title>미리보기</title><style>body{font-family:system-ui;padding:16px}.card{box-sizing:border-box;width:200px;padding:20px;border:8px solid #94a3b8;background:#f1f5f9;border-radius:8px}</style></head><body><div class=\"card\">폭이 200px로 유지!</div></body></html>" }
-              ],
-              "visibility": { "type": "step", "value": 4 }
-            }
-          ]
-        },
-        {
-          "id": 5,
-          "title": "타이포그래피 기초: font-family / font-size / line-height",
-          "modules": [
-            {
-              "id": 0,
-              "type": "paragraph",
-              "content": "### ✒️ 텍스트 기본\n- `font-family`: 폰트 **우선순위 스택** 작성(예: `system-ui, -apple-system, ...`)\n- `font-size`: 글자 크기(접근성을 위해 `rem` 권장)\n- `line-height`: 줄 간격(가독성 향상, 단위 없이 1.5~1.8 권장)",
-              "visibility": { "type": "step", "value": 1 }
             },
             {
               "id": 1,
-              "type": "multipleChoice",
-              "questions": [
-                {
-                  "title": "문단 가독성을 높이기 위해 **줄 간격**을 조절하는 속성은?",
-                  "interactionOptions": [
-                    { "label": "font-weight" },
-                    { "label": "letter-spacing" },
-                    { "label": "line-height" },
-                    { "label": "word-spacing" }
-                  ],
-                  "answer": { "isCorrect": null, "answer": 2, "userAnswer": null }
-                }
-              ],
-              "visibility": { "type": "step", "value": 2 },
-              "result": {
-                "totalStep": 1,
-                "modules": [
-                  { "id": 0, "type": "paragraph", "content": "🎉 정답! `line-height`로 줄 간격을 조절합니다.", "visibility": { "type": "step", "value": 1 }, "condition": "correct" },
-                  { "id": 1, "type": "paragraph", "content": "❌ 줄 간격은 `line-height`입니다. 가독성 향상에 큰 영향을 줘요.", "visibility": { "type": "step", "value": 1 }, "condition": "wrong" }
-                ]
-              }
-            },
-            {
-              "id": 2,
-              "type": "codeFillTheGap",
-              "files": [
+              "type": "webview",
+              "title": "🧑‍💻 아래 결과 브라우저를 확인해봐요!",
+              "tts": "",
+              "tabs": [
                 {
                   "name": "index.html",
                   "language": "html",
@@ -4175,8 +3707,9 @@ const CSS_2 = {
           ]
         },
         {
-          "id": 6,
-          "title": "배경과 테두리: background / background-size / border-radius",
+          "id": 4,
+          "title": "🎯 오늘 배운 것 정리",
+          "role": "🎉 엔딩",
           "modules": [
             {
               "id": 0,
@@ -4210,42 +3743,17 @@ const CSS_2 = {
             },
             {
               "id": 2,
-              "type": "codeFillTheGap",
-              "files": [
-                {
-                  "name": "index.html",
-                  "language": "html",
-                  "content": "<!DOCTYPE html><html lang=\"ko\"><head><style>.hero{ {{BLANK-1}}: url('/images/hero.jpg'); {{BLANK-2}}: cover; background-position:center; height:140px; border-radius:12px }</style></head><body><div class=\"hero\"></div></body></html>",
-                  "url": "/code/50",
-                  "isInteractive": true,
-                  "inputLength": 2,
-                  "interactionOptions": [
-                    { "id": "option-1", "value": "background-image", "disabled": false },
-                    { "id": "option-2", "value": "background-repeat", "disabled": false },
-                    { "id": "option-3", "value": "background-size", "disabled": false }
-                  ],
-                  "answers": [
-                    { "isCorrect": null, "answer": "background-image", "userAnswer": null, "optionElIndex": null },
-                    { "isCorrect": null, "answer": "background-size", "userAnswer": null, "optionElIndex": null }
-                  ]
-                }
-              ],
-              "visibility": { "type": "step", "value": 3 },
-              "result": {
-                "totalStep": 1,
-                "modules": [
-                  { "id": 0, "type": "paragraph", "content": "🎉 좋아요! 배경 이미지를 꽉 차게 세팅했습니다.", "visibility": { "type": "step", "value": 1 }, "condition": "correct" },
-                  { "id": 1, "type": "paragraph", "content": "❌ `background-image`와 `background-size` 속성을 올바르게 지정해야 합니다.", "visibility": { "type": "step", "value": 1 }, "condition": "wrong" }
-                ]
-              }
+              "type": "paragraph",
+              "content": "1) **이름**: 🟥`red`, 🟦`blue``\n2) **색상코드**: `#ff0000`(빨강), `#0000ff`(파랑)\n3) **RGB**: 🟥`rgb(255, 0, 0)`, 🟦`rgb(0, 0, 255)`",
+              "tts" : "",
+              "visibility": { "type": "step", "value": 2 }
             },
             {
               "id": 3,
-              "type": "webview",
-              "tabs": [
-                { "type": "html", "content": "<!DOCTYPE html><html lang=\"ko\"><head><meta charset=\"UTF-8\"><title>미리보기</title><style>body{font-family:system-ui;padding:16px}.hero{background-image:url('/images/hero.jpg');background-size:cover;background-position:center;height:140px;border-radius:12px;border:1px solid #e5e7eb}</style></head><body><div class=\"hero\"></div></body></html>" }
-              ],
-              "visibility": { "type": "step", "value": 4 }
+              "type": "paragraph",
+              "content": "## 다음 레슨에서 또 만나요! 🚀",
+              "tts" : "",
+              "visibility": { "type": "step", "value": 3 }
             }
           ]
         }
@@ -5967,7 +5475,8 @@ const JS_1 = {
             {
               "id": 0,
               "type": "paragraph",
-              "content": "### 🚀 자바스크립트 시작\n- **내장 스크립트**: `<script> ... </script>` 블록에 직접 작성\n- **외부 스크립트**: `<script src=\"app.js\" defer></script>`로 파일을 불러오기 (📌 `defer`는 HTML 파싱 후 실행 → 화면 깜빡임↓)\n- **출력/디버깅**: `console.log(\"메시지\")`로 개발자 도구 콘솔에 출력",
+              "content": "## HTML이 뼈대🦴\n## CSS가 옷👗\n## JS는 움직이는 힘(엔진⚡)",
+              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/001_html_구조와_태그에_대해_알아볼까.mp3",
               "visibility": { "type": "step", "value": 1 }
             },
             {
@@ -5999,7 +5508,8 @@ const JS_1 = {
                   {
                     "id": 1,
                     "type": "paragraph",
-                    "content": "❌ `href`나 `<link>`는 CSS에 쓰입니다. 외부 JS는 `<script src=\"...\" defer></script>`를 사용하세요.",
+                    "content": "## 🙅‍♀️ 정답은 '웹을 움직이게 하기'입니다.\n구조는 HTML, 꾸미기는 CSS",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_정답_화면에_보이는_콘텐츠는_body_태그_안에_작성합니다.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "wrong"
                   }
@@ -6007,59 +5517,35 @@ const JS_1 = {
               }
             },
             {
-              "id": 2,
-              "type": "codeFillTheGap",
+              "id": 1,
+              "type": "code",
+              "title": "👇아래 예시 코드와 브라우저를 보면서\n더 자세히 알아봐요!",
+              "tts": "",
+              "height": 300,
               "files": [
                 {
                   "name": "index.html",
                   "language": "html",
-                  "content": "<!DOCTYPE html>\\n<html lang=\\\"ko\\\">\\n<head>\\n  <meta charset=\\\"UTF-8\\\"/>\\n  <title>JS 시작</title>\\n  <{{BLANK-1}}>\\n    console.log(\\\"JS 시작!\\\");\\n  </{{BLANK-1}}>\\n</head>\\n<body>\\n  <p id=\\\"out\\\">콘솔을 확인해 보세요!</p>\\n</body>\\n</html>",
-                  "url": "/code/69",
-                  "isInteractive": true,
-                  "inputLength": 2,
-                  "interactionOptions": [
-                    { "id": "option-1", "value": "<script>", "disabled": false },
-                    { "id": "option-2", "value": "<style>", "disabled": false },
-                    { "id": "option-3", "value": "</script>", "disabled": false },
-                    { "id": "option-4", "value": "</style>", "disabled": false }
-                  ],
-                  "answers": [
-                    { "isCorrect": null, "answer": "<script>", "userAnswer": null, "optionElIndex": null },
-                    { "isCorrect": null, "answer": "</script>", "userAnswer": null, "optionElIndex": null }
-                  ]
+                  "content": "<h1>JS 동작 맛보기</h1>\n<button id='btn'>눌러보세요</button>\n<p id='text'>아직 버튼을 누르지 않았습니다.</p>\n\n<script src='script.js'></script>"
+                },
+                {
+                  "name": "script.js",
+                  "language": "javascript",
+                  "content": "let count = 0; // 버튼 클릭 횟수 저장 변수\n\ndocument.getElementById('btn').addEventListener('click', function() {\n  count++; // 버튼 클릭 시 횟수 증가\n\n  // 클릭 횟수에 따라 출력 내용 변경\n  if (count === 1) {\n    document.getElementById('text').textContent = '버튼을 눌렀어요! 🎉';\n  } else {\n    document.getElementById('text').textContent = '버튼을 눌렀어요! 🎉: (+${count}번 클릭);\n  }\n});"
                 }
               ],
-              "visibility": { "type": "step", "value": 3 },
-              "result": {
-                "totalStep": 1,
-                "modules": [
-                  {
-                    "id": 0,
-                    "type": "paragraph",
-                    "content": "🎉 잘했어요! `<script>` 블록이 올바르게 작성됐어요. 콘솔에 메시지가 출력됩니다.",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "correct"
-                  },
-                  {
-                    "id": 1,
-                    "type": "paragraph",
-                    "content": "❌ 자바스크립트 코드는 `<script>` 태그 안에 작성해야 합니다. CSS는 `<style>`, 외부 리소스 연결은 `<link>`예요.",
-                    "visibility": { "type": "step", "value": 1 },
-                    "condition": "wrong"
-                  }
-                ]
-              }
+              "visibility": { "type": "step", "value": 2 }
             },
             {
-              "id": 3,
+              "id": 2,
               "type": "webview",
               "tabs": [
                 {
                   "type": "html",
-                  "content": "<!DOCTYPE html><html lang=\\\"ko\\\"><head><meta charset=\\\"UTF-8\\\"><title>미리보기</title></head><body style=\\\"font-family:system-ui;padding:16px\\\"><p id=\\\"out\\\">콘솔을 열어 <code>JS 시작!</code> 메시지를 확인하세요.</p><script>console.log(\\\"JS 시작!\\\");</script></body></html>"
+                  "content": "<!DOCTYPE html><html lang='ko'><head><meta charset='UTF-8'><title>JS 동작 맛보기</title></head><body><h1>JS 동작 맛보기</h1><button id='btn'>눌러보세요</button><p id='text'>아직 버튼을 누르지 않았습니다.</p><script>let count=0;document.getElementById('btn').addEventListener('click',function(){count++;if(count===1){document.getElementById('text').textContent='버튼을 눌렀어요! 🎉';}else{document.getElementById('text').textContent=`버튼을 눌렀어요! 🎉 (+${count}번 클릭)`;}});</script></body></html>"
                 }
               ],
-              "visibility": { "type": "step", "value": 4 }
+              "visibility": { "type": "step", "value": 3 }
             }
           ]
         },
@@ -6092,118 +5578,19 @@ const JS_1 = {
               "result": {
                 "totalStep": 1,
                 "modules": [
-                  { "id": 0, "type": "paragraph", "content": "🎉 정답! `let`은 재할당은 가능하지만 **재선언은 불가**해요.", "visibility": { "type": "step", "value": 1 }, "condition": "correct" },
-                  { "id": 1, "type": "paragraph", "content": "❌ `const`는 재할당 불가, `var`는 재선언이 가능해 충돌을 유발할 수 있어요. 정답은 `let`입니다.", "visibility": { "type": "step", "value": 1 }, "condition": "wrong" }
-                ]
-              }
-            },
-            {
-              "id": 2,
-              "type": "codeFillTheGap",
-              "files": [
-                {
-                  "name": "index.html",
-                  "language": "html",
-                  "content": "<!DOCTYPE html>\\n<html lang=\\\"코\\\"><head><meta charset=\\\"UTF-8\\\"><style>body{font-family:system-ui}</style></head><body><p id=\\\"out\\\"></p><script>{{BLANK-1}} count = 1; {{BLANK-2}} PI = 3.14; count = 2; document.getElementById(\\\"out\\\").textContent = count + \", \" + PI;</script></body></html>",
-                  "url": "/code/70",
-                  "isInteractive": true,
-                  "inputLength": 2,
-                  "interactionOptions": [
-                    { "id": "option-1", "value": "var", "disabled": false },
-                    { "id": "option-2", "value": "const", "disabled": false },
-                    { "id": "option-3", "value": "let", "disabled": false }
-                  ],
-                  "answers": [
-                    { "isCorrect": null, "answer": "let", "userAnswer": null, "optionElIndex": null },
-                    { "isCorrect": null, "answer": "const", "userAnswer": null, "optionElIndex": null }
-                  ]
-                }
-              ],
-              "visibility": { "type": "step", "value": 3 },
-              "result": {
-                "totalStep": 1,
-                "modules": [
-                  { "id": 0, "type": "paragraph", "content": "🎉 좋아요! `let`은 재할당, `const`는 상수에 적합합니다.", "visibility": { "type": "step", "value": 1 }, "condition": "correct" },
-                  { "id": 1, "type": "paragraph", "content": "❌ `count`는 바뀌므로 `let`, 원주율 같은 상수는 `const`로 선언해요.", "visibility": { "type": "step", "value": 1 }, "condition": "wrong" }
-                ]
-              }
-            },
-            {
-              "id": 3,
-              "type": "webview",
-              "tabs": [
-                {
-                  "type": "html",
-                  "content": "<!DOCTYPE html><html lang=\\\"ko\\\"><head><meta charset=\\\"UTF-8\\\"><title>미리보기</title></head><body style=\\\"font-family:system-ui;padding:16px\\\"><p id=\\\"out\\\"></p><script>let count=1; const PI=3.14; count=2; document.getElementById(\\\"out\\\").textContent = count + \", \" + PI;</script></body></html>"
-                }
-              ],
-              "visibility": { "type": "step", "value": 4 }
-            }
-          ]
-        },
-        {
-          "id": 3,
-          "title": "데이터 타입과 typeof",
-          "modules": [
-            {
-              "id": 0,
-              "type": "paragraph",
-              "content": "### 🔤 기본 타입\n- 원시 타입: string, number, boolean, undefined, bigint, symbol (그리고 `null`)\n- 타입 확인: **`typeof 값`** (예: `typeof \"hi\"` → \"string\")\n- 주의: `typeof null`은 역사적 이유로 \"object\"를 반환해요(암기 포인트)",
-              "visibility": { "type": "step", "value": 1 }
-            },
-            {
-              "id": 1,
-              "type": "multipleChoice",
-              "questions": [
-                {
-                  "title": "값의 **자료형을 확인**할 때 쓰는 연산자는?",
-                  "interactionOptions": [
-                    { "label": "typeof" },
-                    { "label": "instanceof" },
-                    { "label": "type()" },
-                    { "label": "kindof" }
-                  ],
-                  "answer": { "isCorrect": null, "answer": 0, "userAnswer": null }
-                }
-              ],
-              "visibility": { "type": "step", "value": 2 },
-              "result": {
-                "totalStep": 1,
-                "modules": [
-                  { "id": 0, "type": "paragraph", "content": "🎉 정답! `typeof`는 값의 자료형 이름을 문자열로 돌려줘요.", "visibility": { "type": "step", "value": 1 }, "condition": "correct" },
-                  { "id": 1, "type": "paragraph", "content": "❌ 자료형 확인은 `typeof`를 사용합니다. `type()` 같은 내장은 없어요.", "visibility": { "type": "step", "value": 1 }, "condition": "wrong" }
-                ]
-              }
-            },
-            {
-              "id": 2,
-              "type": "codeFillTheGap",
-              "files": [
-                {
-                  "name": "index.html",
-                  "language": "html",
-                  "content": "<!DOCTYPE html>\\n<html lang=\\\"ko\\\"><head><meta charset=\\\"UTF-8\\\"></head><body style=\\\"font-family:system-ui;padding:16px\\\"><p id=\\\"out\\\"></p><script>const name = \\\"Sara\\\"; const age = 20; const types = (typeof {{BLANK-1}}) + \\\" / \\\" + (typeof {{BLANK-2}}); document.getElementById(\\\"out\\\").textContent = types;</script></body></html>",
-                  "url": "/code/71",
-                  "isInteractive": true,
-                  "inputLength": 1,
-                  "interactionOptions": [
-                    { "id": "option-1", "value": "type", "disabled": false },
-                    { "id": "option-2", "value": "types", "disabled": false },
-                    { "id": "option-3", "value": "typeof", "disabled": false }
-                  ],
-                  "answers": [
-                    { "isCorrect": null, "answer": "typeof", "userAnswer": null, "optionElIndex": null }
-                  ]
-                }
-              ],
-              "visibility": { "type": "step", "value": 3 },
-              "result": {
-                "totalStep": 1,
-                "modules": [
-                  { "id": 0, "type": "paragraph", "content": "🎉 좋아요! `name`은 string, `age`는 number로 출력됩니다.", "visibility": { "type": "step", "value": 1 }, "condition": "correct" },
-                  { "id": 1,
+                  {
+                    "id": 0,
                     "type": "paragraph",
-                    "content": "❌ 괄호 안에는 자료형 확인 `typeof`를 넣어야 요. 확인할 `name`, `age`는 식별자 입니다.",
+                    "content": "## 🙆‍♀️ 정답이에요!\n`console.log`는 콘솔 출력이에요.",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_정답_화면에_보이는_콘텐츠는_body_태그_안에_작성합니다.mp3",
+                    "visibility": { "type": "step", "value": 1 },
+                    "condition": "correct"
+                  },
+                  {
+                    "id": 1,
+                    "type": "paragraph",
+                    "content": "## 🙅‍♀️ 정답은 `alert('안녕 JS!');`입니다.\n`console.log`는 콘솔 출력이에요.",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_정답_화면에_보이는_콘텐츠는_body_태그_안에_작성합니다.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "wrong"
                   }
@@ -6211,7 +5598,27 @@ const JS_1 = {
               }
             },
             {
-              "id": 3,
+              "id": 1,
+              "type": "code",
+              "title": "👇아래 예시 코드와 브라우저를 보면서\nalert() 함수를 더 자세히 알아봐요! ✨",
+              "tts": "",
+              "height": 130,
+              "files": [
+                {
+                  "name": "index.html",
+                  "language": "html",
+                  "content": "<h1>JS 첫 인사</h1>\n<button id='btn'>눌러보세요!</button>\n\n<script src='script.js'></script>"
+                },
+                {
+                  "name": "script.js",
+                  "language": "javascript",
+                  "content": "document.getElementById('btn').addEventListener('click', function () {\n  alert('안녕 JS!');\n});"
+                }
+              ],
+              "visibility": { "type": "step", "value": 2 }
+            },
+            {
+              "id": 2,
               "type": "webview",
               "tabs": [
                 {
@@ -6219,7 +5626,7 @@ const JS_1 = {
                   "content": "<!DOCTYPE html><html lang=\\\"ko\\\"><head><meta charset=\\\"UTF-8\\\"><title>미리보기</title></head><body style=\\\"font-family:system-ui;padding:16px\\\"><p id=\\\"out\\\"></p><script>const name=\\\"Sara\\\"; const age=20; const types=(typeof name)+\\\" / \\\"+(typeof age); document.getElementById(\\\"out\\\").textContent=types;</script></body></html>"
                 }
               ],
-              "visibility": { "type": "step", "value": 4 }
+              "visibility": { "type": "step", "value": 3 }
             }
           ]
         },
@@ -6282,55 +5689,22 @@ const JS_1 = {
               "result": {
                 "totalStep": 1,
                 "modules": [
-                  { "id": 0, "type": "paragraph", "content": "🎉 좋아요! 문자열 \"5\"와 숫자 5는 `===`로 비교하면 **false**가 됩니다.", "visibility": { "type": "step", "value": 1 }, "condition": "correct" },
-                  { "id": 1, "type": "paragraph", "content": "❌ `==`는 타입을 강제로 맞추어 true가 될 수 있어요. 예측 가능한 `===`를 사용하세요.", "visibility": { "type": "step", "value": 1 }, "condition": "wrong" }
-                ]
-              }
-            },
-            {
-              "id": 3,
-              "type": "webview",
-              "tabs": [
-                {
-                  "type": "html",
-                  "content": "<!DOCTYPE html><html lang=\\\"ko\\\"><head><meta charset=\\\"UTF-8\\\"><title>미리보기</title></head><body style=\\\"font-family:system-ui;padding:16px\\\"><p id=\\\"out\\\"></p><script>const a=\\\"5\\\", b=5; const same=(a===b); document.getElementById(\\\"out\\\").textContent=\\\"결과: \\\"+same;</script></body></html>"
-                }
-              ],
-              "visibility": { "type": "step", "value": 4 }
-            }
-          ]
-        },
-        {
-          "id": 5,
-          "title": "문자열 템플릿 리터럴: `백틱`과 ${표현식}",
-          "modules": [
-            {
-              "id": 0,
-              "type": "paragraph",
-              "content": "### 🧵 템플릿 리터럴\n- 백틱(\\`)으로 감싸고 `${표현식}`을 삽입: <br>`const msg = \\`안녕, ${name}! 점수: ${score}\\`;`\n- 문자열 연결 `+` 보다 가독성↑, 줄바꿈도 편리\n- 표현식에 **함수 호출/연산**도 가능: `${1+2}` → `3`",
-              "visibility": { "type": "step", "value": 1 }
-            },
-            {
-              "id": 1,
-              "type": "multipleChoice",
-              "questions": [
-                {
-                  "title": "이름 변수를 문자열에 **간편히 삽입**하는 올바른 예시는?",
-                  "interactionOptions": [
-                    { "label": "`안녕, ${name}`" },
-                    { "label": "\"안녕, ${name}\"" },
-                    { "label": "\"안녕, ${name}\"" },
-                    { "label": "\"안녕, \" + name" }
-                  ],
-                  "answer": { "isCorrect": null, "answer": 0, "userAnswer": null }
-                }
-              ],
-              "visibility": { "type": "step", "value": 2 },
-              "result": {
-                "totalStep": 1,
-                "modules": [
-                  { "id": 0, "type": "paragraph", "content": "🎉 정답! 템플릿 리터럴은 **백틱**과 `${}` 구문을 사용합니다.", "visibility": { "type": "step", "value": 1 }, "condition": "correct" },
-                  { "id": 1, "type": "paragraph", "content": "❌ 작은따옴표나 큰따옴표는 `${}`이 동작하지 않습니다. **백틱(\\`)**을 사용해야 해요.", "visibility": { "type": "step", "value": 1 }, "condition": "wrong" }
+                  {
+                    "id": 0,
+                    "type": "paragraph",
+                    "content": "## 🎉 **정답!**\n자바스크립트로 계산에 성공했어요.",
+                    "tts" : "",
+                    "visibility": { "type": "step", "value": 1 },
+                    "condition": "correct"
+                  },
+                  {
+                    "id": 1,
+                    "type": "paragraph",
+                    "content": "## 틀렸어요 🥹\n덧셈 연산자는 `+`, 뺄셈 연산자는 `-`, 곱셈 연산자는 `*`",
+                    "tts" : "",
+                    "visibility": { "type": "step", "value": 1 },
+                    "condition": "wrong"
+                  }
                 ]
               }
             },
@@ -6369,10 +5743,12 @@ const JS_1 = {
             {
               "id": 3,
               "type": "webview",
+              "title": "🧑‍💻 아래 결과 브라우저를 볼까요?",
+              "tts": "",
               "tabs": [
                 {
                   "type": "html",
-                  "content": "<!DOCTYPE html><html lang=\\\"ko\\\"><head><meta charset=\\\"UTF-8\\\"><title>미리보기</title></head><body style=\\\"font-family:system-ui;padding:16px\\\"><p id=\\\"out\\\"></p><script>const name=\\\"민지\\\", score=95; const msg=`이름: ${name}, 점수: ${score}`; document.getElementById(\\\"out\\\").textContent=msg;</script></body></html>"
+                  "content": "<!DOCTYPE html><html lang='ko'><head><meta charset='UTF-8'><title>JS 계산 결과</title></head><body><h1>1 + 2 =</h1><p id='out'>아직 실행 전이에요. 아래 버튼을 눌러보세요!</p><button id='runBtn'>결과 실행</button><script>function __run(){const sum=1+2;document.getElementById('out').textContent='결과는 '+sum;}document.getElementById('runBtn').addEventListener('click',__run);</script></body></html>"
                 }
               ],
               "visibility": { "type": "step", "value": 4 }
@@ -6380,8 +5756,9 @@ const JS_1 = {
           ]
         },
         {
-          "id": 6,
-          "title": "조건문 if/else 기본",
+          "id": 5,
+          "title": "🎯 오늘 배운 것 정리",
+          "role": "🎉 엔딩",
           "modules": [
             {
               "id": 0,
@@ -6415,45 +5792,10 @@ const JS_1 = {
             },
             {
               "id": 2,
-              "type": "codeFillTheGap",
-              "files": [
-                {
-                  "name": "index.html",
-                  "language": "html",
-                  "content": "<!DOCTYPE html>\\n<html lang=\\\"ko\\\"><head><meta charset=\\\"UTF-8\\\"></head><body style=\\\"font-family:system-ui;padding:16px\\\"><p id=\\\"out\\\"></p><script>const age = 17; let result = \\\"\\\"; if ({{BLANK-1}} {{BLANK-2}} 18) { result = \\\"성인\\\"; } else { result = \\\"미성년\\\"; } document.getElementById(\\\"out\\\").textContent = result;</script></body></html>",
-                  "url": "/code/74",
-                  "isInteractive": true,
-                  "inputLength": 1,
-                  "interactionOptions": [
-                    { "id": "option-1", "value": "!=", "disabled": false },
-                    { "id": "option-2", "value": ">=", "disabled": false },
-                    { "id": "option-3", "value": "===", "disabled": false },
-                    { "id": "option-4", "value": "<=", "disabled": false }
-                  ],
-                  "answers": [
-                    { "isCorrect": null, "answer": ">=", "userAnswer": null, "optionElIndex": null }
-                  ]
-                }
-              ],
-              "visibility": { "type": "step", "value": 3 },
-              "result": {
-                "totalStep": 1,
-                "modules": [
-                  { "id": 0, "type": "paragraph", "content": "🎉 좋아요! age가 18 이상인지 비교하는 조건이 완성됐습니다.", "visibility": { "type": "step", "value": 1 }, "condition": "correct" },
-                  { "id": 1, "type": "paragraph", "content": "❌ `if (age >= 18)`처럼 **식별자 + 비교 연산자 + 기준값** 형태를 기억해요.", "visibility": { "type": "step", "value": 1 }, "condition": "wrong" }
-                ]
-              }
-            },
-            {
-              "id": 3,
-              "type": "webview",
-              "tabs": [
-                {
-                  "type": "html",
-                  "content": "<!DOCTYPE html><html lang=\\\"ko\\\"><head><meta charset=\\\"UTF-8\\\"><title>미리보기</title></head><body style=\\\"font-family:system-ui;padding:16px\\\"><p id=\\\"out\\\"></p><script>const age=17; let result=\\\"\\\"; if(age>=18){result=\\\"성인\\\";}else{result=\\\"미성년\\\";} document.getElementById(\\\"out\\\").textContent=result;</script></body></html>"
-                }
-              ],
-              "visibility": { "type": "step", "value": 4 }
+              "type": "paragraph",
+              "content": "## 다음 레슨에서 또 만나요! 🚀",
+              "tts" : "",
+              "visibility": { "type": "step", "value": 2 }
             }
           ]
         }
@@ -6501,39 +5843,32 @@ const JS_2 = {
             },
             {
               "id": 1,
-              "type": "multipleChoice",
-              "questions": [
-                {
-                  "title": "사용자 이름이 빈 문자열일 때 **'게스트'**를 사용하려면 어떤 표현이 적절할까요?",
-                  "interactionOptions": [
-                    { "label": "name && \"게스트\"" },
-                    { "label": "name || \"게스트\"" },
-                    { "label": "\"게스트\" || name" },
-                    { "label": "!\"게스트\" && name" }
-                  ],
-                  "answer": { "isCorrect": null, "answer": 1, "userAnswer": null }
-                }
-              ],
-              "visibility": { "type": "step", "value": 2 },
-              "result": {
-                "totalStep": 1,
-                "modules": [
-                  { "id": 0, "type": "paragraph", "content": "🎉 정답! `||`는 왼쪽이 falsy면 오른쪽 값을 반환해요.", "visibility": { "type": "step", "value": 1 }, "condition": "correct" },
-                  { "id": 1, "type": "paragraph", "content": "❌ 기본값 패턴은 `name || \"게스트\"`예요. 왼쪽이 비어 있으면 오른쪽을 사용합니다.", "visibility": { "type": "step", "value": 1 }, "condition": "wrong" }
-                ]
-              }
+              "type": "paragraph",
+              "content": "## 변수는 값을 담아두는 이름표 달린 상자📦",
+              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/001_html_구조와_태그에_대해_알아볼까.mp3",
+              "visibility": { "type": "step", "value": 1 }
             },
             {
               "id": 2,
-              "type": "codeFillTheGap",
-              "files": [
+              "type": "paragraph",
+              "content": "`let`은 값을 **바꿀 수 있는 변수** \n`const`는 값을 **바꾸지 않는 상수**",
+              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/001_html_구조와_태그에_대해_알아볼까.mp3",
+              "visibility": { "type": "step", "value": 2 }
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "어떤 선언을 쓸까?",
+          "role": "✏️ 실습",
+          "modules": [
+            {
+              "id": 0,
+              "type": "multipleChoice",
+              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/007_화면에_직접_표시되는_내용을_담는_태그는_무엇일까요.mp3",
+              "questions": [
                 {
-                  "name": "index.html",
-                  "language": "html",
-                  "content": "<!DOCTYPE html>\n<html lang=\"ko\"><head><meta charset=\"UTF-8\"></head><body style=\"font-family:system-ui;padding:16px\"><p id=\"out\"></p><script>const user=\"\"; const displayName = user {{BLANK-1}} \"게스트\"; document.getElementById(\"out\").textContent = displayName;</script></body></html>",
-                  "url": "/code/75",
-                  "isInteractive": true,
-                  "inputLength": 1,
+                  "title": "한 번 정하면 바꾸지 않을 값을 만들 때 알맞은 키워드는?",
                   "interactionOptions": [
                     { "id": "option-1", "value": "&&", "disabled": false },
                     { "id": "option-2", "value": "||", "disabled": false },
@@ -6549,90 +5884,47 @@ const JS_2 = {
               "result": {
                 "totalStep": 1,
                 "modules": [
-                  { "id": 0, "type": "paragraph", "content": "🎉 좋아요! 빈 문자열은 false라 `||` 오른쪽 값으로 대체돼요.", "visibility": { "type": "step", "value": 1 }, "condition": "correct" },
-                  { "id": 1, "type": "paragraph", "content": "❌ 기본값 패턴은 `값 || 기본값`입니다. `&&`는 조건부 실행 패턴이에요.", "visibility": { "type": "step", "value": 1 }, "condition": "wrong" }
+                  {
+                    "id": 0,
+                    "type": "paragraph",
+                    "content": "## 🙆‍♀️ 잘했어요!",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_정답_화면에_보이는_콘텐츠는_body_태그_안에_작성합니다.mp3",
+                    "visibility": { "type": "step", "value": 1 },
+                    "condition": "correct"
+                  },
+                  {
+                    "id": 1,
+                    "type": "paragraph",
+                    "content": "## 🙅‍♀️ 정답은 'const'입니다.\n **let**은 값을 **바꿀 수 있는 변수**\n **var**는 옛날 방식이라 초보자는 **지양**해요!",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_정답_화면에_보이는_콘텐츠는_body_태그_안에_작성합니다.mp3",
+                    "visibility": { "type": "step", "value": 1 },
+                    "condition": "wrong"
+                  }
                 ]
               }
-            },
-            {
-              "id": 3,
-              "type": "webview",
-              "tabs": [
-                {
-                  "type": "html",
-                  "content": "<!DOCTYPE html><html lang=\"ko\"><head><meta charset=\"UTF-8\"><title>미리보기</title></head><body style=\"font-family:system-ui;padding:16px\"><p id=\"out\"></p><script>const user=\"\"; const displayName=user||\"게스트\"; document.getElementById(\"out\").textContent=displayName;</script></body></html>"
-                }
-              ],
-              "visibility": { "type": "step", "value": 4 }
-            }
-          ]
-        },
-        {
-          "id": 2,
-          "title": "함수 선언과 return",
-          "modules": [
-            {
-              "id": 0,
-              "type": "paragraph",
-              "content": "### 🧩 함수 기본\n- 선언: `function add(a, b) { return a + b; }`\n- 호출: `add(2, 3)` → `5`\n- `return`은 **값을 돌려주고 함수 실행을 종료**합니다.",
-              "visibility": { "type": "step", "value": 1 }
             },
             {
               "id": 1,
-              "type": "multipleChoice",
-              "questions": [
-                {
-                  "title": "`return`의 설명으로 가장 알맞은 것은?",
-                  "interactionOptions": [
-                    { "label": "지역 변수를 모두 전역으로 만든다" },
-                    { "label": "함수를 일시정지하고 나중에 재개한다" },
-                    { "label": "값을 호출자에게 돌려주고 함수를 종료한다" },
-                    { "label": "함수 안의 콘솔을 지운다" }
-                  ],
-                  "answer": { "isCorrect": null, "answer": 2, "userAnswer": null }
-                }
-              ],
-              "visibility": { "type": "step", "value": 2 },
-              "result": {
-                "totalStep": 1,
-                "modules": [
-                  { "id": 0, "type": "paragraph", "content": "🎉 정답! `return`을 만나면 함수는 즉시 종료돼요.", "visibility": { "type": "step", "value": 1 }, "condition": "correct" },
-                  { "id": 1, "type": "paragraph", "content": "❌ `return`은 값을 돌려주고 함수를 **끝냅니다**. 일시정지가 아니에요.", "visibility": { "type": "step", "value": 1 }, "condition": "wrong" }
-                ]
-              }
-            },
-            {
-              "id": 2,
-              "type": "codeFillTheGap",
+              "type": "code",
+              "title": "👇아래 예시 코드와 브라우저를 보면서\n더 자세히 알아봐요!",
+              "tts": "",
+              "height": 300,
               "files": [
                 {
                   "name": "index.html",
                   "language": "html",
-                  "content": "<!DOCTYPE html>\n<html lang=\"ko\"><head><meta charset=\"UTF-8\"></head><body style=\"font-family:system-ui;padding:16px\"><p id=\"out\"></p><script>function add(a,b){ {{BLANK-1}} a+b; } document.getElementById(\"out\").textContent = add(3,4);</script></body></html>",
-                  "url": "/code/76",
-                  "isInteractive": true,
-                  "inputLength": 1,
-                  "interactionOptions": [
-                    { "id": "option-1", "value": "break", "disabled": false },
-                    { "id": "option-2", "value": "yield", "disabled": false },
-                    { "id": "option-3", "value": "return", "disabled": false }
-                  ],
-                  "answers": [
-                    { "isCorrect": null, "answer": "return", "userAnswer": null, "optionElIndex": null }
-                  ]
+                  "content": "<h1>const 간단 예시</h1>\n<button id='runBtn'>실행</button>\n<p id='out'>아직 실행 전</p>\n\n<script src='script.js'></script>"
+                },
+                {
+                  "name": "script.js",
+                  "language": "javascript",
+                  "content": "// 한 번 정하면 바꾸지 않을 값 → const\nconst MAX_HEARTS = 5;\n\ntry {\n  // ❌ const 재할당 시도 → 에러 발생\n  MAX_HEARTS = 10;\n} catch (e) {\n  msg += `const는 재할당 불가! (${e.name})`;\n}\n\n document.getElementById('out').textContent = msg;\n};"
                 }
               ],
-              "visibility": { "type": "step", "value": 3 },
-              "result": {
-                "totalStep": 1,
-                "modules": [
-                  { "id": 0, "type": "paragraph", "content": "🎉 좋아요! `add(3,4)`는 7을 반환합니다.", "visibility": { "type": "step", "value": 1 }, "condition": "correct" },
-                  { "id": 1, "type": "paragraph", "content": "❌ 결과를 돌려주려면 `return`을 사용해야 합니다.", "visibility": { "type": "step", "value": 1 }, "condition": "wrong" }
-                ]
-              }
+              "visibility": { "type": "step", "value": 2 }
             },
             {
-              "id": 3,
+              "id": 2,
               "type": "webview",
               "tabs": [
                 {
@@ -6640,7 +5932,7 @@ const JS_2 = {
                   "content": "<!DOCTYPE html><html lang=\"ko\"><head><meta charset=\"UTF-8\"><title>미리보기</title></head><body style=\"font-family:system-ui;padding:16px\"><p id=\"out\"></p><script>function add(a,b){return a+b;} document.getElementById(\"out\").textContent=add(3,4);</script></body></html>"
                 }
               ],
-              "visibility": { "type": "step", "value": 4 }
+              "visibility": { "type": "step", "value": 3 }
             }
           ]
         },
@@ -6673,43 +5965,47 @@ const JS_2 = {
               "result": {
                 "totalStep": 1,
                 "modules": [
-                  { "id": 0, "type": "paragraph", "content": "🎉 정답! 한 줄 본문은 `return`을 생략할 수 있어요.", "visibility": { "type": "step", "value": 1 }, "condition": "correct" },
-                  { "id": 1, "type": "paragraph", "content": "❌ 화살표 함수는 `(매개변수) => 표현식` 형태예요. `return`은 중괄호 블록일 때 필요합니다.", "visibility": { "type": "step", "value": 1 }, "condition": "wrong" }
+                  {
+                    "id": 0,
+                    "type": "paragraph",
+                    "content": "## 🙆‍♀️ 정답이에요!",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_정답_화면에_보이는_콘텐츠는_body_태그_안에_작성합니다.mp3",
+                    "visibility": { "type": "step", "value": 1 },
+                    "condition": "correct"
+                  },
+                  {
+                    "id": 1,
+                    "type": "paragraph",
+                    "content": "## 🙅‍♀️ 정답은 `userName`입니다. \n변수는 숫자로 시작하거나, `-`이 들어가면 안 돼요.",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_정답_화면에_보이는_콘텐츠는_body_태그_안에_작성합니다.mp3",
+                    "visibility": { "type": "step", "value": 1 },
+                    "condition": "wrong"
+                  }
                 ]
               }
             },
             {
-              "id": 2,
-              "type": "codeFillTheGap",
+              "id": 1,
+              "type": "code",
+              "title": "아래 예시 코드와 브라우저를 보며 더 알아봐요! ✨",
+              "tts": "",
+              "height": 300,
               "files": [
                 {
                   "name": "index.html",
                   "language": "html",
-                  "content": "<!DOCTYPE html>\n<html lang=\"ко\"><head><meta charset=\"UTF-8\"></head><body style=\"font-family:system-ui;padding:16px\"><p id=\"out\"></p><script>const double = (n) => {{BLANK-1}}; document.getElementById(\"out\").textContent = double(7);</script></body></html>",
-                  "url": "/code/77",
-                  "isInteractive": true,
-                  "inputLength": 1,
-                  "interactionOptions": [
-                    { "id": "option-1", "value": "n * 2", "disabled": false },
-                    { "id": "option-2", "value": "return n * 2", "disabled": false },
-                    { "id": "option-3", "value": "{ n * 2 }", "disabled": false }
-                  ],
-                  "answers": [
-                    { "isCorrect": null, "answer": "n * 2", "userAnswer": null, "optionElIndex": null }
-                  ]
+                  "content": "<h1>잘못된 변수 사용 예시</h1>\n<button id='runBtn'>실행</button>\n<p id='out'>아직 실행 전</p>\n\n<script src='script.js'></script>"
+                },
+                {
+                  "name": "script.js",
+                  "language": "javascript",
+                  "content": "const 2count = 5;\nconst user-name = 'mina';\n\ndocument.getElementById('runBtn').onclick = function () {\n  try {\n    const msg = `2count = ${2count}, user-name = ${user-name}`;\n    document.getElementById('out').textContent = msg;\n  } catch (e) {\n    msg += `에러 발생! (${e.name})`;\n    document.getElementById('out').textContent = msg;\n  }\n};"
                 }
               ],
-              "visibility": { "type": "step", "value": 3 },
-              "result": {
-                "totalStep": 1,
-                "modules": [
-                  { "id": 0, "type": "paragraph", "content": "🎉 좋아요! 화살표 함수는 표현식만 적으면 그 값이 반환됩니다.", "visibility": { "type": "step", "value": 1 }, "condition": "correct" },
-                  { "id": 1, "type": "paragraph", "content": "❌ 중괄호를 쓰면 `return`이 필요합니다. 화살표 함수를 사용할 경우, `n * 2`만 적으세요.", "visibility": { "type": "step", "value": 1 }, "condition": "wrong" }
-                ]
-              }
+              "visibility": { "type": "step", "value": 2 }
             },
             {
-              "id": 3,
+              "id": 2,
               "type": "webview",
               "tabs": [
                 {
@@ -6717,7 +6013,7 @@ const JS_2 = {
                   "content": "<!DOCTYPE html><html lang=\"ko\"><head><meta charset=\"UTF-8\"><title>미리보기</title></head><body style=\"font-family:system-ui;padding:16px\"><p id=\"out\"></p><script>const double=(n)=>n*2; document.getElementById(\"out\").textContent=double(7);</script></body></html>"
                 }
               ],
-              "visibility": { "type": "step", "value": 4 }
+              "visibility": { "type": "step", "value": 3 }
             }
           ]
         },
@@ -6758,6 +6054,8 @@ const JS_2 = {
             {
               "id": 2,
               "type": "codeFillTheGap",
+              "title": "👉 조건에 맞게 변수를 선언하고 값을 넣어보세요\n- 점수(score)는 바뀔 수 있음\n- 별명(nick)은 바뀌지 않음",
+              "tts" : "",
               "files": [
                 {
                   "name": "index.html",
@@ -6782,55 +6080,22 @@ const JS_2 = {
               "result": {
                 "totalStep": 1,
                 "modules": [
-                  { "id": 0, "type": "paragraph", "content": "🎉 좋아요! `colors`는 \"red, green, blue\"가 되고 길이는 3이에요.", "visibility": { "type": "step", "value": 1 }, "condition": "correct" },
-                  { "id": 1, "type": "paragraph", "content": "❌ 항목 추가는 `push`, 길이는 `length` 속성으로 가져옵니다.", "visibility": { "type": "step", "value": 1 }, "condition": "wrong" }
-                ]
-              }
-            },
-            {
-              "id": 3,
-              "type": "webview",
-              "tabs": [
-                {
-                  "type": "html",
-                  "content": "<!DOCTYPE html><html lang=\"ko\"><head><meta charset=\"UTF-8\"><title>미리보기</title></head><body style=\"font-family:system-ui;padding:16px\"><p id=\"out\"></p><script>const colors=[\"red\",\"green\"]; colors.push(\"blue\"); const size=colors.length; document.getElementById(\"out\").textContent=colors.join(\", \")+\" | \"+size;</script></body></html>"
-                }
-              ],
-              "visibility": { "type": "step", "value": 4 }
-            }
-          ]
-        },
-        {
-          "id": 5,
-          "title": "반복문: for와 for...of",
-          "modules": [
-            {
-              "id": 0,
-              "type": "paragraph",
-              "content": "### 🔁 반복의 기본\n- 전통적 for: `for (let i=0; i<arr.length; i++) { ... }`\n- **값 중심** 순회: `for (const v of arr) { ... }`\n- `for...of`는 배열/이터러블의 **값**을 꺼내기 좋아요. (`for...in`은 키/인덱스에 사용)",
-              "visibility": { "type": "step", "value": 1 }
-            },
-            {
-              "id": 1,
-              "type": "multipleChoice",
-              "questions": [
-                {
-                  "title": "배열의 **값들**을 순서대로 꺼낼 때 더 적합한 반복문은?",
-                  "interactionOptions": [
-                    { "label": "for...in" },
-                    { "label": "for...of" },
-                    { "label": "while (arr)" },
-                    { "label": "loop arr" }
-                  ],
-                  "answer": { "isCorrect": null, "answer": 1, "userAnswer": null }
-                }
-              ],
-              "visibility": { "type": "step", "value": 2 },
-              "result": {
-                "totalStep": 1,
-                "modules": [
-                  { "id": 0, "type": "paragraph", "content": "🎉 정답! `for...of`는 값 자체를 순회합니다.", "visibility": { "type": "step", "value": 1 }, "condition": "correct" },
-                  { "id": 1, "type": "paragraph", "content": "❌ `for...in`은 키/인덱스를 순회합니다. 값 순회는 `for...of`가 적절해요.", "visibility": { "type": "step", "value": 1 }, "condition": "wrong" }
+                  {
+                    "id": 0,
+                    "type": "paragraph",
+                    "content": "## 🎉 정답!\n`let`은 바뀌는 값, `const`는 고정 값, `=`는 값 대입",
+                    "tts" : "",
+                    "visibility": { "type": "step", "value": 1 },
+                    "condition": "correct"
+                  },
+                  {
+                    "id": 1,
+                    "type": "paragraph",
+                    "content": "## 틀렸어요 🥹\n바뀌는 값 → **let**, 고정 값 → **const**\n값을 넣을 때 → **=**",
+                    "tts" : "",
+                    "visibility": { "type": "step", "value": 1 },
+                    "condition": "wrong"
+                  }
                 ]
               }
             },
@@ -6869,6 +6134,8 @@ const JS_2 = {
             {
               "id": 3,
               "type": "webview",
+              "title": "🧑‍💻 아래 결과 브라우저를 볼까요?",
+              "tts": "",
               "tabs": [
                 {
                   "type": "html",
@@ -6891,67 +6158,17 @@ const JS_2 = {
             },
             {
               "id": 1,
-              "type": "multipleChoice",
-              "questions": [
-                {
-                  "title": "점수가 90 이상이면 'A', 아니면 'B'로 만드는 식은?",
-                  "interactionOptions": [
-                    { "label": "score >= 90 : \"A\" ? \"B\"" },
-                    { "label": "score ? \"A\" : \"B\" >= 90" },
-                    { "label": "score >= 90 ? \"A\" : \"B\"" },
-                    { "label": "if (score >= 90) \"A\" : \"B\"" }
-                  ],
-                  "answer": { "isCorrect": null, "answer": 2, "userAnswer": null }
-                }
-              ],
-              "visibility": { "type": "step", "value": 2 },
-              "result": {
-                "totalStep": 1,
-                "modules": [
-                  { "id": 0, "type": "paragraph", "content": "🎉 정답! `조건 ? 참값 : 거짓값` 순서입니다.", "visibility": { "type": "step", "value": 1 }, "condition": "correct" },
-                  { "id": 1, "type": "paragraph", "content": "❌ 삼항은 `조건 ? 값1 : 값2` 형태예요. 위치를 헷갈리지 않게 주의!", "visibility": { "type": "step", "value": 1 }, "condition": "wrong" }
-                ]
-              }
+              "type": "paragraph",
+              "content": "# 👌3가지만 기억해요!\n1) **변수는 값 상자**: 이름 붙여 관리\n2) **let/const**: 바뀌는 값 vs 고정 값\n3) **=**: 값을 변수에 대입",
+              "tts" : "",
+              "visibility": { "type": "step", "value": 1 }
             },
             {
               "id": 2,
-              "type": "codeFillTheGap",
-              "files": [
-                {
-                  "name": "index.html",
-                  "language": "html",
-                  "content": "<!DOCTYPE html>\n<html lang=\"ko\"><head><meta charset=\"UTF-8\"></head><body style=\"font-family:system-ui;padding:16px\"><p id=\"out\"></p><script>const score=85; const grade = (score >= 90) ? \"A\" : {{BLANK-1}}; document.getElementById(\"out\").textContent = grade;</script></body></html>",
-                  "url": "/code/80",
-                  "isInteractive": true,
-                  "inputLength": 1,
-                  "interactionOptions": [
-                    { "id": "option-1", "value": "\"B\"", "disabled": false },
-                    { "id": "option-2", "value": "B", "disabled": false }
-                  ],
-                  "answers": [
-                    { "isCorrect": null, "answer": "\"B\"", "userAnswer": null, "optionElIndex": null }
-                  ]
-                }
-              ],
-              "visibility": { "type": "step", "value": 3 },
-              "result": {
-                "totalStep": 1,
-                "modules": [
-                  { "id": 0, "type": "paragraph", "content": "🎉 좋아요! score가 85이므로 결과는 \"B\"입니다.", "visibility": { "type": "step", "value": 1 }, "condition": "correct" },
-                  { "id": 1, "type": "paragraph", "content": "❌ 문자열 리터럴은 따옴표로 감싸야 합니다. `\"B\"`나 `'B'`를 사용하세요.", "visibility": { "type": "step", "value": 1 }, "condition": "wrong" }
-                ]
-              }
-            },
-            {
-              "id": 3,
-              "type": "webview",
-              "tabs": [
-                {
-                  "type": "html",
-                  "content": "<!DOCTYPE html><html lang=\"ko\"><head><meta charset=\"UTF-8\"><title>미리보기</title></head><body style=\"font-family:system-ui;padding:16px\"><p id=\"out\"></p><script>const score=85; const grade=score>=90?\"A\":\"B\"; document.getElementById(\"out\").textContent=grade;</script></body></html>"
-                }
-              ],
-              "visibility": { "type": "step", "value": 4 }
+              "type": "paragraph",
+              "content": "## 다음 레슨에서 또 만나요! 🚀",
+              "tts" : "",
+              "visibility": { "type": "step", "value": 2 }
             }
           ]
         }
