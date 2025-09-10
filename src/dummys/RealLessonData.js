@@ -2497,6 +2497,7 @@ const CSS_1 = {
               "id": 1,
               "type": "paragraph",
               "content": "# 반가워요 👋\n## 오늘은 HTML 위에 **👗옷을 입히는 CSS**를 배워요!",
+              "tts" : "https://s3.ghmate.com/codingpt/class/3/5/11/audio/001_반가워요_오늘은_html_위에_옷을_입히는_css을_배워요.mp3",
               "visibility": { "type": "step", "value": 1 }
             }
           ]
@@ -2517,13 +2518,14 @@ const CSS_1 = {
               "id": 1,
               "type": "paragraph",
               "content": "## HTML은 **뼈대**🦴 \n## CSS는 꾸미는 법(스타일)🎨",
-              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/001_html_구조와_태그에_대해_알아볼까.mp3",
+              "tts" : "https://s3.ghmate.com/codingpt/class/3/5/11/audio/002_html은_뼈대이고_css는_스타일이에요.mp3",
               "visibility": { "type": "step", "value": 1 }
             },
             {
               "id": 2,
               "type": "paragraph",
               "content": "- 글자 색: `color`\n- 배경 색: `background-color`\n- 글자 크기: `font-size`\n위 세 가지만 알아도 웹이 확 살아나요!",
+              "tts" : "https://s3.ghmate.com/codingpt/class/3/5/11/audio/003_글자_색을_바꾸는_css_속성은_무엇일까.mp3",
               "visibility": { "type": "step", "value": 2 }
             }
           ]
@@ -2536,7 +2538,7 @@ const CSS_1 = {
             {
               "id": 0,
               "type": "multipleChoice",
-              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/007_화면에_직접_표시되는_내용을_담는_태그는_무엇일까요.mp3",
+              "tts" : "https://s3.ghmate.com/codingpt/class/3/5/11/audio/004_글자_색을_바꾸는_css_속성은_무엇일까.mp3",
               "questions": [
                 {
                   "title": "글자 색을 바꾸는 CSS 속성은 무엇일까?",
@@ -2556,7 +2558,7 @@ const CSS_1 = {
                     "id": 0,
                     "type": "paragraph",
                     "content": "## 🙆‍♀️ 잘했어요!",
-                    "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_정답_화면에_보이는_콘텐츠는_body_태그_안에_작성합니다.mp3",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/3/5/11/audio/005_잘했어요.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "correct"
                   },
@@ -2564,7 +2566,7 @@ const CSS_1 = {
                     "id": 1,
                     "type": "paragraph",
                     "content": "## 🙅‍♀️ 정답은 `color`입니다! \n💡 `background-color`: 바탕색, `font-size`: 글자 크기",
-                    "tts" : "",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/3/5/11/audio/006_정답은_color입니다.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "wrong"
                   }
@@ -2575,7 +2577,7 @@ const CSS_1 = {
               "id": 1,
               "type": "code",
               "title": "👇아래 예시 코드와 브라우저를 보면서 color 속성을\n 더 자세히 알아봐요! ✨",
-              "tts": "",
+              "tts": "https://s3.ghmate.com/codingpt/class/3/5/11/audio/007_아래_예시_코드와_브라우저를_보면서_color_속성을_더_자세히_알아봐요.mp3",
               "height": 150,
               "files": [
                 {
@@ -2612,12 +2614,12 @@ const CSS_1 = {
             {
               "id": 0,
               "type": "multipleChoice",
-              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/007_화면에_직접_표시되는_내용을_담는_태그는_무엇일까요.mp3",
+              "tts" : "https://s3.ghmate.com/codingpt/class/3/5/11/audio/008_파란_배경이_되는_올바른_css_속성은_무엇일까.mp3",
               "questions": [
                 {
                   "title": "파란 배경이 되는 올바른 CSS 속성은 무엇일까?",
                   "interactionOptions": [
-                    { "label": "background: blue" },
+                    { "label": "bg-color: blue" },
                     { "label": "background-color: blue" },
                     { "label": "color: blue" }
                   ],
@@ -2632,7 +2634,7 @@ const CSS_1 = {
                     "id": 0,
                     "type": "paragraph",
                     "content": "## 🙆‍♀️ 정답이에요!",
-                    "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_정답_화면에_보이는_콘텐츠는_body_태그_안에_작성합니다.mp3",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/3/5/11/audio/009_정답이에요.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "correct"
                   },
@@ -2640,7 +2642,7 @@ const CSS_1 = {
                     "id": 1,
                     "type": "paragraph",
                     "content": "## 🙅‍♀️ 정답은 `background-color: blue`에요.\n💡 `color`는 글자색을 바꿔요.",
-                    "tts" : "",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/3/5/11/audio/010_정답은_background_color_blue에요.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "wrong"
                   }
@@ -2651,7 +2653,7 @@ const CSS_1 = {
               "id": 1,
               "type": "code",
               "title": "👇아래 예시 코드와 브라우저를 보면서\nbackground-color 속성을 더 알아봐요! ✨",
-              "tts": "",
+              "tts": "https://s3.ghmate.com/codingpt/class/3/5/11/audio/011_아래_예시_코드와_브라우저를_보면서_background_color_속성을_더_알아봐요.mp3",
               "height": 130,
               "files": [
                 {
@@ -2688,7 +2690,7 @@ const CSS_1 = {
             {
               "id": 0,
               "type": "multipleChoice",
-              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/007_화면에_직접_표시되는_내용을_담는_태그는_무엇일까요.mp3",
+              "tts" : "https://s3.ghmate.com/codingpt/class/3/5/11/audio/012_글자_크기를_크게_하는_속성은.mp3",
               "questions": [
                 {
                   "title": "글자 크기를 크게 하는 속성은?",
@@ -2708,7 +2710,7 @@ const CSS_1 = {
                     "id": 0,
                     "type": "paragraph",
                     "content": "## 🙆‍♀️ 정답이에요!",
-                    "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_정답_화면에_보이는_콘텐츠는_body_태그_안에_작성합니다.mp3",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/3/5/11/audio/009_정답이에요.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "correct"
                   },
@@ -2716,7 +2718,7 @@ const CSS_1 = {
                     "id": 1,
                     "type": "paragraph",
                     "content": "## 🙅‍♀️ 정답은 `font-size`입니다. \n💡 `font-weight`: 굵기, `line-height`: 줄 간격",
-                    "tts" : "",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/3/5/11/audio/013_정답은_font_size입니다.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "wrong"
                   }
@@ -2727,7 +2729,7 @@ const CSS_1 = {
               "id": 1,
               "type": "code",
               "title": "👇아래 예시 코드와 브라우저를 보며\nfont-size에 대해 자세히 알아봐요! ✨",
-              "tts": "",
+              "tts": "https://s3.ghmate.com/codingpt/class/3/5/11/audio/014_아래_예시_코드와_브라우저를_보며_font_size에_대해_자세히_알아봐요.mp3",
               "height": 150,
               "files": [
                 {
@@ -2765,7 +2767,7 @@ const CSS_1 = {
               "id": 0,
               "type": "codeFillTheGap",
               "title": "아래 빈칸을 채워서 [배경=노랑], [글자색=빨강],\n[제목 크기=32px]으로 만들어보세요! ✨",
-              "tts" : "",
+              "tts" : "https://s3.ghmate.com/codingpt/class/3/5/11/audio/015_아래_빈칸을_채워서_배경_노랑_글자색_빨강_제목_크기_32px으로_만들어보세요.mp3",
               "files": [
                 {
                   "name": "index.html",
@@ -2806,7 +2808,7 @@ const CSS_1 = {
                     "id": 0,
                     "type": "paragraph",
                     "content": "## 🎉 잘했어요!\n분리한 **style.css** 덕분에 HTML과 스타일이 깔끔히 나뉘었어요.",
-                    "tts" : "",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/3/5/11/audio/016_잘했어요.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "correct"
                   },
@@ -2814,7 +2816,7 @@ const CSS_1 = {
                     "id": 1,
                     "type": "paragraph",
                     "content": "## 틀렸어요 🥹\n💡배경=**background-color**, \n글자색=**color**, 글자 크기=**font-size**",
-                    "tts" : "",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/3/5/11/audio/017_틀렸어요_배경_background_color_글자색_color_글자_크기_font_size.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "wrong"
                   }
@@ -2825,7 +2827,7 @@ const CSS_1 = {
               "id": 1,
               "type": "webview",
               "title": "🧑‍💻 아래 결과 브라우저를 볼까요?",
-              "tts": "",
+              "tts": "https://s3.ghmate.com/codingpt/class/3/5/11/audio/018_아래_결과_브라우저를_볼까요.mp3",
               "tabs": [
                 {
                   "type": "html",
@@ -2852,21 +2854,21 @@ const CSS_1 = {
               "id": 1,
               "type": "paragraph",
               "content": "# 오늘은 CSS로 글자색, 배경색, \n# 글자 크기를 바꿔봤어요!",
-              "tts" : "",
+              "tts" : "https://s3.ghmate.com/codingpt/class/3/5/11/audio/019_오늘은_css로_글자색_배경색_글자_크기를_바꿔봤어요.mp3",
               "visibility": { "type": "step", "value": 1 }
             },
             {
               "id": 2,
               "type": "paragraph",
               "content": "`color`: blue; ➡️ 글자색: 파랑\n`backgroud-color`: yellow; ➡️ 배경색: 노랑\n`font-size`: 32px; ➡️ 글자 크기: 32px",
-              "visibility": { "type": "step", "value": 2 }
+              "visibility": { "type": "step", "value": 1 }
             },
             {
               "id": 3,
               "type": "paragraph",
               "content": "## 다음 레슨에서 또 만나요! 🚀",
-              "tts" : "",
-              "visibility": { "type": "step", "value": 3 }
+              "tts" : "https://s3.ghmate.com/codingpt/class/3/5/11/audio/020_다음_레슨에서_또_만나요.mp3",
+              "visibility": { "type": "step", "value": 2 }
             }
           ]
         }
@@ -2899,6 +2901,7 @@ const CSS_2 = {
               "id": 1,
               "type": "paragraph",
               "content": "# 반가워요 👋\n## 오늘은 색상을 표현하는 세 가지 방법에 대해\n## 배워볼까요? 🌈",
+              "tts" : "https://s3.ghmate.com/codingpt/class/3/5/12/audio/001_반가워요_오늘은_색상을_표현하는_세_가지_방법에_대해_배워볼까요.mp3",
               "visibility": { "type": "step", "value": 1 }
             }
           ]
@@ -2919,28 +2922,28 @@ const CSS_2 = {
               "id": 1,
               "type": "paragraph",
               "content": "## 🎨 색을 표현하는 세 가지 방법",
-              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/001_html_구조와_태그에_대해_알아볼까.mp3",
+              "tts" : "https://s3.ghmate.com/codingpt/class/3/5/12/audio/002_색을_표현하는_세_가지_방법.mp3",
               "visibility": { "type": "step", "value": 1 }
             },
             {
               "id": 2,
               "type": "paragraph",
               "content": "**이름**: 🟥`red`, 🟦`blue`, 🟩`green` 처럼 쉽고 직관적이에요",
-              "tts" : "",
+              "tts" : "https://s3.ghmate.com/codingpt/class/3/5/12/audio/003_이름_쉽고_직관적이에요.mp3",
               "visibility": { "type": "step", "value": 2 }
             },
             {
               "id": 3,
               "type": "paragraph",
               "content": "**색상코드**: `#ff0000`(빨강), `#0000ff`(파랑)처럼 색상코드로\n 더 많은 색을 표현해요.",
-              "tts" : "",
+              "tts" : "https://s3.ghmate.com/codingpt/class/3/5/12/audio/004_색상코드로_더_많은_색을_표현해요.mp3",
               "visibility": { "type": "step", "value": 3 }
             },
             {
               "id": 4,
               "type": "paragraph",
               "content": "**RGB**: 🟥`rgb(255, 0, 0)`, 🟦`rgb(0, 0, 255)`처럼\nRGB 값으로 더 많은 색을 표현해요.",
-              "tts" : "",
+              "tts" : "https://s3.ghmate.com/codingpt/class/3/5/12/audio/005_rgb_값으로_더_많은_색을_표현해요.mp3",
               "visibility": { "type": "step", "value": 4 }
             }
           ]
@@ -2953,7 +2956,7 @@ const CSS_2 = {
             {
               "id": 0,
               "type": "multipleChoice",
-              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/007_화면에_직접_표시되는_내용을_담는_태그는_무엇일까요.mp3",
+              "tts" : "https://s3.ghmate.com/codingpt/class/3/5/12/audio/006_글자색을_빨강색으로_바꾸는_올바른_코드는_무엇일까.mp3",
               "questions": [
                 {
                   "title": "글자색을 빨강색으로 바꾸는 올바른 코드는 무엇일까?",
@@ -2973,7 +2976,7 @@ const CSS_2 = {
                     "id": 0,
                     "type": "paragraph",
                     "content": "## 🙆‍♀️ 잘했어요!",
-                    "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_정답_화면에_보이는_콘텐츠는_body_태그_안에_작성합니다.mp3",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/3/5/12/audio/007_잘했어요.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "correct"
                   },
@@ -2981,7 +2984,7 @@ const CSS_2 = {
                     "id": 1,
                     "type": "paragraph",
                     "content": "## 🙅‍♀️ 정답은 **color: #ff0000**입니다! \n`background-color`는 **배경색**을 설정해요.",
-                    "tts" : "",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/3/5/12/audio/008_정답은_color_ff0000입니다.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "wrong"
                   }
@@ -3030,7 +3033,7 @@ const CSS_2 = {
               "id": 0,
               "type": "codeFillTheGap",
               "title": "아래 조건을 만족하도록 빈칸을 채워요 ✨\n- 버튼 배경: 빨간색(색상코드)\n- 안내 박스 배경: 파랑색 50% 투명(반투명)",
-              "tts" : "",
+              "tts" : "https://s3.ghmate.com/codingpt/class/3/5/12/audio/009_아래_조건을_만족하도록_빈칸을_채워요.mp3",
               "files": [
                 {
                   "name": "index.html",
@@ -3069,8 +3072,8 @@ const CSS_2 = {
                   {
                     "id": 0,
                     "type": "paragraph",
-                    "content": "## 🎉 잘했어요!\n 버튼 배경은 **색상코드**로, 안내 박스 배경은 **RGBA**로 투명도를 표현했어요.",
-                    "tts" : "",
+                    "content": "## 🎉 잘했어요!\n 버튼 배경은 **색상코드**로, 안내 박스 배경은 **RGBA**로\n투명도를 표현했어요.",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/3/5/12/audio/010_잘했어요.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "correct"
                   },
@@ -3078,7 +3081,7 @@ const CSS_2 = {
                     "id": 1,
                     "type": "paragraph",
                     "content": "## 틀렸어요 🥹\n- 빨간색 색상코드 → `#ff0000`\n- 파랑색 50% 투명 → `rgba(0,0,255,0.5)`",
-                    "tts" : "",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/3/5/12/audio/011_틀렸어요.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "wrong"
                   }
@@ -3089,7 +3092,7 @@ const CSS_2 = {
               "id": 1,
               "type": "webview",
               "title": "🧑‍💻 아래 결과 브라우저를 확인해봐요!",
-              "tts": "",
+              "tts": "https://s3.ghmate.com/codingpt/class/3/5/12/audio/012_아래_결과_브라우저를_확인해봐요.mp3",
               "tabs": [
                 {
                   "type": "html",
@@ -3116,7 +3119,7 @@ const CSS_2 = {
               "id": 1,
               "type": "paragraph",
               "content": "# 오늘은 🎨 색상을 표현하는 세 가지 방법에\n# 대해 배워봤어요!",
-              "tts" : "",
+              "tts" : "https://s3.ghmate.com/codingpt/class/3/5/12/audio/013_오늘은_색상을_표현하는_세_가지_방법에_대해_배워봤어요.mp3",
               "visibility": { "type": "step", "value": 1 }
             },
             {
@@ -3124,14 +3127,14 @@ const CSS_2 = {
               "type": "paragraph",
               "content": "1) **이름**: 🟥`red`, 🟦`blue``\n2) **색상코드**: `#ff0000`(빨강), `#0000ff`(파랑)\n3) **RGB**: 🟥`rgb(255, 0, 0)`, 🟦`rgb(0, 0, 255)`",
               "tts" : "",
-              "visibility": { "type": "step", "value": 2 }
+              "visibility": { "type": "step", "value": 1 }
             },
             {
               "id": 3,
               "type": "paragraph",
               "content": "## 다음 레슨에서 또 만나요! 🚀",
-              "tts" : "",
-              "visibility": { "type": "step", "value": 3 }
+              "tts" : "https://s3.ghmate.com/codingpt/class/3/5/12/audio/014_다음_레슨에서_또_만나요.mp3",
+              "visibility": { "type": "step", "value": 2 }
             }
           ]
         }
@@ -4843,7 +4846,7 @@ const JS_1 = {
               "id": 1,
               "type": "paragraph",
               "content": "# 반가워요 👋\n## 오늘은 웹을 움직이게 하는 힘,\n## JavaScript(JS)에 대해 알아볼까요?",
-              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/001_반가워요.mp3",
+              "tts" : "https://s3.ghmate.com/codingpt/class/6/10/22/audio/001_반가워요.mp3",
               "visibility": { "type": "step", "value": 1 }
             }
           ]
@@ -4864,7 +4867,7 @@ const JS_1 = {
               "id": 1,
               "type": "paragraph",
               "content": "## HTML이 뼈대🦴\n## CSS가 옷👗\n## JS는 움직이는 힘(엔진⚡)",
-              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/001_html_구조와_태그에_대해_알아볼까.mp3",
+              "tts" : "https://s3.ghmate.com/codingpt/class/6/10/22/audio/002_html_css_js.mp3",
               "visibility": { "type": "step", "value": 1 }
             }
           ]
@@ -4877,7 +4880,7 @@ const JS_1 = {
             {
               "id": 0,
               "type": "multipleChoice",
-              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/007_화면에_직접_표시되는_내용을_담는_태그는_무엇일까요.mp3",
+              "tts" : "https://s3.ghmate.com/codingpt/class/6/10/22/audio/003_js의_역할은.mp3",
               "questions": [
                 {
                   "title": "다음 중 JavaScript의 역할은 뭘까?",
@@ -4897,7 +4900,7 @@ const JS_1 = {
                     "id": 0,
                     "type": "paragraph",
                     "content": "## 🙆‍♀️ 잘했어요!\nJS는 웹에 **움직임과 반응**을 줘요.",
-                    "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_정답_화면에_보이는_콘텐츠는_body_태그_안에_작성합니다.mp3",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/6/10/22/audio/004_잘했어요.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "correct"
                   },
@@ -4905,7 +4908,7 @@ const JS_1 = {
                     "id": 1,
                     "type": "paragraph",
                     "content": "## 🙅‍♀️ 정답은 '웹을 움직이게 하기'입니다.\n구조는 HTML, 꾸미기는 CSS",
-                    "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_정답_화면에_보이는_콘텐츠는_body_태그_안에_작성합니다.mp3",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/6/10/22/audio/005_정답은_웹을_움직이게_하기입니다.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "wrong"
                   }
@@ -4916,7 +4919,7 @@ const JS_1 = {
               "id": 1,
               "type": "code",
               "title": "👇아래 예시 코드와 브라우저를 보면서\n더 자세히 알아봐요!",
-              "tts": "",
+              "tts": "https://s3.ghmate.com/codingpt/class/6/10/22/audio/006_아래_예시_코드와_브라우저를_보면서_더_자세히_알아봐요.mp3",
               "height": 300,
               "files": [
                 {
@@ -4953,7 +4956,7 @@ const JS_1 = {
             {
               "id": 0,
               "type": "multipleChoice",
-              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/007_화면에_직접_표시되는_내용을_담는_태그는_무엇일까요.mp3",
+              "tts" : "https://s3.ghmate.com/codingpt/class/6/10/22/audio/007_브라우저에서_알림을_띄우는_코드는_뭘까.mp3",
               "questions": [
                 {
                   "title": "브라우저에서 알림을 띄우는 코드는 뭘까?",
@@ -4973,7 +4976,7 @@ const JS_1 = {
                     "id": 0,
                     "type": "paragraph",
                     "content": "## 🙆‍♀️ 정답이에요!\n`console.log`는 콘솔 출력이에요.",
-                    "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_정답_화면에_보이는_콘텐츠는_body_태그_안에_작성합니다.mp3",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/6/10/22/audio/008_정답이에요.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "correct"
                   },
@@ -4981,7 +4984,7 @@ const JS_1 = {
                     "id": 1,
                     "type": "paragraph",
                     "content": "## 🙅‍♀️ 정답은 `alert('안녕 JS!');`입니다.\n`console.log`는 콘솔 출력이에요.",
-                    "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_정답_화면에_보이는_콘텐츠는_body_태그_안에_작성합니다.mp3",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/6/10/22/audio/009_정답은_alert_안녕_JS_입니다.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "wrong"
                   }
@@ -4992,7 +4995,7 @@ const JS_1 = {
               "id": 1,
               "type": "code",
               "title": "👇아래 예시 코드와 브라우저를 보면서\nalert() 함수를 더 자세히 알아봐요! ✨",
-              "tts": "",
+              "tts": "https://s3.ghmate.com/codingpt/class/6/10/22/audio/010_아래_예시_코드와_브라우저를_보면서_alert_함수를_더_자세히_알아봐요.mp3",
               "height": 130,
               "files": [
                 {
@@ -5030,7 +5033,7 @@ const JS_1 = {
               "id": 0,
               "type": "codeFillTheGap",
               "title": "👉 아래 빈칸을 채워 1+2=3 계산이 나오도록 해보세요!",
-              "tts" : "",
+              "tts" : "https://s3.ghmate.com/codingpt/class/6/10/22/audio/011_아래_빈칸을_채워_계산이_나오도록_해보세요.mp3",
               "files": [
                 {
                   "name": "index.html",
@@ -5069,7 +5072,7 @@ const JS_1 = {
                     "id": 0,
                     "type": "paragraph",
                     "content": "## 🎉 **정답!**\n자바스크립트로 계산에 성공했어요.",
-                    "tts" : "",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/6/10/22/audio/012_정답이에요.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "correct"
                   },
@@ -5077,7 +5080,7 @@ const JS_1 = {
                     "id": 1,
                     "type": "paragraph",
                     "content": "## 틀렸어요 🥹\n덧셈 연산자는 `+`, 뺄셈 연산자는 `-`, 곱셈 연산자는 `*`",
-                    "tts" : "",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/6/10/22/audio/013_틀렸어요.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "wrong"
                   }
@@ -5088,7 +5091,7 @@ const JS_1 = {
               "id": 1,
               "type": "webview",
               "title": "🧑‍💻 아래 결과 브라우저를 볼까요?",
-              "tts": "",
+              "tts": "https://s3.ghmate.com/codingpt/class/6/10/22/audio/014_아래_결과_브라우저를_볼까요.mp3",
               "tabs": [
                 {
                   "type": "html",
@@ -5115,14 +5118,14 @@ const JS_1 = {
               "id": 1,
               "type": "paragraph",
               "content": "# 오늘은 자바스크립트(JS)가\n# 웹을 움직이게 하는 힘⚡을 알았어요.",
-              "tts" : "",
+              "tts" : "https://s3.ghmate.com/codingpt/class/6/10/22/audio/015_오늘은_자바스크립트_JS가_웹을_움직이게_하는_힘을_알았어요.mp3",
               "visibility": { "type": "step", "value": 1 }
             },
             {
               "id": 2,
               "type": "paragraph",
               "content": "## 다음 레슨에서 또 만나요! 🚀",
-              "tts" : "",
+              "tts" : "https://s3.ghmate.com/codingpt/class/6/10/22/audio/016_다음_레슨에서_또_만나요.mp3",
               "visibility": { "type": "step", "value": 2 }
             }
           ]
@@ -5156,7 +5159,7 @@ const JS_2 = {
               "id": 1,
               "type": "paragraph",
               "content": "# 반가워요 👋\n## 오늘은 변수(Variables)에 대해 알아봐요!",
-              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/001_반가워요.mp3",
+              "tts" : "https://s3.ghmate.com/codingpt/class/6/10/23/audio/001_반가워요.mp3",
               "visibility": { "type": "step", "value": 1 }
             }
           ]
@@ -5177,14 +5180,14 @@ const JS_2 = {
               "id": 1,
               "type": "paragraph",
               "content": "## 변수는 값을 담아두는 이름표 달린 상자📦",
-              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/001_html_구조와_태그에_대해_알아볼까.mp3",
+              "tts" : "https://s3.ghmate.com/codingpt/class/6/10/23/audio/002_변수는_값을_담아두는_이름표_달린_상자.mp3",
               "visibility": { "type": "step", "value": 1 }
             },
             {
               "id": 2,
               "type": "paragraph",
               "content": "`let`은 값을 **바꿀 수 있는 변수** \n`const`는 값을 **바꾸지 않는 상수**",
-              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/001_html_구조와_태그에_대해_알아볼까.mp3",
+              "tts" : "https://s3.ghmate.com/codingpt/class/6/10/23/audio/003_let_const.mp3",
               "visibility": { "type": "step", "value": 2 }
             }
           ]
@@ -5197,7 +5200,7 @@ const JS_2 = {
             {
               "id": 0,
               "type": "multipleChoice",
-              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/007_화면에_직접_표시되는_내용을_담는_태그는_무엇일까요.mp3",
+              "tts" : "https://s3.ghmate.com/codingpt/class/6/10/23/audio/004_한_번_정하면_바꾸지_않을_값을_만들_때_알맞은_키워드는.mp3",
               "questions": [
                 {
                   "title": "한 번 정하면 바꾸지 않을 값을 만들 때 알맞은 키워드는?",
@@ -5217,7 +5220,7 @@ const JS_2 = {
                     "id": 0,
                     "type": "paragraph",
                     "content": "## 🙆‍♀️ 잘했어요!",
-                    "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_정답_화면에_보이는_콘텐츠는_body_태그_안에_작성합니다.mp3",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/6/10/23/audio/005_잘했어요.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "correct"
                   },
@@ -5225,7 +5228,7 @@ const JS_2 = {
                     "id": 1,
                     "type": "paragraph",
                     "content": "## 🙅‍♀️ 정답은 'const'입니다.\n **let**은 값을 **바꿀 수 있는 변수**\n **var**는 옛날 방식이라 초보자는 **지양**해요!",
-                    "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_정답_화면에_보이는_콘텐츠는_body_태그_안에_작성합니다.mp3",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/6/10/23/audio/006_정답은_const입니다.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "wrong"
                   }
@@ -5236,7 +5239,7 @@ const JS_2 = {
               "id": 1,
               "type": "code",
               "title": "👇아래 예시 코드와 브라우저를 보면서\n더 자세히 알아봐요!",
-              "tts": "",
+              "tts": "https://s3.ghmate.com/codingpt/class/6/10/23/audio/007_아래_예시_코드와_브라우저를_보면서_더_자세히_알아봐요.mp3",
               "height": 300,
               "files": [
                 {
@@ -5273,7 +5276,7 @@ const JS_2 = {
             {
               "id": 0,
               "type": "multipleChoice",
-              "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/007_화면에_직접_표시되는_내용을_담는_태그는_무엇일까요.mp3",
+              "tts" : "https://s3.ghmate.com/codingpt/class/6/10/23/audio/008_올바른_변수_이름을_골라보자.mp3",
               "questions": [
                 {
                   "title": "올바른 변수 이름을 골라보자!",
@@ -5293,7 +5296,7 @@ const JS_2 = {
                     "id": 0,
                     "type": "paragraph",
                     "content": "## 🙆‍♀️ 정답이에요!",
-                    "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_정답_화면에_보이는_콘텐츠는_body_태그_안에_작성합니다.mp3",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/6/10/23/audio/009_정답이에요.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "correct"
                   },
@@ -5301,7 +5304,7 @@ const JS_2 = {
                     "id": 1,
                     "type": "paragraph",
                     "content": "## 🙅‍♀️ 정답은 `userName`입니다. \n변수는 숫자로 시작하거나, `-`이 들어가면 안 돼요.",
-                    "tts" : "https://s3.ghmate.com/codingpt/class/1/1/1/audio/008_정답_화면에_보이는_콘텐츠는_body_태그_안에_작성합니다.mp3",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/6/10/23/audio/010_정답은_userName입니다.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "wrong"
                   }
@@ -5312,7 +5315,7 @@ const JS_2 = {
               "id": 1,
               "type": "code",
               "title": "아래 예시 코드와 브라우저를 보며 더 알아봐요! ✨",
-              "tts": "",
+              "tts": "https://s3.ghmate.com/codingpt/class/6/10/23/audio/011_아래_예시_코드와_브라우저를_보며_더_알아봐요.mp3",
               "height": 300,
               "files": [
                 {
@@ -5350,7 +5353,7 @@ const JS_2 = {
               "id": 0,
               "type": "codeFillTheGap",
               "title": "👉 조건에 맞게 변수를 선언하고 값을 넣어보세요\n- 점수(score)는 바뀔 수 있음\n- 별명(nick)은 바뀌지 않음",
-              "tts" : "",
+              "tts" : "https://s3.ghmate.com/codingpt/class/6/10/23/audio/012_조건에_맞게_변수를_선언하고_값을_넣어보세요.mp3",
               "files": [
                 {
                   "name": "index.html",
@@ -5392,7 +5395,7 @@ const JS_2 = {
                     "id": 0,
                     "type": "paragraph",
                     "content": "## 🎉 정답!\n`let`은 바뀌는 값, `const`는 고정 값, `=`는 값 대입",
-                    "tts" : "",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/6/10/23/audio/013_정답이에요.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "correct"
                   },
@@ -5400,7 +5403,7 @@ const JS_2 = {
                     "id": 1,
                     "type": "paragraph",
                     "content": "## 틀렸어요 🥹\n바뀌는 값 → **let**, 고정 값 → **const**\n값을 넣을 때 → **=**",
-                    "tts" : "",
+                    "tts" : "https://s3.ghmate.com/codingpt/class/6/10/23/audio/014_틀렸어요.mp3",
                     "visibility": { "type": "step", "value": 1 },
                     "condition": "wrong"
                   }
@@ -5411,7 +5414,7 @@ const JS_2 = {
               "id": 1,
               "type": "webview",
               "title": "🧑‍💻 아래 결과 브라우저를 볼까요?",
-              "tts": "",
+              "tts": "https://s3.ghmate.com/codingpt/class/6/10/23/audio/015_아래_결과_브라우저를_볼까요.mp3",
               "tabs": [
                 {
                   "type": "html",
@@ -5438,14 +5441,14 @@ const JS_2 = {
               "id": 1,
               "type": "paragraph",
               "content": "# 👌3가지만 기억해요!\n1) **변수는 값 상자**: 이름 붙여 관리\n2) **let/const**: 바뀌는 값 vs 고정 값\n3) **=**: 값을 변수에 대입",
-              "tts" : "",
+              "tts" : "https://s3.ghmate.com/codingpt/class/6/10/23/audio/016_3가지만_기억해요.mp3",
               "visibility": { "type": "step", "value": 1 }
             },
             {
               "id": 2,
               "type": "paragraph",
               "content": "## 다음 레슨에서 또 만나요! 🚀",
-              "tts" : "",
+              "tts" : "https://s3.ghmate.com/codingpt/class/6/10/23/audio/017_다음_레슨에서_또_만나요.mp3",
               "visibility": { "type": "step", "value": 2 }
             }
           ]
