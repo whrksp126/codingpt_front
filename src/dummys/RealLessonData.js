@@ -5032,26 +5032,15 @@ const JS_1 = {
             {
               "id": 0,
               "type": "codeFillTheGap",
-              "title": "👉 아래 빈칸을 채워 1+2=3 계산이 나오도록 해보세요!",
-              "tts" : "https://s3.ghmate.com/codingpt/class/6/10/22/audio/011_아래_빈칸을_채워_계산이_나오도록_해보세요.mp3",
+              "title": "👉 아래 빈칸을 채워 1+1=2 계산이 나오도록 해보세요!",
+              "tts" : "https://s3.ghmate.com/codingpt/class/6/10/22/audio/011_아래_빈칸을_채워_덧셈_계산이_나오도록_해보세요.mp3",
               "files": [
-                {
-                  "name": "index.html",
-                  "language": "html",
-                  "content": "",
-                  "url": "/code/4",
-                  "height": 170,
-                  "isInteractive": true,
-                  "inputLength": 0,
-                  "interactionOptions": [],
-                  "answers": []
-                },
                 {
                   "name": "script.js",
                   "language": "javascript",
                   "content": "",
                   "url": "/code/5",
-                  "height": 170,
+                  "height": 85,
                   "isInteractive": true,
                   "inputLength": 1,
                   "interactionOptions": [
@@ -5089,16 +5078,27 @@ const JS_1 = {
             },
             {
               "id": 1,
-              "type": "webview",
-              "title": "🧑‍💻 아래 결과 브라우저를 볼까요?",
-              "tts": "https://s3.ghmate.com/codingpt/class/6/10/22/audio/014_아래_결과_브라우저를_볼까요.mp3",
-              "tabs": [
+              "type": "paragraph",
+              "content": "### 🧑‍💻 아래 터미널에서 결과를 확인해볼까요?",
+              "tts" : "https://s3.ghmate.com/codingpt/class/6/10/22/audio/014_아래_터미널에서_결과를_확인해볼까요.mp3",
+              "visibility": { "type": "step", "value": 2 }
+            },
+            {
+              "id": 2,
+              "type": "terminal",
+              "height": 120,
+              "files": [
                 {
-                  "type": "html",
-                  "content": "<!DOCTYPE html><html lang='ko'><head><meta charset='UTF-8'><title>JS 계산 결과</title></head><body><h1>1 + 2 =</h1><p id='out'>아직 실행 전이에요. 아래 버튼을 눌러보세요!</p><button id='runBtn'>결과 실행</button><script>function __run(){const sum=1+2;document.getElementById('out').textContent='결과는 '+sum;}document.getElementById('runBtn').addEventListener('click',__run);</script></body></html>"
+                  "name": "JS Terminal",
+                  "language": "js",
+                  "script": [
+                    { "type": "input", "text": "const two = 1 + 1;" },
+                    { "type": "input", "text": "> console.log(two);" },
+                    { "type": "output", "text": "2" }
+                  ]
                 }
               ],
-              "visibility": { "type": "step", "value": 2 }
+              "visibility": { "type": "step", "value": 3 }
             }
           ]
         },
