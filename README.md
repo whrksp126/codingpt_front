@@ -1,11 +1,88 @@
-# React + Vite
+### 로컬(local) 개발 환경
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 컨테이너 중지(필요시)
+docker stop codingpt_front_local
 
-Currently, two official plugins are available:
+## 컨테이너 삭제(필요시)
+docker rm codingpt_front_local
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 이미지 삭제(필요시)
+docker rmi whrksp126/codingpt_front:local
 
-## 🚀 CI/CD 테스트 - 2025-11-24 21:03:55
-GitHub Actions 자동 배포 테스트
+## 로컬 환경 실행
+docker compose -f docker-compose.local.yml up --build
+
+## 로컬 환경 실행 (백그라운드)
+docker compose -f docker-compose.local.yml up --build -d
+
+## 로컬 환경의 이미지 확인
+docker images | grep codingpt_front
+
+## 도커 허브에 local 태그로 푸쉬
+docker push whrksp126/codingpt_front:local
+
+---
+
+### 데브(dev) 개발 환경
+
+## 컨테이너 중지(필요시)
+docker stop codingpt_front_dev
+
+## 컨테이너 삭제(필요시)
+docker rm codingpt_front_dev
+
+## 이미지 삭제(필요시)
+docker rmi whrksp126/codingpt_front:dev
+
+## 데브 환경 실행
+docker compose -f docker-compose.dev.yml up --build
+
+## 데브 환경 실행 (백그라운드)
+docker compose -f docker-compose.dev.yml up --build -d
+
+## 데브 환경 실행 컨테이너 중지
+docker compose -f docker-compose.dev.yml down
+
+## dev 환경의 이미지 확인
+docker images | grep codingpt_front
+
+## 도커 허브에 dev 태그로 푸쉬
+docker push whrksp126/codingpt_front:dev
+
+## 서버 적용
+sudo systemctl restart codingpt_front_dev
+
+---
+
+### 스테이징(stg) 개발 환경
+
+## 컨테이너 중지(필요시)
+docker stop codingpt_front_stg
+
+## 컨테이너 삭제(필요시)
+docker rm codingpt_front_stg
+
+## 이미지 삭제(필요시)
+docker rmi whrksp126/codingpt_front:stg
+
+## 데브 환경 실행
+docker compose -f docker-compose.stg.yml up --build
+
+## 데브 환경 실행 (백그라운드)
+docker compose -f docker-compose.stg.yml up --build -d
+
+## 데브 환경 실행 컨테이너 중지
+docker compose -f docker-compose.stg.yml down
+
+## stg 환경의 이미지 확인
+docker images | grep codingpt_front
+
+## 도커 허브에 local 태그로 푸쉬
+docker push whrksp126/codingpt_front:stg
+
+## 서버 적용
+sudo systemctl restart codingpt_front_stg
+
+---
+
+테스트
