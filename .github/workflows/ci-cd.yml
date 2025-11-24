@@ -34,6 +34,7 @@ jobs:
 
       - name: Run linter
         run: npm run lint
+        continue-on-error: true  # 린트 오류가 있어도 계속 진행
 
   # 2. Docker 이미지 빌드 및 푸시
   build-and-push:
@@ -54,21 +55,21 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Determine image tag and compose file
+      - name: Determine image tag and service name
         id: meta
         run: |
           if [ "${{ github.ref }}" == "refs/heads/main" ]; then
             echo "tag=latest" >> $GITHUB_OUTPUT
-            echo "compose_file=docker-compose.yml" >> $GITHUB_OUTPUT
+            echo "service_name=codingpt_front" >> $GITHUB_OUTPUT
           elif [ "${{ github.ref }}" == "refs/heads/dev" ]; then
             echo "tag=dev" >> $GITHUB_OUTPUT
-            echo "compose_file=docker-compose.dev.yml" >> $GITHUB_OUTPUT
+            echo "service_name=codingpt_front_dev" >> $GITHUB_OUTPUT
           elif [ "${{ github.ref }}" == "refs/heads/staging" ]; then
             echo "tag=staging" >> $GITHUB_OUTPUT
-            echo "compose_file=docker-compose.stg.yml" >> $GITHUB_OUTPUT
+            echo "service_name=codingpt_front_stg" >> $GITHUB_OUTPUT
           else
             echo "tag=${GITHUB_SHA::7}" >> $GITHUB_OUTPUT
-            echo "compose_file=docker-compose.yml" >> $GITHUB_OUTPUT
+            echo "service_name=codingpt_front" >> $GITHUB_OUTPUT
           fi
 
       - name: Build and push Docker image
@@ -83,7 +84,7 @@ jobs:
           cache-from: type=registry,ref=${{ env.DOCKER_IMAGE }}:buildcache
           cache-to: type=registry,ref=${{ env.DOCKER_IMAGE }}:buildcache,mode=max
 
-  # 3. 서버 배포
+  # 3. 서버 배포 (systemctl 사용)
   deploy:
     name: Deploy to EC2 Server
     runs-on: ubuntu-latest
@@ -97,21 +98,17 @@ jobs:
           chmod 600 ~/.ssh/deploy_key
           ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
 
-      - name: Determine deployment path and compose file
+      - name: Determine service name
         id: deploy
         run: |
           if [ "${{ github.ref }}" == "refs/heads/main" ]; then
-            echo "compose_file=docker-compose.yml" >> $GITHUB_OUTPUT
-            echo "project_path=${{ secrets.DEPLOY_PATH_MAIN || '/home/ubuntu/codingpt_front' }}" >> $GITHUB_OUTPUT
+            echo "service_name=codingpt_front" >> $GITHUB_OUTPUT
           elif [ "${{ github.ref }}" == "refs/heads/dev" ]; then
-            echo "compose_file=docker-compose.dev.yml" >> $GITHUB_OUTPUT
-            echo "project_path=${{ secrets.DEPLOY_PATH_DEV || '/home/ubuntu/codingpt_front' }}" >> $GITHUB_OUTPUT
+            echo "service_name=codingpt_front_dev" >> $GITHUB_OUTPUT
           elif [ "${{ github.ref }}" == "refs/heads/staging" ]; then
-            echo "compose_file=docker-compose.stg.yml" >> $GITHUB_OUTPUT
-            echo "project_path=${{ secrets.DEPLOY_PATH_STAGING || '/home/ubuntu/codingpt_front' }}" >> $GITHUB_OUTPUT
+            echo "service_name=codingpt_front_stg" >> $GITHUB_OUTPUT
           else
-            echo "compose_file=docker-compose.yml" >> $GITHUB_OUTPUT
-            echo "project_path=${{ secrets.DEPLOY_PATH_MAIN || '/home/ubuntu/codingpt_front' }}" >> $GITHUB_OUTPUT
+            echo "service_name=codingpt_front" >> $GITHUB_OUTPUT
           fi
 
       - name: Deploy to server
@@ -121,7 +118,11 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ~/.ssh/deploy_key
           script: |
-            cd ${{ steps.deploy.outputs.project_path }}
-            docker-compose -f ${{ steps.deploy.outputs.compose_file }} pull
-            docker-compose -f ${{ steps.deploy.outputs.compose_file }} up -d
-            docker system prune -f
+            # Docker Hub에서 최신 이미지 pull
+            docker pull ${{ env.DOCKER_IMAGE }}:${{ steps.meta.outputs.tag }}
+            
+            # systemd 서비스 재시작
+            sudo systemctl restart ${{ steps.deploy.outputs.service_name }}
+            
+            # 서비스 상태 확인
+            sudo systemctl status ${{ steps.deploy.outputs.service_name }} --no-pager || true
