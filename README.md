@@ -84,3 +84,9 @@ docker push whrksp126/codingpt_front:stg
 sudo systemctl restart codingpt_front_stg
 
 ---
+
+## 🚀 CI/CD 테스트
+
+**테스트 시간**: 2025-11-24 12:00:00  
+**목적**: GitHub Actions CI/CD 파이프라인 테스트  
+**예상 동작**: 코드 푸시 → 자동 빌드 → Docker Hub 푸시 → 서버 자동 배포
