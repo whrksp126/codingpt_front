@@ -55,21 +55,17 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Determine image tag and service name
+      - name: Determine image tag
         id: meta
         run: |
           if [ "${{ github.ref }}" == "refs/heads/main" ]; then
             echo "tag=latest" >> $GITHUB_OUTPUT
-            echo "service_name=codingpt_front" >> $GITHUB_OUTPUT
           elif [ "${{ github.ref }}" == "refs/heads/dev" ]; then
             echo "tag=dev" >> $GITHUB_OUTPUT
-            echo "service_name=codingpt_front_dev" >> $GITHUB_OUTPUT
           elif [ "${{ github.ref }}" == "refs/heads/staging" ]; then
             echo "tag=staging" >> $GITHUB_OUTPUT
-            echo "service_name=codingpt_front_stg" >> $GITHUB_OUTPUT
           else
             echo "tag=${GITHUB_SHA::7}" >> $GITHUB_OUTPUT
-            echo "service_name=codingpt_front" >> $GITHUB_OUTPUT
           fi
 
       - name: Build and push Docker image
@@ -98,16 +94,20 @@ jobs:
           chmod 600 ~/.ssh/deploy_key
           ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
 
-      - name: Determine service name
+      - name: Determine image tag and service name
         id: deploy
         run: |
           if [ "${{ github.ref }}" == "refs/heads/main" ]; then
+            echo "tag=latest" >> $GITHUB_OUTPUT
             echo "service_name=codingpt_front" >> $GITHUB_OUTPUT
           elif [ "${{ github.ref }}" == "refs/heads/dev" ]; then
+            echo "tag=dev" >> $GITHUB_OUTPUT
             echo "service_name=codingpt_front_dev" >> $GITHUB_OUTPUT
           elif [ "${{ github.ref }}" == "refs/heads/staging" ]; then
+            echo "tag=staging" >> $GITHUB_OUTPUT
             echo "service_name=codingpt_front_stg" >> $GITHUB_OUTPUT
           else
+            echo "tag=${GITHUB_SHA::7}" >> $GITHUB_OUTPUT
             echo "service_name=codingpt_front" >> $GITHUB_OUTPUT
           fi
 
@@ -119,7 +119,7 @@ jobs:
           key: ~/.ssh/deploy_key
           script: |
             # Docker Hub에서 최신 이미지 pull
-            docker pull ${{ env.DOCKER_IMAGE }}:${{ steps.meta.outputs.tag }}
+            docker pull ${{ env.DOCKER_IMAGE }}:${{ steps.deploy.outputs.tag }}
             
             # systemd 서비스 재시작
             sudo systemctl restart ${{ steps.deploy.outputs.service_name }}
