@@ -9,6 +9,7 @@ import Welcome from './pages/Welcome';
 import Learn from './pages/Learn';
 import Admin from './pages/Admin';
 import Code from './pages/Code';
+import Execute from './pages/Execute';
 
 import Curriculums from './pages/Curriculums';
 import Curriculum from './pages/Curriculum';
@@ -28,6 +29,7 @@ function App() {
         
         <Route path="/admin" element={<Admin />} />
         <Route path="/code/:id" element={<Code />} />
+        <Route path="/execute" element={<Execute />} />
       </Routes>
     </BrowserRouter>
   );
