@@ -12,7 +12,7 @@ import { backendUrl } from './common.js';
  * @returns {Function} 중단 함수
  */
 export const executeCode = async (code, language, { onLog, onOutput, onError, onClose }) => {
-  const apiUrl = `${backendUrl}/api/execute`;
+  const apiUrl = `${backendUrl}/api/executor/execute`;
   
   let reader = null;
   let isAborted = false;
