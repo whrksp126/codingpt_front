@@ -2,11 +2,7 @@
 
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'; // BrowserRouter로 직접 import
-import Home from './pages/Home';
-import Register from './pages/Register';
-import Welcome from './pages/Welcome';
-// import Lesson from './pages/Lesson';
-import Learn from './pages/Learn';
+import Main from './pages/Main';
 import Admin from './pages/Admin';
 import Code from './pages/Code';
 import Execute from './pages/Execute';
@@ -14,22 +10,17 @@ import Execute from './pages/Execute';
 import Curriculums from './pages/Curriculums';
 import Curriculum from './pages/Curriculum';
 import Sections from './pages/Sections';
+import TTS from './pages/TTS';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/welcome" element={<Welcome />} />
-        {/* <Route path="/lesson" element={<Lesson />} /> */}
-        <Route path="/learn" element={<Learn />} />
-
-
-        
+        <Route path="/" element={<Main />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/code/:id" element={<Code />} />
         <Route path="/execute" element={<Execute />} />
+        <Route path="/tts" element={<TTS />} />
       </Routes>
     </BrowserRouter>
   );
